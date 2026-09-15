@@ -8338,5 +8338,317 @@
         "nameClean": "Helion"
       }
     ]
+  },
+  {
+    "id": "10002877",
+    "number": "047",
+    "slug": "squarrel",
+    "name_pt": "Squarrel",
+    "name_en": "Squarrel",
+    "element": "Fogo",
+    "element_en": "Fire",
+    "role_pt": "DPS (Dano)",
+    "role_en": "DPS",
+    "stage": "Lumin",
+    "tier": "B",
+    "image": "/assets/creatures/squarrel.webp",
+    "description_pt": "Squarrel possui uma cauda grande em forma de punho. Quando o pelo oleoso da cauda é esfregado, ele pode entrar em combustão instantânea. Qualquer um que tentar roubar suas pinhas provará seus punhos de fogo ardente.",
+    "description_en": "Squarrel has a large, fist-shaped tail. When its greasy tail fur is rubbed even slightly, it can burst into flames. Anyone who eyes its stockpiled pinecones will get a taste of its scorching fire fists.",
+    "habitat_pt": "Caldeira Vulcânica, Planalto Chamuscado",
+    "habitat_en": "Volcanic Caldera, Scorched Woods",
+    "homeland_pt": "Cozinhar, Fundição e Artesanato",
+    "homeland_en": "Cooking, Smelting, Crafting",
+    "stats": {
+      "HP": 75,
+      "ATK": 88,
+      "M.ATK": 40,
+      "P.DEF": 65,
+      "M.DEF": 60,
+      "HASTE": 70
+    },
+    "skills_pt": [
+      {
+        "name": "Bomba de Pinha",
+        "type": "Físico",
+        "power": 38,
+        "desc": "Arremessa uma pinha em chamas que explode ao contato."
+      },
+      {
+        "name": "Golpe Pesado de Cauda",
+        "type": "Físico",
+        "power": 40,
+        "desc": "Golpeia com sua cauda de punho causando impacto ígneo."
+      }
+    ],
+    "skills_en": [
+      {
+        "name": "Pinecone Bomb",
+        "type": "Physical",
+        "cost": 15,
+        "power": 38,
+        "desc": "Throws an explosive flaming pinecone at the target."
+      },
+      {
+        "name": "Heavy Tail Strike",
+        "type": "Physical",
+        "cost": 20,
+        "power": 40,
+        "desc": "Smams with its fist tail dealing fire impact damage."
+      }
+    ],
+    "evolution_path": [
+      {
+        "id": "10002877",
+        "number": "047",
+        "name": "Squarrel",
+        "stage": "Lumin Stage",
+        "image": "10511",
+        "slug": "squarrel",
+        "nameClean": "Squarrel"
+      },
+      {
+        "id": "10002878",
+        "number": "048",
+        "name": "Squashel",
+        "stage": "Nova Stage",
+        "image": "10512",
+        "slug": "squashel",
+        "nameClean": "Squashel"
+      }
+    ]
+  },
+  {
+    "id": "10002878",
+    "number": "048",
+    "slug": "squashel",
+    "name_pt": "Squashel",
+    "name_en": "Squashel",
+    "element": "Fogo",
+    "element_en": "Fire",
+    "role_pt": "DPS (Dano)",
+    "role_en": "DPS",
+    "stage": "Nova",
+    "tier": "B",
+    "image": "/assets/creatures/squashel.webp",
+    "description_pt": "Squashel possui caudas duplas parecidas com punhos, amplificando sua força descomunal. As pinhas arremessadas com essa força impactam como balas de canhão incendiárias.",
+    "description_en": "Squashel has twin fist-like tails, giving its power a super-boost. Pinecones thrown with that force strike like cannonballs — not to be underestimated.",
+    "habitat_pt": "Planalto Chamuscado, Vale das Cinzas",
+    "habitat_en": "Scorched Plateau, Blazing Woods",
+    "homeland_pt": "Fundição e Combate Pesado",
+    "homeland_en": "Smelting and Heavy Craft",
+    "stats": {
+      "HP": 92,
+      "ATK": 95,
+      "M.ATK": 45,
+      "P.DEF": 75,
+      "M.DEF": 72,
+      "HASTE": 68
+    },
+    "skills_pt": [
+      {
+        "name": "Canoada de Pinha",
+        "type": "Físico",
+        "power": 85,
+        "desc": "Dispara pinhas duplas superaquecidas como projéteis de canhão."
+      },
+      {
+        "name": "Punhos Flamejantes Duplos",
+        "type": "Físico",
+        "power": 110,
+        "desc": "Golpeia o oponente com ambas as caudas incendiárias em sequência rápida."
+      }
+    ],
+    "skills_en": [
+      {
+        "name": "Pinecone Cannonade",
+        "type": "Physical",
+        "cost": 25,
+        "power": 85,
+        "desc": "Launches dual fiery pinecones like cannonballs."
+      },
+      {
+        "name": "Twin Fire Punch",
+        "type": "Physical",
+        "cost": 30,
+        "power": 110,
+        "desc": "Strikes repeatedly with twin fist tails."
+      }
+    ],
+    "evolution_path": [
+      {
+        "id": "10002877",
+        "number": "047",
+        "name": "Squarrel",
+        "stage": "Lumin Stage",
+        "image": "10511",
+        "slug": "squarrel",
+        "nameClean": "Squarrel"
+      },
+      {
+        "id": "10002878",
+        "number": "048",
+        "name": "Squashel",
+        "stage": "Nova Stage",
+        "image": "10512",
+        "slug": "squashel",
+        "nameClean": "Squashel"
+      }
+    ]
+  },
+  {
+    "id": "10001000",
+    "number": "10001",
+    "slug": "irisalis",
+    "name_pt": "Irisalis",
+    "name_en": "Irisalis",
+    "element": "Planta",
+    "element_en": "Grass",
+    "role_pt": "DPS (Dano)",
+    "role_en": "DPS",
+    "stage": "Nova",
+    "tier": "B",
+    "image": "/assets/creatures/irisalis.webp",
+    "description_pt": "Absorve as cores do mundo como vestes florais, trazendo vitalidade colorida à natureza. Se as pétalas murcham, podem florescer novamente ao retornar ao abraço da terra.",
+    "description_en": "They absorb the world’s colors as floral raiment, bringing colorful vitality to nature. If petals wither, they can bloom again by returning to the earth’s embrace.",
+    "habitat_pt": "Jardins Floridos de Astra, Ilhas Sussurrantes",
+    "habitat_en": "Blooming Astra Gardens, Whispering Isles",
+    "homeland_pt": "Colheita de Plantas e Floricultura",
+    "homeland_en": "Harvesting and Floriculture",
+    "stats": {
+      "HP": 80,
+      "ATK": 98,
+      "M.ATK": 85,
+      "P.DEF": 62,
+      "M.DEF": 64,
+      "HASTE": 75
+    },
+    "skills_pt": [
+      {
+        "name": "Chuva Floral",
+        "type": "Mágico",
+        "power": 78,
+        "desc": "Libera pétalas afiadas como lâminas que cortam e enfraquecem o alvo."
+      },
+      {
+        "name": "Dança das Cores",
+        "type": "Mágico",
+        "power": 115,
+        "desc": "Invoca um vórtice de cores da natureza que cura aliados e ataca inimigos."
+      }
+    ],
+    "skills_en": [
+      {
+        "name": "Floral Rain",
+        "type": "Magic",
+        "cost": 20,
+        "power": 78,
+        "desc": "Releases razor-sharp petals that slice foes."
+      },
+      {
+        "name": "Prismatic Dance",
+        "type": "Magic",
+        "cost": 30,
+        "power": 115,
+        "desc": "Summons a vortex of natural color that deals Grass damage."
+      }
+    ],
+    "evolution_path": [
+      {
+        "id": "10002101",
+        "number": "011",
+        "name": "Iris",
+        "stage": "Lumin Stage",
+        "image": "10211",
+        "slug": "iris",
+        "nameClean": "Iris"
+      },
+      {
+        "id": "10002102",
+        "number": "012",
+        "name": "Irisal",
+        "stage": "Gamma Stage",
+        "image": "10212",
+        "slug": "irisal",
+        "nameClean": "Irisal"
+      },
+      {
+        "id": "10001000",
+        "number": "10001",
+        "name": "Irisalis",
+        "stage": "Nova Stage",
+        "image": "10213",
+        "slug": "irisalis",
+        "nameClean": "Irisalis"
+      }
+    ]
+  },
+  {
+    "id": "10009996",
+    "number": "99996",
+    "slug": "lunara",
+    "name_pt": "Lunara",
+    "name_en": "Lunara",
+    "element": "Luz",
+    "element_en": "Light",
+    "role_pt": "DPS (Dano)",
+    "role_en": "DPS",
+    "stage": "Nova",
+    "tier": "B",
+    "image": "/assets/creatures/lunara.webp",
+    "description_pt": "Seus olhos brilham com a luz azul profunda da lua cheia, e padrões misteriosos de runas celestiais aparecem em seu corpo quando canaliza seu imenso poder lunar.",
+    "description_en": "Their eyes shimmer with the deep blue light of the moon, and mysterious patterns appear when they wield their power.",
+    "habitat_pt": "Santuário da Lua de Prata, Picos Estrelares",
+    "habitat_en": "Silvermoon Sanctuary, Starfall Peaks",
+    "homeland_pt": "Iluminação Astral e Coleta Noturna",
+    "homeland_en": "Astral Light and Night Foraging",
+    "stats": {
+      "HP": 84,
+      "ATK": 92,
+      "M.ATK": 90,
+      "P.DEF": 60,
+      "M.DEF": 62,
+      "HASTE": 78
+    },
+    "skills_pt": [
+      {
+        "name": "Impacto Lunar",
+        "type": "Mágico",
+        "power": 82,
+        "desc": "Concentra energia lunar em um orbe devastador contra o alvo."
+      },
+      {
+        "name": "Eclipse Lunar",
+        "type": "Mágico",
+        "power": 125,
+        "desc": "Cobre a área em escuridão luminosa e desfere múltiplos raios celestiais."
+      }
+    ],
+    "skills_en": [
+      {
+        "name": "Moon Impact",
+        "type": "Magic",
+        "cost": 20,
+        "power": 82,
+        "desc": "Concentrates lunar energy into a devastating projectile."
+      },
+      {
+        "name": "Lunar Eclipse",
+        "type": "Magic",
+        "cost": 35,
+        "power": 125,
+        "desc": "Envelops the area in celestial glow, bombarding targets."
+      }
+    ],
+    "evolution_path": [
+      {
+        "id": "10009996",
+        "number": "99996",
+        "name": "Lunara",
+        "stage": "Nova Stage",
+        "image": "10371",
+        "slug": "lunara",
+        "nameClean": "Lunara"
+      }
+    ]
   }
 ]
