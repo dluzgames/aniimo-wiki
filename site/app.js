@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 window.state = state;
 
-const APP_VERSION = '20260915_2315';
+const APP_VERSION = '20260915_2330';
 
 // 4. LOAD ALL DATASETS
 async function loadAppData() {
@@ -152,6 +152,14 @@ function setupNavigation() {
 function handleRouting() {
   const pathParts = window.location.pathname.replace(/^\/+/, '').split('/').filter(Boolean);
   const rootSegment = (pathParts[0] || 'home').toLowerCase();
+
+  // 0. Dedicated Item Detail Route: /items/<slug> or /itens/<slug>
+  if ((rootSegment === 'items' || rootSegment === 'itens') && pathParts[1]) {
+    const itemSlug = pathParts[1];
+    showSection('item-detail');
+    renderItemDetailPage(itemSlug);
+    return;
+  }
 
   // 1. Dedicated Creature Profile Route: /aniimo/<slug> or /criaturas/<slug>
   if ((rootSegment === 'aniimo' || rootSegment === 'criaturas') && pathParts[1]) {
@@ -1211,14 +1219,15 @@ function renderItemsDatabase() {
     const iconUrl = item.icon ? `https://aniidex.com/_ipx/q_95&fit_inside&s_96x96${item.icon}` : '/assets/dluz-logo.png';
     const desc = (item.funcRep || item.description || '').replace(/"/g, '&quot;');
 
+    const itemSlug = item.slug || String(item.id);
     return `
-      <div class="item-card" title="${desc}">
+      <a href="/items/${itemSlug}/" class="item-card" onclick="navigateTo('/items/${itemSlug}'); return false;" title="${desc}">
         <div class="item-icon-box quality-${quality}">
           <img src="${iconUrl}" alt="${item.name}" loading="lazy" onerror="this.src='/images/items/ui_item_4040075.webp'; this.onerror=function(){this.src='/assets/dluz-logo.png';};" />
         </div>
         <div class="item-name">${item.name}</div>
         <div class="item-category">${category}</div>
-      </div>
+      </a>
     `;
   }).join('');
 

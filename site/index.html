@@ -9,7 +9,7 @@
 
   <!-- Stitch & Aniidex CSS -->
   <link rel="stylesheet" href="/assets/aniidex/aniidex_combined.css">
-  <link rel="stylesheet" href="/styles.css?v=20260915_2315">
+  <link rel="stylesheet" href="/styles.css?v=20260915_2330">
 
   <!-- Google Identity Services (GSI) -->
   <script src="https://accounts.google.com/gsi/client" async defer></script>
@@ -759,6 +759,70 @@
         </div>
       </section>
 
+    
+      <!-- =================================================================== -->
+      <!-- SECTION 11: DEDICATED ITEM DETAIL PAGE (/items/:slug) -->
+      <!-- =================================================================== -->
+      <section class="app-section" id="section-item-detail">
+        <div class="container" style="max-width:1200px; margin:0 auto; padding:30px 20px;">
+          <!-- BREADCRUMBS -->
+          <div class="aniimo-breadcrumbs" id="item-breadcrumbs" style="margin-bottom:24px;">
+            <a href="/" onclick="navigateTo('/'); return false;">Início</a>
+            <span>/</span>
+            <a href="/itens" onclick="navigateTo('/itens'); return false;">Itens</a>
+            <span>/</span>
+            <strong id="item-crumb-name" style="color:#f8fafc;">Item Name</strong>
+          </div>
+
+          <!-- HERO ITEM CARD (1:1 ANIIDEX) -->
+          <div class="item-detail-hero" id="item-hero-card">
+            <div class="item-hero-icon-box" id="item-hero-icon-box">
+              <div class="item-hero-glow" id="item-hero-glow"></div>
+              <img id="item-hero-img" src="" alt="" style="width:96px; height:96px; object-fit:contain; position:relative; z-index:2;" onerror="this.src='/assets/dluz-logo.png'" />
+            </div>
+            <div class="item-hero-info" style="flex:1;">
+              <div class="item-hero-header" style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+                <span class="item-quality-pill" id="item-quality-pill">Prismatic</span>
+                <span class="item-category-pill" id="item-category-pill">Material</span>
+              </div>
+              <h1 class="item-detail-title" id="item-title">Item Name</h1>
+              <div class="item-detail-descriptions">
+                <p class="item-funcrep" id="item-funcrep"></p>
+                <p class="item-lore" id="item-lore"></p>
+              </div>
+              <div class="item-detail-actions" style="display:flex; flex-wrap:wrap; gap:12px; margin-top:20px;">
+                <button class="btn btn-secondary" onclick="navigateTo('/itens');">← Voltar para Itens</button>
+                <button class="btn btn-primary" id="btn-copy-item-link" onclick="navigator.clipboard.writeText(window.location.href); showToast('Link do item copiado!', 'success');">🔗 Copiar Link</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- INFO GRID: HOW TO OBTAIN & USAGES -->
+          <div class="item-info-grid" style="margin-top:24px; display:grid; grid-template-columns: 1fr; gap:20px;">
+            <section class="item-info-section" style="background:#0e131f; border:1px solid rgba(255,255,255,0.07); border-radius:16px; padding:24px;">
+              <div class="item-section-header" style="display:flex; align-items:center; gap:10px; margin-bottom:18px; border-bottom:1px solid rgba(255,255,255,0.06); padding-bottom:12px;">
+                <span style="font-size:20px;">📦</span>
+                <h2 style="font-size:1.25rem; font-weight:800; color:#f8fafc; margin:0;" id="item-obtain-heading">Como Obter este Item</h2>
+                <span id="item-obtain-count" style="background:rgba(56,189,240,0.15); color:#38bcef; font-weight:800; font-size:12px; padding:2px 8px; border-radius:10px;">0</span>
+              </div>
+              <div class="item-obtain-body" id="item-obtain-body" style="display:flex; flex-direction:column; gap:12px;">
+                <!-- Dynamically populated obtain rows -->
+              </div>
+            </section>
+
+            <section class="item-info-section" id="item-usages-section" style="background:#0e131f; border:1px solid rgba(255,255,255,0.07); border-radius:16px; padding:24px;">
+              <div class="item-section-header" style="display:flex; align-items:center; gap:10px; margin-bottom:18px; border-bottom:1px solid rgba(255,255,255,0.06); padding-bottom:12px;">
+                <span style="font-size:20px;">⚙️</span>
+                <h2 style="font-size:1.25rem; font-weight:800; color:#f8fafc; margin:0;">Usos e Propriedades</h2>
+              </div>
+              <div id="item-usages-body" style="color:#cbd5e1; font-size:14px; line-height:1.6;">
+                <!-- Dynamically populated or fallback -->
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
     </main>
 
 
@@ -967,7 +1031,7 @@
   </div>
 
   <!-- Application Scripts -->
-  <script src="/auth.js?v=20260915_2315"></script>
-  <script src="/app.js?v=20260915_2315"></script>
+  <script src="/auth.js?v=20260915_2330"></script>
+  <script src="/app.js?v=20260915_2330"></script>
 </body>
 </html>
