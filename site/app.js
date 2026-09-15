@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 window.state = state;
 
-const APP_VERSION = '20260915_2330';
+const APP_VERSION = '20260915_2345';
 
 // 4. LOAD ALL DATASETS
 async function loadAppData() {
@@ -1612,3 +1612,152 @@ function renderAniimoProfilePage(creatureOrSlug) {
 window.renderAniimoProfilePage = renderAniimoProfilePage;
 window.renderAniidexTierList = renderAniidexTierList;
 window.renderItemsDatabase = renderItemsDatabase;
+
+
+// ----------------------------------------------------------------------------
+// 19. DEDICATED ITEM DETAIL PAGE ENGINE (/items/:slug)
+// ----------------------------------------------------------------------------
+function renderItemDetailPage(slugOrId) {
+  if (!state.items || !state.items.length) {
+    setTimeout(() => renderItemDetailPage(slugOrId), 150);
+    return;
+  }
+
+  const cleanSlug = String(slugOrId).toLowerCase().replace(/^\/+|\/+$/g, '');
+  let item = state.items.find(it => it.slug === cleanSlug || String(it.id) === cleanSlug);
+  if (!item) {
+    item = state.items.find(it => it.slug && it.slug.includes(cleanSlug));
+  }
+
+  if (!item) {
+    item = {
+      name: 'Item não encontrado',
+      slug: cleanSlug,
+      quality: 1,
+      category: 'Geral',
+      funcRep: 'Este item não foi localizado no banco de dados oficial de Aniimo.',
+      description: '',
+      obtainMethods: []
+    };
+  }
+
+  document.title = `${item.name} | Aniidex DLuz Brasil`;
+
+  // Breadcrumb
+  const crumbName = document.getElementById('item-crumb-name');
+  if (crumbName) crumbName.textContent = item.name;
+
+  // Title
+  const titleEl = document.getElementById('item-title');
+  if (titleEl) titleEl.textContent = item.name;
+
+  // Quality pill
+  const qualNames = { 1: 'Comum', 2: 'Incomum', 3: 'Raro', 4: 'Épico', 5: 'Lendário', 6: 'Prismático' };
+  const qualColors = {
+    1: { bg: '#64748b', text: '#fff' },
+    2: { bg: '#10b981', text: '#fff' },
+    3: { bg: '#3b82f6', text: '#fff' },
+    4: { bg: '#a855f7', text: '#fff' },
+    5: { bg: '#f59e0b', text: '#000' },
+    6: { bg: 'linear-gradient(135deg, #ec4899, #8b5cf6)', text: '#fff' }
+  };
+  const qual = item.quality || 1;
+  const qInfo = qualColors[qual] || qualColors[1];
+
+  const qPill = document.getElementById('item-quality-pill');
+  if (qPill) {
+    qPill.textContent = item.qualityName || qualNames[qual] || 'Comum';
+    qPill.style.background = qInfo.bg;
+    qPill.style.color = qInfo.text;
+  }
+
+  // Category pill
+  const catPill = document.getElementById('item-category-pill');
+  if (catPill) catPill.textContent = item.category || item.subcategory || 'Item';
+
+  // Icon & Glow
+  const imgEl = document.getElementById('item-hero-img');
+  const iconBox = document.getElementById('item-hero-icon-box');
+  const iconUrl = item.icon ? `https://aniidex.com/_ipx/q_95&fit_inside&s_112x112${item.icon}` : '/assets/dluz-logo.png';
+  if (imgEl) {
+    imgEl.src = iconUrl;
+    imgEl.onerror = function() { this.src = '/images/items/ui_item_4040075.webp'; this.onerror = function(){ this.src = '/assets/dluz-logo.png'; }; };
+  }
+  if (iconBox) {
+    iconBox.className = `item-hero-icon-box quality-${qual}`;
+  }
+
+  // Descriptions
+  const funcRepEl = document.getElementById('item-funcrep');
+  if (funcRepEl) funcRepEl.textContent = item.funcRep || '';
+
+  const loreEl = document.getElementById('item-lore');
+  if (loreEl) loreEl.textContent = item.description || '';
+
+  // How to Obtain
+  const obtainHeading = document.getElementById('item-obtain-heading');
+  if (obtainHeading) obtainHeading.textContent = `Como Obter ${item.name}`;
+
+  const obtainCount = document.getElementById('item-obtain-count');
+  const methods = item.obtainMethods || [];
+  if (obtainCount) obtainCount.textContent = String(methods.length);
+
+  const obtainBody = document.getElementById('item-obtain-body');
+  if (obtainBody) {
+    if (methods.length === 0) {
+      obtainBody.innerHTML = `
+        <div style="color:#94a3b8; font-size:14px; padding:12px 0;">
+          Nenhum método direto de obtenção registrado nos arquivos do jogo para este item. Pode ser obtido através de eventos temporários, baús secretos ou recompensas de missões de exploração em Idília.
+        </div>
+      `;
+    } else {
+      obtainBody.innerHTML = methods.map(m => {
+        const type = m.type || 'Geral';
+        const detail = m.detail || m.source || 'Disponível no mundo de Idília';
+        const costs = m.cost || [];
+        const costsHtml = costs.map(c => `
+          <span style="display:inline-flex; align-items:center; gap:6px; background:rgba(0,0,0,0.4); padding:4px 10px; border-radius:8px; border:1px solid rgba(255,255,255,0.08); font-size:13px; font-weight:700; color:#f8fafc;">
+            ${c.icon ? `<img src="https://aniidex.com/_ipx/q_95&fit_inside&s_32x32${c.icon}" style="width:18px; height:18px; object-fit:contain;" onerror="this.style.display=\'none\';" />` : ''}
+            <span>${c.amount ? c.amount.toLocaleString() : ''} ${c.name || 'Créditos'}</span>
+          </span>
+        `).join('');
+
+        return `
+          <div class="item-obtain-row">
+            <span class="item-type-badge">${type}</span>
+            <div style="flex:1;">
+              <strong style="color:#f8fafc; font-size:14px;">${detail}</strong>
+            </div>
+            ${costsHtml ? `<div style="display:flex; gap:8px;">${costsHtml}</div>` : ''}
+          </div>
+        `;
+      }).join('');
+    }
+  }
+
+  // Usages & Properties
+  const usagesBody = document.getElementById('item-usages-body');
+  if (usagesBody) {
+    const usages = item.usages || [];
+    const stack = item.stackcount ? `Limite de Acúmulo no Inventário: <strong>${item.stackcount.toLocaleString()}</strong> unidades.` : '';
+    const idInfo = `<div style="margin-top:12px; font-size:12px; color:#64748b;">ID Oficial nos Arquivos: <code>${item.id}</code> • Tipo: <code>${item.displayType || item.type || 'Padrão'}</code></div>`;
+    
+    if (usages.length > 0) {
+      usagesBody.innerHTML = `
+        <div style="margin-bottom:12px;">${usages.map(u => `<div style="padding:4px 0;">• ${u}</div>`).join('')}</div>
+        <p>${stack}</p>
+        ${idInfo}
+      `;
+    } else {
+      usagesBody.innerHTML = `
+        <p style="margin-bottom:8px;">Item utilizável em Idília para progressão, síntese, culinária ou customização.</p>
+        <p>${stack}</p>
+        ${idInfo}
+      `;
+    }
+  }
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+window.renderItemDetailPage = renderItemDetailPage;
