@@ -528,100 +528,29 @@
       <!-- =================================================================== -->
       <!-- SECTION 6: TIER LIST PAGE -->
       <!-- =================================================================== -->
+            <!-- =================================================================== -->
+      <!-- SECTION 6: TIER LIST (1:1 ANIIDEX CLONE) -->
+      <!-- =================================================================== -->
       <section class="app-section" id="section-tier-list">
         <div class="container" style="max-width:1200px; margin:0 auto; padding:30px 20px;">
-          <div class="section-heading">
-            <div class="heading-row">
-              <span class="rule left"></span>
-              <h1 class="heading-text">Tier List Aniimo DLuz</h1>
-              <span class="rule right"></span>
-            </div>
-            <p class="heading-subtitle">Classificação em tempo real votada pelos inscritos e análise editorial do meta de combate.</p>
+          <div style="margin-bottom:24px;">
+            <h1 class="gameplay-heading no-border" style="margin:0 0 8px 0; font-size:2.2rem; font-weight:900;">Aniimo Tier List</h1>
+            <p style="color:var(--ink-soft); margin:0 0 20px 0; font-size:15px;">Todos os 97 Aniimos classificados pelo que os arquivos do jogo dizem que fazem. Escolha uma função para ver a lista ideal para sua equipe.</p>
+            
+            <!-- ROLE SUB-NAV (1:1 ANIIDEX) -->
+            <nav class="tier-nav" id="tier-nav-roles">
+              <button class="tier-nav-btn active" data-role="all">Geral (Overall)</button>
+              <button class="tier-nav-btn" data-role="DPS">DPS</button>
+              <button class="tier-nav-btn" data-role="BREAK">Quebra (Break)</button>
+              <button class="tier-nav-btn" data-role="SUP">Suporte (Support)</button>
+              <button class="tier-nav-btn" data-role="ENERGY">Regeneração (Regen)</button>
+              <button class="tier-nav-btn" data-role="HEAL">Cura (Heal)</button>
+            </nav>
           </div>
 
-          <!-- TABS -->
-          <div style="display:flex; justify-content:center; gap:16px; margin-bottom:24px;">
-            <button class="btn btn-primary active" id="tl-tab-community">☀️ Votação da Comunidade (<span id="tl-total-creatures">100</span> Aniimos)</button>
-            <button class="btn btn-secondary" id="tl-tab-editorial">📋 Quadro Editorial & Meta PvE & PvP</button>
-          </div>
-
-          <!-- ELEMENT FILTER CHIPS -->
-          <div class="tl-filters-row" style="margin-bottom:24px; display:flex; flex-wrap:wrap; justify-content:center; gap:8px;">
-            <button class="tl-filter-chip active" data-element="all">✨ Todos</button>
-            <button class="tl-filter-chip" data-element="fogo">🔥 Fogo</button>
-            <button class="tl-filter-chip" data-element="agua">💧 Água</option>
-            <button class="tl-filter-chip" data-element="grama">🌿 Grama</button>
-            <button class="tl-filter-chip" data-element="eletrico">⚡ Elétrico</button>
-            <button class="tl-filter-chip" data-element="vento">🌪️ Vento</button>
-            <button class="tl-filter-chip" data-element="terra">🪨 Terra</button>
-            <button class="tl-filter-chip" data-element="gelo">❄️ Gelo</button>
-            <button class="tl-filter-chip" data-element="luz">✨ Luz</button>
-            <button class="tl-filter-chip" data-element="trevas">🌑 Trevas</button>
-          </div>
-
-          <!-- COMMUNITY TIER BOARD -->
-          <div id="tl-board-community">
-            <!-- TIER S+ -->
-            <div class="tier-row tier-row-S-plus">
-              <div class="tier-label label-S-plus">
-                <span>S+</span>
-                <small>Meta Absoluto</small>
-              </div>
-              <div class="tier-tiles-container" id="tiles-tier-S+"></div>
-            </div>
-
-            <!-- TIER S -->
-            <div class="tier-row tier-row-S">
-              <div class="tier-label label-S">
-                <span>S</span>
-                <small>Altamente Forte</small>
-              </div>
-              <div class="tier-tiles-container" id="tiles-tier-S"></div>
-            </div>
-
-            <!-- TIER A -->
-            <div class="tier-row tier-row-A">
-              <div class="tier-label label-A">
-                <span>A</span>
-                <small>Muito Bom</small>
-              </div>
-              <div class="tier-tiles-container" id="tiles-tier-A"></div>
-            </div>
-
-            <!-- TIER B -->
-            <div class="tier-row tier-row-B">
-              <div class="tier-label label-B">
-                <span>B</span>
-                <small>Equilibrado</small>
-              </div>
-              <div class="tier-tiles-container" id="tiles-tier-B"></div>
-            </div>
-
-            <!-- TIER C -->
-            <div class="tier-row tier-row-C">
-              <div class="tier-label label-C">
-                <span>C</span>
-                <small>Situacional</small>
-              </div>
-              <div class="tier-tiles-container" id="tiles-tier-C"></div>
-            </div>
-
-            <!-- TIER D -->
-            <div class="tier-row tier-row-D">
-              <div class="tier-label label-D">
-                <span>D</span>
-                <small>Iniciante</small>
-              </div>
-              <div class="tier-tiles-container" id="tiles-tier-D"></div>
-            </div>
-          </div>
-
-          <!-- EDITORIAL BOARD -->
-          <div id="tl-board-editorial" style="display:none;">
-            <div class="gameplay-block" style="padding:24px;">
-              <h2>Análise de Meta — Lançamento Global 2026</h2>
-              <p>O meta oficial de Aniimo é baseado na sinergia entre Quebra de Escudo (Break) e DPS de explosão elemental.</p>
-            </div>
+          <!-- TIER TABLE CONTAINER (1:1 ANIIDEX) -->
+          <div class="tier-table" id="tier-table-container">
+            <!-- S, A, B, C, D tiers populated dynamically -->
           </div>
         </div>
       </section>
@@ -650,17 +579,58 @@
       <!-- =================================================================== -->
       <!-- SECTION 8: ITENS PAGE -->
       <!-- =================================================================== -->
+            <!-- =================================================================== -->
+      <!-- SECTION 8: ITENS PAGE (1:1 ANIIDEX ITEMS DATABASE) -->
+      <!-- =================================================================== -->
       <section class="app-section" id="section-itens">
         <div class="container" style="max-width:1200px; margin:0 auto; padding:30px 20px;">
-          <div class="featured-header" style="margin-bottom:24px;">
-            <div>
-              <h1 class="gameplay-heading no-border">Banco de Itens (3.476 Itens)</h1>
-              <p style="color:var(--ink-soft);">Materiais de síntese, equipamentos, runas e ovos com locais de drop.</p>
+          <div style="margin-bottom:24px;">
+            <h1 class="gameplay-heading no-border" style="margin:0 0 8px 0; font-size:2.2rem; font-weight:900;">Banco de Itens de Aniimo</h1>
+            <p style="color:var(--ink-soft); margin:0 0 20px 0; font-size:15px;">Explore todos os 3.609 itens do jogo. Filtre por categoria, qualidade ou pesquise pelo nome.</p>
+          </div>
+
+          <!-- FILTERS BAR -->
+          <div class="items-filter-bar">
+            <div class="items-search-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <input type="text" id="items-search-input" placeholder="Buscar por nome..." />
+            </div>
+
+            <div class="items-select-group">
+              <select id="items-category-select" class="items-select">
+                <option value="all">Todas as Categorias</option>
+                <option value="Aniipod">Aniipod (Dispositivos)</option>
+                <option value="Egg">Ovos (Eggs)</option>
+                <option value="Home materials">Materiais de Base (Home)</option>
+                <option value="Evolution Material">Materiais de Evolução</option>
+                <option value="Training">Treinamento & Frutas</option>
+                <option value="Rare Item">Itens Raros</option>
+                <option value="Equipment">Equipamentos</option>
+                <option value="Held Item - Rune">Runas</option>
+                <option value="Cosmetic">Aparência & Cosméticos</option>
+                <option value="Currency">Moedas & Cupons</option>
+              </select>
+
+              <select id="items-quality-select" class="items-select">
+                <option value="all">Todas as Qualidades</option>
+                <option value="1">Comum (1 Estrela)</option>
+                <option value="2">Incomum (2 Estrelas)</option>
+                <option value="3">Raro (3 Estrelas)</option>
+                <option value="4">Épico (4 Estrelas)</option>
+                <option value="5">Lendário (5 Estrelas)</option>
+                <option value="6">Mítico / Prismatic (6 Estrelas)</option>
+              </select>
             </div>
           </div>
 
-          <div id="items-full-grid">
-            <!-- Dynamically populated -->
+          <!-- ITEMS GRID -->
+          <div class="items-grid" id="items-grid-container">
+            <!-- 60 items per page -->
+          </div>
+
+          <!-- PAGINATION CONTROLS -->
+          <div class="items-pagination" id="items-pagination-container">
+            <!-- Prev 1 2 3... Next -->
           </div>
         </div>
       </section>
@@ -691,6 +661,100 @@
                 <p style="margin:4px 0;">Votos Registrados: <strong id="comm-stat-votes">0</strong></p>
               </div>
             </aside>
+          </div>
+        </div>
+      </section>
+
+    
+      <!-- =================================================================== -->
+      <!-- SECTION 10: DEDICATED ANIIMO PROFILE PAGE (/aniimo/:slug) -->
+      <!-- =================================================================== -->
+      <section class="app-section" id="section-aniimo-detail">
+        <div class="container" style="max-width:1200px; margin:0 auto; padding:30px 20px;">
+          <!-- BREADCRUMBS -->
+          <div class="aniimo-breadcrumbs" id="profile-breadcrumbs">
+            <a href="/" onclick="navigateTo('/'); return false;">Início</a>
+            <span>/</span>
+            <a href="/criaturas" onclick="navigateTo('/criaturas'); return false;">Lista Aniimo</a>
+            <span>/</span>
+            <strong id="profile-crumb-name" style="color:#f8fafc;">Emberpup</strong>
+          </div>
+
+          <!-- PROFILE HEADER BANNER -->
+          <div class="aniimo-profile-header">
+            <div class="aniimo-profile-avatar-box">
+              <span class="aniimo-profile-dex-tag" id="profile-dex">#001</span>
+              <img id="profile-img" src="" alt="" onerror="this.src='/assets/dluz-logo.png'" />
+            </div>
+            <div class="aniimo-profile-meta">
+              <h1 id="profile-name">Emberpup Aniimo</h1>
+              <div class="aniimo-profile-badges">
+                <span class="aniimo-profile-badge" id="profile-badge-element" style="background:#EF4444; color:#fff;">🔥 Fogo</span>
+                <span class="aniimo-profile-badge" id="profile-badge-role" style="background:rgba(255,255,255,0.1); color:#cbd5e1;">DPS</span>
+                <span class="aniimo-profile-badge" id="profile-badge-stage" style="background:rgba(255,255,255,0.08); color:#94a3b8;">Estágio Lumin</span>
+                <span class="aniimo-profile-badge" id="profile-badge-tier" style="background:#f59e0b; color:#07090e;">TIER S</span>
+              </div>
+              <div class="aniimo-profile-actions">
+                <button class="btn btn-primary" id="profile-btn-vote">🗳️ Votar na Tier List</button>
+                <button class="btn btn-secondary" id="profile-btn-builder">⚔️ Adicionar à Equipe</button>
+                <button class="btn btn-secondary" id="profile-btn-map">🗺️ Ver no Mapa</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROFILE LAYOUT -->
+          <div class="aniimo-profile-layout">
+            <!-- LEFT COLUMN: STATS & POTENTIAL -->
+            <div class="aniimo-stat-box">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:12px;">
+                <h3 style="margin:0; font-size:16px; font-weight:900; color:#f8fafc;">Atributos & CP</h3>
+                <span id="profile-cp" style="font-size:15px; font-weight:900; color:#38bcef; background:rgba(56,188,239,0.12); padding:4px 10px; border-radius:8px;">CP ≈ 932</span>
+              </div>
+              <div class="cdm-stats-grid" id="profile-stats-grid" style="display:flex; flex-direction:column; gap:12px;">
+                <!-- Stat bars populated dynamically -->
+              </div>
+            </div>
+
+            <!-- RIGHT COLUMN: CONTENT TABS -->
+            <div class="aniimo-content-tabs">
+              <div class="aniimo-tab-header" id="profile-tabs-header">
+                <button class="aniimo-tab-btn active" data-tab="overview">Visão Geral</button>
+                <button class="aniimo-tab-btn" data-tab="abilities">Habilidades</button>
+                <button class="aniimo-tab-btn" data-tab="evolution">Evolução</button>
+                <button class="aniimo-tab-btn" data-tab="location">Localização</button>
+              </div>
+
+              <!-- TAB 1: OVERVIEW -->
+              <div class="profile-tab-pane active" id="pane-overview">
+                <h4 style="color:#38bcef; margin:0 0 8px 0; font-size:14px; text-transform:uppercase;">Descrição & Biologia</h4>
+                <p id="profile-desc" style="color:#cbd5e1; line-height:1.7; font-size:14px; margin-bottom:24px;"></p>
+
+                <h4 style="color:#38bcef; margin:0 0 12px 0; font-size:14px; text-transform:uppercase;">Itens Recomendados</h4>
+                <div id="profile-recommended-items" style="display:flex; flex-wrap:wrap; gap:12px; margin-bottom:24px;"></div>
+
+                <h4 style="color:#38bcef; margin:0 0 12px 0; font-size:14px; text-transform:uppercase;">Alimentos da Base (Home Food)</h4>
+                <p id="profile-homeland-text" style="color:#94a3b8; font-size:13px; line-height:1.6;"></p>
+              </div>
+
+              <!-- TAB 2: ABILITIES -->
+              <div class="profile-tab-pane" id="pane-abilities" style="display:none;">
+                <h4 style="color:#38bcef; margin:0 0 12px 0; font-size:14px; text-transform:uppercase;">Habilidades de Combate</h4>
+                <div id="profile-skills-list" style="display:flex; flex-direction:column; gap:10px; margin-bottom:24px;"></div>
+              </div>
+
+              <!-- TAB 3: EVOLUTION -->
+              <div class="profile-tab-pane" id="pane-evolution" style="display:none;">
+                <h4 style="color:#38bcef; margin:0 0 12px 0; font-size:14px; text-transform:uppercase;">Cadeia Evolutiva</h4>
+                <div id="profile-evo-chain" style="display:flex; flex-wrap:wrap; gap:12px; align-items:center;"></div>
+              </div>
+
+              <!-- TAB 4: LOCATION -->
+              <div class="profile-tab-pane" id="pane-location" style="display:none;">
+                <h4 style="color:#38bcef; margin:0 0 8px 0; font-size:14px; text-transform:uppercase;">Biomas de Spawn</h4>
+                <p id="profile-habitat-text" style="color:#cbd5e1; font-size:14px; line-height:1.6; margin-bottom:16px;"></p>
+                <button class="btn btn-primary" id="profile-btn-goto-map">🗺️ Abrir no Mapa Interativo</button>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -1,0 +1,624 @@
+[
+  {
+    "tier": "S",
+    "petsCount": 6,
+    "pets": [
+      {
+        "slug": "wavwal",
+        "name": "Wavwal",
+        "dex": "#087",
+        "notScored": false
+      },
+      {
+        "slug": "coraliz",
+        "name": "Coraliz",
+        "dex": "#085",
+        "notScored": true
+      },
+      {
+        "slug": "glameep",
+        "name": "Glameep",
+        "dex": "#089",
+        "notScored": true
+      },
+      {
+        "slug": "gracewing",
+        "name": "Gracewing",
+        "dex": "#029",
+        "notScored": false
+      },
+      {
+        "slug": "hexxin",
+        "name": "Hexxin",
+        "dex": "#021",
+        "notScored": true
+      },
+      {
+        "slug": "somniwing",
+        "name": "Somniwing",
+        "dex": "#030",
+        "notScored": true
+      }
+    ]
+  },
+  {
+    "tier": "A",
+    "petsCount": 46,
+    "pets": [
+      {
+        "slug": "squashel",
+        "name": "Squashel",
+        "dex": "#048",
+        "notScored": false
+      },
+      {
+        "slug": "erlath",
+        "name": "Erlath",
+        "dex": "#081",
+        "notScored": true
+      },
+      {
+        "slug": "leafy",
+        "name": "Leafy",
+        "dex": "#016",
+        "notScored": true
+      },
+      {
+        "slug": "tromber",
+        "name": "Tromber",
+        "dex": "#008",
+        "notScored": true
+      },
+      {
+        "slug": "magmarex",
+        "name": "Magmarex",
+        "dex": "#072",
+        "notScored": false
+      },
+      {
+        "slug": "helgon",
+        "name": "Helgon",
+        "dex": "#066",
+        "notScored": false
+      },
+      {
+        "slug": "tuckin",
+        "name": "Tuckin",
+        "dex": "#022",
+        "notScored": false
+      },
+      {
+        "slug": "irisalis",
+        "name": "Irisalis",
+        "notScored": false
+      },
+      {
+        "slug": "dazmand",
+        "name": "Dazmand",
+        "notScored": true
+      },
+      {
+        "slug": "pomawk",
+        "name": "Pomawk",
+        "dex": "#037",
+        "notScored": false
+      },
+      {
+        "slug": "shrubclaw",
+        "name": "Shrubclaw",
+        "dex": "#024",
+        "notScored": false
+      },
+      {
+        "slug": "gachapus",
+        "name": "Gachapus",
+        "dex": "#091",
+        "notScored": true
+      },
+      {
+        "slug": "inferlupa",
+        "name": "Inferlupa",
+        "dex": "#004",
+        "notScored": false
+      },
+      {
+        "slug": "minespine",
+        "name": "Minespine",
+        "dex": "#074",
+        "notScored": false
+      },
+      {
+        "slug": "geoclaw",
+        "name": "Geoclaw",
+        "dex": "#025",
+        "notScored": false
+      },
+      {
+        "slug": "panpanta",
+        "name": "Panpanta",
+        "dex": "#052",
+        "notScored": false
+      },
+      {
+        "slug": "rookey",
+        "name": "Rookey",
+        "dex": "#063",
+        "notScored": false
+      },
+      {
+        "slug": "malangel",
+        "name": "Malangel",
+        "dex": "#092",
+        "notScored": false
+      },
+      {
+        "slug": "piopiota",
+        "name": "Piopiota",
+        "dex": "#051",
+        "notScored": true
+      },
+      {
+        "slug": "tubster",
+        "name": "Tubster",
+        "dex": "#010",
+        "notScored": false
+      },
+      {
+        "slug": "waleetle",
+        "name": "Waleetle",
+        "dex": "#057",
+        "notScored": false
+      },
+      {
+        "slug": "besauce",
+        "name": "Besauce",
+        "dex": "#082",
+        "notScored": true
+      },
+      {
+        "slug": "turbo",
+        "name": "Turbo",
+        "dex": "#018",
+        "notScored": true
+      },
+      {
+        "slug": "luminelle",
+        "name": "Luminelle",
+        "dex": "#079",
+        "notScored": true
+      },
+      {
+        "slug": "sparkelf",
+        "name": "Sparkelf",
+        "notScored": true
+      },
+      {
+        "slug": "malevsera",
+        "name": "Malevsera",
+        "dex": "#093",
+        "notScored": false
+      },
+      {
+        "slug": "blazen",
+        "name": "Blazen",
+        "dex": "#046",
+        "notScored": false
+      },
+      {
+        "slug": "glacy",
+        "name": "Glacy",
+        "dex": "#015",
+        "notScored": false
+      },
+      {
+        "slug": "dreaple",
+        "name": "Dreaple",
+        "dex": "#019",
+        "notScored": true
+      },
+      {
+        "slug": "scorchhowl",
+        "name": "Scorchhowl",
+        "dex": "#003",
+        "notScored": false
+      },
+      {
+        "slug": "eklue",
+        "name": "Eklue",
+        "dex": "#032",
+        "notScored": true
+      },
+      {
+        "slug": "glynsera",
+        "name": "Glynsera",
+        "dex": "#044",
+        "notScored": false
+      },
+      {
+        "slug": "bailite",
+        "name": "Bailite",
+        "dex": "#076",
+        "notScored": true
+      },
+      {
+        "slug": "flamerion",
+        "name": "Flamerion",
+        "dex": "#027",
+        "notScored": true
+      },
+      {
+        "slug": "fennelun",
+        "name": "Fennelun",
+        "notScored": false
+      },
+      {
+        "slug": "helion",
+        "name": "Helion",
+        "notScored": false
+      },
+      {
+        "slug": "lunara",
+        "name": "Lunara",
+        "notScored": false
+      },
+      {
+        "slug": "soleon",
+        "name": "Soleon",
+        "notScored": false
+      },
+      {
+        "slug": "sherro",
+        "name": "Sherro",
+        "dex": "#055",
+        "notScored": false
+      },
+      {
+        "slug": "thornblade",
+        "name": "Thornblade",
+        "dex": "#034",
+        "notScored": false
+      },
+      {
+        "slug": "fulmintis",
+        "name": "Fulmintis",
+        "notScored": false
+      },
+      {
+        "slug": "bouldus",
+        "name": "Bouldus",
+        "dex": "#058",
+        "notScored": true
+      },
+      {
+        "slug": "cornet",
+        "name": "Cornet",
+        "dex": "#009",
+        "notScored": false
+      },
+      {
+        "slug": "grizbo",
+        "name": "Grizbo",
+        "dex": "#069",
+        "notScored": false
+      },
+      {
+        "slug": "melloblum",
+        "name": "Melloblum",
+        "dex": "#035",
+        "notScored": true
+      },
+      {
+        "slug": "fragrancier",
+        "name": "Fragrancier",
+        "dex": "#039",
+        "notScored": true
+      }
+    ]
+  },
+  {
+    "tier": "B",
+    "petsCount": 22,
+    "pets": [
+      {
+        "slug": "irisal",
+        "name": "Irisal",
+        "dex": "#012",
+        "notScored": false
+      },
+      {
+        "slug": "pawney",
+        "name": "Pawney",
+        "dex": "#062",
+        "notScored": false
+      },
+      {
+        "slug": "infergon",
+        "name": "Infergon",
+        "dex": "#067",
+        "notScored": false
+      },
+      {
+        "slug": "ignitis",
+        "name": "Ignitis",
+        "dex": "#041",
+        "notScored": false
+      },
+      {
+        "slug": "fenmane",
+        "name": "Fenmane",
+        "dex": "#060",
+        "notScored": false
+      },
+      {
+        "slug": "stellarys",
+        "name": "Stellarys",
+        "dex": "#006",
+        "notScored": false
+      },
+      {
+        "slug": "cheekie",
+        "name": "Cheekie",
+        "dex": "#086",
+        "notScored": false
+      },
+      {
+        "slug": "helmwhelp",
+        "name": "Helmwhelp",
+        "dex": "#065",
+        "notScored": false
+      },
+      {
+        "slug": "reefish",
+        "name": "Reefish",
+        "dex": "#084",
+        "notScored": true
+      },
+      {
+        "slug": "pranky",
+        "name": "Pranky",
+        "dex": "#014",
+        "notScored": false
+      },
+      {
+        "slug": "veilfloat",
+        "name": "Veilfloat",
+        "dex": "#078",
+        "notScored": true
+      },
+      {
+        "slug": "bubbeep",
+        "name": "Bubbeep",
+        "dex": "#088",
+        "notScored": true
+      },
+      {
+        "slug": "lavazar",
+        "name": "Lavazar",
+        "dex": "#071",
+        "notScored": false
+      },
+      {
+        "slug": "geodeback",
+        "name": "Geodeback",
+        "dex": "#073",
+        "notScored": false
+      },
+      {
+        "slug": "hummin",
+        "name": "Hummin",
+        "dex": "#020",
+        "notScored": false
+      },
+      {
+        "slug": "fahloo",
+        "name": "Fahloo",
+        "dex": "#080",
+        "notScored": true
+      },
+      {
+        "slug": "squarrel",
+        "name": "Squarrel",
+        "dex": "#047",
+        "notScored": false
+      },
+      {
+        "slug": "popota",
+        "name": "Popota",
+        "dex": "#050",
+        "notScored": false
+      },
+      {
+        "slug": "nimbi",
+        "name": "Nimbi",
+        "dex": "#017",
+        "notScored": true
+      },
+      {
+        "slug": "chirpi",
+        "name": "Chirpi",
+        "dex": "#007",
+        "notScored": true
+      },
+      {
+        "slug": "sheldon",
+        "name": "Sheldon",
+        "dex": "#054",
+        "notScored": false
+      },
+      {
+        "slug": "flameruff",
+        "name": "Flameruff",
+        "dex": "#002",
+        "notScored": false
+      }
+    ]
+  },
+  {
+    "tier": "C",
+    "petsCount": 19,
+    "pets": [
+      {
+        "slug": "budclaw",
+        "name": "Budclaw",
+        "dex": "#023",
+        "notScored": false
+      },
+      {
+        "slug": "fenrier",
+        "name": "Fenrier",
+        "dex": "#043",
+        "notScored": false
+      },
+      {
+        "slug": "cozite",
+        "name": "Cozite",
+        "dex": "#075",
+        "notScored": true
+      },
+      {
+        "slug": "popapus",
+        "name": "Popapus",
+        "dex": "#090",
+        "notScored": true
+      },
+      {
+        "slug": "pomegg",
+        "name": "Pomegg",
+        "dex": "#036",
+        "notScored": false
+      },
+      {
+        "slug": "flutternym",
+        "name": "Flutternym",
+        "dex": "#028",
+        "notScored": false
+      },
+      {
+        "slug": "baleetle",
+        "name": "Baleetle",
+        "dex": "#056",
+        "notScored": false
+      },
+      {
+        "slug": "cubbo",
+        "name": "Cubbo",
+        "dex": "#068",
+        "notScored": false
+      },
+      {
+        "slug": "bolty",
+        "name": "Bolty",
+        "dex": "#045",
+        "notScored": false
+      },
+      {
+        "slug": "sparki",
+        "name": "Sparki",
+        "dex": "#026",
+        "notScored": true
+      },
+      {
+        "slug": "dewy",
+        "name": "Dewy",
+        "dex": "#038",
+        "notScored": true
+      },
+      {
+        "slug": "fentuft",
+        "name": "Fentuft",
+        "dex": "#059",
+        "notScored": false
+      },
+      {
+        "slug": "eko",
+        "name": "Eko",
+        "dex": "#031",
+        "notScored": true
+      },
+      {
+        "slug": "budsquire",
+        "name": "Budsquire",
+        "dex": "#033",
+        "notScored": false
+      },
+      {
+        "slug": "celestis",
+        "name": "Celestis",
+        "dex": "#005",
+        "notScored": false
+      },
+      {
+        "slug": "pebbling",
+        "name": "Pebbling",
+        "dex": "#070",
+        "notScored": false
+      },
+      {
+        "slug": "susuta",
+        "name": "Susuta",
+        "dex": "#049",
+        "notScored": false
+      },
+      {
+        "slug": "wisptis",
+        "name": "Wisptis",
+        "dex": "#040",
+        "notScored": false
+      },
+      {
+        "slug": "bulbly",
+        "name": "Bulbly",
+        "dex": "#077",
+        "notScored": true
+      }
+    ]
+  },
+  {
+    "tier": "D",
+    "petsCount": 7,
+    "pets": [
+      {
+        "slug": "skippy",
+        "name": "Skippy",
+        "dex": "#013",
+        "notScored": false
+      },
+      {
+        "slug": "jawling",
+        "name": "Jawling",
+        "dex": "#064",
+        "notScored": false
+      },
+      {
+        "slug": "iris",
+        "name": "Iris",
+        "dex": "#011",
+        "notScored": false
+      },
+      {
+        "slug": "emberpup",
+        "name": "Emberpup",
+        "dex": "#001",
+        "notScored": false
+      },
+      {
+        "slug": "shelly",
+        "name": "Shelly",
+        "dex": "#053",
+        "notScored": false
+      },
+      {
+        "slug": "helmut",
+        "name": "Helmut",
+        "dex": "#061",
+        "notScored": false
+      },
+      {
+        "slug": "bonesky",
+        "name": "Bonesky",
+        "dex": "#042",
+        "notScored": false
+      }
+    ]
+  }
+]

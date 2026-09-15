@@ -32,15 +32,22 @@ const state = {
   theme: localStorage.getItem('aniidex_theme') || 'dark',
   creatures: [],
   tierListData: [],
+  officialTiers: [],
   mapData: null,
   items: [],
   builderTeam: [null, null, null, null],
   activeSlotIndex: 0,
   communityPosts: [],
   activeRegion: 'breezy-plains',
-  activeTierFilter: 'all',
-  activeTierTab: 'official', // 'official' (100) or 'all' (220)
+  activeTierRole: 'all',
   activeCreatureSearch: '',
+  itemsCurrentPage: 1,
+  itemsPerPage: 60,
+  itemsCategoryFilter: 'all',
+  itemsQualityFilter: 'all',
+  itemsSearchQuery: '',
+  currentProfileCreature: null,
+  activeProfileTab: 'overview',
   mapZoom: 1,
   mapPan: { x: -150, y: -150 },
   activeLayers: new Set(['aniimo', 'teleport', 'chest', 'boss', 'egg', 'resource']),
@@ -81,20 +88,22 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 window.state = state;
 
-const APP_VERSION = '20260915_2205';
+const APP_VERSION = '20260915_2245';
 
 // 4. LOAD ALL DATASETS
 async function loadAppData() {
   try {
-    const [cRes, tRes, iRes, mRes] = await Promise.all([
+    const [cRes, tRes, oRes, iRes, mRes] = await Promise.all([
       fetch(`/data/creatures.json?v=${APP_VERSION}`),
       fetch('/api/tier-list/votes').catch(() => fetch(`/data/tier_list_data.json?v=${APP_VERSION}`)),
+      fetch(`/data/aniidex_official_tiers.json?v=${APP_VERSION}`).catch(() => null),
       fetch(`/data/items.json?v=${APP_VERSION}`),
       fetch(`/data/map_data.json?v=${APP_VERSION}`).catch(() => null)
     ]);
 
     if (cRes.ok) state.creatures = await cRes.json();
     if (tRes && tRes.ok) state.tierListData = await tRes.json();
+    if (oRes && oRes.ok) state.officialTiers = await oRes.json();
     if (iRes.ok) state.items = await iRes.json();
     if (mRes && mRes.ok) state.mapData = await mRes.json();
   } catch (e) {
@@ -144,6 +153,31 @@ function handleRouting() {
   const pathParts = window.location.pathname.replace(/^\/+/, '').split('/').filter(Boolean);
   const rootSegment = (pathParts[0] || 'home').toLowerCase();
 
+  // 1. Dedicated Creature Profile Route: /aniimo/<slug> or /criaturas/<slug>
+  if ((rootSegment === 'aniimo' || rootSegment === 'criaturas') && pathParts[1]) {
+    const slug = pathParts[1];
+    showSection('aniimo-detail');
+    renderAniimoProfilePage(slug);
+    return;
+  }
+
+  // 2. Tier List Sub-Role Route: /tier-list/<role>
+  if ((rootSegment === 'tier-list' || rootSegment === 'tierlist') && pathParts[1]) {
+    const roleSlug = pathParts[1].toLowerCase();
+    const roleMap = {
+      'dps': 'DPS',
+      'break': 'BREAK',
+      'support': 'SUP',
+      'regen': 'ENERGY',
+      'heal': 'HEAL',
+      'overall': 'all'
+    };
+    state.activeTierRole = roleMap[roleSlug] || 'all';
+    showSection('tier-list');
+    renderAniidexTierList();
+    return;
+  }
+
   const routeAliases = {
     '': 'home',
     'home': 'home',
@@ -165,12 +199,10 @@ function handleRouting() {
   const target = routeAliases[rootSegment] || 'home';
   showSection(target);
 
-  // Check if navigating to /aniimo/<slug> or /criaturas/<slug>
-  if ((rootSegment === 'aniimo' || rootSegment === 'criaturas') && pathParts[1]) {
-    const slug = pathParts[1];
-    setTimeout(() => {
-      openCreatureDetailModal(slug);
-    }, 150);
+  if (target === 'tier-list') {
+    renderAniidexTierList();
+  } else if (target === 'itens') {
+    renderItemsDatabase();
   }
 }
 
@@ -481,78 +513,98 @@ function setupCreaturesModule() {
 }
 
 // ----------------------------------------------------------------------------
-// 10. TIER LIST MODULE & COMMUNITY VOTING (/tier-list)
+// 10. TIER LIST MODULE & ROLE FILTERING (1:1 ANIIDEX CLONE)
 // ----------------------------------------------------------------------------
 function setupTierListModule() {
-  // Tabs: 100 Official Aniimos vs 220 Forms
-  const tabCommunity = document.getElementById('tl-tab-community');
-  const tabEditorial = document.getElementById('tl-tab-editorial');
-
-  if (tabCommunity) {
-    tabCommunity.textContent = '☀️ 100 Aniimos Oficiais';
-    tabCommunity.onclick = () => {
-      tabCommunity.classList.add('active');
-      tabEditorial?.classList.remove('active');
-      state.activeTierTab = 'official';
-      renderTierBoard();
-    };
-  }
-
-  if (tabEditorial) {
-    tabEditorial.textContent = '🌀 Todas as Formas & Variantes (220)';
-    tabEditorial.onclick = () => {
-      tabEditorial.classList.add('active');
-      tabCommunity?.classList.remove('active');
-      state.activeTierTab = 'all';
-      renderTierBoard();
-    };
-  }
-
-  document.querySelectorAll('.tl-filter-chip').forEach(chip => {
-    chip.addEventListener('click', () => {
-      document.querySelectorAll('.tl-filter-chip').forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-      state.activeTierFilter = chip.getAttribute('data-element');
-      renderTierBoard();
+  const navRoles = document.getElementById('tier-nav-roles');
+  if (navRoles) {
+    navRoles.querySelectorAll('.tier-nav-btn').forEach(btn => {
+      btn.onclick = () => {
+        navRoles.querySelectorAll('.tier-nav-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        state.activeTierRole = btn.getAttribute('data-role');
+        const roleUrls = {
+          'all': '/tier-list/',
+          'DPS': '/tier-list/dps/',
+          'BREAK': '/tier-list/break/',
+          'SUP': '/tier-list/support/',
+          'ENERGY': '/tier-list/regen/',
+          'HEAL': '/tier-list/heal/'
+        };
+        const targetUrl = roleUrls[state.activeTierRole] || '/tier-list/';
+        if (window.location.pathname !== targetUrl) {
+          history.pushState(null, '', targetUrl);
+        }
+        renderAniidexTierList();
+      };
     });
-  });
-
-  renderTierBoard();
+  }
+  renderAniidexTierList();
 }
 
-function renderTierBoard() {
-  if (!state.tierListData || !state.tierListData.length) return;
+function renderAniidexTierList() {
+  const container = document.getElementById('tier-table-container');
+  if (!container || !state.officialTiers || !state.officialTiers.length) return;
 
-  const tiers = ['S+', 'S', 'A', 'B', 'C', 'D'];
-  tiers.forEach(t => {
-    const container = document.getElementById(`tiles-tier-${t}`);
-    if (!container) return;
+  const roleFilter = state.activeTierRole; // 'all', 'DPS', 'BREAK', 'SUP', 'ENERGY', 'HEAL'
 
-    const matching = state.tierListData.filter(item => {
-      const topT = item.tier || 'B';
-      if (topT !== t) return false;
-      if (state.activeTierFilter !== 'all' && item.element !== state.activeTierFilter) return false;
-      if (state.activeTierTab === 'official' && item.is_form) return false;
+  // Update active state on buttons
+  document.querySelectorAll('.tier-nav-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-role') === roleFilter);
+  });
+
+  const tierColors = {
+    'S': { bg: 'linear-gradient(135deg, #ef4444, #f97316)' },
+    'A': { bg: 'linear-gradient(135deg, #f59e0b, #eab308)' },
+    'B': { bg: 'linear-gradient(135deg, #10b981, #059669)' },
+    'C': { bg: 'linear-gradient(135deg, #3b82f6, #2563eb)' },
+    'D': { bg: 'linear-gradient(135deg, #64748b, #475569)' }
+  };
+
+  container.innerHTML = state.officialTiers.map(tData => {
+    const tier = tData.tier;
+    const style = tierColors[tier] || tierColors['B'];
+
+    const filteredPets = tData.pets.filter(p => {
+      if (roleFilter === 'all') return true;
+      const c = state.creatures.find(cr => cr.slug === p.slug || getBaseSlug(cr.slug) === getBaseSlug(p.slug));
+      if (!c) return false;
+      const role = (c.role_en || c.role || '').toUpperCase();
+      if (roleFilter === 'DPS') return role.includes('DPS');
+      if (roleFilter === 'BREAK') return role.includes('BREAK');
+      if (roleFilter === 'SUP') return role.includes('SUP');
+      if (roleFilter === 'ENERGY') return role.includes('ENERGY') || role.includes('REGEN');
+      if (roleFilter === 'HEAL') return role.includes('HEAL');
       return true;
     });
 
-    if (matching.length === 0) {
-      container.innerHTML = `<span style="font-size:12px; color:var(--ink-soft); padding:8px;">Nenhuma criatura nesta faixa com os filtros ativos</span>`;
-      return;
-    }
-
-    container.innerHTML = matching.map(item => {
-      const baseSlug = getBaseSlug(item.base_slug || item.slug);
-      return `
-        <div class="tl-card" data-slug="${item.slug}" onclick="openCreatureDetailModal('${item.slug}');" title="Ver status completo de ${item.name}">
-          <div class="tl-card-avatar-wrap">
-            <img src="/assets/creatures/${baseSlug}.webp" class="tl-card-img" alt="${item.name}" onerror="this.src='/assets/creatures/${baseSlug}.png'; this.onerror=function(){this.src='/images/home/hero/${baseSlug}.webp'; this.onerror=function(){this.src='/assets/dluz-logo.png';};};" />
-          </div>
-          <span class="tl-card-name">${item.name}</span>
+    return `
+      <div class="tier">
+        <div class="tier-letter tier-${tier}" style="background:${style.bg};">
+          <span>${tier}</span>
         </div>
-      `;
-    }).join('');
-  });
+        <div class="shelf">
+          ${filteredPets.length === 0 ? `
+            <span style="font-size:13px; color:#64748b; padding:16px;">Nenhum Aniimo com função ${roleFilter} neste Tier.</span>
+          ` : filteredPets.map(p => {
+            const baseSlug = getBaseSlug(p.slug);
+            const dexNum = p.dex || '';
+            const notScored = p.notScored;
+            return `
+              <a href="/aniimo/${baseSlug}/" class="pet" onclick="navigateTo('/aniimo/${baseSlug}'); return false;" title="${p.name}">
+                <span class="portrait">
+                  ${dexNum ? `<span class="dex">${dexNum}</span>` : ''}
+                  <img src="/assets/creatures/${baseSlug}.webp" alt="${p.name}" loading="lazy" onerror="this.src='/assets/creatures/${baseSlug}.png'; this.onerror=function(){this.src='/assets/dluz-logo.png';};" />
+                </span>
+                <span class="name">${p.name}</span>
+                ${notScored ? `<span class="kit">kit not scored</span>` : ''}
+              </a>
+            `;
+          }).join('')}
+        </div>
+      </div>
+    `;
+  }).join('');
 }
 
 function openTierVoteModal(item) {
@@ -1079,27 +1131,131 @@ function setupElementsModule() {
 }
 
 // ----------------------------------------------------------------------------
-// 14. ITEMS DATABASE MODULE (/itens)
+// 14. ITEMS DATABASE MODULE (1:1 ANIIDEX 3609 ITEMS)
 // ----------------------------------------------------------------------------
 function setupItemsModule() {
-  const container = document.getElementById('items-full-grid');
-  if (!container || !state.items.length) return;
+  const searchInput = document.getElementById('items-search-input');
+  const catSelect = document.getElementById('items-category-select');
+  const qualSelect = document.getElementById('items-quality-select');
 
-  container.innerHTML = state.items.slice(0, 48).map(item => `
-    <div class="card" style="padding:16px; display:flex; align-items:center; gap:16px; background:rgba(15,23,42,0.75);">
-      <img src="/images/items/ui_item_4040075.webp" onerror="this.src='/assets/dluz-logo.png';" style="width:48px; height:48px; object-fit:contain;" />
-      <div>
-        <h4 style="margin:0; color:#f8fafc; font-size:14px; font-weight:800;">${item.name_pt || item.name}</h4>
-        <p style="margin:4px 0 0 0; font-size:12px; color:#94a3b8; line-height:1.4;">${item.desc_pt || item.description || 'Item essencial de aventura em Idília.'}</p>
-      </div>
-    </div>
-  `).join('');
+  searchInput?.addEventListener('input', (e) => {
+    state.itemsSearchQuery = e.target.value.toLowerCase().trim();
+    state.itemsCurrentPage = 1;
+    renderItemsDatabase();
+  });
+
+  catSelect?.addEventListener('change', (e) => {
+    state.itemsCategoryFilter = e.target.value;
+    state.itemsCurrentPage = 1;
+    renderItemsDatabase();
+  });
+
+  qualSelect?.addEventListener('change', (e) => {
+    state.itemsQualityFilter = e.target.value;
+    state.itemsCurrentPage = 1;
+    renderItemsDatabase();
+  });
+
+  renderItemsDatabase();
 }
 
-// ----------------------------------------------------------------------------
-// 15. COMMUNITY MODULE (/comunidade)
-// ----------------------------------------------------------------------------
-function setupCommunityModule() {
+function renderItemsDatabase() {
+  const grid = document.getElementById('items-grid-container');
+  const pagination = document.getElementById('items-pagination-container');
+  if (!grid || !state.items || !state.items.length) return;
+
+  const q = state.itemsSearchQuery;
+  const cat = state.itemsCategoryFilter;
+  const qual = state.itemsQualityFilter;
+
+  const filtered = state.items.filter(item => {
+    if (q) {
+      const name = (item.name || '').toLowerCase();
+      const desc = (item.funcRep || item.description || '').toLowerCase();
+      if (!name.includes(q) && !desc.includes(q)) return false;
+    }
+    if (cat !== 'all') {
+      const itemCat = item.category || '';
+      const itemSub = item.subcategory || '';
+      if (itemCat !== cat && itemSub !== cat) return false;
+    }
+    if (qual !== 'all') {
+      if (String(item.quality) !== qual) return false;
+    }
+    return true;
+  });
+
+  const total = filtered.length;
+  const perPage = state.itemsPerPage || 60;
+  const totalPages = Math.ceil(total / perPage) || 1;
+  const page = Math.min(Math.max(1, state.itemsCurrentPage), totalPages);
+  state.itemsCurrentPage = page;
+
+  const start = (page - 1) * perPage;
+  const pageItems = filtered.slice(start, start + perPage);
+
+  if (pageItems.length === 0) {
+    grid.innerHTML = `
+      <div style="grid-column: 1 / -1; text-align:center; padding:50px 20px;">
+        <h3 style="color:#f8fafc; margin-bottom:8px;">Nenhum item encontrado</h3>
+        <p style="color:#64748b;">Tente ajustar sua busca ou selecionar outra categoria.</p>
+      </div>
+    `;
+    if (pagination) pagination.innerHTML = '';
+    return;
+  }
+
+  grid.innerHTML = pageItems.map(item => {
+    const quality = item.quality || 1;
+    const category = item.category || item.subcategory || 'Geral';
+    const iconUrl = item.icon ? `https://aniidex.com/_ipx/q_95&fit_inside&s_96x96${item.icon}` : '/assets/dluz-logo.png';
+    const desc = (item.funcRep || item.description || '').replace(/"/g, '&quot;');
+
+    return `
+      <div class="item-card" title="${desc}">
+        <div class="item-icon-box quality-${quality}">
+          <img src="${iconUrl}" alt="${item.name}" loading="lazy" onerror="this.src='/images/items/ui_item_4040075.webp'; this.onerror=function(){this.src='/assets/dluz-logo.png';};" />
+        </div>
+        <div class="item-name">${item.name}</div>
+        <div class="item-category">${category}</div>
+      </div>
+    `;
+  }).join('');
+
+  // Pagination controls
+  if (pagination) {
+    let pagesHtml = '';
+    pagesHtml += `<button class="page-btn" ${page <= 1 ? 'disabled' : ''} onclick="goToItemsPage(${page - 1})">Anterior</button>`;
+
+    const range = [];
+    for (let i = 1; i <= totalPages; i++) {
+      if (i === 1 || i === totalPages || (i >= page - 2 && i <= page + 2)) {
+        range.push(i);
+      } else if (range[range.length - 1] !== '...') {
+        range.push('...');
+      }
+    }
+
+    range.forEach(p => {
+      if (p === '...') {
+        pagesHtml += `<span style="color:#64748b; padding:0 4px;">...</span>`;
+      } else {
+        pagesHtml += `<button class="page-btn ${p === page ? 'active' : ''}" onclick="goToItemsPage(${p})">${p}</button>`;
+      }
+    });
+
+    pagesHtml += `<button class="page-btn" ${page >= totalPages ? 'disabled' : ''} onclick="goToItemsPage(${page + 1})">Próxima</button>`;
+    pagination.innerHTML = pagesHtml;
+  }
+}
+
+window.goToItemsPage = function(p) {
+  state.itemsCurrentPage = p;
+  renderItemsDatabase();
+  document.getElementById('section-itens')?.scrollIntoView({ behavior: 'smooth' });
+};
+
+// 15. COMMUNITY MODULE() {
   const container = document.getElementById('comm-posts-stream');
   if (!container) return;
 
@@ -1225,3 +1381,224 @@ function showToast(message, type = 'info') {
   }, 3200);
 }
 window.showToast = showToast;
+
+// ----------------------------------------------------------------------------
+// 18. DEDICATED ANIIMO PROFILE PAGE ENGINE (/aniimo/:slug)
+// ----------------------------------------------------------------------------
+function renderAniimoProfilePage(creatureOrSlug) {
+  const baseSlug = getBaseSlug(creatureOrSlug);
+  let creature = state.creatures.find(c => c.slug === baseSlug || getBaseSlug(c.slug) === baseSlug);
+  if (!creature) {
+    const tItem = (state.tierListData || []).find(t => getBaseSlug(t.slug) === baseSlug);
+    if (tItem) {
+      creature = {
+        name_pt: tItem.name,
+        name_en: tItem.name,
+        slug: baseSlug,
+        number: '#000',
+        element: tItem.element || 'fogo',
+        role: 'DPS',
+        tier: tItem.tier || 'A'
+      };
+    }
+  }
+
+  if (!creature) return;
+
+  state.currentProfileCreature = creature;
+
+  // Breadcrumbs
+  const crumbName = document.getElementById('profile-crumb-name');
+  if (crumbName) crumbName.textContent = creature.name_pt || creature.name;
+
+  // Header
+  const nameEl = document.getElementById('profile-name');
+  if (nameEl) nameEl.textContent = `${creature.name_pt || creature.name} Aniimo`;
+
+  const dexEl = document.getElementById('profile-dex');
+  if (dexEl) dexEl.textContent = creature.number || '#001';
+
+  const imgEl = document.getElementById('profile-img');
+  if (imgEl) {
+    imgEl.src = `/assets/creatures/${baseSlug}.webp`;
+    imgEl.onerror = function() {
+      this.src = `/assets/creatures/${baseSlug}.png`;
+      this.onerror = function() { this.src = '/assets/dluz-logo.png'; };
+    };
+  }
+
+  const elemInfo = ELEMENT_MAP[creature.element || 'fogo'] || { name: 'Fogo', icon: '🔥', bg: '#EF4444' };
+  const badgeElem = document.getElementById('profile-badge-element');
+  if (badgeElem) {
+    badgeElem.innerHTML = `${elemInfo.icon} ${elemInfo.name}`;
+    badgeElem.style.background = elemInfo.bg;
+  }
+
+  const badgeRole = document.getElementById('profile-badge-role');
+  if (badgeRole) badgeRole.textContent = creature.role_pt || creature.role || 'DPS';
+
+  const badgeStage = document.getElementById('profile-badge-stage');
+  if (badgeStage) badgeStage.textContent = `Estágio ${creature.stage || 'Básico'}`;
+
+  // Find tier from official tiers
+  let curTier = creature.tier || 'B';
+  if (state.officialTiers) {
+    for (const ot of state.officialTiers) {
+      if (ot.pets.some(p => getBaseSlug(p.slug) === baseSlug)) {
+        curTier = ot.tier;
+        break;
+      }
+    }
+  }
+  const badgeTier = document.getElementById('profile-badge-tier');
+  if (badgeTier) {
+    badgeTier.textContent = `TIER ${curTier}`;
+    const tierColors = { 'S+': '#ef4444', 'S': '#f97316', 'A': '#eab308', 'B': '#10b981', 'C': '#3b82f6', 'D': '#6b7280' };
+    badgeTier.style.background = tierColors[curTier] || '#10b981';
+  }
+
+  // Buttons
+  const btnVote = document.getElementById('profile-btn-vote');
+  if (btnVote) {
+    btnVote.onclick = () => {
+      openTierVoteModal({
+        slug: baseSlug,
+        name: creature.name_pt || creature.name,
+        element: creature.element,
+        tier: curTier,
+        votes: { 'S+': 10, 'S': 20, 'A': 40, 'B': 20, 'C': 5, 'D': 5 }
+      });
+    };
+  }
+
+  const btnBuilder = document.getElementById('profile-btn-builder');
+  if (btnBuilder) {
+    btnBuilder.onclick = () => {
+      let emptyIdx = state.builderTeam.findIndex(slot => slot === null);
+      if (emptyIdx === -1) emptyIdx = 0;
+      state.builderTeam[emptyIdx] = creature;
+      renderBuilderSlot(emptyIdx + 1);
+      updateBuilderSynergy();
+      showToast(`⚔️ ${creature.name_pt || creature.name} adicionado ao Slot ${emptyIdx + 1} do Montador!`, 'success');
+    };
+  }
+
+  const btnMap = document.getElementById('profile-btn-map');
+  const btnGotoMap = document.getElementById('profile-btn-goto-map');
+  const goToMap = () => {
+    navigateTo('/mapa');
+    showToast(`📍 Rastreador ativado para ${creature.name_pt || creature.name} no mapa!`, 'info');
+  };
+  if (btnMap) btnMap.onclick = goToMap;
+  if (btnGotoMap) btnGotoMap.onclick = goToMap;
+
+  // Stats & CP
+  const stats = creature.stats || { 'HP': 65, 'ATK': 85, 'P.DEF': 60, 'M.DEF': 55, 'REGEN': 50, 'BREAK': 60 };
+  const cpVal = Math.round(((stats['HP']||60)*2 + (stats['ATK']||70)*3 + (stats['P.DEF']||50)*1.5 + (stats['M.DEF']||50)*1.5) * 1.8);
+  const cpEl = document.getElementById('profile-cp');
+  if (cpEl) cpEl.textContent = `CP ≈ ${cpVal}`;
+
+  const statsGrid = document.getElementById('profile-stats-grid');
+  if (statsGrid) {
+    const maxStatValues = { 'HP': 120, 'ATK': 130, 'M.ATK': 130, 'P.DEF': 110, 'M.DEF': 110, 'REGEN': 100, 'BREAK': 100, 'HASTE': 100 };
+    statsGrid.innerHTML = Object.entries(stats).map(([statKey, val]) => {
+      const maxVal = maxStatValues[statKey] || 100;
+      const pct = Math.min(100, Math.round((val / maxVal) * 100));
+      return `
+        <div class="cdm-stat-item">
+          <div class="cdm-stat-top">
+            <span class="cdm-stat-label">${statKey}</span>
+            <span class="cdm-stat-val">${val}</span>
+          </div>
+          <div class="cdm-stat-track">
+            <div class="cdm-stat-bar" style="width:${pct}%;"></div>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Tab 1: Overview
+  const descEl = document.getElementById('profile-desc');
+  if (descEl) descEl.textContent = creature.description_pt || creature.description || 'Uma fascinante criatura de Idília com dons elementais excepcionais.';
+
+  const recItems = document.getElementById('profile-recommended-items');
+  if (recItems) {
+    const sampleItemNames = ['Ferocious Fang', 'Gargantuan Horn', 'Ether Heart', 'Aniipod Ultra'];
+    const foundItems = (state.items || []).filter(i => sampleItemNames.some(s => i.name.includes(s))).slice(0, 3);
+    recItems.innerHTML = foundItems.map(item => `
+      <div style="display:flex; align-items:center; gap:12px; padding:12px 16px; background:rgba(0,0,0,0.35); border-radius:12px; border:1px solid rgba(255,255,255,0.08);">
+        <img src="https://aniidex.com/_ipx/q_95&fit_inside&s_96x96${item.icon}" style="width:40px; height:40px; object-fit:contain;" onerror="this.src='/images/items/ui_item_4040075.webp'; this.onerror=function(){this.src='/assets/dluz-logo.png';};" />
+        <div>
+          <strong style="color:#f8fafc; font-size:13px;">${item.name}</strong>
+          <span style="display:block; font-size:11px; color:#94a3b8;">${item.category} • Efeito Passivo</span>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  const homelandEl = document.getElementById('profile-homeland-text');
+  if (homelandEl) homelandEl.textContent = creature.homeland_pt || 'Consumo: 10 Energia/min. Alimentos ideais: Apple Candy, Apple Tart, Berry Chocolate Pudding.';
+
+  // Tab 2: Abilities
+  const skillsList = document.getElementById('profile-skills-list');
+  if (skillsList) {
+    const skills = creature.skills_pt || [
+      { name: `Investida de ${elemInfo.name}`, desc: `Ataque primário rápido que desfere dano do tipo ${elemInfo.name}.`, cost: '10 energia' },
+      { name: `Explosão Elemental`, desc: `Canaliza energia pura causando alto impacto e quebra de escudo.`, cost: '15 energia' },
+      { name: `Vontade de Idília (Passiva)`, desc: `Aumenta em 15% a regeneração de energia e a resistência elemental da equipe.`, cost: 'Passiva' }
+    ];
+    skillsList.innerHTML = skills.map(s => `
+      <div class="cdm-skill-card">
+        <div class="cdm-skill-info">
+          <span class="cdm-skill-name">${s.name}</span>
+          <span class="cdm-skill-desc">${s.desc}</span>
+        </div>
+        <span class="cdm-skill-cost">${s.cost || '12 energia'}</span>
+      </div>
+    `).join('');
+  }
+
+  // Tab 3: Evolution
+  const evoChainContainer = document.getElementById('profile-evo-chain');
+  if (evoChainContainer) {
+    const evoChain = creature.evolution_path || [creature.name_pt || creature.name || baseSlug];
+    evoChainContainer.innerHTML = evoChain.map((evoItem, idx) => {
+      const rawName = typeof evoItem === 'object' ? (evoItem.nameClean || evoItem.name || evoItem.slug) : evoItem;
+      const evoSlug = getBaseSlug(evoItem);
+      const isCurrent = evoSlug === baseSlug;
+      return `
+        <a href="/aniimo/${evoSlug}/" onclick="navigateTo('/aniimo/${evoSlug}'); return false;" class="cdm-evo-card ${isCurrent ? 'current' : ''}" style="cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:6px; padding:10px 16px; background:${isCurrent ? 'rgba(56,189,240,0.15)' : 'rgba(255,255,255,0.04)'}; border-radius:12px; border:1px solid ${isCurrent ? '#38bcef' : 'rgba(255,255,255,0.08)'}; text-decoration:none;">
+          <img src="/assets/creatures/${evoSlug}.webp" style="width:54px; height:54px; object-fit:contain;" onerror="this.src='/assets/creatures/${evoSlug}.png'; this.onerror=function(){this.src='/assets/dluz-logo.png';};" />
+          <span style="font-size:12px; font-weight:800; color:${isCurrent ? '#38bcef' : '#cbd5e1'};">${rawName}</span>
+        </a>
+        ${idx < evoChain.length - 1 ? '<span style="color:#64748b; font-weight:900; align-self:center; font-size:18px;">→</span>' : ''}
+      `;
+    }).join('');
+  }
+
+  // Tab 4: Location
+  const habitatEl = document.getElementById('profile-habitat-text');
+  if (habitatEl) habitatEl.textContent = creature.habitat_pt || 'Planícies Ventosas • Ilhas Centrais de Idília';
+
+  // Setup tabs switching
+  const tabsHeader = document.getElementById('profile-tabs-header');
+  if (tabsHeader) {
+    tabsHeader.querySelectorAll('.aniimo-tab-btn').forEach(btn => {
+      btn.onclick = () => {
+        tabsHeader.querySelectorAll('.aniimo-tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const tab = btn.getAttribute('data-tab');
+        document.querySelectorAll('.profile-tab-pane').forEach(p => p.style.display = 'none');
+        const activePane = document.getElementById(`pane-${tab}`);
+        if (activePane) activePane.style.display = 'block';
+      };
+    });
+  }
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+window.renderAniimoProfilePage = renderAniimoProfilePage;
+window.renderAniidexTierList = renderAniidexTierList;
+window.renderItemsDatabase = renderItemsDatabase;
