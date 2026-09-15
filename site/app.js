@@ -199,13 +199,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 async function loadData() {
   try {
     const [creaturesRes, codesRes, typeRes, tierRes, mapRes, itemsRes, guidesRes] = await Promise.all([
-      fetch('data/creatures.json'),
-      fetch('data/codes.json'),
-      fetch('data/type_chart.json'),
-      fetch('data/tier_list.json'),
-      fetch('data/map_data.json'),
-      fetch('data/items.json'),
-      fetch('data/guides.json')
+      fetch('/data/creatures.json'),
+      fetch('/data/codes.json'),
+      fetch('/data/type_chart.json'),
+      fetch('/data/tier_list.json'),
+      fetch('/data/map_data.json'),
+      fetch('/data/items.json'),
+      fetch('/data/guides.json')
     ]);
 
     state.creatures = await creaturesRes.json();
@@ -220,10 +220,23 @@ async function loadData() {
   }
 }
 
-// NAVIGATION & ROUTING
+// CLEAN HTML5 NAVIGATION & ROUTING
+function navigateTo(path, push = true) {
+  if (push && window.location.pathname !== path) {
+    history.pushState(null, '', path);
+  }
+  handleRouting();
+}
+
 function setupNavigation() {
-  window.addEventListener('hashchange', () => {
-    handleRouting();
+  // Global click delegation for clean internal links
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href^="/"]');
+    if (a && !a.target && !a.hasAttribute('download') && a.origin === window.location.origin) {
+      e.preventDefault();
+      const href = a.getAttribute('href');
+      navigateTo(href);
+    }
   });
 
   window.addEventListener('popstate', () => {
@@ -247,15 +260,25 @@ function setupNavigation() {
 }
 
 function handleRouting() {
-  // Check pathname first (e.g. /inferlupa or /codigos) or hash
-  let raw = window.location.hash.replace(/^#\/?/, '') || window.location.pathname.replace(/^\/+/, '');
+  // Sanitize any accidental or legacy hash (e.g. /bailite#/tier-list or #/tier-list)
+  if (window.location.hash) {
+    const cleanFromHash = window.location.hash.replace(/^#\/?/, '').trim();
+    if (cleanFromHash) {
+      history.replaceState(null, '', '/' + cleanFromHash);
+    } else {
+      history.replaceState(null, '', window.location.pathname || '/');
+    }
+  }
+
+  // Parse clean pathname (e.g. /inferlupa or /codigos)
+  let raw = window.location.pathname.replace(/^\/+/, '').trim().toLowerCase();
   raw = raw.split('/')[0] || 'home';
 
   // Check if raw matches a creature slug directly (Deep Linking!)
-  const foundCreature = state.creatures.find(c => c.slug.toLowerCase() === raw.toLowerCase());
+  const foundCreature = state.creatures && state.creatures.find(c => c.slug.toLowerCase() === raw);
   if (foundCreature) {
     showSection('criaturas');
-    openCreatureModal(foundCreature);
+    openCreatureModal(foundCreature, false);
     document.title = `${foundCreature.name_pt} (${foundCreature.number}) — Aniimo Tools Brasil`;
     return;
   }
@@ -281,8 +304,14 @@ function handleRouting() {
     'guides': 'guias'
   };
 
-  const target = routeAliases[raw.toLowerCase()] || 'home';
+  const target = routeAliases[raw] || 'home';
   showSection(target);
+
+  // Close creature modal if navigating to a normal page
+  const modal = document.getElementById('creature-modal');
+  if (modal && modal.classList.contains('open')) {
+    modal.classList.remove('open');
+  }
 
   // Update Page Title dynamically
   const titles = {
@@ -310,8 +339,8 @@ function showSection(target) {
 
   // Update active nav link
   document.querySelectorAll('.nav-item a').forEach(a => {
-    const href = a.getAttribute('href').replace(/^#\/?/, '');
-    if (href === target || (target === 'home' && href === '')) {
+    const href = a.getAttribute('href').replace(/^\/+/, '') || 'home';
+    if (href === target || (target === 'home' && href === 'home')) {
       a.classList.add('active');
     } else {
       a.classList.remove('active');
@@ -368,19 +397,19 @@ function setupCommandPalette() {
 
     // Quick Tool Links
     const tools = [
-      { title: isPt ? 'Códigos de Resgate' : 'Redeem Codes', sub: isPt ? 'Ferramenta de códigos promocionais' : 'Redeem promo codes', hash: '#/codigos', icon: '🎁' },
-      { title: isPt ? 'Registro Anii (Criaturas)' : 'Anii Register (Creatures)', sub: isPt ? 'Catálogo das 94 criaturas' : '94 Creatures database', hash: '#/criaturas', icon: '🐾' },
-      { title: isPt ? 'Comparador de Criaturas' : 'Creature Comparator', sub: isPt ? 'Comparar atributos e tipos lado a lado' : 'Side-by-side stats comparison', hash: '#/comparador', icon: '⚔️' },
-      { title: isPt ? 'Mapa Interativo' : 'Interactive Map', sub: isPt ? 'Planícies Ventosas (Breezy Plains)' : 'Explore Breezy Plains', hash: '#/mapa', icon: '🗺️' },
-      { title: isPt ? 'Tabela de Tipos' : 'Type Chart', sub: isPt ? 'Matriz e calculadora elemental' : 'Elemental matchup calculator', hash: '#/tabela-tipos', icon: '🔮' },
-      { title: isPt ? 'Tier List do Meta' : 'Meta Tier List', sub: isPt ? 'Rankings S+, S, A e B' : 'S+, S, A, B Rankings', hash: '#/tier-list', icon: '🏆' }
+      { title: isPt ? 'Códigos de Resgate' : 'Redeem Codes', sub: isPt ? 'Ferramenta de códigos promocionais' : 'Redeem promo codes', path: '/codigos', icon: '🎁' },
+      { title: isPt ? 'Registro Anii (Criaturas)' : 'Anii Register (Creatures)', sub: isPt ? 'Catálogo das 94 criaturas' : '94 Creatures database', path: '/criaturas', icon: '🐾' },
+      { title: isPt ? 'Comparador de Criaturas' : 'Creature Comparator', sub: isPt ? 'Comparar atributos e tipos lado a lado' : 'Side-by-side stats comparison', path: '/comparador', icon: '⚔️' },
+      { title: isPt ? 'Mapa Interativo' : 'Interactive Map', sub: isPt ? 'Planícies Ventosas (Breezy Plains)' : 'Explore Breezy Plains', path: '/mapa', icon: '🗺️' },
+      { title: isPt ? 'Tabela de Tipos' : 'Type Chart', sub: isPt ? 'Matriz e calculadora elemental' : 'Elemental matchup calculator', path: '/tabela-tipos', icon: '🔮' },
+      { title: isPt ? 'Tier List do Meta' : 'Meta Tier List', sub: isPt ? 'Rankings S+, S, A e B' : 'S+, S, A, B Rankings', path: '/tier-list', icon: '🏆' }
     ];
 
     const matchingTools = tools.filter(t => !query || t.title.toLowerCase().includes(query) || t.sub.toLowerCase().includes(query));
     if (matchingTools.length > 0) {
       itemsHtml += `<li style="padding:0.4rem 0.8rem; font-size:0.75rem; font-weight:800; color:var(--ink-muted); text-transform:uppercase;">${isPt ? 'Ferramentas' : 'Tools'}</li>`;
       itemsHtml += matchingTools.map(t => `
-        <li class="command-item" data-action="nav" data-hash="${t.hash}">
+        <li class="command-item" data-action="nav" data-path="${t.path}">
           <span style="font-size:1.4rem;">${t.icon}</span>
           <div class="command-item-text">
             <div class="command-item-title">${t.title}</div>
@@ -419,14 +448,10 @@ function setupCommandPalette() {
         closePalette();
         const action = li.getAttribute('data-action');
         if (action === 'nav') {
-          window.location.hash = li.getAttribute('data-hash');
+          navigateTo(li.getAttribute('data-path'));
         } else if (action === 'creature') {
           const slug = li.getAttribute('data-slug');
-          const c = state.creatures.find(cr => cr.slug === slug);
-          if (c) {
-            window.location.hash = '#/criaturas';
-            openCreatureModal(c);
-          }
+          navigateTo('/' + slug);
         }
       });
     });
@@ -816,7 +841,7 @@ function updateVersusDisplay() {
   }
 }
 
-// INTERACTIVE MAP WITH PROGRESS
+// INTERACTIVE MAP WITH WHEEL ZOOM, PAN & PROGRESS
 function setupMap() {
   renderMap();
 
@@ -825,18 +850,171 @@ function setupMap() {
   const zoomIn = document.getElementById('map-zoom-in');
   const zoomOut = document.getElementById('map-zoom-out');
   const zoomReset = document.getElementById('map-zoom-reset');
+  const zoomBadge = document.getElementById('map-zoom-badge');
   const filterUnfoundBtn = document.getElementById('map-filter-unfound');
   const resetProgressBtn = document.getElementById('map-reset-progress');
+  const selectAllBtn = document.getElementById('map-select-all-layers');
+  const deselectAllBtn = document.getElementById('map-deselect-all-layers');
+  const detailCard = document.getElementById('map-detail-card');
+  const detailCloseBtn = document.getElementById('map-detail-close');
 
   if (!viewport || !container) return;
 
   function updateTransform() {
     container.style.transform = `translate(${state.mapPan.x}px, ${state.mapPan.y}px) scale(${state.mapZoom})`;
+    if (zoomBadge) {
+      zoomBadge.textContent = `${Math.round(state.mapZoom * 100)}%`;
+    }
   }
 
-  if (zoomIn) zoomIn.addEventListener('click', () => { state.mapZoom = Math.min(state.mapZoom + 0.25, 3); updateTransform(); });
-  if (zoomOut) zoomOut.addEventListener('click', () => { state.mapZoom = Math.max(state.mapZoom - 0.25, 0.5); updateTransform(); });
-  if (zoomReset) zoomReset.addEventListener('click', () => { state.mapZoom = 1; state.mapPan = { x: 0, y: 0 }; updateTransform(); });
+  // Initial center of map inside viewport
+  function centerMapInitially() {
+    const vpRect = viewport.getBoundingClientRect();
+    if (vpRect.width > 0 && vpRect.height > 0) {
+      // center around the main island / starter region (x: ~500px, y: ~400px)
+      state.mapPan.x = (vpRect.width / 2) - 450 * state.mapZoom;
+      state.mapPan.y = (vpRect.height / 2) - 380 * state.mapZoom;
+      updateTransform();
+    }
+  }
+  setTimeout(centerMapInitially, 100);
+
+  // 1. MOUSE WHEEL ZOOM (Centered at cursor)
+  viewport.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    const zoomFactor = e.deltaY < 0 ? 1.15 : 0.87;
+    const oldZoom = state.mapZoom;
+    const newZoom = Math.min(Math.max(oldZoom * zoomFactor, 0.4), 3.5);
+    if (newZoom === oldZoom) return;
+
+    const rect = viewport.getBoundingClientRect();
+    const mouseX = e.clientX - rect.left;
+    const mouseY = e.clientY - rect.top;
+
+    state.mapPan.x = mouseX - (mouseX - state.mapPan.x) * (newZoom / oldZoom);
+    state.mapPan.y = mouseY - (mouseY - state.mapPan.y) * (newZoom / oldZoom);
+    state.mapZoom = newZoom;
+    updateTransform();
+  }, { passive: false });
+
+  // 2. MOUSE DRAGGING (PAN)
+  let isDragging = false;
+  let startX = 0;
+  let startY = 0;
+
+  viewport.addEventListener('mousedown', (e) => {
+    if (e.target.closest('.map-marker') || e.target.closest('.map-controls') || e.target.closest('.map-detail-card')) return;
+    isDragging = true;
+    startX = e.clientX - state.mapPan.x;
+    startY = e.clientY - state.mapPan.y;
+    viewport.style.cursor = 'grabbing';
+  });
+
+  window.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    state.mapPan.x = e.clientX - startX;
+    state.mapPan.y = e.clientY - startY;
+    updateTransform();
+  });
+
+  window.addEventListener('mouseup', () => {
+    if (isDragging) {
+      isDragging = false;
+      viewport.style.cursor = 'grab';
+    }
+  });
+
+  // 3. TOUCH PAN & PINCH-TO-ZOOM (Mobile / Tablet)
+  let initialTouchDist = null;
+  let initialTouchZoom = 1;
+
+  viewport.addEventListener('touchstart', (e) => {
+    if (e.target.closest('.map-marker') || e.target.closest('.map-controls') || e.target.closest('.map-detail-card')) return;
+    if (e.touches.length === 1) {
+      isDragging = true;
+      startX = e.touches[0].clientX - state.mapPan.x;
+      startY = e.touches[0].clientY - state.mapPan.y;
+    } else if (e.touches.length === 2) {
+      isDragging = false;
+      initialTouchDist = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+      initialTouchZoom = state.mapZoom;
+    }
+  }, { passive: true });
+
+  viewport.addEventListener('touchmove', (e) => {
+    if (e.touches.length === 1 && isDragging) {
+      state.mapPan.x = e.touches[0].clientX - startX;
+      state.mapPan.y = e.touches[0].clientY - startY;
+      updateTransform();
+    } else if (e.touches.length === 2 && initialTouchDist) {
+      const dist = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+      const factor = dist / initialTouchDist;
+      state.mapZoom = Math.min(Math.max(initialTouchZoom * factor, 0.4), 3.5);
+      updateTransform();
+    }
+  }, { passive: true });
+
+  viewport.addEventListener('touchend', () => {
+    isDragging = false;
+    initialTouchDist = null;
+  });
+
+  // 4. ZOOM BUTTONS
+  if (zoomIn) {
+    zoomIn.addEventListener('click', () => {
+      const oldZoom = state.mapZoom;
+      state.mapZoom = Math.min(state.mapZoom + 0.25, 3.5);
+      const rect = viewport.getBoundingClientRect();
+      const cx = rect.width / 2;
+      const cy = rect.height / 2;
+      state.mapPan.x = cx - (cx - state.mapPan.x) * (state.mapZoom / oldZoom);
+      state.mapPan.y = cy - (cy - state.mapPan.y) * (state.mapZoom / oldZoom);
+      updateTransform();
+    });
+  }
+
+  if (zoomOut) {
+    zoomOut.addEventListener('click', () => {
+      const oldZoom = state.mapZoom;
+      state.mapZoom = Math.max(state.mapZoom - 0.25, 0.4);
+      const rect = viewport.getBoundingClientRect();
+      const cx = rect.width / 2;
+      const cy = rect.height / 2;
+      state.mapPan.x = cx - (cx - state.mapPan.x) * (state.mapZoom / oldZoom);
+      state.mapPan.y = cy - (cy - state.mapPan.y) * (state.mapZoom / oldZoom);
+      updateTransform();
+    });
+  }
+
+  if (zoomReset) {
+    zoomReset.addEventListener('click', () => {
+      state.mapZoom = 1;
+      centerMapInitially();
+    });
+  }
+
+  // 5. LAYER TOGGLE BUTTONS
+  if (selectAllBtn) {
+    selectAllBtn.addEventListener('click', () => {
+      if (state.mapData) {
+        state.mapData.categories.forEach(c => state.activeLayers.add(c.id));
+        renderMap();
+      }
+    });
+  }
+
+  if (deselectAllBtn) {
+    deselectAllBtn.addEventListener('click', () => {
+      state.activeLayers.clear();
+      renderMap();
+    });
+  }
 
   if (filterUnfoundBtn) {
     filterUnfoundBtn.addEventListener('click', () => {
@@ -861,25 +1039,20 @@ function setupMap() {
     });
   }
 
-  // Pan dragging
-  let isDragging = false;
-  let startX, startY;
+  // 6. DETAIL CARD CLOSE
+  if (detailCloseBtn) {
+    detailCloseBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      detailCard.classList.remove('visible');
+    });
+  }
 
-  viewport.addEventListener('mousedown', (e) => {
-    if (e.target.closest('.map-marker') || e.target.closest('.map-controls')) return;
-    isDragging = true;
-    startX = e.clientX - state.mapPan.x;
-    startY = e.clientY - state.mapPan.y;
+  // Clicking viewport canvas closes detail card
+  viewport.addEventListener('click', (e) => {
+    if (!e.target.closest('.map-marker') && !e.target.closest('.map-detail-card') && !e.target.closest('.map-controls')) {
+      if (detailCard) detailCard.classList.remove('visible');
+    }
   });
-
-  window.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    state.mapPan.x = e.clientX - startX;
-    state.mapPan.y = e.clientY - startY;
-    updateTransform();
-  });
-
-  window.addEventListener('mouseup', () => { isDragging = false; });
 }
 
 function updateMapProgress() {
@@ -900,12 +1073,17 @@ function renderMap() {
   const isPt = state.lang === 'pt';
 
   if (layersEl) {
-    layersEl.innerHTML = state.mapData.categories.map(cat => `
-      <li class="map-layer-item ${state.activeLayers.has(cat.id) ? 'active' : ''}" data-layer="${cat.id}">
-        <span>${cat.icon} ${isPt ? cat.name_pt : cat.name_en}</span>
-        <input type="checkbox" ${state.activeLayers.has(cat.id) ? 'checked' : ''} />
-      </li>
-    `).join('');
+    layersEl.innerHTML = state.mapData.categories.map(cat => {
+      const count = state.mapData.markers.filter(m => m.cat === cat.id).length;
+      const isChecked = state.activeLayers.has(cat.id);
+      return `
+        <li class="map-layer-item ${isChecked ? 'active' : ''}" data-layer="${cat.id}">
+          <span>${cat.icon} ${isPt ? cat.name_pt : cat.name_en}</span>
+          <span class="map-layer-count">(${count})</span>
+          <input type="checkbox" ${isChecked ? 'checked' : ''} />
+        </li>
+      `;
+    }).join('');
 
     layersEl.querySelectorAll('.map-layer-item').forEach(li => {
       li.addEventListener('click', () => {
@@ -967,14 +1145,15 @@ function openMarkerDetail(m) {
   const cat = state.mapData.categories.find(c => c.id === m.cat) || {};
 
   card.querySelector('.map-detail-title').textContent = isPt ? m.name_pt : m.name_en;
-  card.querySelector('.map-detail-category').textContent = `${cat.icon} ${isPt ? cat.name_pt : cat.name_en}`;
+  card.querySelector('.map-detail-category').innerHTML = `<span style="color:${cat.color}; font-weight:800;">${cat.icon} ${isPt ? cat.name_pt : cat.name_en}</span> • <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--ink-muted);">${m.x.toFixed(1)}%, ${m.y.toFixed(1)}%</span>`;
   card.querySelector('.map-detail-desc').textContent = isPt ? m.desc_pt : m.desc_en;
 
   const foundBtn = card.querySelector('#btn-mark-found');
   const isFound = state.foundMarkers.has(m.id);
   foundBtn.textContent = isFound ? (isPt ? '✓ Encontrado' : '✓ Found') : (isPt ? 'Marcar como Encontrado' : 'Mark as Found');
 
-  foundBtn.onclick = () => {
+  foundBtn.onclick = (e) => {
+    e.stopPropagation();
     if (state.foundMarkers.has(m.id)) {
       state.foundMarkers.delete(m.id);
       foundBtn.textContent = isPt ? 'Marcar como Encontrado' : 'Mark as Found';
@@ -988,6 +1167,21 @@ function openMarkerDetail(m) {
   };
 
   card.classList.add('visible');
+
+  // Center marker smoothly in view
+  centerMarkerInView(m);
+}
+
+function centerMarkerInView(m) {
+  const viewport = document.getElementById('map-viewport');
+  const container = document.getElementById('map-container');
+  if (!viewport || !container) return;
+  const rect = viewport.getBoundingClientRect();
+  const markerPxX = (m.x / 100) * 1000;
+  const markerPxY = (m.y / 100) * 1000;
+  state.mapPan.x = (rect.width / 2) - (markerPxX * state.mapZoom);
+  state.mapPan.y = (rect.height / 2) - (markerPxY * state.mapZoom);
+  container.style.transform = `translate(${state.mapPan.x}px, ${state.mapPan.y}px) scale(${state.mapZoom})`;
 }
 
 // TYPE CHART & CALCULATOR
@@ -1173,13 +1367,31 @@ function showToast(msg) {
   setTimeout(() => { toast.remove(); }, 3000);
 }
 
-// MODAL CLOSE LISTENERS
+// MODAL CLOSE LISTENERS & KEYBOARD ESCAPE
+function closeCreatureModal() {
+  const modal = document.getElementById('creature-modal');
+  if (modal && modal.classList.contains('open')) {
+    modal.classList.remove('open');
+    const segment = window.location.pathname.replace(/^\/+/, '').split('/')[0].toLowerCase();
+    const isCreature = state.creatures && state.creatures.some(c => c.slug.toLowerCase() === segment);
+    if (isCreature) {
+      history.pushState(null, '', '/criaturas');
+      document.title = 'Registro Anii: 94 Criaturas, Fraquezas e Stats — Aniimo Tools Brasil';
+    }
+  }
+}
+
 window.addEventListener('click', (e) => {
   const modal = document.getElementById('creature-modal');
   if (e.target === modal || e.target.closest('.modal-close-btn')) {
-    modal.classList.remove('open');
-    if (window.location.hash.includes('/') && !['#/', '#/codigos', '#/criaturas', '#/comparador', '#/mapa', '#/tabela-tipos', '#/tier-list', '#/itens', '#/guias'].includes(window.location.hash)) {
-      window.history.pushState(null, '', '/');
-    }
+    closeCreatureModal();
+  }
+});
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeCreatureModal();
+    const mapCard = document.getElementById('map-detail-card');
+    if (mapCard) mapCard.classList.remove('visible');
   }
 });

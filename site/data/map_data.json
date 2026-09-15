@@ -1,17 +1,10 @@
 {
   "region_name_pt": "Planícies Ventosas (Breezy Plains)",
   "region_name_en": "Breezy Plains",
-  "description_pt": "A verdejante região inicial de Idília, repleta de criaturas Lumin, ruínas antigas e pontos de teletransporte.",
-  "description_en": "The lush starting region of Idylia, teeming with Lumin creatures, ancient ruins, and fast-travel teleporters.",
+  "description_pt": "A verdejante região inicial de Idília, repleta de criaturas Lumin, ruínas antigas, caldeiras vulcânicas e pontos de teletransporte.",
+  "description_en": "The lush starting region of Idylia, teeming with Lumin creatures, ancient ruins, volcanic calderas, and fast-travel teleporters.",
   "map_image": "/assets/map/breezy-plains.webp",
   "categories": [
-    {
-      "id": "aniimo",
-      "name_pt": "Surgimento de Aniimos",
-      "name_en": "Aniimo Spawns",
-      "color": "#ff6b8b",
-      "icon": "🐾"
-    },
     {
       "id": "teleport",
       "name_pt": "Teletransportes",
@@ -20,18 +13,25 @@
       "icon": "🌀"
     },
     {
-      "id": "chest",
-      "name_pt": "Baús de Tesouro",
-      "name_en": "Chests",
-      "color": "#facc15",
-      "icon": "📦"
-    },
-    {
       "id": "boss",
       "name_pt": "Chefes Mundiais",
       "name_en": "World Bosses",
       "color": "#ef4444",
       "icon": "👑"
+    },
+    {
+      "id": "aniimo",
+      "name_pt": "Surgimento de Aniimos",
+      "name_en": "Aniimo Spawns",
+      "color": "#ff6b8b",
+      "icon": "🐾"
+    },
+    {
+      "id": "chest",
+      "name_pt": "Baús de Tesouro",
+      "name_en": "Chests",
+      "color": "#facc15",
+      "icon": "📦"
     },
     {
       "id": "egg",
@@ -54,160 +54,240 @@
       "cat": "teleport",
       "name_pt": "Teleporte: Pátio do Despertar",
       "name_en": "Teleport: Awakening Courtyard",
-      "x": 48.5,
-      "y": 52.0,
-      "desc_pt": "Ponto de renascimento principal dos novos Desbravantes.",
-      "desc_en": "Main spawn point for new Pathfinders."
+      "x": 84.5,
+      "y": 68.2,
+      "desc_pt": "Ponto de renascimento principal dos novos Desbravantes na Ilha Inicial.",
+      "desc_en": "Main spawn point for new Pathfinders on Awakening Isle."
     },
     {
       "id": "m2",
-      "cat": "teleport",
-      "name_pt": "Teleporte: Colina dos Ventos",
-      "name_en": "Teleport: Windhill Ridge",
-      "x": 62.0,
-      "y": 38.4,
-      "desc_pt": "Mirante elevado com visão panorâmica de todo o vale.",
-      "desc_en": "High viewpoint offering a panoramic overlook of the valley."
+      "cat": "chest",
+      "name_pt": "Baú de Boas-Vindas da Costa",
+      "name_en": "Welcome Coastal Chest",
+      "x": 82.0,
+      "y": 65.5,
+      "desc_pt": "Contém Poções de Vitalidade e 500 Moedas de Ouro.",
+      "desc_en": "Contains Vitality Potions and 500 Gold Coins."
     },
     {
       "id": "m3",
-      "cat": "teleport",
-      "name_pt": "Teleporte: Bosque Fluente",
-      "name_en": "Teleport: Fluent Grove",
-      "x": 35.2,
-      "y": 68.1,
-      "desc_pt": "Acesso rápido às margens do rio de Idília.",
-      "desc_en": "Fast access to the banks of Idylia River."
+      "cat": "egg",
+      "name_pt": "Ninho de Ovos da Costa Leste",
+      "name_en": "Eastern Coast Egg Nest",
+      "x": 88.2,
+      "y": 64.0,
+      "desc_pt": "Ninho acolhedor onde ovos de criaturas marinhas e de vento podem ser chocados.",
+      "desc_en": "Cozy nest where marine and wind creature eggs can be hatched."
     },
     {
       "id": "m4",
-      "cat": "boss",
-      "name_pt": "Chefe: Flamerion Alfa (Nível 25)",
-      "name_en": "Boss: Alpha Flamerion (Level 25)",
-      "x": 71.3,
-      "y": 28.5,
-      "desc_pt": "Chefe poderoso de Fogo. Recomenda-se equipe com criaturas de Água.",
-      "desc_en": "Mighty Fire Boss. Water creatures strongly recommended."
+      "cat": "aniimo",
+      "name_pt": "Habitat de Skippy (Inicial)",
+      "name_en": "Starter Skippy Habitat",
+      "x": 85.0,
+      "y": 72.0,
+      "desc_pt": "Pequenos e amigáveis Skippy saltando pelas colinas da ilha de início.",
+      "desc_en": "Small and friendly Skippies hopping through the starting island hills."
     },
     {
       "id": "m5",
-      "cat": "boss",
-      "name_pt": "Chefe: Bouldus Ancestral (Nível 30)",
-      "name_en": "Boss: Ancient Bouldus (Level 30)",
-      "x": 22.8,
-      "y": 81.0,
-      "desc_pt": "Guerreiro de Pedra imenso com alta resistência física.",
-      "desc_en": "Colossal Stone guardian with massive physical defense."
+      "cat": "resource",
+      "name_pt": "Veio de Cristal da Maré",
+      "name_en": "Tide Crystal Vein",
+      "x": 80.5,
+      "y": 70.5,
+      "desc_pt": "Minério especial utilizado no aprimoramento de equipamentos aquáticos.",
+      "desc_en": "Special ore used for enhancing aquatic gear."
     },
     {
       "id": "m6",
-      "cat": "aniimo",
-      "name_pt": "Habitat de Flameruff",
-      "name_en": "Flameruff Habitat",
-      "x": 58.4,
-      "y": 44.2,
-      "desc_pt": "Caninos de Fogo em bando durante o dia e entardecer.",
-      "desc_en": "Fire canines wandering in packs during daytime and dusk."
+      "cat": "chest",
+      "name_pt": "Baú Secreto do Atol do Sul",
+      "name_en": "South Atoll Secret Chest",
+      "x": 86.5,
+      "y": 85.0,
+      "desc_pt": "Baú raro em um ilhéu isolado. Contém Runa Ancestral de 4 Estrelas.",
+      "desc_en": "Rare chest on an isolated islet. Contains a 4-Star Ancestral Rune."
     },
     {
       "id": "m7",
-      "cat": "aniimo",
-      "name_pt": "Habitat de Skippy",
-      "name_en": "Skippy Habitat",
-      "x": 43.1,
-      "y": 59.0,
-      "desc_pt": "Pequenas criaturas de Grama ágeis nas clareiras abertas.",
-      "desc_en": "Nimble Grass creatures in open clearings."
+      "cat": "teleport",
+      "name_pt": "Teleporte: Baía dos Sussurros",
+      "name_en": "Teleport: Whispering Bay",
+      "x": 35.5,
+      "y": 38.5,
+      "desc_pt": "Ponto de desembarque no continente principal de Idília.",
+      "desc_en": "Mainland landing dock on Idylia."
     },
     {
       "id": "m8",
       "cat": "aniimo",
-      "name_pt": "Habitat de Wavwal",
-      "name_en": "Wavwal Habitat",
-      "x": 32.5,
-      "y": 64.7,
-      "desc_pt": "Criaturas aquáticas perto das cachoeiras e lagos calmos.",
-      "desc_en": "Aquatic creatures near waterfalls and calm ponds."
+      "name_pt": "Habitat de Wavwal (Margem Aquática)",
+      "name_en": "Wavwal Waterbank Habitat",
+      "x": 32.0,
+      "y": 34.0,
+      "desc_pt": "Cardumes de Wavwal nadando próximo à foz do rio de Idília.",
+      "desc_en": "Pods of Wavwal swimming near the river mouth of Idylia."
     },
     {
       "id": "m9",
-      "cat": "aniimo",
-      "name_pt": "Habitat de Bolty",
-      "name_en": "Bolty Habitat",
-      "x": 67.0,
-      "y": 35.1,
-      "desc_pt": "Criaturas elétricas atraídas pelos geradores das ruínas.",
-      "desc_en": "Electric creatures attracted to ruin generators."
+      "cat": "resource",
+      "name_pt": "Pomar de Frutas Idílicas",
+      "name_en": "Idylia Fruit Orchard",
+      "x": 38.0,
+      "y": 35.0,
+      "desc_pt": "Árvores frutíferas com frutos que restauram a energia das criaturas.",
+      "desc_en": "Fruit trees bearing fruits that restore creature stamina."
     },
     {
       "id": "m10",
       "cat": "chest",
-      "name_pt": "Baú Raro Escondido",
-      "name_en": "Hidden Rare Chest",
-      "x": 51.2,
-      "y": 32.7,
-      "desc_pt": "Contém Runa de 4 Estrelas e Cristais de Invocação.",
-      "desc_en": "Contains 4-Star Rune and Summon Crystals."
+      "name_pt": "Baú Submerso da Enseada",
+      "name_en": "Cove Submerged Chest",
+      "x": 27.5,
+      "y": 36.5,
+      "desc_pt": "Tesouro protegido por correntes marinhas. Contém Cristais Astrais.",
+      "desc_en": "Treasure protected by tide currents. Contains Astral Crystals."
     },
     {
       "id": "m11",
-      "cat": "chest",
-      "name_pt": "Baú Trancado por Enigma",
-      "name_en": "Puzzle-Locked Chest",
-      "x": 75.8,
-      "y": 42.0,
-      "desc_pt": "Ative os 3 pilares elementais ao redor para destravar.",
-      "desc_en": "Activate the 3 surrounding elemental pillars to unlock."
+      "cat": "teleport",
+      "name_pt": "Teleporte: Planície Central",
+      "name_en": "Teleport: Central Plains",
+      "x": 23.5,
+      "y": 22.0,
+      "desc_pt": "Cruzamento principal que liga as florestas ocidentais às montanhas.",
+      "desc_en": "Main crossroads connecting western forests to the mountains."
     },
     {
       "id": "m12",
-      "cat": "chest",
-      "name_pt": "Baú do Vale Subterrâneo",
-      "name_en": "Underground Valley Chest",
-      "x": 28.9,
-      "y": 74.3,
-      "desc_pt": "Tesouro protegido por guardiões do bosque.",
-      "desc_en": "Treasure guarded by woodland sentinels."
+      "cat": "aniimo",
+      "name_pt": "Habitat de Emberpup & Flameruff",
+      "name_en": "Emberpup & Flameruff Habitat",
+      "x": 18.0,
+      "y": 25.0,
+      "desc_pt": "Caninos de fogo caçando em matilhas pelas campinas douradas.",
+      "desc_en": "Fire canines hunting in packs across golden grasslands."
     },
     {
       "id": "m13",
       "cat": "egg",
-      "name_pt": "Ninho de Ovo Lumin Ardente",
-      "name_en": "Blazing Lumin Egg Nest",
-      "x": 64.9,
-      "y": 25.4,
-      "desc_pt": "Pode chocar um Flameruff ou Emberpup com atributos elevados.",
-      "desc_en": "Can hatch high-stat Flameruff or Emberpup."
+      "name_pt": "Ninho Raro do Vale Lilás",
+      "name_en": "Lilac Valley Rare Nest",
+      "x": 26.0,
+      "y": 16.5,
+      "desc_pt": "Ninho protegido com alta probabilidade de chocar Aniimos com traços Lumin.",
+      "desc_en": "Sheltered nest with high chance to hatch Aniimos with Lumin traits."
     },
     {
       "id": "m14",
-      "cat": "egg",
-      "name_pt": "Ninho de Ovo da Floresta",
-      "name_en": "Forest Egg Nest",
-      "x": 40.0,
-      "y": 72.5,
-      "desc_pt": "Ovo de criatura de Grama ou Água.",
-      "desc_en": "Egg containing Grass or Water Aniimo."
+      "cat": "resource",
+      "name_pt": "Jardim de Flores Astrais",
+      "name_en": "Astral Flower Garden",
+      "x": 21.0,
+      "y": 18.0,
+      "desc_pt": "Flores raras usadas para preparar elixires de evolução.",
+      "desc_en": "Rare flowers used to craft evolution elixirs."
     },
     {
       "id": "m15",
-      "cat": "resource",
-      "name_pt": "Veio de Cristal Primordial",
-      "name_en": "Primordial Crystal Vein",
-      "x": 53.0,
-      "y": 66.8,
-      "desc_pt": "Minério essencial para forjar e aprimorar equipamentos.",
-      "desc_en": "Essential ore for crafting and upgrading gear."
+      "cat": "boss",
+      "name_pt": "Chefe de Campo: Bouldus Ancestral (Nv. 30)",
+      "name_en": "Field Boss: Ancient Bouldus (Lvl 30)",
+      "x": 15.0,
+      "y": 19.5,
+      "desc_pt": "Colosso de Rocha com defesa impenetrável. Traga atacantes de Planta ou Gelo.",
+      "desc_en": "Rock colossus with high defense. Bring Grass or Ice attackers."
     },
     {
       "id": "m16",
-      "cat": "resource",
-      "name_pt": "Jardim de Ervas de Cura",
-      "name_en": "Healing Herb Garden",
-      "x": 38.6,
-      "y": 49.3,
-      "desc_pt": "Ingredientes de alta qualidade para poções de cura.",
-      "desc_en": "High quality ingredients for restorative potions."
+      "cat": "teleport",
+      "name_pt": "Teleporte: Caldeira Vulcânica",
+      "name_en": "Teleport: Volcanic Caldera",
+      "x": 48.0,
+      "y": 7.5,
+      "desc_pt": "Ponto de acesso ao cume quente do vulcão setentrional.",
+      "desc_en": "Access point to the scorching northern volcano peak."
+    },
+    {
+      "id": "m17",
+      "cat": "boss",
+      "name_pt": "Chefe Supremo: Inferlupa Alfa (Nv. 45)",
+      "name_en": "World Boss: Alpha Inferlupa (Lvl 45)",
+      "x": 46.5,
+      "y": 5.0,
+      "desc_pt": "Lorde supremo das chamas. Requer grupo coordenado com alto DPS de Água.",
+      "desc_en": "Supreme Fire Lord. Requires coordinated party with high Water DPS."
+    },
+    {
+      "id": "m18",
+      "cat": "chest",
+      "name_pt": "Baú de Magma Selado",
+      "name_en": "Sealed Magma Chest",
+      "x": 51.0,
+      "y": 9.5,
+      "desc_pt": "Tesouro lendário em meio à lava. Requer Chave Vulcânica.",
+      "desc_en": "Legendary treasure amidst magma. Requires Volcanic Key."
+    },
+    {
+      "id": "m19",
+      "cat": "aniimo",
+      "name_pt": "Habitat de Magmarex & Scorchhowl",
+      "name_en": "Magmarex & Scorchhowl Habitat",
+      "x": 42.0,
+      "y": 11.0,
+      "desc_pt": "Zona de calor extremo habitada pelas feras mais agressivas de Fogo.",
+      "desc_en": "Extreme heat zone inhabited by ferocious Fire beasts."
+    },
+    {
+      "id": "m20",
+      "cat": "teleport",
+      "name_pt": "Teleporte: Pico Nevado de Glacy",
+      "name_en": "Teleport: Glacy Snow Peak",
+      "x": 37.0,
+      "y": 14.5,
+      "desc_pt": "Pico gélido envolto em nuvens permanentes no coração da ilha.",
+      "desc_en": "Chilly summit shrouded in permanent mist in the island heart."
+    },
+    {
+      "id": "m21",
+      "cat": "aniimo",
+      "name_pt": "Habitat de Glacy & Bonesky",
+      "name_en": "Glacy & Bonesky Habitat",
+      "x": 35.0,
+      "y": 12.0,
+      "desc_pt": "Criaturas do gelo e aladas planando pelos ventos gélidos das montanhas.",
+      "desc_en": "Ice and winged creatures soaring across alpine winds."
+    },
+    {
+      "id": "m22",
+      "cat": "egg",
+      "name_pt": "Ninho de Ovos de Gelo Ancestrais",
+      "name_en": "Ancient Ice Egg Nest",
+      "x": 39.5,
+      "y": 16.0,
+      "desc_pt": "Ninho congelado preservando linhagens puras de criaturas de Gelo.",
+      "desc_en": "Frozen nest preserving ancient pureblood Ice creature lineages."
+    },
+    {
+      "id": "m23",
+      "cat": "teleport",
+      "name_pt": "Teleporte: Penhasco das Ruínas",
+      "name_en": "Teleport: Ruins Cliff",
+      "x": 54.0,
+      "y": 22.0,
+      "desc_pt": "Mirante rochoso com ruínas ancestrais e torres condutoras de energia.",
+      "desc_en": "Rocky overlook with ancient ruins and power conducting towers."
+    },
+    {
+      "id": "m24",
+      "cat": "aniimo",
+      "name_pt": "Habitat de Bolty (Torre Elétrica)",
+      "name_en": "Bolty Habitat (Electric Spire)",
+      "x": 52.0,
+      "y": 18.0,
+      "desc_pt": "Criaturas elétricas atraídas pelos para-raios das ruínas antigas.",
+      "desc_en": "Electric creatures congregating around lightning rods of ancient spires."
     }
   ]
 }
