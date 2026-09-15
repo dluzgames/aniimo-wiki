@@ -3682,3 +3682,99 @@ input, select { font: inherit; color: inherit; }
   background: #0e1422 !important;
   color: #f8fafc !important;
 }
+
+/* ── CREATURE DETAIL MODAL STYLES ── */
+.creature-detail-modal {
+  border-radius: 20px !important;
+  background: #0b101d !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(56, 188, 239, 0.15) !important;
+  animation: modalScaleIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+}
+
+@keyframes modalScaleIn {
+  from { opacity: 0; transform: scale(0.94); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.cdm-stat-item {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+}
+.cdm-stat-top {
+  display: flex !important;
+  justify-content: space-between !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+}
+.cdm-stat-label {
+  color: #94a3b8 !important;
+}
+.cdm-stat-val {
+  color: #f8fafc !important;
+}
+.cdm-stat-track {
+  height: 6px !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-radius: 99px !important;
+  overflow: hidden !important;
+}
+.cdm-stat-bar {
+  height: 100% !important;
+  border-radius: 99px !important;
+  background: linear-gradient(90deg, #38bcef, #2563eb) !important;
+}
+.cdm-skill-card {
+  background: rgba(15, 23, 42, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-radius: 10px !important;
+  padding: 10px 14px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+.cdm-skill-info {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+}
+.cdm-skill-name {
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  color: #f8fafc !important;
+}
+.cdm-skill-desc {
+  font-size: 12px !important;
+  color: #94a3b8 !important;
+}
+.cdm-skill-cost {
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  padding: 3px 8px !important;
+  border-radius: 6px !important;
+  background: rgba(56, 188, 239, 0.15) !important;
+  color: #38bcef !important;
+  white-space: nowrap !important;
+}
+.cdm-evo-card {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 4px !important;
+  cursor: pointer !important;
+  padding: 6px 12px !important;
+  border-radius: 8px !important;
+  background: rgba(15, 23, 42, 0.7) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  transition: all 0.2s !important;
+}
+.cdm-evo-card:hover {
+  transform: translateY(-2px) !important;
+  border-color: #38bcef !important;
+}
+.cdm-evo-card.current {
+  border-color: #38bcef !important;
+  background: rgba(56, 188, 239, 0.12) !important;
+}

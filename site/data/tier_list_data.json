@@ -13,14 +13,16 @@
       "B": 10,
       "C": 5,
       "D": 2
-    }
+    },
+    "base_slug": "emberpup",
+    "is_form": false
   },
   {
     "name": "Emberpup (Highland Form)",
     "slug": "emberpup::highland-form",
     "element": "fire",
     "element2": "earth",
-    "art": "/assets/creatures/emberpup::highland-form.webp",
+    "art": "/assets/creatures/emberpup.webp",
     "tier": "S+",
     "votes": {
       "S+": 177,
@@ -29,14 +31,16 @@
       "B": 9,
       "C": 6,
       "D": 2
-    }
+    },
+    "base_slug": "emberpup",
+    "is_form": true
   },
   {
     "name": "Emberpup (Mountain Woods Form)",
     "slug": "emberpup::mountain-woods-form",
     "element": "fire",
     "element2": null,
-    "art": "/assets/creatures/emberpup::mountain-woods-form.webp",
+    "art": "/assets/creatures/emberpup.webp",
     "tier": "S+",
     "votes": {
       "S+": 167,
@@ -45,7 +49,9 @@
       "B": 10,
       "C": 5,
       "D": 2
-    }
+    },
+    "base_slug": "emberpup",
+    "is_form": true
   },
   {
     "name": "Flameruff",
@@ -61,14 +67,16 @@
       "B": 12,
       "C": 6,
       "D": 2
-    }
+    },
+    "base_slug": "flameruff",
+    "is_form": false
   },
   {
     "name": "Flameruff (Highland Form)",
     "slug": "flameruff::highland-form",
     "element": "fire",
     "element2": "earth",
-    "art": "/assets/creatures/flameruff::highland-form.webp",
+    "art": "/assets/creatures/flameruff.webp",
     "tier": "S+",
     "votes": {
       "S+": 184,
@@ -77,14 +85,16 @@
       "B": 11,
       "C": 6,
       "D": 2
-    }
+    },
+    "base_slug": "flameruff",
+    "is_form": true
   },
   {
     "name": "Flameruff (Mountain Woods Form)",
     "slug": "flameruff::mountain-woods-form",
     "element": "fire",
     "element2": null,
-    "art": "/assets/creatures/flameruff::mountain-woods-form.webp",
+    "art": "/assets/creatures/flameruff.webp",
     "tier": "S+",
     "votes": {
       "S+": 191,
@@ -93,7 +103,9 @@
       "B": 9,
       "C": 5,
       "D": 3
-    }
+    },
+    "base_slug": "flameruff",
+    "is_form": true
   },
   {
     "name": "Scorchhowl",
@@ -109,14 +121,16 @@
       "B": 11,
       "C": 5,
       "D": 3
-    }
+    },
+    "base_slug": "scorchhowl",
+    "is_form": false
   },
   {
     "name": "Scorchhowl (Highland Form)",
     "slug": "scorchhowl::highland-form",
     "element": "fire",
     "element2": "earth",
-    "art": "/assets/creatures/scorchhowl::highland-form.webp",
+    "art": "/assets/creatures/scorchhowl.webp",
     "tier": "S+",
     "votes": {
       "S+": 232,
@@ -125,14 +139,16 @@
       "B": 9,
       "C": 6,
       "D": 3
-    }
+    },
+    "base_slug": "scorchhowl",
+    "is_form": true
   },
   {
     "name": "Scorchhowl (Thunderstorm Form)",
     "slug": "scorchhowl::thunderstorm-form",
     "element": "fire",
     "element2": "electric",
-    "art": "/assets/creatures/scorchhowl::thunderstorm-form.webp",
+    "art": "/assets/creatures/scorchhowl.webp",
     "tier": "S+",
     "votes": {
       "S+": 237,
@@ -141,14 +157,16 @@
       "B": 9,
       "C": 5,
       "D": 3
-    }
+    },
+    "base_slug": "scorchhowl",
+    "is_form": true
   },
   {
     "name": "Scorchhowl (Prismana Form)",
     "slug": "scorchhowl::prismana-form",
     "element": "fire",
     "element2": null,
-    "art": "/assets/creatures/scorchhowl::prismana-form.webp",
+    "art": "/assets/creatures/scorchhowl.webp",
     "tier": "S+",
     "votes": {
       "S+": 174,
@@ -157,14 +175,16 @@
       "B": 12,
       "C": 6,
       "D": 3
-    }
+    },
+    "base_slug": "scorchhowl",
+    "is_form": true
   },
   {
     "name": "Scorchhowl (Mountain Woods Form)",
     "slug": "scorchhowl::mountain-woods-form",
     "element": "fire",
     "element2": null,
-    "art": "/assets/creatures/scorchhowl::mountain-woods-form.webp",
+    "art": "/assets/creatures/scorchhowl.webp",
     "tier": "S+",
     "votes": {
       "S+": 210,
@@ -173,7 +193,9 @@
       "B": 11,
       "C": 5,
       "D": 3
-    }
+    },
+    "base_slug": "scorchhowl",
+    "is_form": true
   },
   {
     "name": "Inferlupa",
@@ -189,14 +211,16 @@
       "B": 21,
       "C": 8,
       "D": 3
-    }
+    },
+    "base_slug": "inferlupa",
+    "is_form": false
   },
   {
     "name": "Inferlupa (Prismana)",
     "slug": "inferlupa::v1005503",
     "element": "dark",
     "element2": "fire",
-    "art": "/assets/creatures/inferlupa::v1005503.webp",
+    "art": "/assets/creatures/inferlupa.webp",
     "tier": "S",
     "votes": {
       "S+": 68,
@@ -205,7 +229,9 @@
       "B": 22,
       "C": 9,
       "D": 3
-    }
+    },
+    "base_slug": "inferlupa",
+    "is_form": true
   },
   {
     "name": "Celestis",
@@ -221,7 +247,9 @@
       "B": 24,
       "C": 10,
       "D": 4
-    }
+    },
+    "base_slug": "celestis",
+    "is_form": false
   },
   {
     "name": "Stellarys",
@@ -237,14 +265,16 @@
       "B": 24,
       "C": 8,
       "D": 4
-    }
+    },
+    "base_slug": "stellarys",
+    "is_form": false
   },
   {
     "name": "Stellarys (Rainstorm Form)",
     "slug": "stellarys::rainstorm-form",
     "element": "dark",
     "element2": "water",
-    "art": "/assets/creatures/stellarys::rainstorm-form.webp",
+    "art": "/assets/creatures/stellarys.webp",
     "tier": "S",
     "votes": {
       "S+": 66,
@@ -253,14 +283,16 @@
       "B": 21,
       "C": 9,
       "D": 3
-    }
+    },
+    "base_slug": "stellarys",
+    "is_form": true
   },
   {
     "name": "Stellarys (Prismana Form)",
     "slug": "stellarys::prismana-form",
     "element": "dark",
     "element2": "ice",
-    "art": "/assets/creatures/stellarys::prismana-form.webp",
+    "art": "/assets/creatures/stellarys.webp",
     "tier": "S",
     "votes": {
       "S+": 61,
@@ -269,7 +301,9 @@
       "B": 23,
       "C": 10,
       "D": 4
-    }
+    },
+    "base_slug": "stellarys",
+    "is_form": true
   },
   {
     "name": "Chirpi",
@@ -285,14 +319,16 @@
       "B": 26,
       "C": 7,
       "D": 3
-    }
+    },
+    "base_slug": "chirpi",
+    "is_form": false
   },
   {
     "name": "Chirpi (Beach Form)",
     "slug": "chirpi::highland-form",
     "element": "wind",
     "element2": "water",
-    "art": "/assets/creatures/chirpi::highland-form.webp",
+    "art": "/assets/creatures/chirpi.webp",
     "tier": "S",
     "votes": {
       "S+": 57,
@@ -301,14 +337,16 @@
       "B": 25,
       "C": 7,
       "D": 4
-    }
+    },
+    "base_slug": "chirpi",
+    "is_form": true
   },
   {
     "name": "Chirpi (Highland Form)",
     "slug": "chirpi::mountain-woods-form",
     "element": "wind",
     "element2": "grass",
-    "art": "/assets/creatures/chirpi::mountain-woods-form.webp",
+    "art": "/assets/creatures/chirpi.webp",
     "tier": "S",
     "votes": {
       "S+": 66,
@@ -317,7 +355,9 @@
       "B": 23,
       "C": 7,
       "D": 3
-    }
+    },
+    "base_slug": "chirpi",
+    "is_form": true
   },
   {
     "name": "Tromber",
@@ -333,14 +373,16 @@
       "B": 23,
       "C": 9,
       "D": 3
-    }
+    },
+    "base_slug": "tromber",
+    "is_form": false
   },
   {
     "name": "Tromber (Beach Form)",
     "slug": "tromber::highland-form",
     "element": "wind",
     "element2": "water",
-    "art": "/assets/creatures/tromber::highland-form.webp",
+    "art": "/assets/creatures/tromber.webp",
     "tier": "S",
     "votes": {
       "S+": 63,
@@ -349,14 +391,16 @@
       "B": 26,
       "C": 7,
       "D": 4
-    }
+    },
+    "base_slug": "tromber",
+    "is_form": true
   },
   {
     "name": "Tromber (Highland Form)",
     "slug": "tromber::mountain-woods-form",
     "element": "wind",
     "element2": "grass",
-    "art": "/assets/creatures/tromber::mountain-woods-form.webp",
+    "art": "/assets/creatures/tromber.webp",
     "tier": "S",
     "votes": {
       "S+": 70,
@@ -365,7 +409,9 @@
       "B": 20,
       "C": 9,
       "D": 3
-    }
+    },
+    "base_slug": "tromber",
+    "is_form": true
   },
   {
     "name": "Cornet",
@@ -381,14 +427,16 @@
       "B": 19,
       "C": 9,
       "D": 4
-    }
+    },
+    "base_slug": "cornet",
+    "is_form": false
   },
   {
     "name": "Cornet (Beach Form)",
     "slug": "cornet::highland-form",
     "element": "wind",
     "element2": "water",
-    "art": "/assets/creatures/cornet::highland-form.webp",
+    "art": "/assets/creatures/cornet.webp",
     "tier": "S",
     "votes": {
       "S+": 54,
@@ -397,14 +445,16 @@
       "B": 23,
       "C": 8,
       "D": 3
-    }
+    },
+    "base_slug": "cornet",
+    "is_form": true
   },
   {
     "name": "Cornet (Prismana Form)",
     "slug": "cornet::prismana-form",
     "element": "wind",
     "element2": "electric",
-    "art": "/assets/creatures/cornet::prismana-form.webp",
+    "art": "/assets/creatures/cornet.webp",
     "tier": "S",
     "votes": {
       "S+": 61,
@@ -413,14 +463,16 @@
       "B": 20,
       "C": 7,
       "D": 4
-    }
+    },
+    "base_slug": "cornet",
+    "is_form": true
   },
   {
     "name": "Cornet (Highland Form)",
     "slug": "cornet::mountain-woods-form",
     "element": "wind",
     "element2": "grass",
-    "art": "/assets/creatures/cornet::mountain-woods-form.webp",
+    "art": "/assets/creatures/cornet.webp",
     "tier": "S",
     "votes": {
       "S+": 56,
@@ -429,7 +481,9 @@
       "B": 21,
       "C": 8,
       "D": 4
-    }
+    },
+    "base_slug": "cornet",
+    "is_form": true
   },
   {
     "name": "Tubster",
@@ -445,14 +499,16 @@
       "B": 25,
       "C": 8,
       "D": 3
-    }
+    },
+    "base_slug": "tubster",
+    "is_form": false
   },
   {
     "name": "Tubster (Beach Form)",
     "slug": "tubster::highland-form",
     "element": "wind",
     "element2": "water",
-    "art": "/assets/creatures/tubster::highland-form.webp",
+    "art": "/assets/creatures/tubster.webp",
     "tier": "S",
     "votes": {
       "S+": 76,
@@ -461,14 +517,16 @@
       "B": 24,
       "C": 10,
       "D": 4
-    }
+    },
+    "base_slug": "tubster",
+    "is_form": true
   },
   {
     "name": "Tubster (Highland Form)",
     "slug": "tubster::mountain-woods-form",
     "element": "wind",
     "element2": "grass",
-    "art": "/assets/creatures/tubster::mountain-woods-form.webp",
+    "art": "/assets/creatures/tubster.webp",
     "tier": "S",
     "votes": {
       "S+": 57,
@@ -477,7 +535,9 @@
       "B": 20,
       "C": 9,
       "D": 3
-    }
+    },
+    "base_slug": "tubster",
+    "is_form": true
   },
   {
     "name": "Iris",
@@ -493,14 +553,16 @@
       "B": 22,
       "C": 7,
       "D": 3
-    }
+    },
+    "base_slug": "iris",
+    "is_form": false
   },
   {
     "name": "Iris (Highland Form)",
     "slug": "iris::highland-form",
     "element": "grass",
     "element2": null,
-    "art": "/assets/creatures/iris::highland-form.webp",
+    "art": "/assets/creatures/iris.webp",
     "tier": "S",
     "votes": {
       "S+": 76,
@@ -509,14 +571,16 @@
       "B": 22,
       "C": 7,
       "D": 3
-    }
+    },
+    "base_slug": "iris",
+    "is_form": true
   },
   {
     "name": "Iris (Forest Form)",
     "slug": "iris::mountain-woods-form",
     "element": "grass",
     "element2": null,
-    "art": "/assets/creatures/iris::mountain-woods-form.webp",
+    "art": "/assets/creatures/iris.webp",
     "tier": "S",
     "votes": {
       "S+": 64,
@@ -525,14 +589,16 @@
       "B": 22,
       "C": 9,
       "D": 4
-    }
+    },
+    "base_slug": "iris",
+    "is_form": true
   },
   {
     "name": "Iris (Grassland Form)",
     "slug": "iris::thunderstorm",
     "element": "grass",
     "element2": null,
-    "art": "/assets/creatures/iris::thunderstorm.webp",
+    "art": "/assets/creatures/iris.webp",
     "tier": "S",
     "votes": {
       "S+": 60,
@@ -541,14 +607,16 @@
       "B": 26,
       "C": 8,
       "D": 4
-    }
+    },
+    "base_slug": "iris",
+    "is_form": true
   },
   {
     "name": "Iris (Prismana Form)",
     "slug": "iris::mudflat-form",
     "element": "grass",
     "element2": null,
-    "art": "/assets/creatures/iris::mudflat-form.webp",
+    "art": "/assets/creatures/iris.webp",
     "tier": "S",
     "votes": {
       "S+": 67,
@@ -557,14 +625,16 @@
       "B": 20,
       "C": 10,
       "D": 4
-    }
+    },
+    "base_slug": "iris",
+    "is_form": true
   },
   {
     "name": "Iris (Plateau Form)",
     "slug": "iris::rainstorm-form",
     "element": "grass",
     "element2": null,
-    "art": "/assets/creatures/iris::rainstorm-form.webp",
+    "art": "/assets/creatures/iris.webp",
     "tier": "S",
     "votes": {
       "S+": 67,
@@ -573,14 +643,16 @@
       "B": 19,
       "C": 7,
       "D": 3
-    }
+    },
+    "base_slug": "iris",
+    "is_form": true
   },
   {
     "name": "Iris (Mountain Woods Form)",
     "slug": "iris::prismana",
     "element": "grass",
     "element2": null,
-    "art": "/assets/creatures/iris::prismana.webp",
+    "art": "/assets/creatures/iris.webp",
     "tier": "S",
     "votes": {
       "S+": 66,
@@ -589,7 +661,9 @@
       "B": 20,
       "C": 8,
       "D": 3
-    }
+    },
+    "base_slug": "iris",
+    "is_form": true
   },
   {
     "name": "Irisal",
@@ -605,14 +679,16 @@
       "B": 58,
       "C": 25,
       "D": 5
-    }
+    },
+    "base_slug": "irisal",
+    "is_form": false
   },
   {
     "name": "Irisal (Highland Form)",
     "slug": "irisal::highland-form",
     "element": "grass",
     "element2": null,
-    "art": "/assets/creatures/irisal::highland-form.webp",
+    "art": "/assets/creatures/irisal.webp",
     "tier": "A",
     "votes": {
       "S+": 23,
@@ -621,14 +697,16 @@
       "B": 56,
       "C": 26,
       "D": 5
-    }
+    },
+    "base_slug": "irisal",
+    "is_form": true
   },
   {
     "name": "Irisal (Forest Form)",
     "slug": "irisal::mountain-woods-form",
     "element": "grass",
     "element2": null,
-    "art": "/assets/creatures/irisal::mountain-woods-form.webp",
+    "art": "/assets/creatures/irisal.webp",
     "tier": "A",
     "votes": {
       "S+": 19,
@@ -637,14 +715,16 @@
       "B": 54,
       "C": 20,
       "D": 5
-    }
+    },
+    "base_slug": "irisal",
+    "is_form": true
   },
   {
     "name": "Irisal (Grassland Form)",
     "slug": "irisal::thunderstorm",
     "element": "grass",
     "element2": null,
-    "art": "/assets/creatures/irisal::thunderstorm.webp",
+    "art": "/assets/creatures/irisal.webp",
     "tier": "A",
     "votes": {
       "S+": 21,
@@ -653,14 +733,16 @@
       "B": 69,
       "C": 22,
       "D": 6
-    }
+    },
+    "base_slug": "irisal",
+    "is_form": true
   },
   {
     "name": "Irisal (Prismana Form)",
     "slug": "irisal::mudflat-form",
     "element": "grass",
     "element2": null,
-    "art": "/assets/creatures/irisal::mudflat-form.webp",
+    "art": "/assets/creatures/irisal.webp",
     "tier": "A",
     "votes": {
       "S+": 19,
@@ -669,14 +751,16 @@
       "B": 54,
       "C": 25,
       "D": 6
-    }
+    },
+    "base_slug": "irisal",
+    "is_form": true
   },
   {
     "name": "Irisal (Plateau Form)",
     "slug": "irisal::rainstorm-form",
     "element": "grass",
     "element2": null,
-    "art": "/assets/creatures/irisal::rainstorm-form.webp",
+    "art": "/assets/creatures/irisal.webp",
     "tier": "A",
     "votes": {
       "S+": 26,
@@ -685,14 +769,16 @@
       "B": 76,
       "C": 26,
       "D": 5
-    }
+    },
+    "base_slug": "irisal",
+    "is_form": true
   },
   {
     "name": "Irisal (Mountain Woods Form)",
     "slug": "irisal::prismana",
     "element": "grass",
     "element2": null,
-    "art": "/assets/creatures/irisal::prismana.webp",
+    "art": "/assets/creatures/irisal.webp",
     "tier": "A",
     "votes": {
       "S+": 22,
@@ -701,7 +787,9 @@
       "B": 55,
       "C": 19,
       "D": 6
-    }
+    },
+    "base_slug": "irisal",
+    "is_form": true
   },
   {
     "name": "Skippy",
@@ -717,14 +805,16 @@
       "B": 69,
       "C": 21,
       "D": 5
-    }
+    },
+    "base_slug": "skippy",
+    "is_form": false
   },
   {
     "name": "Skippy (Sea of Flowers Form)",
     "slug": "skippy::highland-form",
     "element": "water",
     "element2": null,
-    "art": "/assets/creatures/skippy::highland-form.webp",
+    "art": "/assets/creatures/skippy.webp",
     "tier": "A",
     "votes": {
       "S+": 20,
@@ -733,14 +823,16 @@
       "B": 73,
       "C": 20,
       "D": 5
-    }
+    },
+    "base_slug": "skippy",
+    "is_form": true
   },
   {
     "name": "Skippy (Snowfield Form)",
     "slug": "skippy::mountain-woods-form",
     "element": "water",
     "element2": "ice",
-    "art": "/assets/creatures/skippy::mountain-woods-form.webp",
+    "art": "/assets/creatures/skippy.webp",
     "tier": "A",
     "votes": {
       "S+": 25,
@@ -749,7 +841,9 @@
       "B": 61,
       "C": 19,
       "D": 5
-    }
+    },
+    "base_slug": "skippy",
+    "is_form": true
   },
   {
     "name": "Pranky",
@@ -765,14 +859,16 @@
       "B": 70,
       "C": 24,
       "D": 6
-    }
+    },
+    "base_slug": "pranky",
+    "is_form": false
   },
   {
     "name": "Pranky (Sea of Flowers Form)",
     "slug": "pranky::highland-form",
     "element": "water",
     "element2": null,
-    "art": "/assets/creatures/pranky::highland-form.webp",
+    "art": "/assets/creatures/pranky.webp",
     "tier": "A",
     "votes": {
       "S+": 22,
@@ -781,14 +877,16 @@
       "B": 62,
       "C": 25,
       "D": 5
-    }
+    },
+    "base_slug": "pranky",
+    "is_form": true
   },
   {
     "name": "Pranky (Snowfield Form)",
     "slug": "pranky::mountain-woods-form",
     "element": "water",
     "element2": "ice",
-    "art": "/assets/creatures/pranky::mountain-woods-form.webp",
+    "art": "/assets/creatures/pranky.webp",
     "tier": "A",
     "votes": {
       "S+": 23,
@@ -797,7 +895,9 @@
       "B": 56,
       "C": 19,
       "D": 6
-    }
+    },
+    "base_slug": "pranky",
+    "is_form": true
   },
   {
     "name": "Glacy",
@@ -813,14 +913,16 @@
       "B": 60,
       "C": 23,
       "D": 5
-    }
+    },
+    "base_slug": "glacy",
+    "is_form": false
   },
   {
     "name": "Glacy (Sea of Flowers Form)",
     "slug": "glacy::highland-form",
     "element": "water",
     "element2": "ice",
-    "art": "/assets/creatures/glacy::highland-form.webp",
+    "art": "/assets/creatures/glacy.webp",
     "tier": "A",
     "votes": {
       "S+": 24,
@@ -829,14 +931,16 @@
       "B": 65,
       "C": 23,
       "D": 5
-    }
+    },
+    "base_slug": "glacy",
+    "is_form": true
   },
   {
     "name": "Glacy (Snowfield Form)",
     "slug": "glacy::mountain-woods-form",
     "element": "water",
     "element2": "ice",
-    "art": "/assets/creatures/glacy::mountain-woods-form.webp",
+    "art": "/assets/creatures/glacy.webp",
     "tier": "A",
     "votes": {
       "S+": 26,
@@ -845,14 +949,16 @@
       "B": 63,
       "C": 19,
       "D": 6
-    }
+    },
+    "base_slug": "glacy",
+    "is_form": true
   },
   {
     "name": "Glacy (Prismana Form)",
     "slug": "glacy::prismana-form",
     "element": "water",
     "element2": "light",
-    "art": "/assets/creatures/glacy::prismana-form.webp",
+    "art": "/assets/creatures/glacy.webp",
     "tier": "A",
     "votes": {
       "S+": 20,
@@ -861,7 +967,9 @@
       "B": 57,
       "C": 20,
       "D": 5
-    }
+    },
+    "base_slug": "glacy",
+    "is_form": true
   },
   {
     "name": "Leafy",
@@ -877,7 +985,9 @@
       "B": 60,
       "C": 24,
       "D": 5
-    }
+    },
+    "base_slug": "leafy",
+    "is_form": false
   },
   {
     "name": "Nimbi",
@@ -893,14 +1003,16 @@
       "B": 62,
       "C": 19,
       "D": 5
-    }
+    },
+    "base_slug": "nimbi",
+    "is_form": false
   },
   {
     "name": "Nimbi (Rainstorm Form)",
     "slug": "nimbi::highland-form",
     "element": "wind",
     "element2": "electric",
-    "art": "/assets/creatures/nimbi::highland-form.webp",
+    "art": "/assets/creatures/nimbi.webp",
     "tier": "A",
     "votes": {
       "S+": 25,
@@ -909,14 +1021,16 @@
       "B": 54,
       "C": 24,
       "D": 5
-    }
+    },
+    "base_slug": "nimbi",
+    "is_form": true
   },
   {
     "name": "Nimbi (Cloudmist Form)",
     "slug": "nimbi::mountain-woods-form",
     "element": "wind",
     "element2": null,
-    "art": "/assets/creatures/nimbi::mountain-woods-form.webp",
+    "art": "/assets/creatures/nimbi.webp",
     "tier": "A",
     "votes": {
       "S+": 23,
@@ -925,14 +1039,16 @@
       "B": 68,
       "C": 25,
       "D": 5
-    }
+    },
+    "base_slug": "nimbi",
+    "is_form": true
   },
   {
     "name": "Nimbi (Plateau Form)",
     "slug": "nimbi::thunderstorm",
     "element": "wind",
     "element2": "ice",
-    "art": "/assets/creatures/nimbi::thunderstorm.webp",
+    "art": "/assets/creatures/nimbi.webp",
     "tier": "A",
     "votes": {
       "S+": 20,
@@ -941,7 +1057,9 @@
       "B": 58,
       "C": 19,
       "D": 6
-    }
+    },
+    "base_slug": "nimbi",
+    "is_form": true
   },
   {
     "name": "Turbo",
@@ -957,14 +1075,16 @@
       "B": 55,
       "C": 23,
       "D": 6
-    }
+    },
+    "base_slug": "turbo",
+    "is_form": false
   },
   {
     "name": "Turbo (Rainstorm Form)",
     "slug": "turbo::highland-form",
     "element": "wind",
     "element2": "electric",
-    "art": "/assets/creatures/turbo::highland-form.webp",
+    "art": "/assets/creatures/turbo.webp",
     "tier": "A",
     "votes": {
       "S+": 19,
@@ -973,14 +1093,16 @@
       "B": 75,
       "C": 22,
       "D": 5
-    }
+    },
+    "base_slug": "turbo",
+    "is_form": true
   },
   {
     "name": "Turbo (Cloudmist Form)",
     "slug": "turbo::mountain-woods-form",
     "element": "wind",
     "element2": null,
-    "art": "/assets/creatures/turbo::mountain-woods-form.webp",
+    "art": "/assets/creatures/turbo.webp",
     "tier": "A",
     "votes": {
       "S+": 24,
@@ -989,14 +1111,16 @@
       "B": 73,
       "C": 21,
       "D": 5
-    }
+    },
+    "base_slug": "turbo",
+    "is_form": true
   },
   {
     "name": "Turbo (Prismana Form)",
     "slug": "turbo::prismana-form",
     "element": "wind",
     "element2": "dark",
-    "art": "/assets/creatures/turbo::prismana-form.webp",
+    "art": "/assets/creatures/turbo.webp",
     "tier": "A",
     "votes": {
       "S+": 21,
@@ -1005,14 +1129,16 @@
       "B": 54,
       "C": 21,
       "D": 6
-    }
+    },
+    "base_slug": "turbo",
+    "is_form": true
   },
   {
     "name": "Turbo (Plateau Form)",
     "slug": "turbo::thunderstorm",
     "element": "wind",
     "element2": "ice",
-    "art": "/assets/creatures/turbo::thunderstorm.webp",
+    "art": "/assets/creatures/turbo.webp",
     "tier": "A",
     "votes": {
       "S+": 25,
@@ -1021,7 +1147,9 @@
       "B": 59,
       "C": 20,
       "D": 6
-    }
+    },
+    "base_slug": "turbo",
+    "is_form": true
   },
   {
     "name": "Dreaple",
@@ -1037,7 +1165,9 @@
       "B": 60,
       "C": 26,
       "D": 6
-    }
+    },
+    "base_slug": "dreaple",
+    "is_form": false
   },
   {
     "name": "Hummin",
@@ -1053,14 +1183,16 @@
       "B": 54,
       "C": 22,
       "D": 6
-    }
+    },
+    "base_slug": "hummin",
+    "is_form": false
   },
   {
     "name": "Hummin (Mountain Form)",
     "slug": "hummin::highland-form",
     "element": "grass",
     "element2": null,
-    "art": "/assets/creatures/hummin::highland-form.webp",
+    "art": "/assets/creatures/hummin.webp",
     "tier": "A",
     "votes": {
       "S+": 24,
@@ -1069,7 +1201,9 @@
       "B": 62,
       "C": 24,
       "D": 6
-    }
+    },
+    "base_slug": "hummin",
+    "is_form": true
   },
   {
     "name": "Witchin",
@@ -1085,14 +1219,16 @@
       "B": 62,
       "C": 21,
       "D": 6
-    }
+    },
+    "base_slug": "witchin",
+    "is_form": false
   },
   {
     "name": "Witchin (Mountain Form)",
     "slug": "witchin::highland-form",
     "element": "dark",
     "element2": "grass",
-    "art": "/assets/creatures/witchin::highland-form.webp",
+    "art": "/assets/creatures/witchin.webp",
     "tier": "A",
     "votes": {
       "S+": 19,
@@ -1101,14 +1237,16 @@
       "B": 67,
       "C": 24,
       "D": 6
-    }
+    },
+    "base_slug": "witchin",
+    "is_form": true
   },
   {
     "name": "Witchin (Prismana Form)",
     "slug": "witchin::prismana-form",
     "element": "dark",
     "element2": "grass",
-    "art": "/assets/creatures/witchin::prismana-form.webp",
+    "art": "/assets/creatures/witchin.webp",
     "tier": "A",
     "votes": {
       "S+": 25,
@@ -1117,14 +1255,16 @@
       "B": 57,
       "C": 25,
       "D": 5
-    }
+    },
+    "base_slug": "witchin",
+    "is_form": true
   },
   {
     "name": "Witchin (Umbrabow Form)",
     "slug": "witchin::umbrabow-form",
     "element": "dark",
     "element2": "grass",
-    "art": "/assets/creatures/witchin::umbrabow-form.webp",
+    "art": "/assets/creatures/witchin.webp",
     "tier": "A",
     "votes": {
       "S+": 23,
@@ -1133,7 +1273,9 @@
       "B": 67,
       "C": 19,
       "D": 5
-    }
+    },
+    "base_slug": "witchin",
+    "is_form": true
   },
   {
     "name": "Tuckin",
@@ -1149,14 +1291,16 @@
       "B": 75,
       "C": 24,
       "D": 6
-    }
+    },
+    "base_slug": "tuckin",
+    "is_form": false
   },
   {
     "name": "Tuckin (Mountain Form)",
     "slug": "tuckin::highland-form",
     "element": "grass",
     "element2": "earth",
-    "art": "/assets/creatures/tuckin::highland-form.webp",
+    "art": "/assets/creatures/tuckin.webp",
     "tier": "A",
     "votes": {
       "S+": 20,
@@ -1165,7 +1309,9 @@
       "B": 63,
       "C": 25,
       "D": 6
-    }
+    },
+    "base_slug": "tuckin",
+    "is_form": true
   },
   {
     "name": "Budclaw",
@@ -1181,14 +1327,16 @@
       "B": 58,
       "C": 22,
       "D": 6
-    }
+    },
+    "base_slug": "budclaw",
+    "is_form": false
   },
   {
     "name": "Budclaw (Mudflat Form)",
     "slug": "budclaw::highland-form",
     "element": "earth",
     "element2": null,
-    "art": "/assets/creatures/budclaw::highland-form.webp",
+    "art": "/assets/creatures/budclaw.webp",
     "tier": "A",
     "votes": {
       "S+": 25,
@@ -1197,14 +1345,16 @@
       "B": 72,
       "C": 23,
       "D": 6
-    }
+    },
+    "base_slug": "budclaw",
+    "is_form": true
   },
   {
     "name": "Budclaw (Beach Form)",
     "slug": "budclaw::mountain-woods-form",
     "element": "earth",
     "element2": null,
-    "art": "/assets/creatures/budclaw::mountain-woods-form.webp",
+    "art": "/assets/creatures/budclaw.webp",
     "tier": "A",
     "votes": {
       "S+": 19,
@@ -1213,14 +1363,16 @@
       "B": 60,
       "C": 25,
       "D": 6
-    }
+    },
+    "base_slug": "budclaw",
+    "is_form": true
   },
   {
     "name": "Budclaw (alt form)",
     "slug": "budclaw::thunderstorm",
     "element": "earth",
     "element2": null,
-    "art": "/assets/creatures/budclaw::thunderstorm.webp",
+    "art": "/assets/creatures/budclaw.webp",
     "tier": "A",
     "votes": {
       "S+": 26,
@@ -1229,7 +1381,9 @@
       "B": 75,
       "C": 22,
       "D": 6
-    }
+    },
+    "base_slug": "budclaw",
+    "is_form": true
   },
   {
     "name": "Shrubclaw",
@@ -1245,14 +1399,16 @@
       "B": 70,
       "C": 24,
       "D": 5
-    }
+    },
+    "base_slug": "shrubclaw",
+    "is_form": false
   },
   {
     "name": "Shrubclaw (Mudflat Form)",
     "slug": "shrubclaw::highland-form",
     "element": "earth",
     "element2": null,
-    "art": "/assets/creatures/shrubclaw::highland-form.webp",
+    "art": "/assets/creatures/shrubclaw.webp",
     "tier": "A",
     "votes": {
       "S+": 22,
@@ -1261,14 +1417,16 @@
       "B": 60,
       "C": 21,
       "D": 5
-    }
+    },
+    "base_slug": "shrubclaw",
+    "is_form": true
   },
   {
     "name": "Shrubclaw (Beach Form)",
     "slug": "shrubclaw::mountain-woods-form",
     "element": "earth",
     "element2": null,
-    "art": "/assets/creatures/shrubclaw::mountain-woods-form.webp",
+    "art": "/assets/creatures/shrubclaw.webp",
     "tier": "A",
     "votes": {
       "S+": 19,
@@ -1277,14 +1435,16 @@
       "B": 73,
       "C": 20,
       "D": 6
-    }
+    },
+    "base_slug": "shrubclaw",
+    "is_form": true
   },
   {
     "name": "Shrubclaw (Bay Form)",
     "slug": "shrubclaw::thunderstorm",
     "element": "earth",
     "element2": null,
-    "art": "/assets/creatures/shrubclaw::thunderstorm.webp",
+    "art": "/assets/creatures/shrubclaw.webp",
     "tier": "A",
     "votes": {
       "S+": 25,
@@ -1293,7 +1453,9 @@
       "B": 76,
       "C": 25,
       "D": 6
-    }
+    },
+    "base_slug": "shrubclaw",
+    "is_form": true
   },
   {
     "name": "Geoclaw",
@@ -1309,7 +1471,9 @@
       "B": 74,
       "C": 19,
       "D": 5
-    }
+    },
+    "base_slug": "geoclaw",
+    "is_form": false
   },
   {
     "name": "Sparki",
@@ -1325,14 +1489,16 @@
       "B": 76,
       "C": 26,
       "D": 5
-    }
+    },
+    "base_slug": "sparki",
+    "is_form": false
   },
   {
     "name": "Sparki (Highland Form)",
     "slug": "sparki::highland-form",
     "element": "fire",
     "element2": null,
-    "art": "/assets/creatures/sparki::highland-form.webp",
+    "art": "/assets/creatures/sparki.webp",
     "tier": "A",
     "votes": {
       "S+": 22,
@@ -1341,14 +1507,16 @@
       "B": 58,
       "C": 26,
       "D": 6
-    }
+    },
+    "base_slug": "sparki",
+    "is_form": true
   },
   {
     "name": "Sparki (Forest Form)",
     "slug": "sparki::mountain-woods-form",
     "element": "fire",
     "element2": null,
-    "art": "/assets/creatures/sparki::mountain-woods-form.webp",
+    "art": "/assets/creatures/sparki.webp",
     "tier": "A",
     "votes": {
       "S+": 26,
@@ -1357,14 +1525,16 @@
       "B": 77,
       "C": 25,
       "D": 6
-    }
+    },
+    "base_slug": "sparki",
+    "is_form": true
   },
   {
     "name": "Sparki (Sea of Flowers Form)",
     "slug": "sparki::thunderstorm",
     "element": "fire",
     "element2": null,
-    "art": "/assets/creatures/sparki::thunderstorm.webp",
+    "art": "/assets/creatures/sparki.webp",
     "tier": "A",
     "votes": {
       "S+": 21,
@@ -1373,7 +1543,9 @@
       "B": 62,
       "C": 22,
       "D": 6
-    }
+    },
+    "base_slug": "sparki",
+    "is_form": true
   },
   {
     "name": "Flamerion",
@@ -1389,14 +1561,16 @@
       "B": 68,
       "C": 20,
       "D": 6
-    }
+    },
+    "base_slug": "flamerion",
+    "is_form": false
   },
   {
     "name": "Flamerion (Highland Form)",
     "slug": "flamerion::highland-form",
     "element": "fire",
     "element2": null,
-    "art": "/assets/creatures/flamerion::highland-form.webp",
+    "art": "/assets/creatures/flamerion.webp",
     "tier": "A",
     "votes": {
       "S+": 22,
@@ -1405,14 +1579,16 @@
       "B": 64,
       "C": 20,
       "D": 5
-    }
+    },
+    "base_slug": "flamerion",
+    "is_form": true
   },
   {
     "name": "Flamerion (Forest Form)",
     "slug": "flamerion::mountain-woods-form",
     "element": "fire",
     "element2": null,
-    "art": "/assets/creatures/flamerion::mountain-woods-form.webp",
+    "art": "/assets/creatures/flamerion.webp",
     "tier": "A",
     "votes": {
       "S+": 21,
@@ -1421,14 +1597,16 @@
       "B": 76,
       "C": 21,
       "D": 5
-    }
+    },
+    "base_slug": "flamerion",
+    "is_form": true
   },
   {
     "name": "Flamerion (Sea of Flowers Form)",
     "slug": "flamerion::thunderstorm",
     "element": "fire",
     "element2": null,
-    "art": "/assets/creatures/flamerion::thunderstorm.webp",
+    "art": "/assets/creatures/flamerion.webp",
     "tier": "A",
     "votes": {
       "S+": 20,
@@ -1437,7 +1615,9 @@
       "B": 64,
       "C": 26,
       "D": 6
-    }
+    },
+    "base_slug": "flamerion",
+    "is_form": true
   },
   {
     "name": "Flutternym",
@@ -1453,14 +1633,16 @@
       "B": 67,
       "C": 25,
       "D": 5
-    }
+    },
+    "base_slug": "flutternym",
+    "is_form": false
   },
   {
     "name": "Flutternym (Sea of Flowers Form)",
     "slug": "flutternym::highland-form",
     "element": "wind",
     "element2": "grass",
-    "art": "/assets/creatures/flutternym::highland-form.webp",
+    "art": "/assets/creatures/flutternym.webp",
     "tier": "A",
     "votes": {
       "S+": 25,
@@ -1469,14 +1651,16 @@
       "B": 65,
       "C": 23,
       "D": 6
-    }
+    },
+    "base_slug": "flutternym",
+    "is_form": true
   },
   {
     "name": "Flutternym (Nighttime Form)",
     "slug": "flutternym::mountain-woods-form",
     "element": "wind",
     "element2": "dark",
-    "art": "/assets/creatures/flutternym::mountain-woods-form.webp",
+    "art": "/assets/creatures/flutternym.webp",
     "tier": "A",
     "votes": {
       "S+": 25,
@@ -1485,14 +1669,16 @@
       "B": 77,
       "C": 22,
       "D": 6
-    }
+    },
+    "base_slug": "flutternym",
+    "is_form": true
   },
   {
     "name": "Flutternym (Mountain Woods Form)",
     "slug": "flutternym::thunderstorm",
     "element": "wind",
     "element2": "earth",
-    "art": "/assets/creatures/flutternym::thunderstorm.webp",
+    "art": "/assets/creatures/flutternym.webp",
     "tier": "A",
     "votes": {
       "S+": 22,
@@ -1501,7 +1687,9 @@
       "B": 69,
       "C": 19,
       "D": 6
-    }
+    },
+    "base_slug": "flutternym",
+    "is_form": true
   },
   {
     "name": "Gracewing",
@@ -1517,14 +1705,16 @@
       "B": 59,
       "C": 26,
       "D": 5
-    }
+    },
+    "base_slug": "gracewing",
+    "is_form": false
   },
   {
     "name": "Gracewing (Sea of Flowers Form)",
     "slug": "gracewing::highland-form",
     "element": "wind",
     "element2": "grass",
-    "art": "/assets/creatures/gracewing::highland-form.webp",
+    "art": "/assets/creatures/gracewing.webp",
     "tier": "A",
     "votes": {
       "S+": 19,
@@ -1533,14 +1723,16 @@
       "B": 72,
       "C": 19,
       "D": 5
-    }
+    },
+    "base_slug": "gracewing",
+    "is_form": true
   },
   {
     "name": "Gracewing (Nighttime Form)",
     "slug": "gracewing::mountain-woods-form",
     "element": "wind",
     "element2": "dark",
-    "art": "/assets/creatures/gracewing::mountain-woods-form.webp",
+    "art": "/assets/creatures/gracewing.webp",
     "tier": "A",
     "votes": {
       "S+": 25,
@@ -1549,14 +1741,16 @@
       "B": 59,
       "C": 19,
       "D": 6
-    }
+    },
+    "base_slug": "gracewing",
+    "is_form": true
   },
   {
     "name": "Gracewing (Mountain Woods Form)",
     "slug": "gracewing::thunderstorm",
     "element": "wind",
     "element2": "earth",
-    "art": "/assets/creatures/gracewing::thunderstorm.webp",
+    "art": "/assets/creatures/gracewing.webp",
     "tier": "A",
     "votes": {
       "S+": 25,
@@ -1565,7 +1759,9 @@
       "B": 68,
       "C": 24,
       "D": 6
-    }
+    },
+    "base_slug": "gracewing",
+    "is_form": true
   },
   {
     "name": "Somniwing",
@@ -1581,7 +1777,9 @@
       "B": 67,
       "C": 23,
       "D": 5
-    }
+    },
+    "base_slug": "somniwing",
+    "is_form": false
   },
   {
     "name": "Eko",
@@ -1597,7 +1795,9 @@
       "B": 141,
       "C": 38,
       "D": 12
-    }
+    },
+    "base_slug": "eko",
+    "is_form": false
   },
   {
     "name": "Eklue",
@@ -1613,7 +1813,9 @@
       "B": 109,
       "C": 37,
       "D": 11
-    }
+    },
+    "base_slug": "eklue",
+    "is_form": false
   },
   {
     "name": "Budsquire",
@@ -1629,14 +1831,16 @@
       "B": 116,
       "C": 44,
       "D": 11
-    }
+    },
+    "base_slug": "budsquire",
+    "is_form": false
   },
   {
     "name": "Budsquire (Towerwood Form)",
     "slug": "budsquire::highland-form",
     "element": "grass",
     "element2": null,
-    "art": "/assets/creatures/budsquire::highland-form.webp",
+    "art": "/assets/creatures/budsquire.webp",
     "tier": "B",
     "votes": {
       "S+": 10,
@@ -1645,7 +1849,9 @@
       "B": 120,
       "C": 51,
       "D": 15
-    }
+    },
+    "base_slug": "budsquire",
+    "is_form": true
   },
   {
     "name": "Thornblade",
@@ -1661,14 +1867,16 @@
       "B": 145,
       "C": 40,
       "D": 11
-    }
+    },
+    "base_slug": "thornblade",
+    "is_form": false
   },
   {
     "name": "Thornblade (Rainstorm Form)",
     "slug": "thornblade::rainstorm-form",
     "element": "grass",
     "element2": "electric",
-    "art": "/assets/creatures/thornblade::rainstorm-form.webp",
+    "art": "/assets/creatures/thornblade.webp",
     "tier": "B",
     "votes": {
       "S+": 9,
@@ -1677,14 +1885,16 @@
       "B": 108,
       "C": 46,
       "D": 14
-    }
+    },
+    "base_slug": "thornblade",
+    "is_form": true
   },
   {
     "name": "Thornblade (Prismana Form)",
     "slug": "thornblade::prismana-form",
     "element": "grass",
     "element2": "water",
-    "art": "/assets/creatures/thornblade::prismana-form.webp",
+    "art": "/assets/creatures/thornblade.webp",
     "tier": "B",
     "votes": {
       "S+": 10,
@@ -1693,14 +1903,16 @@
       "B": 119,
       "C": 39,
       "D": 14
-    }
+    },
+    "base_slug": "thornblade",
+    "is_form": true
   },
   {
     "name": "Thornblade (Towerwood Form)",
     "slug": "thornblade::highland-form",
     "element": "grass",
     "element2": null,
-    "art": "/assets/creatures/thornblade::highland-form.webp",
+    "art": "/assets/creatures/thornblade.webp",
     "tier": "B",
     "votes": {
       "S+": 8,
@@ -1709,7 +1921,9 @@
       "B": 126,
       "C": 40,
       "D": 14
-    }
+    },
+    "base_slug": "thornblade",
+    "is_form": true
   },
   {
     "name": "Melloblum",
@@ -1725,14 +1939,16 @@
       "B": 134,
       "C": 48,
       "D": 10
-    }
+    },
+    "base_slug": "melloblum",
+    "is_form": false
   },
   {
     "name": "Melloblum (Prismana)",
     "slug": "melloblum::v1032402",
     "element": "grass",
     "element2": "light",
-    "art": "/assets/creatures/melloblum::v1032402.webp",
+    "art": "/assets/creatures/melloblum.webp",
     "tier": "B",
     "votes": {
       "S+": 9,
@@ -1741,7 +1957,9 @@
       "B": 138,
       "C": 40,
       "D": 13
-    }
+    },
+    "base_slug": "melloblum",
+    "is_form": true
   },
   {
     "name": "Pomegg",
@@ -1757,14 +1975,16 @@
       "B": 116,
       "C": 50,
       "D": 11
-    }
+    },
+    "base_slug": "pomegg",
+    "is_form": false
   },
   {
     "name": "Pomegg (Snowfield Form)",
     "slug": "pomegg::highland-form",
     "element": "grass",
     "element2": "ice",
-    "art": "/assets/creatures/pomegg::highland-form.webp",
+    "art": "/assets/creatures/pomegg.webp",
     "tier": "B",
     "votes": {
       "S+": 9,
@@ -1773,14 +1993,16 @@
       "B": 134,
       "C": 45,
       "D": 12
-    }
+    },
+    "base_slug": "pomegg",
+    "is_form": true
   },
   {
     "name": "Pomegg (Highland Form)",
     "slug": "pomegg::mountain-woods-form",
     "element": "grass",
     "element2": null,
-    "art": "/assets/creatures/pomegg::mountain-woods-form.webp",
+    "art": "/assets/creatures/pomegg.webp",
     "tier": "B",
     "votes": {
       "S+": 8,
@@ -1789,14 +2011,16 @@
       "B": 135,
       "C": 44,
       "D": 13
-    }
+    },
+    "base_slug": "pomegg",
+    "is_form": true
   },
   {
     "name": "Pomegg (Sea of Flowers Form)",
     "slug": "pomegg::thunderstorm",
     "element": "grass",
     "element2": null,
-    "art": "/assets/creatures/pomegg::thunderstorm.webp",
+    "art": "/assets/creatures/pomegg.webp",
     "tier": "B",
     "votes": {
       "S+": 10,
@@ -1805,7 +2029,9 @@
       "B": 138,
       "C": 47,
       "D": 11
-    }
+    },
+    "base_slug": "pomegg",
+    "is_form": true
   },
   {
     "name": "Pomawk",
@@ -1821,14 +2047,16 @@
       "B": 123,
       "C": 47,
       "D": 12
-    }
+    },
+    "base_slug": "pomawk",
+    "is_form": false
   },
   {
     "name": "Pomawk (Snowfield Form)",
     "slug": "pomawk::highland-form",
     "element": "grass",
     "element2": "ice",
-    "art": "/assets/creatures/pomawk::highland-form.webp",
+    "art": "/assets/creatures/pomawk.webp",
     "tier": "B",
     "votes": {
       "S+": 9,
@@ -1837,14 +2065,16 @@
       "B": 119,
       "C": 39,
       "D": 11
-    }
+    },
+    "base_slug": "pomawk",
+    "is_form": true
   },
   {
     "name": "Pomawk (Highland Form)",
     "slug": "pomawk::mountain-woods-form",
     "element": "grass",
     "element2": null,
-    "art": "/assets/creatures/pomawk::mountain-woods-form.webp",
+    "art": "/assets/creatures/pomawk.webp",
     "tier": "B",
     "votes": {
       "S+": 10,
@@ -1853,14 +2083,16 @@
       "B": 122,
       "C": 52,
       "D": 15
-    }
+    },
+    "base_slug": "pomawk",
+    "is_form": true
   },
   {
     "name": "Pomawk (Sea of Flowers Form)",
     "slug": "pomawk::thunderstorm",
     "element": "grass",
     "element2": null,
-    "art": "/assets/creatures/pomawk::thunderstorm.webp",
+    "art": "/assets/creatures/pomawk.webp",
     "tier": "B",
     "votes": {
       "S+": 10,
@@ -1869,7 +2101,9 @@
       "B": 112,
       "C": 46,
       "D": 11
-    }
+    },
+    "base_slug": "pomawk",
+    "is_form": true
   },
   {
     "name": "Dewy",
@@ -1885,7 +2119,9 @@
       "B": 149,
       "C": 48,
       "D": 13
-    }
+    },
+    "base_slug": "dewy",
+    "is_form": false
   },
   {
     "name": "Fragrancier",
@@ -1901,7 +2137,9 @@
       "B": 142,
       "C": 47,
       "D": 12
-    }
+    },
+    "base_slug": "fragrancier",
+    "is_form": false
   },
   {
     "name": "Wisptis",
@@ -1917,14 +2155,16 @@
       "B": 123,
       "C": 44,
       "D": 10
-    }
+    },
+    "base_slug": "wisptis",
+    "is_form": false
   },
   {
     "name": "Wisptis (Forest Form)",
     "slug": "wisptis::highland-form",
     "element": "dark",
     "element2": "grass",
-    "art": "/assets/creatures/wisptis::highland-form.webp",
+    "art": "/assets/creatures/wisptis.webp",
     "tier": "B",
     "votes": {
       "S+": 8,
@@ -1933,14 +2173,16 @@
       "B": 154,
       "C": 54,
       "D": 15
-    }
+    },
+    "base_slug": "wisptis",
+    "is_form": true
   },
   {
     "name": "Wisptis (Highland Form)",
     "slug": "wisptis::mountain-woods-form",
     "element": "dark",
     "element2": "fire",
-    "art": "/assets/creatures/wisptis::mountain-woods-form.webp",
+    "art": "/assets/creatures/wisptis.webp",
     "tier": "B",
     "votes": {
       "S+": 8,
@@ -1949,7 +2191,9 @@
       "B": 154,
       "C": 52,
       "D": 12
-    }
+    },
+    "base_slug": "wisptis",
+    "is_form": true
   },
   {
     "name": "Ignitis",
@@ -1965,14 +2209,16 @@
       "B": 125,
       "C": 44,
       "D": 12
-    }
+    },
+    "base_slug": "ignitis",
+    "is_form": false
   },
   {
     "name": "Ignitis (Forest Form)",
     "slug": "ignitis::highland-form",
     "element": "dark",
     "element2": "grass",
-    "art": "/assets/creatures/ignitis::highland-form.webp",
+    "art": "/assets/creatures/ignitis.webp",
     "tier": "B",
     "votes": {
       "S+": 8,
@@ -1981,14 +2227,16 @@
       "B": 152,
       "C": 54,
       "D": 11
-    }
+    },
+    "base_slug": "ignitis",
+    "is_form": true
   },
   {
     "name": "Ignitis (Prismana Form)",
     "slug": "ignitis::prismana-form",
     "element": "dark",
     "element2": "fire",
-    "art": "/assets/creatures/ignitis::prismana-form.webp",
+    "art": "/assets/creatures/ignitis.webp",
     "tier": "B",
     "votes": {
       "S+": 9,
@@ -1997,14 +2245,16 @@
       "B": 142,
       "C": 46,
       "D": 15
-    }
+    },
+    "base_slug": "ignitis",
+    "is_form": true
   },
   {
     "name": "Ignitis (Highland Form)",
     "slug": "ignitis::mountain-woods-form",
     "element": "dark",
     "element2": "fire",
-    "art": "/assets/creatures/ignitis::mountain-woods-form.webp",
+    "art": "/assets/creatures/ignitis.webp",
     "tier": "B",
     "votes": {
       "S+": 8,
@@ -2013,7 +2263,9 @@
       "B": 107,
       "C": 46,
       "D": 13
-    }
+    },
+    "base_slug": "ignitis",
+    "is_form": true
   },
   {
     "name": "Bonesky",
@@ -2029,14 +2281,16 @@
       "B": 118,
       "C": 38,
       "D": 12
-    }
+    },
+    "base_slug": "bonesky",
+    "is_form": false
   },
   {
     "name": "Bonesky (Nighttime Form)",
     "slug": "bonesky::highland-form",
     "element": "ice",
     "element2": "dark",
-    "art": "/assets/creatures/bonesky::highland-form.webp",
+    "art": "/assets/creatures/bonesky.webp",
     "tier": "B",
     "votes": {
       "S+": 10,
@@ -2045,7 +2299,9 @@
       "B": 132,
       "C": 52,
       "D": 10
-    }
+    },
+    "base_slug": "bonesky",
+    "is_form": true
   },
   {
     "name": "Fenrier",
@@ -2061,14 +2317,16 @@
       "B": 143,
       "C": 46,
       "D": 10
-    }
+    },
+    "base_slug": "fenrier",
+    "is_form": false
   },
   {
     "name": "Fenrier (Nighttime Form)",
     "slug": "fenrier::highland-form",
     "element": "ice",
     "element2": "dark",
-    "art": "/assets/creatures/fenrier::highland-form.webp",
+    "art": "/assets/creatures/fenrier.webp",
     "tier": "B",
     "votes": {
       "S+": 8,
@@ -2077,7 +2335,9 @@
       "B": 133,
       "C": 44,
       "D": 14
-    }
+    },
+    "base_slug": "fenrier",
+    "is_form": true
   },
   {
     "name": "Glynsera",
@@ -2093,14 +2353,16 @@
       "B": 126,
       "C": 50,
       "D": 12
-    }
+    },
+    "base_slug": "glynsera",
+    "is_form": false
   },
   {
     "name": "Glynsera (Prismana Form)",
     "slug": "glynsera::prismana-form",
     "element": "ice",
     "element2": "light",
-    "art": "/assets/creatures/glynsera::prismana-form.webp",
+    "art": "/assets/creatures/glynsera.webp",
     "tier": "B",
     "votes": {
       "S+": 7,
@@ -2109,14 +2371,16 @@
       "B": 147,
       "C": 43,
       "D": 12
-    }
+    },
+    "base_slug": "glynsera",
+    "is_form": true
   },
   {
     "name": "Glynsera (Nighttime Form)",
     "slug": "glynsera::highland-form",
     "element": "ice",
     "element2": "dark",
-    "art": "/assets/creatures/glynsera::highland-form.webp",
+    "art": "/assets/creatures/glynsera.webp",
     "tier": "B",
     "votes": {
       "S+": 7,
@@ -2125,7 +2389,9 @@
       "B": 118,
       "C": 54,
       "D": 10
-    }
+    },
+    "base_slug": "glynsera",
+    "is_form": true
   },
   {
     "name": "Bolty",
@@ -2141,14 +2407,16 @@
       "B": 135,
       "C": 52,
       "D": 12
-    }
+    },
+    "base_slug": "bolty",
+    "is_form": false
   },
   {
     "name": "Bolty (Mountain Woods Form)",
     "slug": "bolty::highland-form",
     "element": "electric",
     "element2": null,
-    "art": "/assets/creatures/bolty::highland-form.webp",
+    "art": "/assets/creatures/bolty.webp",
     "tier": "B",
     "votes": {
       "S+": 7,
@@ -2157,7 +2425,9 @@
       "B": 152,
       "C": 46,
       "D": 15
-    }
+    },
+    "base_slug": "bolty",
+    "is_form": true
   },
   {
     "name": "Blazen",
@@ -2173,14 +2443,16 @@
       "B": 121,
       "C": 45,
       "D": 15
-    }
+    },
+    "base_slug": "blazen",
+    "is_form": false
   },
   {
     "name": "Blazen (Prismana Form)",
     "slug": "blazen::prismana-form",
     "element": "electric",
     "element2": "dark",
-    "art": "/assets/creatures/blazen::prismana-form.webp",
+    "art": "/assets/creatures/blazen.webp",
     "tier": "B",
     "votes": {
       "S+": 8,
@@ -2189,14 +2461,16 @@
       "B": 141,
       "C": 44,
       "D": 15
-    }
+    },
+    "base_slug": "blazen",
+    "is_form": true
   },
   {
     "name": "Blazen (Mountain Woods Form)",
     "slug": "blazen::highland-form",
     "element": "electric",
     "element2": null,
-    "art": "/assets/creatures/blazen::highland-form.webp",
+    "art": "/assets/creatures/blazen.webp",
     "tier": "B",
     "votes": {
       "S+": 8,
@@ -2205,7 +2479,9 @@
       "B": 111,
       "C": 38,
       "D": 11
-    }
+    },
+    "base_slug": "blazen",
+    "is_form": true
   },
   {
     "name": "Squarrel",
@@ -2221,7 +2497,9 @@
       "B": 114,
       "C": 51,
       "D": 15
-    }
+    },
+    "base_slug": "squarrel",
+    "is_form": false
   },
   {
     "name": "Squashel",
@@ -2237,7 +2515,9 @@
       "B": 139,
       "C": 54,
       "D": 13
-    }
+    },
+    "base_slug": "squashel",
+    "is_form": false
   },
   {
     "name": "Susuta",
@@ -2253,14 +2533,16 @@
       "B": 109,
       "C": 50,
       "D": 15
-    }
+    },
+    "base_slug": "susuta",
+    "is_form": false
   },
   {
     "name": "Susuta (Nighttime Form)",
     "slug": "susuta::highland-form",
     "element": "water",
     "element2": null,
-    "art": "/assets/creatures/susuta::highland-form.webp",
+    "art": "/assets/creatures/susuta.webp",
     "tier": "B",
     "votes": {
       "S+": 9,
@@ -2269,7 +2551,9 @@
       "B": 112,
       "C": 44,
       "D": 15
-    }
+    },
+    "base_slug": "susuta",
+    "is_form": true
   },
   {
     "name": "Popota",
@@ -2285,14 +2569,16 @@
       "B": 109,
       "C": 42,
       "D": 13
-    }
+    },
+    "base_slug": "popota",
+    "is_form": false
   },
   {
     "name": "Popota (Nighttime Form)",
     "slug": "popota::highland-form",
     "element": "water",
     "element2": null,
-    "art": "/assets/creatures/popota::highland-form.webp",
+    "art": "/assets/creatures/popota.webp",
     "tier": "B",
     "votes": {
       "S+": 10,
@@ -2301,7 +2587,9 @@
       "B": 144,
       "C": 50,
       "D": 15
-    }
+    },
+    "base_slug": "popota",
+    "is_form": true
   },
   {
     "name": "Piopiota",
@@ -2317,14 +2605,16 @@
       "B": 129,
       "C": 50,
       "D": 12
-    }
+    },
+    "base_slug": "piopiota",
+    "is_form": false
   },
   {
     "name": "Piopiota (Nighttime Form)",
     "slug": "piopiota::highland-form",
     "element": "water",
     "element2": "dark",
-    "art": "/assets/creatures/piopiota::highland-form.webp",
+    "art": "/assets/creatures/piopiota.webp",
     "tier": "B",
     "votes": {
       "S+": 9,
@@ -2333,7 +2623,9 @@
       "B": 128,
       "C": 50,
       "D": 15
-    }
+    },
+    "base_slug": "piopiota",
+    "is_form": true
   },
   {
     "name": "Panpanta",
@@ -2349,14 +2641,16 @@
       "B": 132,
       "C": 54,
       "D": 10
-    }
+    },
+    "base_slug": "panpanta",
+    "is_form": false
   },
   {
     "name": "Panpanta (Nighttime Form)",
     "slug": "panpanta::highland-form",
     "element": "water",
     "element2": null,
-    "art": "/assets/creatures/panpanta::highland-form.webp",
+    "art": "/assets/creatures/panpanta.webp",
     "tier": "B",
     "votes": {
       "S+": 10,
@@ -2365,14 +2659,16 @@
       "B": 123,
       "C": 47,
       "D": 10
-    }
+    },
+    "base_slug": "panpanta",
+    "is_form": true
   },
   {
     "name": "Panpanta (Prismana Form)",
     "slug": "panpanta::prismana-form",
     "element": "water",
     "element2": null,
-    "art": "/assets/creatures/panpanta::prismana-form.webp",
+    "art": "/assets/creatures/panpanta.webp",
     "tier": "B",
     "votes": {
       "S+": 10,
@@ -2381,7 +2677,9 @@
       "B": 141,
       "C": 51,
       "D": 13
-    }
+    },
+    "base_slug": "panpanta",
+    "is_form": true
   },
   {
     "name": "Shelly",
@@ -2397,7 +2695,9 @@
       "B": 130,
       "C": 52,
       "D": 15
-    }
+    },
+    "base_slug": "shelly",
+    "is_form": false
   },
   {
     "name": "Sheldon",
@@ -2413,7 +2713,9 @@
       "B": 124,
       "C": 54,
       "D": 11
-    }
+    },
+    "base_slug": "sheldon",
+    "is_form": false
   },
   {
     "name": "Sherro",
@@ -2429,14 +2731,16 @@
       "B": 138,
       "C": 40,
       "D": 10
-    }
+    },
+    "base_slug": "sherro",
+    "is_form": false
   },
   {
     "name": "Sherro (Thunderstorm Form)",
     "slug": "sherro::thunderstorm-form",
     "element": "water",
     "element2": "electric",
-    "art": "/assets/creatures/sherro::thunderstorm-form.webp",
+    "art": "/assets/creatures/sherro.webp",
     "tier": "B",
     "votes": {
       "S+": 8,
@@ -2445,14 +2749,16 @@
       "B": 142,
       "C": 37,
       "D": 14
-    }
+    },
+    "base_slug": "sherro",
+    "is_form": true
   },
   {
     "name": "Sherro (Prismana Form)",
     "slug": "sherro::prismana-form",
     "element": "water",
     "element2": "light",
-    "art": "/assets/creatures/sherro::prismana-form.webp",
+    "art": "/assets/creatures/sherro.webp",
     "tier": "B",
     "votes": {
       "S+": 10,
@@ -2461,7 +2767,9 @@
       "B": 114,
       "C": 51,
       "D": 10
-    }
+    },
+    "base_slug": "sherro",
+    "is_form": true
   },
   {
     "name": "Baleetle",
@@ -2477,14 +2785,16 @@
       "B": 125,
       "C": 53,
       "D": 15
-    }
+    },
+    "base_slug": "baleetle",
+    "is_form": false
   },
   {
     "name": "Baleetle (Snowfield Form)",
     "slug": "baleetle::highland-form",
     "element": "earth",
     "element2": "ice",
-    "art": "/assets/creatures/baleetle::highland-form.webp",
+    "art": "/assets/creatures/baleetle.webp",
     "tier": "B",
     "votes": {
       "S+": 9,
@@ -2493,7 +2803,9 @@
       "B": 137,
       "C": 44,
       "D": 13
-    }
+    },
+    "base_slug": "baleetle",
+    "is_form": true
   },
   {
     "name": "Waleetle",
@@ -2509,14 +2821,16 @@
       "B": 145,
       "C": 53,
       "D": 15
-    }
+    },
+    "base_slug": "waleetle",
+    "is_form": false
   },
   {
     "name": "Waleetle (Snowfield Form)",
     "slug": "waleetle::highland-form",
     "element": "earth",
     "element2": "ice",
-    "art": "/assets/creatures/waleetle::highland-form.webp",
+    "art": "/assets/creatures/waleetle.webp",
     "tier": "B",
     "votes": {
       "S+": 8,
@@ -2525,14 +2839,16 @@
       "B": 133,
       "C": 47,
       "D": 14
-    }
+    },
+    "base_slug": "waleetle",
+    "is_form": true
   },
   {
     "name": "Waleetle (Prismana)",
     "slug": "waleetle::v1045302",
     "element": "earth",
     "element2": "dark",
-    "art": "/assets/creatures/waleetle::v1045302.webp",
+    "art": "/assets/creatures/waleetle.webp",
     "tier": "C",
     "votes": {
       "S+": 4,
@@ -2541,7 +2857,9 @@
       "B": 59,
       "C": 128,
       "D": 32
-    }
+    },
+    "base_slug": "waleetle",
+    "is_form": true
   },
   {
     "name": "Bouldus",
@@ -2557,14 +2875,16 @@
       "B": 67,
       "C": 121,
       "D": 28
-    }
+    },
+    "base_slug": "bouldus",
+    "is_form": false
   },
   {
     "name": "Bouldus (Snowfield Form)",
     "slug": "bouldus::highland-form",
     "element": "earth",
     "element2": "ice",
-    "art": "/assets/creatures/bouldus::highland-form.webp",
+    "art": "/assets/creatures/bouldus.webp",
     "tier": "C",
     "votes": {
       "S+": 4,
@@ -2573,7 +2893,9 @@
       "B": 60,
       "C": 103,
       "D": 34
-    }
+    },
+    "base_slug": "bouldus",
+    "is_form": true
   },
   {
     "name": "Fentuft",
@@ -2589,7 +2911,9 @@
       "B": 63,
       "C": 93,
       "D": 28
-    }
+    },
+    "base_slug": "fentuft",
+    "is_form": false
   },
   {
     "name": "Fenmane",
@@ -2605,14 +2929,16 @@
       "B": 71,
       "C": 100,
       "D": 30
-    }
+    },
+    "base_slug": "fenmane",
+    "is_form": false
   },
   {
     "name": "Fenmane (Prismana Form)",
     "slug": "fenmane::prismana-form",
     "element": "electric",
     "element2": "light",
-    "art": "/assets/creatures/fenmane::prismana-form.webp",
+    "art": "/assets/creatures/fenmane.webp",
     "tier": "C",
     "votes": {
       "S+": 3,
@@ -2621,7 +2947,9 @@
       "B": 53,
       "C": 119,
       "D": 24
-    }
+    },
+    "base_slug": "fenmane",
+    "is_form": true
   },
   {
     "name": "Helmut",
@@ -2637,14 +2965,16 @@
       "B": 63,
       "C": 100,
       "D": 24
-    }
+    },
+    "base_slug": "helmut",
+    "is_form": false
   },
   {
     "name": "Helmut (Snowfield Form)",
     "slug": "helmut::highland-form",
     "element": "dark",
     "element2": "ice",
-    "art": "/assets/creatures/helmut::highland-form.webp",
+    "art": "/assets/creatures/helmut.webp",
     "tier": "C",
     "votes": {
       "S+": 4,
@@ -2653,14 +2983,16 @@
       "B": 69,
       "C": 116,
       "D": 33
-    }
+    },
+    "base_slug": "helmut",
+    "is_form": true
   },
   {
     "name": "Helmut (Mountain Woods Form)",
     "slug": "helmut::mountain-woods-form",
     "element": "dark",
     "element2": null,
-    "art": "/assets/creatures/helmut::mountain-woods-form.webp",
+    "art": "/assets/creatures/helmut.webp",
     "tier": "C",
     "votes": {
       "S+": 3,
@@ -2669,7 +3001,9 @@
       "B": 60,
       "C": 122,
       "D": 31
-    }
+    },
+    "base_slug": "helmut",
+    "is_form": true
   },
   {
     "name": "Pawney",
@@ -2685,14 +3019,16 @@
       "B": 70,
       "C": 109,
       "D": 26
-    }
+    },
+    "base_slug": "pawney",
+    "is_form": false
   },
   {
     "name": "Pawney (Snowfield Form)",
     "slug": "pawney::highland-form",
     "element": "dark",
     "element2": "ice",
-    "art": "/assets/creatures/pawney::highland-form.webp",
+    "art": "/assets/creatures/pawney.webp",
     "tier": "C",
     "votes": {
       "S+": 3,
@@ -2701,14 +3037,16 @@
       "B": 70,
       "C": 97,
       "D": 30
-    }
+    },
+    "base_slug": "pawney",
+    "is_form": true
   },
   {
     "name": "Pawney (Mountain Woods Form)",
     "slug": "pawney::mountain-woods-form",
     "element": "dark",
     "element2": null,
-    "art": "/assets/creatures/pawney::mountain-woods-form.webp",
+    "art": "/assets/creatures/pawney.webp",
     "tier": "C",
     "votes": {
       "S+": 3,
@@ -2717,14 +3055,16 @@
       "B": 51,
       "C": 111,
       "D": 23
-    }
+    },
+    "base_slug": "pawney",
+    "is_form": true
   },
   {
     "name": "Pawney (Prismana Form)",
     "slug": "pawney::prismana-form",
     "element": "dark",
     "element2": null,
-    "art": "/assets/creatures/pawney::prismana-form.webp",
+    "art": "/assets/creatures/pawney.webp",
     "tier": "C",
     "votes": {
       "S+": 4,
@@ -2733,7 +3073,9 @@
       "B": 63,
       "C": 100,
       "D": 26
-    }
+    },
+    "base_slug": "pawney",
+    "is_form": true
   },
   {
     "name": "Rookey",
@@ -2749,14 +3091,16 @@
       "B": 55,
       "C": 96,
       "D": 32
-    }
+    },
+    "base_slug": "rookey",
+    "is_form": false
   },
   {
     "name": "Rookey (Snowfield Form)",
     "slug": "rookey::highland-form",
     "element": "dark",
     "element2": "ice",
-    "art": "/assets/creatures/rookey::highland-form.webp",
+    "art": "/assets/creatures/rookey.webp",
     "tier": "C",
     "votes": {
       "S+": 4,
@@ -2765,14 +3109,16 @@
       "B": 68,
       "C": 100,
       "D": 26
-    }
+    },
+    "base_slug": "rookey",
+    "is_form": true
   },
   {
     "name": "Rookey (Mountain Woods Form)",
     "slug": "rookey::mountain-woods-form",
     "element": "dark",
     "element2": null,
-    "art": "/assets/creatures/rookey::mountain-woods-form.webp",
+    "art": "/assets/creatures/rookey.webp",
     "tier": "C",
     "votes": {
       "S+": 4,
@@ -2781,7 +3127,9 @@
       "B": 58,
       "C": 91,
       "D": 30
-    }
+    },
+    "base_slug": "rookey",
+    "is_form": true
   },
   {
     "name": "Jawling",
@@ -2797,14 +3145,16 @@
       "B": 64,
       "C": 113,
       "D": 32
-    }
+    },
+    "base_slug": "jawling",
+    "is_form": false
   },
   {
     "name": "Jawling (Mountain Form)",
     "slug": "jawling::highland-form",
     "element": "wind",
     "element2": null,
-    "art": "/assets/creatures/jawling::highland-form.webp",
+    "art": "/assets/creatures/jawling.webp",
     "tier": "C",
     "votes": {
       "S+": 4,
@@ -2813,7 +3163,9 @@
       "B": 64,
       "C": 110,
       "D": 26
-    }
+    },
+    "base_slug": "jawling",
+    "is_form": true
   },
   {
     "name": "Helmwhelp",
@@ -2829,14 +3181,16 @@
       "B": 57,
       "C": 115,
       "D": 32
-    }
+    },
+    "base_slug": "helmwhelp",
+    "is_form": false
   },
   {
     "name": "Helmwhelp (Mountain Form)",
     "slug": "helmwhelp::highland-form",
     "element": "wind",
     "element2": null,
-    "art": "/assets/creatures/helmwhelp::highland-form.webp",
+    "art": "/assets/creatures/helmwhelp.webp",
     "tier": "C",
     "votes": {
       "S+": 4,
@@ -2845,7 +3199,9 @@
       "B": 50,
       "C": 116,
       "D": 27
-    }
+    },
+    "base_slug": "helmwhelp",
+    "is_form": true
   },
   {
     "name": "Helgon",
@@ -2861,14 +3217,16 @@
       "B": 59,
       "C": 105,
       "D": 32
-    }
+    },
+    "base_slug": "helgon",
+    "is_form": false
   },
   {
     "name": "Helgon (Mountain Form)",
     "slug": "helgon::highland-form",
     "element": "wind",
     "element2": null,
-    "art": "/assets/creatures/helgon::highland-form.webp",
+    "art": "/assets/creatures/helgon.webp",
     "tier": "C",
     "votes": {
       "S+": 4,
@@ -2877,7 +3235,9 @@
       "B": 69,
       "C": 107,
       "D": 33
-    }
+    },
+    "base_slug": "helgon",
+    "is_form": true
   },
   {
     "name": "Infergon",
@@ -2893,14 +3253,16 @@
       "B": 59,
       "C": 119,
       "D": 23
-    }
+    },
+    "base_slug": "infergon",
+    "is_form": false
   },
   {
     "name": "Infergon (Prismana)",
     "slug": "infergon::v1002503",
     "element": "fire",
     "element2": "wind",
-    "art": "/assets/creatures/infergon::v1002503.webp",
+    "art": "/assets/creatures/infergon.webp",
     "tier": "C",
     "votes": {
       "S+": 4,
@@ -2909,7 +3271,9 @@
       "B": 59,
       "C": 111,
       "D": 34
-    }
+    },
+    "base_slug": "infergon",
+    "is_form": true
   },
   {
     "name": "Cubbo",
@@ -2925,7 +3289,9 @@
       "B": 54,
       "C": 125,
       "D": 28
-    }
+    },
+    "base_slug": "cubbo",
+    "is_form": false
   },
   {
     "name": "Grizbo",
@@ -2941,14 +3307,16 @@
       "B": 65,
       "C": 109,
       "D": 34
-    }
+    },
+    "base_slug": "grizbo",
+    "is_form": false
   },
   {
     "name": "Grizbo (Prismana Form)",
     "slug": "grizbo::prismana-form",
     "element": "earth",
     "element2": "dark",
-    "art": "/assets/creatures/grizbo::prismana-form.webp",
+    "art": "/assets/creatures/grizbo.webp",
     "tier": "C",
     "votes": {
       "S+": 4,
@@ -2957,7 +3325,9 @@
       "B": 52,
       "C": 100,
       "D": 26
-    }
+    },
+    "base_slug": "grizbo",
+    "is_form": true
   },
   {
     "name": "Pebbling",
@@ -2973,7 +3343,9 @@
       "B": 62,
       "C": 91,
       "D": 27
-    }
+    },
+    "base_slug": "pebbling",
+    "is_form": false
   },
   {
     "name": "Lavazar",
@@ -2989,7 +3361,9 @@
       "B": 71,
       "C": 107,
       "D": 32
-    }
+    },
+    "base_slug": "lavazar",
+    "is_form": false
   },
   {
     "name": "Magmarex",
@@ -3005,14 +3379,16 @@
       "B": 71,
       "C": 105,
       "D": 30
-    }
+    },
+    "base_slug": "magmarex",
+    "is_form": false
   },
   {
     "name": "Magmarex (Prismana Form)",
     "slug": "magmarex::prismana-form",
     "element": "fire",
     "element2": "dark",
-    "art": "/assets/creatures/magmarex::prismana-form.webp",
+    "art": "/assets/creatures/magmarex.webp",
     "tier": "C",
     "votes": {
       "S+": 3,
@@ -3021,7 +3397,9 @@
       "B": 70,
       "C": 95,
       "D": 33
-    }
+    },
+    "base_slug": "magmarex",
+    "is_form": true
   },
   {
     "name": "Geodeback",
@@ -3037,7 +3415,9 @@
       "B": 53,
       "C": 99,
       "D": 23
-    }
+    },
+    "base_slug": "geodeback",
+    "is_form": false
   },
   {
     "name": "Minespine",
@@ -3053,7 +3433,9 @@
       "B": 53,
       "C": 97,
       "D": 26
-    }
+    },
+    "base_slug": "minespine",
+    "is_form": false
   },
   {
     "name": "Cozite",
@@ -3069,7 +3451,9 @@
       "B": 61,
       "C": 125,
       "D": 29
-    }
+    },
+    "base_slug": "cozite",
+    "is_form": false
   },
   {
     "name": "Bailite",
@@ -3085,7 +3469,9 @@
       "B": 65,
       "C": 130,
       "D": 29
-    }
+    },
+    "base_slug": "bailite",
+    "is_form": false
   },
   {
     "name": "Bulbly",
@@ -3101,7 +3487,9 @@
       "B": 56,
       "C": 119,
       "D": 30
-    }
+    },
+    "base_slug": "bulbly",
+    "is_form": false
   },
   {
     "name": "Veilfloat",
@@ -3117,7 +3505,9 @@
       "B": 71,
       "C": 114,
       "D": 31
-    }
+    },
+    "base_slug": "veilfloat",
+    "is_form": false
   },
   {
     "name": "Luminelle",
@@ -3133,14 +3523,16 @@
       "B": 58,
       "C": 103,
       "D": 24
-    }
+    },
+    "base_slug": "luminelle",
+    "is_form": false
   },
   {
     "name": "Luminelle (Rainstorm Form)",
     "slug": "luminelle::rainstorm-form",
     "element": "electric",
     "element2": "water",
-    "art": "/assets/creatures/luminelle::rainstorm-form.webp",
+    "art": "/assets/creatures/luminelle.webp",
     "tier": "C",
     "votes": {
       "S+": 4,
@@ -3149,14 +3541,16 @@
       "B": 70,
       "C": 129,
       "D": 23
-    }
+    },
+    "base_slug": "luminelle",
+    "is_form": true
   },
   {
     "name": "Luminelle (Prismana Form)",
     "slug": "luminelle::prismana-form",
     "element": "electric",
     "element2": "light",
-    "art": "/assets/creatures/luminelle::prismana-form.webp",
+    "art": "/assets/creatures/luminelle.webp",
     "tier": "C",
     "votes": {
       "S+": 3,
@@ -3165,7 +3559,9 @@
       "B": 54,
       "C": 127,
       "D": 26
-    }
+    },
+    "base_slug": "luminelle",
+    "is_form": true
   },
   {
     "name": "Fahloo",
@@ -3181,7 +3577,9 @@
       "B": 22,
       "C": 47,
       "D": 83
-    }
+    },
+    "base_slug": "fahloo",
+    "is_form": false
   },
   {
     "name": "Erlath",
@@ -3197,7 +3595,9 @@
       "B": 21,
       "C": 54,
       "D": 90
-    }
+    },
+    "base_slug": "erlath",
+    "is_form": false
   },
   {
     "name": "Besauce",
@@ -3213,7 +3613,9 @@
       "B": 21,
       "C": 37,
       "D": 96
-    }
+    },
+    "base_slug": "besauce",
+    "is_form": false
   },
   {
     "name": "Reefish",
@@ -3229,14 +3631,16 @@
       "B": 21,
       "C": 45,
       "D": 77
-    }
+    },
+    "base_slug": "reefish",
+    "is_form": false
   },
   {
     "name": "Reefish (Rainstorm Form)",
     "slug": "reefish::highland-form",
     "element": "earth",
     "element2": null,
-    "art": "/assets/creatures/reefish::highland-form.webp",
+    "art": "/assets/creatures/reefish.webp",
     "tier": "D",
     "votes": {
       "S+": 1,
@@ -3245,7 +3649,9 @@
       "B": 20,
       "C": 52,
       "D": 102
-    }
+    },
+    "base_slug": "reefish",
+    "is_form": true
   },
   {
     "name": "Coraliz",
@@ -3261,14 +3667,16 @@
       "B": 22,
       "C": 38,
       "D": 107
-    }
+    },
+    "base_slug": "coraliz",
+    "is_form": false
   },
   {
     "name": "Coraliz (Rainstorm Form)",
     "slug": "coraliz::highland-form",
     "element": "earth",
     "element2": null,
-    "art": "/assets/creatures/coraliz::highland-form.webp",
+    "art": "/assets/creatures/coraliz.webp",
     "tier": "D",
     "votes": {
       "S+": 2,
@@ -3277,7 +3685,9 @@
       "B": 19,
       "C": 52,
       "D": 99
-    }
+    },
+    "base_slug": "coraliz",
+    "is_form": true
   },
   {
     "name": "Cheekie",
@@ -3293,7 +3703,9 @@
       "B": 26,
       "C": 39,
       "D": 79
-    }
+    },
+    "base_slug": "cheekie",
+    "is_form": false
   },
   {
     "name": "Wavwal",
@@ -3309,7 +3721,9 @@
       "B": 21,
       "C": 45,
       "D": 94
-    }
+    },
+    "base_slug": "wavwal",
+    "is_form": false
   },
   {
     "name": "Bubbeep",
@@ -3325,7 +3739,9 @@
       "B": 25,
       "C": 40,
       "D": 81
-    }
+    },
+    "base_slug": "bubbeep",
+    "is_form": false
   },
   {
     "name": "Glameep",
@@ -3341,14 +3757,16 @@
       "B": 22,
       "C": 50,
       "D": 95
-    }
+    },
+    "base_slug": "glameep",
+    "is_form": false
   },
   {
     "name": "Glameep (Prismana Form)",
     "slug": "glameep::v1058301",
     "element": "grass",
     "element2": "dark",
-    "art": "/assets/creatures/glameep::v1058301.webp",
+    "art": "/assets/creatures/glameep.webp",
     "tier": "D",
     "votes": {
       "S+": 2,
@@ -3357,7 +3775,9 @@
       "B": 20,
       "C": 47,
       "D": 101
-    }
+    },
+    "base_slug": "glameep",
+    "is_form": true
   },
   {
     "name": "Popapus",
@@ -3373,7 +3793,9 @@
       "B": 21,
       "C": 52,
       "D": 78
-    }
+    },
+    "base_slug": "popapus",
+    "is_form": false
   },
   {
     "name": "Gachapus",
@@ -3389,7 +3811,9 @@
       "B": 25,
       "C": 40,
       "D": 97
-    }
+    },
+    "base_slug": "gachapus",
+    "is_form": false
   },
   {
     "name": "Malangel",
@@ -3405,7 +3829,9 @@
       "B": 20,
       "C": 50,
       "D": 96
-    }
+    },
+    "base_slug": "malangel",
+    "is_form": false
   },
   {
     "name": "Malevsera",
@@ -3421,7 +3847,9 @@
       "B": 23,
       "C": 48,
       "D": 80
-    }
+    },
+    "base_slug": "malevsera",
+    "is_form": false
   },
   {
     "name": "Dazmand",
@@ -3437,7 +3865,9 @@
       "B": 22,
       "C": 40,
       "D": 96
-    }
+    },
+    "base_slug": "dazmand",
+    "is_form": false
   },
   {
     "name": "Fulmintis",
@@ -3453,14 +3883,16 @@
       "B": 22,
       "C": 50,
       "D": 75
-    }
+    },
+    "base_slug": "fulmintis",
+    "is_form": false
   },
   {
     "name": "Fulmintis (Prismana Form)",
     "slug": "fulmintis::prismana-form",
     "element": "electric",
     "element2": "light",
-    "art": "/assets/creatures/fulmintis::prismana-form.webp",
+    "art": "/assets/creatures/fulmintis.webp",
     "tier": "D",
     "votes": {
       "S+": 2,
@@ -3469,7 +3901,9 @@
       "B": 23,
       "C": 46,
       "D": 95
-    }
+    },
+    "base_slug": "fulmintis",
+    "is_form": true
   },
   {
     "name": "Helion",
@@ -3485,7 +3919,9 @@
       "B": 21,
       "C": 49,
       "D": 78
-    }
+    },
+    "base_slug": "helion",
+    "is_form": false
   },
   {
     "name": "Irisalis",
@@ -3501,7 +3937,9 @@
       "B": 154,
       "C": 53,
       "D": 11
-    }
+    },
+    "base_slug": "irisalis",
+    "is_form": false
   },
   {
     "name": "Lunara",
@@ -3517,6 +3955,8 @@
       "B": 128,
       "C": 42,
       "D": 12
-    }
+    },
+    "base_slug": "lunara",
+    "is_form": false
   }
 ]

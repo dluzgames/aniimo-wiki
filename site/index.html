@@ -822,6 +822,82 @@
       </div>
     </div>
 
+
+    <!-- 4. CREATURE STATUS / DETAIL MODAL (1:1 ANIIDEX.COM SPEC) -->
+    <div class="modal-overlay" id="modal-creature-detail">
+      <div class="modal-card creature-detail-modal" style="max-width:760px; max-height:90vh; display:flex; flex-direction:column; padding:0; overflow:hidden;">
+        <!-- MODAL HEADER BANNER -->
+        <div class="cdm-header" style="position:relative; padding:24px 28px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.9)); border-bottom:1px solid rgba(255,255,255,0.1); display:flex; gap:20px; align-items:center;">
+          <button class="modal-close-btn" id="modal-detail-close" style="top:16px; right:16px; z-index:10;">&times;</button>
+          <div class="cdm-avatar-box" style="position:relative; width:110px; height:110px; min-width:110px; background:radial-gradient(circle at center, rgba(56,188,239,0.2) 0%, rgba(15,23,42,0.6) 70%); border-radius:18px; border:2px solid rgba(56,188,239,0.4); display:flex; align-items:center; justify-content:center; overflow:hidden;">
+            <img id="cdm-img" src="" style="max-width:95%; max-height:95%; object-fit:contain; filter:drop-shadow(0 6px 14px rgba(0,0,0,0.6));" alt="Aniimo" />
+            <span id="cdm-dex" style="position:absolute; top:4px; left:6px; font-size:10px; font-weight:800; color:#64748b; font-family:monospace; background:rgba(0,0,0,0.4); padding:1px 5px; border-radius:4px;">#001</span>
+          </div>
+          <div style="flex:1;">
+            <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+              <h2 id="cdm-name" style="margin:0; font-size:1.6rem; font-weight:900; color:#f8fafc;">Nome da Criatura</h2>
+              <span id="cdm-badge-tier" style="font-size:11px; font-weight:900; padding:2px 8px; border-radius:6px; background:#ef4444; color:#fff;">TIER S+</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; margin-top:8px; flex-wrap:wrap;">
+              <span id="cdm-badge-element" style="font-size:12px; font-weight:800; padding:3px 10px; border-radius:99px; background:#EF4444; color:#fff; display:inline-flex; align-items:center; gap:4px;">🔥 Fogo</span>
+              <span id="cdm-badge-role" style="font-size:12px; font-weight:700; padding:3px 10px; border-radius:99px; background:rgba(255,255,255,0.08); color:#cbd5e1;">DPS</span>
+              <span id="cdm-badge-stage" style="font-size:12px; font-weight:700; padding:3px 10px; border-radius:99px; background:rgba(255,255,255,0.05); color:#94a3b8;">Estágio Básico</span>
+            </div>
+            <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
+              <button class="btn btn-primary" id="cdm-btn-vote" style="padding:6px 14px; font-size:12px;">🗳️ Votar na Tier List</button>
+              <button class="btn btn-secondary" id="cdm-btn-builder" style="padding:6px 14px; font-size:12px;">⚔️ Adicionar à Equipe</button>
+              <button class="btn btn-secondary" id="cdm-btn-map" style="padding:6px 14px; font-size:12px;">🗺️ Ver no Mapa</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODAL SCROLLABLE BODY -->
+        <div class="cdm-body" style="flex:1; overflow-y:auto; padding:24px 28px; display:flex; flex-direction:column; gap:20px;">
+          <!-- SECTION 1: STATS PANEL -->
+          <div class="cdm-section">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+              <h4 style="margin:0; font-size:1.05rem; font-weight:800; color:#f8fafc; text-transform:uppercase; letter-spacing:0.04em;">📊 Atributos & Potencial de Combate</h4>
+              <span id="cdm-cp" style="font-size:1.1rem; font-weight:900; color:#38bcef; background:rgba(56,188,239,0.12); padding:2px 10px; border-radius:8px; border:1px solid rgba(56,188,239,0.3);">CP ≈ 932</span>
+            </div>
+            <div id="cdm-stats-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:12px; background:rgba(15,23,42,0.6); padding:16px; border-radius:12px; border:1px solid rgba(255,255,255,0.06);">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+          <!-- SECTION 2: DESCRIPTION & LORE -->
+          <div class="cdm-section">
+            <h4 style="margin:0 0 8px 0; font-size:1.05rem; font-weight:800; color:#f8fafc; text-transform:uppercase; letter-spacing:0.04em;">📜 Descrição & Ecologia</h4>
+            <p id="cdm-desc" style="margin:0; font-size:13.5px; line-height:1.6; color:#94a3b8; background:rgba(15,23,42,0.5); padding:14px; border-radius:10px; border:1px solid rgba(255,255,255,0.05);"></p>
+          </div>
+
+          <!-- SECTION 3: COMBAT SKILLS -->
+          <div class="cdm-section">
+            <h4 style="margin:0 0 10px 0; font-size:1.05rem; font-weight:800; color:#f8fafc; text-transform:uppercase; letter-spacing:0.04em;">⚔️ Habilidades de Combate</h4>
+            <div id="cdm-skills-list" style="display:flex; flex-direction:column; gap:8px;">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+          <!-- SECTION 4: EVOLUTION CHAIN -->
+          <div class="cdm-section">
+            <h4 style="margin:0 0 10px 0; font-size:1.05rem; font-weight:800; color:#f8fafc; text-transform:uppercase; letter-spacing:0.04em;">🧬 Cadeia Evolutiva</h4>
+            <div id="cdm-evo-chain" style="display:flex; align-items:center; gap:12px; flex-wrap:wrap; background:rgba(15,23,42,0.5); padding:14px; border-radius:10px; border:1px solid rgba(255,255,255,0.05);">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+          <!-- SECTION 5: HABITAT / SPAWN -->
+          <div class="cdm-section">
+            <h4 style="margin:0 0 8px 0; font-size:1.05rem; font-weight:800; color:#f8fafc; text-transform:uppercase; letter-spacing:0.04em;">📍 Onde Encontrar em Idília</h4>
+            <div id="cdm-spawn-info" style="font-size:13px; color:#cbd5e1; background:rgba(15,23,42,0.5); padding:12px 14px; border-radius:10px; border:1px solid rgba(255,255,255,0.05); display:flex; justify-content:space-between; align-items:center;">
+              <span id="cdm-habitat-text">Planícies Ventosas • Colinas Escarpadas</span>
+              <button class="btn btn-secondary" id="cdm-btn-goto-map" style="padding:4px 10px; font-size:11px;">Rastrear no Mapa →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 <div class="toast-container" id="toast-container"></div>
 
   </div>

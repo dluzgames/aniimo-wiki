@@ -1,6 +1,6 @@
 /**
- * ANIIDEX DLUZ BRASIL — CORE APPLICATION ENGINE (COMPLETE EDITION)
- * 1:1 Aniidex.com Architecture + Google Stitch UI + Full Interactive Suite
+ * ANIIDEX DLUZ BRASIL — CORE APPLICATION ENGINE (STATUS & DETAILS EDITION)
+ * 1:1 Aniidex.com Architecture + Creature Status Modals + Interactive Suite
  */
 
 // 1. I18N ELEMENT DICTIONARY
@@ -39,6 +39,7 @@ const state = {
   communityPosts: [],
   activeRegion: 'breezy-plains',
   activeTierFilter: 'all',
+  activeTierTab: 'official', // 'official' (100) or 'all' (220)
   activeCreatureSearch: '',
   mapZoom: 1,
   mapPan: { x: -150, y: -150 },
@@ -48,6 +49,12 @@ const state = {
   selectedVoteCreature: null,
   selectedVoteTier: 'A'
 };
+
+// Helper: Normalize slug to base creature slug
+function getBaseSlug(slugOrName) {
+  if (!slugOrName) return 'emberpup';
+  return slugOrName.split('::')[0].split('(')[0].trim().toLowerCase().replace(/[^a-z0-9_-]/g, '');
+}
 
 // 3. INITIALIZATION
 document.addEventListener('DOMContentLoaded', async () => {
@@ -127,8 +134,8 @@ function setupNavigation() {
 }
 
 function handleRouting() {
-  let raw = window.location.pathname.replace(/^\/+/, '').trim().toLowerCase();
-  raw = raw.split('/')[0] || 'home';
+  const pathParts = window.location.pathname.replace(/^\/+/, '').split('/').filter(Boolean);
+  const rootSegment = (pathParts[0] || 'home').toLowerCase();
 
   const routeAliases = {
     '': 'home',
@@ -148,8 +155,16 @@ function handleRouting() {
     'comunidade': 'comunidade'
   };
 
-  const target = routeAliases[raw] || 'home';
+  const target = routeAliases[rootSegment] || 'home';
   showSection(target);
+
+  // Check if navigating to /aniimo/<slug> or /criaturas/<slug>
+  if ((rootSegment === 'aniimo' || rootSegment === 'criaturas') && pathParts[1]) {
+    const slug = pathParts[1];
+    setTimeout(() => {
+      openCreatureDetailModal(slug);
+    }, 150);
+  }
 }
 
 function showSection(target) {
@@ -168,7 +183,6 @@ function showSection(target) {
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
 
-  // Trigger region map rendering if opening map section
   if (target === 'mapa' && state.mapData) {
     setTimeout(renderMapMarkers, 100);
   }
@@ -218,7 +232,172 @@ function setupCountdown() {
 }
 
 // ----------------------------------------------------------------------------
-// 7. HOME FEATURED CREATURES GRID
+// 7. CREATURE STATUS / DETAIL MODAL (1:1 ANIIDEX.COM PROFILE)
+// ----------------------------------------------------------------------------
+function openCreatureDetailModal(creatureOrSlug) {
+  let creature = null;
+  if (typeof creatureOrSlug === 'object') {
+    creature = creatureOrSlug;
+  } else {
+    const slug = getBaseSlug(creatureOrSlug);
+    creature = state.creatures.find(c => c.slug === slug || (c.name_pt && c.name_pt.toLowerCase() === slug));
+    if (!creature) {
+      // Fallback search in tierListData
+      const tItem = state.tierListData.find(t => t.slug === creatureOrSlug || getBaseSlug(t.slug) === slug);
+      if (tItem) {
+        creature = {
+          name_pt: tItem.name,
+          name_en: tItem.name,
+          slug: getBaseSlug(tItem.slug),
+          number: '#000',
+          element: tItem.element || 'fogo',
+          role: 'DPS',
+          tier: tItem.tier || 'A'
+        };
+      }
+    }
+  }
+
+  if (!creature) return;
+
+  const baseSlug = getBaseSlug(creature.slug);
+  const modal = document.getElementById('modal-creature-detail');
+  if (!modal) return;
+
+  const elemInfo = ELEMENT_MAP[creature.element || 'fogo'] || { name: 'Fogo', icon: '🔥', bg: '#EF4444' };
+  const tierItem = state.tierListData.find(t => getBaseSlug(t.slug) === baseSlug);
+  const curTier = tierItem ? tierItem.tier : (creature.tier || 'A');
+
+  // 1. Header elements
+  const imgEl = document.getElementById('cdm-img');
+  if (imgEl) {
+    imgEl.src = `/assets/creatures/${baseSlug}.webp`;
+    imgEl.onerror = function() {
+      this.src = `/assets/creatures/${baseSlug}.png`;
+      this.onerror = function() {
+        this.src = `/images/home/hero/${baseSlug}.webp`;
+        this.onerror = function() { this.src = '/assets/dluz-logo.png'; };
+      };
+    };
+  }
+
+  document.getElementById('cdm-dex').textContent = creature.number || '#001';
+  document.getElementById('cdm-name').textContent = creature.name_pt || creature.name;
+  
+  const tierBadge = document.getElementById('cdm-badge-tier');
+  tierBadge.textContent = `TIER ${curTier}`;
+  const tierColors = { 'S+': '#ef4444', 'S': '#f97316', 'A': '#eab308', 'B': '#10b981', 'C': '#3b82f6', 'D': '#6b7280' };
+  tierBadge.style.background = tierColors[curTier] || '#eab308';
+
+  const elemBadge = document.getElementById('cdm-badge-element');
+  elemBadge.innerHTML = `${elemInfo.icon} ${elemInfo.name}`;
+  elemBadge.style.background = elemInfo.bg;
+
+  document.getElementById('cdm-badge-role').textContent = creature.role_pt || creature.role || 'DPS';
+  document.getElementById('cdm-badge-stage').textContent = `Estágio ${creature.stage || 'Básico'}`;
+
+  // 2. CP & Stats
+  const stats = creature.stats || { 'HP': 65, 'ATK': 85, 'P.DEF': 60, 'M.DEF': 55, 'REGEN': 50, 'BREAK': 60 };
+  const cpVal = Math.round(((stats['HP']||60)*2 + (stats['ATK']||70)*3 + (stats['P.DEF']||50)*1.5 + (stats['M.DEF']||50)*1.5) * 1.8);
+  document.getElementById('cdm-cp').textContent = `CP ≈ ${cpVal}`;
+
+  const statsGrid = document.getElementById('cdm-stats-grid');
+  const maxStatValues = { 'HP': 120, 'ATK': 130, 'M.ATK': 130, 'P.DEF': 110, 'M.DEF': 110, 'REGEN': 100, 'BREAK': 100, 'HASTE': 100 };
+  statsGrid.innerHTML = Object.entries(stats).map(([statKey, val]) => {
+    const maxVal = maxStatValues[statKey] || 100;
+    const pct = Math.min(100, Math.round((val / maxVal) * 100));
+    return `
+      <div class="cdm-stat-item">
+        <div class="cdm-stat-top">
+          <span class="cdm-stat-label">${statKey}</span>
+          <span class="cdm-stat-val">${val}</span>
+        </div>
+        <div class="cdm-stat-track">
+          <div class="cdm-stat-bar" style="width:${pct}%;"></div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  // 3. Description
+  document.getElementById('cdm-desc').textContent = creature.description_pt || creature.description || 'Uma das fascinantes criaturas que habitam o vasto mundo aberto de Idília, capaz de canalizar poderes elementais únicos.';
+
+  // 4. Combat Skills
+  const skillsList = document.getElementById('cdm-skills-list');
+  const skills = creature.skills_pt || [
+    { name: `Investida de ${elemInfo.name}`, desc: `Ataque primário rápido que desfere dano do tipo ${elemInfo.name}.`, cost: '10 energia' },
+    { name: `Explosão Elemental`, desc: `Canaliza energia pura causando alto impacto e chance de quebra de escudo.`, cost: '15 energia' },
+    { name: `Vontade de Idília (Passiva)`, desc: `Aumenta em 15% a regeneração de energia e a resistência elemental da equipe.`, cost: 'Passiva' }
+  ];
+  skillsList.innerHTML = skills.map(s => `
+    <div class="cdm-skill-card">
+      <div class="cdm-skill-info">
+        <span class="cdm-skill-name">${s.name || s}</span>
+        <span class="cdm-skill-desc">${s.desc || `Golpe técnico com dano concentrado e efeito elemental ${elemInfo.name}.`}</span>
+      </div>
+      <span class="cdm-skill-cost">${s.cost || '12 energia'}</span>
+    </div>
+  `).join('');
+
+  // 5. Evolution Chain
+  const evoContainer = document.getElementById('cdm-evo-chain');
+  const evoChain = creature.evolution_path || [creature.name_pt || creature.name];
+  evoContainer.innerHTML = evoChain.map((evoName, idx) => {
+    const evoSlug = getBaseSlug(evoName);
+    const isCurrent = evoSlug === baseSlug;
+    return `
+      <div class="cdm-evo-card ${isCurrent ? 'current' : ''}" onclick="openCreatureDetailModal('${evoSlug}');">
+        <img src="/assets/creatures/${evoSlug}.webp" style="width:46px; height:46px; object-fit:contain;" onerror="this.src='/assets/creatures/${evoSlug}.png'; this.onerror=function(){this.src='/assets/dluz-logo.png';};" />
+        <span style="font-size:11px; font-weight:800; color:${isCurrent ? '#38bcef' : '#cbd5e1'};">${evoName}</span>
+      </div>
+      ${idx < evoChain.length - 1 ? '<span style="color:#64748b; font-weight:900;">→</span>' : ''}
+    `;
+  }).join('');
+
+  // 6. Spawn / Habitat info
+  const habitat = creature.habitat_pt || 'Planícies Ventosas • Ilhas Centrais de Idília';
+  document.getElementById('cdm-habitat-text').textContent = habitat;
+
+  function goToMap() {
+    modal.classList.remove('open');
+    navigateTo('/mapa');
+    showToast(`📍 Rastreador ativado para ${creature.name_pt || creature.name} no mapa!`, 'info');
+  }
+  document.getElementById('cdm-btn-goto-map').onclick = goToMap;
+  document.getElementById('cdm-btn-map').onclick = goToMap;
+
+  // 7. Action buttons
+  document.getElementById('cdm-btn-vote').onclick = () => {
+    modal.classList.remove('open');
+    const targetItem = state.tierListData.find(t => getBaseSlug(t.slug) === baseSlug) || {
+      slug: baseSlug,
+      name: creature.name_pt || creature.name,
+      element: creature.element,
+      tier: curTier,
+      votes: { 'S+': 10, 'S': 20, 'A': 40, 'B': 20, 'C': 5, 'D': 5 }
+    };
+    openTierVoteModal(targetItem);
+  };
+
+  document.getElementById('cdm-btn-builder').onclick = () => {
+    modal.classList.remove('open');
+    let emptyIdx = state.builderTeam.findIndex(slot => slot === null);
+    if (emptyIdx === -1) emptyIdx = 0;
+    state.builderTeam[emptyIdx] = creature;
+    renderBuilderSlot(emptyIdx + 1);
+    updateBuilderSynergy();
+    showToast(`⚔️ ${creature.name_pt || creature.name} adicionado ao Slot ${emptyIdx + 1} do Montador!`, 'success');
+  };
+
+  // Close handler
+  document.getElementById('modal-detail-close').onclick = () => modal.classList.remove('open');
+
+  modal.classList.add('open');
+}
+window.openCreatureDetailModal = openCreatureDetailModal;
+
+// ----------------------------------------------------------------------------
+// 8. HOME FEATURED CREATURES GRID
 // ----------------------------------------------------------------------------
 function setupHomeFeaturedGrid() {
   const container = document.getElementById('home-featured-creatures-grid');
@@ -231,14 +410,14 @@ function setupHomeFeaturedGrid() {
 function renderCreatureCardHtml(c) {
   const elemInfo = ELEMENT_MAP[c.element || 'fogo'] || { name: 'Fogo', icon: '🔥', bg: '#EF4444' };
   const num = c.number || '#000';
-  const slug = c.slug || (c.name_pt || '').toLowerCase();
-  const role = c.role || 'DPS';
+  const baseSlug = getBaseSlug(c.slug || c.name_pt);
+  const role = c.role_pt || c.role || 'DPS';
 
   return `
-    <div class="aniimo-visual-card" onclick="navigateTo('/criaturas');">
+    <div class="aniimo-visual-card" onclick="openCreatureDetailModal('${baseSlug}');">
       <div class="aniimo-image-wrapper">
         <span class="aniimo-id-tag">${num}</span>
-        <img class="char-img" src="/assets/creatures/${slug}.webp" alt="${c.name_pt || c.name}" onerror="this.src='/assets/creatures/${slug}.png'; this.onerror=function(){this.src='/assets/dluz-logo.png';};" />
+        <img class="char-img" src="/assets/creatures/${baseSlug}.webp" alt="${c.name_pt || c.name}" onerror="this.src='/assets/creatures/${baseSlug}.png'; this.onerror=function(){this.src='/images/home/hero/${baseSlug}.webp'; this.onerror=function(){this.src='/assets/dluz-logo.png';};};" />
         <div class="floating-badges">
           <div class="floating-badge" style="background:${elemInfo.bg};" title="${elemInfo.name}">
             <span>${elemInfo.icon}</span>
@@ -252,14 +431,14 @@ function renderCreatureCardHtml(c) {
             <span>${role}</span>
           </div>
         </div>
-        <span class="details-link">Ver detalhes →</span>
+        <span class="details-link">Ver status completo →</span>
       </div>
     </div>
   `;
 }
 
 // ----------------------------------------------------------------------------
-// 8. CREATURES DATABASE MODULE
+// 9. CREATURES DATABASE MODULE (/criaturas)
 // ----------------------------------------------------------------------------
 function setupCreaturesModule() {
   const container = document.getElementById('creatures-full-grid');
@@ -275,10 +454,11 @@ function setupCreaturesModule() {
       if (search) {
         const namePt = (c.name_pt || '').toLowerCase();
         const slug = (c.slug || '').toLowerCase();
-        if (!namePt.includes(search) && !slug.includes(search)) return false;
+        const num = (c.number || '').toLowerCase();
+        if (!namePt.includes(search) && !slug.includes(search) && !num.includes(search)) return false;
       }
       if (elemFilter !== 'all' && c.element !== elemFilter) return false;
-      if (roleFilter !== 'all' && c.role !== roleFilter) return false;
+      if (roleFilter !== 'all' && (c.role_pt !== roleFilter && c.role !== roleFilter)) return false;
       return true;
     });
 
@@ -293,7 +473,181 @@ function setupCreaturesModule() {
 }
 
 // ----------------------------------------------------------------------------
-// 9. INTERACTIVE MAP ENGINE MODULE
+// 10. TIER LIST MODULE & COMMUNITY VOTING (/tier-list)
+// ----------------------------------------------------------------------------
+function setupTierListModule() {
+  // Tabs: 100 Official Aniimos vs 220 Forms
+  const tabCommunity = document.getElementById('tl-tab-community');
+  const tabEditorial = document.getElementById('tl-tab-editorial');
+
+  if (tabCommunity) {
+    tabCommunity.textContent = '☀️ 100 Aniimos Oficiais';
+    tabCommunity.onclick = () => {
+      tabCommunity.classList.add('active');
+      tabEditorial?.classList.remove('active');
+      state.activeTierTab = 'official';
+      renderTierBoard();
+    };
+  }
+
+  if (tabEditorial) {
+    tabEditorial.textContent = '🌀 Todas as Formas & Variantes (220)';
+    tabEditorial.onclick = () => {
+      tabEditorial.classList.add('active');
+      tabCommunity?.classList.remove('active');
+      state.activeTierTab = 'all';
+      renderTierBoard();
+    };
+  }
+
+  document.querySelectorAll('.tl-filter-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('.tl-filter-chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      state.activeTierFilter = chip.getAttribute('data-element');
+      renderTierBoard();
+    });
+  });
+
+  renderTierBoard();
+}
+
+function renderTierBoard() {
+  if (!state.tierListData || !state.tierListData.length) return;
+
+  const tiers = ['S+', 'S', 'A', 'B', 'C', 'D'];
+  tiers.forEach(t => {
+    const container = document.getElementById(`tiles-tier-${t}`);
+    if (!container) return;
+
+    const matching = state.tierListData.filter(item => {
+      const topT = item.tier || 'B';
+      if (topT !== t) return false;
+      if (state.activeTierFilter !== 'all' && item.element !== state.activeTierFilter) return false;
+      if (state.activeTierTab === 'official' && item.is_form) return false;
+      return true;
+    });
+
+    if (matching.length === 0) {
+      container.innerHTML = `<span style="font-size:12px; color:var(--ink-soft); padding:8px;">Nenhuma criatura nesta faixa com os filtros ativos</span>`;
+      return;
+    }
+
+    container.innerHTML = matching.map(item => {
+      const baseSlug = getBaseSlug(item.base_slug || item.slug);
+      return `
+        <div class="tl-card" data-slug="${item.slug}" onclick="openCreatureDetailModal('${item.slug}');" title="Ver status completo de ${item.name}">
+          <div class="tl-card-avatar-wrap">
+            <img src="/assets/creatures/${baseSlug}.webp" class="tl-card-img" alt="${item.name}" onerror="this.src='/assets/creatures/${baseSlug}.png'; this.onerror=function(){this.src='/images/home/hero/${baseSlug}.webp'; this.onerror=function(){this.src='/assets/dluz-logo.png';};};" />
+          </div>
+          <span class="tl-card-name">${item.name}</span>
+        </div>
+      `;
+    }).join('');
+  });
+}
+
+function openTierVoteModal(item) {
+  state.selectedVoteCreature = item;
+  state.selectedVoteTier = item.tier || 'A';
+
+  const modal = document.getElementById('modal-tier-vote');
+  if (!modal) return;
+  modal.classList.add('open');
+
+  const baseSlug = getBaseSlug(item.base_slug || item.slug);
+  const img = document.getElementById('vote-creature-img');
+  const name = document.getElementById('vote-creature-name');
+  const meta = document.getElementById('vote-creature-meta');
+  const bars = document.getElementById('vote-distribution-bars');
+  const closeBtn = document.getElementById('modal-vote-close');
+
+  if (img) {
+    img.src = `/assets/creatures/${baseSlug}.webp`;
+    img.onerror = function() {
+      this.src = `/assets/creatures/${baseSlug}.png`;
+      this.onerror = function() { this.src = '/assets/dluz-logo.png'; };
+    };
+  }
+
+  if (name) name.textContent = item.name;
+  if (meta) meta.textContent = `Elemento: ${item.element || 'Normal'} • Tier Atual: ${item.tier || 'A'}`;
+
+  const totalVotes = Object.values(item.votes || {}).reduce((a, b) => a + b, 0) || 1;
+  const tiers = ['S+', 'S', 'A', 'B', 'C', 'D'];
+
+  if (bars) {
+    bars.innerHTML = `
+      <div style="display:flex; flex-direction:column; gap:6px;">
+        ${tiers.map(t => {
+          const count = (item.votes && item.votes[t]) || 0;
+          const pct = Math.round((count / totalVotes) * 100);
+          return `
+            <div style="display:flex; align-items:center; gap:8px; font-size:12px;">
+              <strong style="width:24px; color:#cbd5e1;">${t}</strong>
+              <div style="flex:1; height:8px; background:rgba(255,255,255,0.08); border-radius:99px; overflow:hidden;">
+                <div style="height:100%; width:${pct}%; background:#38bcef; border-radius:99px;"></div>
+              </div>
+              <span style="width:36px; text-align:right; color:#94a3b8; font-weight:700;">${pct}%</span>
+            </div>
+          `;
+        }).join('')}
+      </div>
+    `;
+  }
+
+  document.querySelectorAll('.vote-tier-opt').forEach(btn => {
+    btn.classList.toggle('selected', btn.getAttribute('data-tier') === state.selectedVoteTier);
+    btn.onclick = () => {
+      document.querySelectorAll('.vote-tier-opt').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      state.selectedVoteTier = btn.getAttribute('data-tier');
+    };
+  });
+
+  if (closeBtn) closeBtn.onclick = () => modal.classList.remove('open');
+
+  const submitBtn = document.getElementById('btn-submit-tier-vote');
+  if (submitBtn) {
+    submitBtn.onclick = async () => {
+      if (!state.selectedVoteCreature) return;
+      const targetTier = state.selectedVoteTier;
+      
+      if (!item.votes) item.votes = {};
+      item.votes[targetTier] = (item.votes[targetTier] || 0) + 1;
+      
+      let maxVotes = 0;
+      let topTier = targetTier;
+      for (const [t, v] of Object.entries(item.votes)) {
+        if (v > maxVotes) {
+          maxVotes = v;
+          topTier = t;
+        }
+      }
+      item.tier = topTier;
+
+      try {
+        await fetch('/api/tier-list/vote', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            slug: item.slug,
+            creatureSlug: item.slug,
+            tier: targetTier,
+            user: { name: 'Inscrito VIP DLuz' }
+          })
+        });
+      } catch(e) {}
+
+      modal.classList.remove('open');
+      renderTierBoard();
+      showToast(`🎉 Seu voto oficial em ${item.name} (${targetTier}) foi registrado!`, 'success');
+    };
+  }
+}
+
+// ----------------------------------------------------------------------------
+// 11. INTERACTIVE MAP ENGINE MODULE (/mapa)
 // ----------------------------------------------------------------------------
 function setupMapModule() {
   const viewport = document.getElementById('imap-viewport-container');
@@ -321,7 +675,6 @@ function setupMapModule() {
     renderMapMarkers();
   }
 
-  // Set initial background
   updateRegion('breezy-plains');
 
   if (regionSelector) {
@@ -344,7 +697,6 @@ function setupMapModule() {
   }
 
   if (viewport) {
-    // Center map initially
     const vpRect = viewport.getBoundingClientRect();
     if (vpRect.width > 0 && vpRect.height > 0) {
       state.mapPan.x = (vpRect.width / 2) - 1100 * state.mapZoom;
@@ -352,7 +704,6 @@ function setupMapModule() {
       updateTransform();
     }
 
-    // Drag Pan
     let isDragging = false;
     let startX = 0, startY = 0;
 
@@ -372,7 +723,6 @@ function setupMapModule() {
 
     window.addEventListener('mouseup', () => { isDragging = false; });
 
-    // Mouse Wheel Zoom
     viewport.addEventListener('wheel', (e) => {
       e.preventDefault();
       const zoomFactor = e.deltaY < 0 ? 1.15 : 0.88;
@@ -391,7 +741,6 @@ function setupMapModule() {
     }, { passive: false });
   }
 
-  // Controls
   if (zoomIn) zoomIn.addEventListener('click', () => {
     state.mapZoom = Math.min(state.mapZoom * 1.25, 3.0);
     updateTransform();
@@ -411,7 +760,6 @@ function setupMapModule() {
     showToast('Visualização do mapa centralizada!', 'info');
   });
 
-  // Layer toggles
   document.querySelectorAll('.filter-checkbox input').forEach(input => {
     input.addEventListener('change', () => {
       const layer = input.getAttribute('data-layer');
@@ -424,12 +772,10 @@ function setupMapModule() {
     });
   });
 
-  // Search filter
   if (searchInput) {
     searchInput.addEventListener('input', renderMapMarkers);
   }
 
-  // Toggle found markers
   if (toggleFoundBtn) {
     toggleFoundBtn.addEventListener('click', () => {
       state.hideFoundMarkers = !state.hideFoundMarkers;
@@ -475,7 +821,6 @@ function renderMapMarkers() {
     `;
   }).join('');
 
-  // Marker click handler
   container.querySelectorAll('.map-marker').forEach(mEl => {
     mEl.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -491,7 +836,7 @@ function renderMapMarkers() {
       } else {
         state.foundMarkers.add(id);
         mEl.classList.add('found');
-        showToast(`Marcador '${marker.name_pt}' marcado como coletado!`, 'success');
+        showToast(`Marcador '${marker.name_pt}' coletado!`, 'success');
       }
       localStorage.setItem('aniidex_found_markers', JSON.stringify([...state.foundMarkers]));
     });
@@ -499,7 +844,7 @@ function renderMapMarkers() {
 }
 
 // ----------------------------------------------------------------------------
-// 10. TEAM BUILDER MODULE
+// 12. TEAM BUILDER MODULE (/builder)
 // ----------------------------------------------------------------------------
 function setupBuilderModule() {
   const slots = [1, 2, 3, 4];
@@ -536,7 +881,6 @@ function setupBuilderModule() {
     });
   });
 
-  // Restore team from URL if present
   const params = new URLSearchParams(window.location.search);
   const teamParam = params.get('team');
   if (teamParam) {
@@ -577,9 +921,10 @@ function openBuilderPicker() {
 
     grid.innerHTML = filtered.map(c => {
       const elemInfo = ELEMENT_MAP[c.element || 'fogo'] || { name: 'Fogo', icon: '🔥', bg: '#EF4444' };
+      const baseSlug = getBaseSlug(c.slug);
       return `
         <div class="picker-card" data-slug="${c.slug}" style="background:rgba(15,23,42,0.85); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:8px; cursor:pointer; text-align:center; transition:all 0.2s;">
-          <img src="/assets/creatures/${c.slug}.webp" style="width:54px; height:54px; object-fit:contain; margin:0 auto;" onerror="this.src='/assets/dluz-logo.png';" />
+          <img src="/assets/creatures/${baseSlug}.webp" style="width:54px; height:54px; object-fit:contain; margin:0 auto;" onerror="this.src='/assets/creatures/${baseSlug}.png'; this.onerror=function(){this.src='/assets/dluz-logo.png';};" />
           <div style="font-size:12px; font-weight:800; color:#f8fafc; margin-top:4px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${c.name_pt}</div>
           <span style="display:inline-block; font-size:10px; padding:1px 6px; border-radius:4px; background:${elemInfo.bg}; color:#fff; margin-top:2px;">${elemInfo.icon} ${elemInfo.name}</span>
         </div>
@@ -623,13 +968,14 @@ function renderBuilderSlot(slotNum) {
   }
 
   card.classList.add('filled');
+  const baseSlug = getBaseSlug(creature.slug);
   const elemInfo = ELEMENT_MAP[creature.element || 'fogo'] || { name: 'Fogo', icon: '🔥', bg: '#EF4444' };
   body.innerHTML = `
-    <img src="/assets/creatures/${creature.slug}.webp" style="height:90px; width:auto; object-fit:contain; filter:drop-shadow(0 4px 10px rgba(0,0,0,0.6));" onerror="this.src='/assets/dluz-logo.png';" />
-    <strong style="font-size:15px; color:#f8fafc; margin-top:6px;">${creature.name_pt}</strong>
+    <img src="/assets/creatures/${baseSlug}.webp" style="height:90px; width:auto; object-fit:contain; filter:drop-shadow(0 4px 10px rgba(0,0,0,0.6));" onerror="this.src='/assets/creatures/${baseSlug}.png'; this.onerror=function(){this.src='/assets/dluz-logo.png';};" />
+    <strong style="font-size:15px; color:#f8fafc; margin-top:6px;">${creature.name_pt || creature.name}</strong>
     <div style="display:flex; gap:6px; margin-top:4px;">
       <span style="font-size:11px; font-weight:800; padding:2px 8px; border-radius:99px; background:${elemInfo.bg}; color:#fff;">${elemInfo.icon} ${elemInfo.name}</span>
-      <span style="font-size:11px; font-weight:700; padding:2px 8px; border-radius:99px; background:rgba(255,255,255,0.1); color:#94a3b8;">${creature.role || 'DPS'}</span>
+      <span style="font-size:11px; font-weight:700; padding:2px 8px; border-radius:99px; background:rgba(255,255,255,0.1); color:#94a3b8;">${creature.role_pt || creature.role || 'DPS'}</span>
     </div>
   `;
 }
@@ -683,158 +1029,7 @@ function updateBuilderSynergy() {
 }
 
 // ----------------------------------------------------------------------------
-// 11. TIER LIST MODULE & COMMUNITY VOTING
-// ----------------------------------------------------------------------------
-function setupTierListModule() {
-  document.querySelectorAll('.tl-filter-chip').forEach(chip => {
-    chip.addEventListener('click', () => {
-      document.querySelectorAll('.tl-filter-chip').forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-      state.activeTierFilter = chip.getAttribute('data-element');
-      renderTierBoard();
-    });
-  });
-
-  renderTierBoard();
-}
-
-function renderTierBoard() {
-  if (!state.tierListData || !state.tierListData.length) return;
-
-  const tiers = ['S+', 'S', 'A', 'B', 'C', 'D'];
-  tiers.forEach(t => {
-    const container = document.getElementById(`tiles-tier-${t}`);
-    if (!container) return;
-
-    const matching = state.tierListData.filter(item => {
-      const topT = item.tier || 'B';
-      if (topT !== t) return false;
-      if (state.activeTierFilter !== 'all' && item.element !== state.activeTierFilter) return false;
-      return true;
-    });
-
-    if (matching.length === 0) {
-      container.innerHTML = `<span style="font-size:12px; color:var(--ink-soft); padding:8px;">Nenhuma criatura nesta faixa com os filtros ativos</span>`;
-      return;
-    }
-
-    container.innerHTML = matching.map(item => `
-      <div class="tl-card" data-slug="${item.slug}">
-        <div class="tl-card-avatar-wrap">
-          <img src="/assets/creatures/${item.slug}.webp" class="tl-card-img" alt="${item.name}" onerror="this.src='/assets/creatures/${item.slug}.png'; this.onerror=function(){this.src='/assets/dluz-logo.png';};" />
-        </div>
-        <span class="tl-card-name">${item.name}</span>
-      </div>
-    `).join('');
-
-    container.querySelectorAll('.tl-card').forEach(card => {
-      card.addEventListener('click', () => {
-        const slug = card.getAttribute('data-slug');
-        const item = state.tierListData.find(i => i.slug === slug);
-        if (item) openTierVoteModal(item);
-      });
-    });
-  });
-}
-
-function openTierVoteModal(item) {
-  state.selectedVoteCreature = item;
-  state.selectedVoteTier = item.tier || 'A';
-
-  const modal = document.getElementById('modal-tier-vote');
-  if (!modal) return;
-  modal.classList.add('open');
-
-  const img = document.getElementById('vote-creature-img');
-  const name = document.getElementById('vote-creature-name');
-  const meta = document.getElementById('vote-creature-meta');
-  const bars = document.getElementById('vote-distribution-bars');
-  const closeBtn = document.getElementById('modal-vote-close');
-
-  if (img) img.src = `/assets/creatures/${item.slug}.webp`;
-  if (name) name.textContent = item.name;
-  if (meta) meta.textContent = `Elemento: ${item.element || 'Normal'} • Tier Atual: ${item.tier || 'A'}`;
-
-  // Update distribution bars
-  const totalVotes = Object.values(item.votes || {}).reduce((a, b) => a + b, 0) || 1;
-  const tiers = ['S+', 'S', 'A', 'B', 'C', 'D'];
-
-  if (bars) {
-    bars.innerHTML = `
-      <div style="display:flex; flex-direction:column; gap:6px;">
-        ${tiers.map(t => {
-          const count = (item.votes && item.votes[t]) || 0;
-          const pct = Math.round((count / totalVotes) * 100);
-          return `
-            <div style="display:flex; align-items:center; gap:8px; font-size:12px;">
-              <strong style="width:24px; color:#cbd5e1;">${t}</strong>
-              <div style="flex:1; height:8px; background:rgba(255,255,255,0.08); border-radius:99px; overflow:hidden;">
-                <div style="height:100%; width:${pct}%; background:#38bcef; border-radius:99px;"></div>
-              </div>
-              <span style="width:36px; text-align:right; color:#94a3b8; font-weight:700;">${pct}%</span>
-            </div>
-          `;
-        }).join('')}
-      </div>
-    `;
-  }
-
-  // Tier buttons selection
-  document.querySelectorAll('.vote-tier-opt').forEach(btn => {
-    btn.classList.toggle('selected', btn.getAttribute('data-tier') === state.selectedVoteTier);
-    btn.onclick = () => {
-      document.querySelectorAll('.vote-tier-opt').forEach(b => b.classList.remove('selected'));
-      btn.classList.add('selected');
-      state.selectedVoteTier = btn.getAttribute('data-tier');
-    };
-  });
-
-  if (closeBtn) closeBtn.onclick = () => modal.classList.remove('open');
-
-  const submitBtn = document.getElementById('btn-submit-tier-vote');
-  if (submitBtn) {
-    submitBtn.onclick = async () => {
-      if (!state.selectedVoteCreature) return;
-      const targetTier = state.selectedVoteTier;
-      
-      // Update locally
-      if (!item.votes) item.votes = {};
-      item.votes[targetTier] = (item.votes[targetTier] || 0) + 1;
-      
-      // Recalculate top tier
-      let maxVotes = 0;
-      let topTier = targetTier;
-      for (const [t, v] of Object.entries(item.votes)) {
-        if (v > maxVotes) {
-          maxVotes = v;
-          topTier = t;
-        }
-      }
-      item.tier = topTier;
-
-      // Post to backend API
-      try {
-        await fetch('/api/tier-list/vote', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            slug: item.slug,
-            creatureSlug: item.slug,
-            tier: targetTier,
-            user: { name: 'Inscrito VIP DLuz' }
-          })
-        });
-      } catch(e) {}
-
-      modal.classList.remove('open');
-      renderTierBoard();
-      showToast(`🎉 Seu voto oficial em ${item.name} (${targetTier}) foi computado com sucesso!`, 'success');
-    };
-  }
-}
-
-// ----------------------------------------------------------------------------
-// 12. ELEMENTS MATCHUP MATRIX MODULE
+// 13. ELEMENTS MATCHUP MATRIX MODULE (/elementos)
 // ----------------------------------------------------------------------------
 function setupElementsModule() {
   const container = document.getElementById('element-matrix-container');
@@ -876,7 +1071,7 @@ function setupElementsModule() {
 }
 
 // ----------------------------------------------------------------------------
-// 13. ITEMS DATABASE MODULE
+// 14. ITEMS DATABASE MODULE (/itens)
 // ----------------------------------------------------------------------------
 function setupItemsModule() {
   const container = document.getElementById('items-full-grid');
@@ -894,7 +1089,7 @@ function setupItemsModule() {
 }
 
 // ----------------------------------------------------------------------------
-// 14. COMMUNITY MODULE & POSTS STREAM
+// 15. COMMUNITY MODULE (/comunidade)
 // ----------------------------------------------------------------------------
 function setupCommunityModule() {
   const container = document.getElementById('comm-posts-stream');
@@ -953,7 +1148,6 @@ function setupCommunityModule() {
       }
     } catch(e) {}
 
-    // Seed fallback post
     container.innerHTML = renderPost({
       author: 'DLuz Games',
       author_role: 'Criador Oficial',
@@ -969,7 +1163,7 @@ function setupCommunityModule() {
 }
 
 // ----------------------------------------------------------------------------
-// 15. MODAL HELPERS & AUTH DIALOG
+// 16. MODAL HELPERS & AUTH DIALOG
 // ----------------------------------------------------------------------------
 function setupModals() {
   const loginBtn = document.getElementById('btn-header-login');
@@ -983,7 +1177,6 @@ function setupModals() {
     loginClose.addEventListener('click', () => loginModal.classList.remove('open'));
   }
 
-  // Quick Subscriber Login
   document.getElementById('btn-login-quick-sub')?.addEventListener('click', () => {
     if (loginModal) loginModal.classList.remove('open');
     showToast('🚀 Conectado com sucesso como Inscrito VIP DLuz!', 'success');
@@ -1000,7 +1193,7 @@ function setupModals() {
 }
 
 // ----------------------------------------------------------------------------
-// 16. TOAST NOTIFICATION UTILITY
+// 17. TOAST NOTIFICATION UTILITY
 // ----------------------------------------------------------------------------
 function showToast(message, type = 'info') {
   const container = document.getElementById('toast-container');
