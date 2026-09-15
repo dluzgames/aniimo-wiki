@@ -1,43 +1,51 @@
 // MAP API MOCK INTERCEPTOR
 const origFetch = window.fetch;
-let _cachedPois = null;
-let _cachedSpecies = null;
+const _markersCache = {};
 
 window.fetch = async (url, options) => {
   const urlStr = typeof url === 'string' ? url : (url.url || '');
   if (urlStr.includes('/api/map/session') || urlStr.includes('/api/map-session')) {
+    let mapId = 'breezy-plains';
+    try {
+      if (options && options.body) {
+        const b = JSON.parse(options.body);
+        if (b.mapId) mapId = b.mapId;
+      }
+    } catch(e) {}
     return new Response(JSON.stringify({
-      session: "dluz-session-token",
+      session: "dluz-" + mapId + "-token",
       expiresIn: 86400
     }), { status: 200, headers: { 'Content-Type': 'application/json' } });
   }
+
   if (urlStr.includes('/api/map/markers')) {
     let body = {};
     try {
       if (options && options.body) body = JSON.parse(options.body);
     } catch(e) {}
 
-    if (body.pois) {
-      if (!_cachedPois) {
-        const res = await origFetch('/data/markers_pois.json');
-        _cachedPois = await res.json();
+    const mapId = body.mapId || 'breezy-plains';
+    const isPois = !!body.pois;
+    const cacheKey = `${mapId}_${isPois ? 'pois' : 'species'}`;
+
+    if (!_markersCache[cacheKey]) {
+      const fileName = `/data/markers_${mapId}_${isPois ? 'pois' : 'species'}.json`;
+      const res = await origFetch(fileName);
+      if (res.ok) {
+        _markersCache[cacheKey] = await res.json();
+      } else {
+        const fb = await origFetch(isPois ? '/data/markers_pois.json' : '/data/markers_species.json');
+        _markersCache[cacheKey] = await fb.json();
       }
-      return new Response(JSON.stringify(_cachedPois), {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' }
-      });
     }
 
-    if (!_cachedSpecies) {
-      const res = await origFetch('/data/markers_species.json');
-      _cachedSpecies = await res.json();
-    }
+    const data = _markersCache[cacheKey];
 
-    if (body.species) {
-      const idx = _cachedSpecies.n ? _cachedSpecies.n.indexOf(body.species) : -1;
+    if (body.species && data && data.n) {
+      const idx = data.n.indexOf(body.species);
       const filtered = {
-        ..._cachedSpecies,
-        m: idx >= 0 ? _cachedSpecies.m.filter(p => p[2] === idx) : _cachedSpecies.m
+        ...data,
+        m: idx >= 0 ? data.m.filter(p => p[2] === idx) : data.m
       };
       return new Response(JSON.stringify(filtered), {
         status: 200,
@@ -45,7 +53,7 @@ window.fetch = async (url, options) => {
       });
     }
 
-    return new Response(JSON.stringify(_cachedSpecies), {
+    return new Response(JSON.stringify(data || { m: [] }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' }
     });
@@ -288,6 +296,9 @@ function setupNavigation() {
   document.addEventListener('click', (e) => {
     const a = e.target.closest('a[href^="/"]');
     if (a && !a.target && !a.hasAttribute('download') && a.origin === window.location.origin) {
+      if (a.classList.contains('imap__region-tab') || a.closest('.imap__regions')) {
+        return; // Full reload so MapV2 initializes the new map bundle fresh
+      }
       e.preventDefault();
       const href = a.getAttribute('href');
       navigateTo(href);
