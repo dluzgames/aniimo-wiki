@@ -15,8 +15,8 @@ async def main():
         failed_requests = []
         page.on("requestfailed", lambda req: failed_requests.append(f"FAILED: {req.url} -> {req.failure}"))
 
-        print("Navigating to http://localhost:8080/ ...")
-        await page.goto("http://localhost:8080/", wait_until="networkidle")
+        print("Navigating to https://aniimo.dluz.com.br/ ...")
+        await page.goto("https://aniimo.dluz.com.br/", wait_until="networkidle")
         await page.wait_for_timeout(3000)
 
         print("\n=== CONSOLE LOGS ===")
