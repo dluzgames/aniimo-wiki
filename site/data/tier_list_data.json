@@ -5,14 +5,14 @@
     "element": "fire",
     "element2": null,
     "art": "/assets/creatures/emberpup.webp",
-    "tier": "A",
+    "tier": "S+",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 178,
+      "S": 58,
+      "A": 25,
+      "B": 10,
+      "C": 5,
+      "D": 2
     }
   },
   {
@@ -21,14 +21,14 @@
     "element": "fire",
     "element2": "earth",
     "art": "/assets/creatures/emberpup::highland-form.webp",
-    "tier": "A",
+    "tier": "S+",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 177,
+      "S": 79,
+      "A": 29,
+      "B": 9,
+      "C": 6,
+      "D": 2
     }
   },
   {
@@ -37,14 +37,14 @@
     "element": "fire",
     "element2": null,
     "art": "/assets/creatures/emberpup::mountain-woods-form.webp",
-    "tier": "A",
+    "tier": "S+",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 167,
+      "S": 60,
+      "A": 24,
+      "B": 10,
+      "C": 5,
+      "D": 2
     }
   },
   {
@@ -53,14 +53,14 @@
     "element": "fire",
     "element2": null,
     "art": "/assets/creatures/flameruff.webp",
-    "tier": "A",
+    "tier": "S+",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 233,
+      "S": 71,
+      "A": 24,
+      "B": 12,
+      "C": 6,
+      "D": 2
     }
   },
   {
@@ -69,14 +69,14 @@
     "element": "fire",
     "element2": "earth",
     "art": "/assets/creatures/flameruff::highland-form.webp",
-    "tier": "A",
+    "tier": "S+",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 184,
+      "S": 80,
+      "A": 27,
+      "B": 11,
+      "C": 6,
+      "D": 2
     }
   },
   {
@@ -85,14 +85,14 @@
     "element": "fire",
     "element2": null,
     "art": "/assets/creatures/flameruff::mountain-woods-form.webp",
-    "tier": "A",
+    "tier": "S+",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 191,
+      "S": 82,
+      "A": 26,
+      "B": 9,
+      "C": 5,
+      "D": 3
     }
   },
   {
@@ -101,14 +101,14 @@
     "element": "fire",
     "element2": null,
     "art": "/assets/creatures/scorchhowl.webp",
-    "tier": "A",
+    "tier": "S+",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 176,
+      "S": 69,
+      "A": 26,
+      "B": 11,
+      "C": 5,
+      "D": 3
     }
   },
   {
@@ -117,14 +117,14 @@
     "element": "fire",
     "element2": "earth",
     "art": "/assets/creatures/scorchhowl::highland-form.webp",
-    "tier": "A",
+    "tier": "S+",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 232,
+      "S": 61,
+      "A": 27,
+      "B": 9,
+      "C": 6,
+      "D": 3
     }
   },
   {
@@ -133,14 +133,14 @@
     "element": "fire",
     "element2": "electric",
     "art": "/assets/creatures/scorchhowl::thunderstorm-form.webp",
-    "tier": "A",
+    "tier": "S+",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 237,
+      "S": 64,
+      "A": 22,
+      "B": 9,
+      "C": 5,
+      "D": 3
     }
   },
   {
@@ -149,14 +149,14 @@
     "element": "fire",
     "element2": null,
     "art": "/assets/creatures/scorchhowl::prismana-form.webp",
-    "tier": "A",
+    "tier": "S+",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 174,
+      "S": 65,
+      "A": 22,
+      "B": 12,
+      "C": 6,
+      "D": 3
     }
   },
   {
@@ -165,14 +165,14 @@
     "element": "fire",
     "element2": null,
     "art": "/assets/creatures/scorchhowl::mountain-woods-form.webp",
-    "tier": "A",
+    "tier": "S+",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 210,
+      "S": 63,
+      "A": 26,
+      "B": 11,
+      "C": 5,
+      "D": 3
     }
   },
   {
@@ -181,14 +181,14 @@
     "element": "fire",
     "element2": "dark",
     "art": "/assets/creatures/inferlupa.webp",
-    "tier": "A",
+    "tier": "S",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 76,
+      "S": 199,
+      "A": 48,
+      "B": 21,
+      "C": 8,
+      "D": 3
     }
   },
   {
@@ -197,14 +197,14 @@
     "element": "dark",
     "element2": "fire",
     "art": "/assets/creatures/inferlupa::v1005503.webp",
-    "tier": "A",
+    "tier": "S",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 68,
+      "S": 164,
+      "A": 54,
+      "B": 22,
+      "C": 9,
+      "D": 3
     }
   },
   {
@@ -213,14 +213,14 @@
     "element": "dark",
     "element2": null,
     "art": "/assets/creatures/celestis.webp",
-    "tier": "A",
+    "tier": "S",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 61,
+      "S": 192,
+      "A": 47,
+      "B": 24,
+      "C": 10,
+      "D": 4
     }
   },
   {
@@ -229,14 +229,14 @@
     "element": "dark",
     "element2": null,
     "art": "/assets/creatures/stellarys.webp",
-    "tier": "A",
+    "tier": "S",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 56,
+      "S": 153,
+      "A": 64,
+      "B": 24,
+      "C": 8,
+      "D": 4
     }
   },
   {
@@ -245,14 +245,14 @@
     "element": "dark",
     "element2": "water",
     "art": "/assets/creatures/stellarys::rainstorm-form.webp",
-    "tier": "A",
+    "tier": "S",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 66,
+      "S": 196,
+      "A": 60,
+      "B": 21,
+      "C": 9,
+      "D": 3
     }
   },
   {
@@ -261,14 +261,14 @@
     "element": "dark",
     "element2": "ice",
     "art": "/assets/creatures/stellarys::prismana-form.webp",
-    "tier": "A",
+    "tier": "S",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 61,
+      "S": 187,
+      "A": 63,
+      "B": 23,
+      "C": 10,
+      "D": 4
     }
   },
   {
@@ -277,14 +277,14 @@
     "element": "wind",
     "element2": null,
     "art": "/assets/creatures/chirpi.webp",
-    "tier": "A",
+    "tier": "S",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 65,
+      "S": 154,
+      "A": 50,
+      "B": 26,
+      "C": 7,
+      "D": 3
     }
   },
   {
@@ -293,14 +293,14 @@
     "element": "wind",
     "element2": "water",
     "art": "/assets/creatures/chirpi::highland-form.webp",
-    "tier": "A",
+    "tier": "S",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 57,
+      "S": 149,
+      "A": 51,
+      "B": 25,
+      "C": 7,
+      "D": 4
     }
   },
   {
@@ -309,14 +309,14 @@
     "element": "wind",
     "element2": "grass",
     "art": "/assets/creatures/chirpi::mountain-woods-form.webp",
-    "tier": "A",
+    "tier": "S",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 66,
+      "S": 178,
+      "A": 60,
+      "B": 23,
+      "C": 7,
+      "D": 3
     }
   },
   {
@@ -325,14 +325,14 @@
     "element": "wind",
     "element2": null,
     "art": "/assets/creatures/tromber.webp",
-    "tier": "A",
+    "tier": "S",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 75,
+      "S": 196,
+      "A": 63,
+      "B": 23,
+      "C": 9,
+      "D": 3
     }
   },
   {
@@ -341,14 +341,14 @@
     "element": "wind",
     "element2": "water",
     "art": "/assets/creatures/tromber::highland-form.webp",
-    "tier": "A",
+    "tier": "S",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 63,
+      "S": 167,
+      "A": 51,
+      "B": 26,
+      "C": 7,
+      "D": 4
     }
   },
   {
@@ -357,14 +357,14 @@
     "element": "wind",
     "element2": "grass",
     "art": "/assets/creatures/tromber::mountain-woods-form.webp",
-    "tier": "A",
+    "tier": "S",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 70,
+      "S": 188,
+      "A": 51,
+      "B": 20,
+      "C": 9,
+      "D": 3
     }
   },
   {
@@ -373,14 +373,14 @@
     "element": "wind",
     "element2": null,
     "art": "/assets/creatures/cornet.webp",
-    "tier": "A",
+    "tier": "S",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 58,
+      "S": 163,
+      "A": 51,
+      "B": 19,
+      "C": 9,
+      "D": 4
     }
   },
   {
@@ -389,14 +389,14 @@
     "element": "wind",
     "element2": "water",
     "art": "/assets/creatures/cornet::highland-form.webp",
-    "tier": "A",
+    "tier": "S",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 54,
+      "S": 147,
+      "A": 57,
+      "B": 23,
+      "C": 8,
+      "D": 3
     }
   },
   {
@@ -405,14 +405,14 @@
     "element": "wind",
     "element2": "electric",
     "art": "/assets/creatures/cornet::prismana-form.webp",
-    "tier": "A",
+    "tier": "S",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 61,
+      "S": 196,
+      "A": 64,
+      "B": 20,
+      "C": 7,
+      "D": 4
     }
   },
   {
@@ -421,14 +421,14 @@
     "element": "wind",
     "element2": "grass",
     "art": "/assets/creatures/cornet::mountain-woods-form.webp",
-    "tier": "A",
+    "tier": "S",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 56,
+      "S": 188,
+      "A": 63,
+      "B": 21,
+      "C": 8,
+      "D": 4
     }
   },
   {
@@ -437,14 +437,14 @@
     "element": "wind",
     "element2": null,
     "art": "/assets/creatures/tubster.webp",
-    "tier": "A",
+    "tier": "S",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 71,
+      "S": 150,
+      "A": 54,
+      "B": 25,
+      "C": 8,
+      "D": 3
     }
   },
   {
@@ -453,14 +453,14 @@
     "element": "wind",
     "element2": "water",
     "art": "/assets/creatures/tubster::highland-form.webp",
-    "tier": "A",
+    "tier": "S",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 76,
+      "S": 159,
+      "A": 58,
+      "B": 24,
+      "C": 10,
+      "D": 4
     }
   },
   {
@@ -469,14 +469,14 @@
     "element": "wind",
     "element2": "grass",
     "art": "/assets/creatures/tubster::mountain-woods-form.webp",
-    "tier": "A",
+    "tier": "S",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 57,
+      "S": 155,
+      "A": 53,
+      "B": 20,
+      "C": 9,
+      "D": 3
     }
   },
   {
@@ -485,14 +485,14 @@
     "element": "grass",
     "element2": null,
     "art": "/assets/creatures/iris.webp",
-    "tier": "A",
+    "tier": "S",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 72,
+      "S": 175,
+      "A": 53,
+      "B": 22,
+      "C": 7,
+      "D": 3
     }
   },
   {
@@ -501,14 +501,14 @@
     "element": "grass",
     "element2": null,
     "art": "/assets/creatures/iris::highland-form.webp",
-    "tier": "A",
+    "tier": "S",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 76,
+      "S": 180,
+      "A": 47,
+      "B": 22,
+      "C": 7,
+      "D": 3
     }
   },
   {
@@ -517,14 +517,14 @@
     "element": "grass",
     "element2": null,
     "art": "/assets/creatures/iris::mountain-woods-form.webp",
-    "tier": "A",
+    "tier": "S",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 64,
+      "S": 144,
+      "A": 62,
+      "B": 22,
+      "C": 9,
+      "D": 4
     }
   },
   {
@@ -533,14 +533,14 @@
     "element": "grass",
     "element2": null,
     "art": "/assets/creatures/iris::thunderstorm.webp",
-    "tier": "A",
+    "tier": "S",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 60,
+      "S": 174,
+      "A": 50,
+      "B": 26,
+      "C": 8,
+      "D": 4
     }
   },
   {
@@ -549,14 +549,14 @@
     "element": "grass",
     "element2": null,
     "art": "/assets/creatures/iris::mudflat-form.webp",
-    "tier": "A",
+    "tier": "S",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 67,
+      "S": 152,
+      "A": 49,
+      "B": 20,
+      "C": 10,
+      "D": 4
     }
   },
   {
@@ -565,14 +565,14 @@
     "element": "grass",
     "element2": null,
     "art": "/assets/creatures/iris::rainstorm-form.webp",
-    "tier": "A",
+    "tier": "S",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 67,
+      "S": 166,
+      "A": 60,
+      "B": 19,
+      "C": 7,
+      "D": 3
     }
   },
   {
@@ -581,14 +581,14 @@
     "element": "grass",
     "element2": null,
     "art": "/assets/creatures/iris::prismana.webp",
-    "tier": "A",
+    "tier": "S",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 66,
+      "S": 186,
+      "A": 56,
+      "B": 20,
+      "C": 8,
+      "D": 3
     }
   },
   {
@@ -599,11 +599,11 @@
     "art": "/assets/creatures/irisal.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
+      "S+": 22,
+      "S": 63,
+      "A": 147,
+      "B": 58,
+      "C": 25,
       "D": 5
     }
   },
@@ -615,11 +615,11 @@
     "art": "/assets/creatures/irisal::highland-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
+      "S+": 23,
+      "S": 60,
+      "A": 134,
+      "B": 56,
+      "C": 26,
       "D": 5
     }
   },
@@ -631,11 +631,11 @@
     "art": "/assets/creatures/irisal::mountain-woods-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
+      "S+": 19,
+      "S": 63,
+      "A": 172,
+      "B": 54,
+      "C": 20,
       "D": 5
     }
   },
@@ -647,12 +647,12 @@
     "art": "/assets/creatures/irisal::thunderstorm.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 21,
+      "S": 59,
+      "A": 150,
+      "B": 69,
+      "C": 22,
+      "D": 6
     }
   },
   {
@@ -663,12 +663,12 @@
     "art": "/assets/creatures/irisal::mudflat-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 19,
+      "S": 51,
+      "A": 143,
+      "B": 54,
+      "C": 25,
+      "D": 6
     }
   },
   {
@@ -679,11 +679,11 @@
     "art": "/assets/creatures/irisal::rainstorm-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
+      "S+": 26,
+      "S": 55,
+      "A": 146,
+      "B": 76,
+      "C": 26,
       "D": 5
     }
   },
@@ -695,12 +695,12 @@
     "art": "/assets/creatures/irisal::prismana.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 22,
+      "S": 55,
+      "A": 132,
+      "B": 55,
+      "C": 19,
+      "D": 6
     }
   },
   {
@@ -711,11 +711,11 @@
     "art": "/assets/creatures/skippy.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
+      "S+": 19,
+      "S": 47,
+      "A": 156,
+      "B": 69,
+      "C": 21,
       "D": 5
     }
   },
@@ -727,11 +727,11 @@
     "art": "/assets/creatures/skippy::highland-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
+      "S+": 20,
+      "S": 51,
+      "A": 123,
+      "B": 73,
+      "C": 20,
       "D": 5
     }
   },
@@ -743,11 +743,11 @@
     "art": "/assets/creatures/skippy::mountain-woods-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
+      "S+": 25,
+      "S": 49,
+      "A": 155,
+      "B": 61,
+      "C": 19,
       "D": 5
     }
   },
@@ -759,12 +759,12 @@
     "art": "/assets/creatures/pranky.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 25,
+      "S": 64,
+      "A": 155,
+      "B": 70,
+      "C": 24,
+      "D": 6
     }
   },
   {
@@ -775,11 +775,11 @@
     "art": "/assets/creatures/pranky::highland-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
+      "S+": 22,
+      "S": 56,
+      "A": 134,
+      "B": 62,
+      "C": 25,
       "D": 5
     }
   },
@@ -791,12 +791,12 @@
     "art": "/assets/creatures/pranky::mountain-woods-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 23,
+      "S": 60,
+      "A": 139,
+      "B": 56,
+      "C": 19,
+      "D": 6
     }
   },
   {
@@ -807,11 +807,11 @@
     "art": "/assets/creatures/glacy.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
+      "S+": 20,
+      "S": 48,
+      "A": 153,
+      "B": 60,
+      "C": 23,
       "D": 5
     }
   },
@@ -823,11 +823,11 @@
     "art": "/assets/creatures/glacy::highland-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
+      "S+": 24,
+      "S": 48,
+      "A": 134,
+      "B": 65,
+      "C": 23,
       "D": 5
     }
   },
@@ -839,12 +839,12 @@
     "art": "/assets/creatures/glacy::mountain-woods-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 26,
+      "S": 63,
+      "A": 164,
+      "B": 63,
+      "C": 19,
+      "D": 6
     }
   },
   {
@@ -855,11 +855,11 @@
     "art": "/assets/creatures/glacy::prismana-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
+      "S+": 20,
+      "S": 50,
+      "A": 135,
+      "B": 57,
+      "C": 20,
       "D": 5
     }
   },
@@ -871,11 +871,11 @@
     "art": "/assets/creatures/leafy.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
+      "S+": 23,
+      "S": 55,
+      "A": 157,
+      "B": 60,
+      "C": 24,
       "D": 5
     }
   },
@@ -887,11 +887,11 @@
     "art": "/assets/creatures/nimbi.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
+      "S+": 23,
+      "S": 62,
+      "A": 150,
+      "B": 62,
+      "C": 19,
       "D": 5
     }
   },
@@ -903,11 +903,11 @@
     "art": "/assets/creatures/nimbi::highland-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
+      "S+": 25,
+      "S": 54,
+      "A": 121,
+      "B": 54,
+      "C": 24,
       "D": 5
     }
   },
@@ -919,11 +919,11 @@
     "art": "/assets/creatures/nimbi::mountain-woods-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
+      "S+": 23,
+      "S": 51,
+      "A": 166,
+      "B": 68,
+      "C": 25,
       "D": 5
     }
   },
@@ -935,12 +935,12 @@
     "art": "/assets/creatures/nimbi::thunderstorm.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 20,
+      "S": 48,
+      "A": 163,
+      "B": 58,
+      "C": 19,
+      "D": 6
     }
   },
   {
@@ -951,12 +951,12 @@
     "art": "/assets/creatures/turbo.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 21,
+      "S": 59,
+      "A": 127,
+      "B": 55,
+      "C": 23,
+      "D": 6
     }
   },
   {
@@ -967,11 +967,11 @@
     "art": "/assets/creatures/turbo::highland-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
+      "S+": 19,
+      "S": 57,
+      "A": 132,
+      "B": 75,
+      "C": 22,
       "D": 5
     }
   },
@@ -983,11 +983,11 @@
     "art": "/assets/creatures/turbo::mountain-woods-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
+      "S+": 24,
+      "S": 63,
+      "A": 145,
+      "B": 73,
+      "C": 21,
       "D": 5
     }
   },
@@ -999,12 +999,12 @@
     "art": "/assets/creatures/turbo::prismana-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 21,
+      "S": 51,
+      "A": 145,
+      "B": 54,
+      "C": 21,
+      "D": 6
     }
   },
   {
@@ -1015,12 +1015,12 @@
     "art": "/assets/creatures/turbo::thunderstorm.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 25,
+      "S": 53,
+      "A": 136,
+      "B": 59,
+      "C": 20,
+      "D": 6
     }
   },
   {
@@ -1031,12 +1031,12 @@
     "art": "/assets/creatures/dreaple.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 19,
+      "S": 61,
+      "A": 133,
+      "B": 60,
+      "C": 26,
+      "D": 6
     }
   },
   {
@@ -1047,12 +1047,12 @@
     "art": "/assets/creatures/hummin.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 23,
+      "S": 53,
+      "A": 133,
+      "B": 54,
+      "C": 22,
+      "D": 6
     }
   },
   {
@@ -1063,12 +1063,12 @@
     "art": "/assets/creatures/hummin::highland-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 24,
+      "S": 54,
+      "A": 123,
+      "B": 62,
+      "C": 24,
+      "D": 6
     }
   },
   {
@@ -1079,12 +1079,12 @@
     "art": "/assets/creatures/witchin.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 24,
+      "S": 46,
+      "A": 126,
+      "B": 62,
+      "C": 21,
+      "D": 6
     }
   },
   {
@@ -1095,12 +1095,12 @@
     "art": "/assets/creatures/witchin::highland-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 19,
+      "S": 49,
+      "A": 157,
+      "B": 67,
+      "C": 24,
+      "D": 6
     }
   },
   {
@@ -1111,11 +1111,11 @@
     "art": "/assets/creatures/witchin::prismana-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
+      "S+": 25,
+      "S": 65,
+      "A": 151,
+      "B": 57,
+      "C": 25,
       "D": 5
     }
   },
@@ -1127,11 +1127,11 @@
     "art": "/assets/creatures/witchin::umbrabow-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
+      "S+": 23,
+      "S": 47,
+      "A": 164,
+      "B": 67,
+      "C": 19,
       "D": 5
     }
   },
@@ -1143,12 +1143,12 @@
     "art": "/assets/creatures/tuckin.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 24,
+      "S": 59,
+      "A": 123,
+      "B": 75,
+      "C": 24,
+      "D": 6
     }
   },
   {
@@ -1159,12 +1159,12 @@
     "art": "/assets/creatures/tuckin::highland-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 20,
+      "S": 55,
+      "A": 151,
+      "B": 63,
+      "C": 25,
+      "D": 6
     }
   },
   {
@@ -1175,12 +1175,12 @@
     "art": "/assets/creatures/budclaw.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 25,
+      "S": 55,
+      "A": 154,
+      "B": 58,
+      "C": 22,
+      "D": 6
     }
   },
   {
@@ -1191,12 +1191,12 @@
     "art": "/assets/creatures/budclaw::highland-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 25,
+      "S": 51,
+      "A": 158,
+      "B": 72,
+      "C": 23,
+      "D": 6
     }
   },
   {
@@ -1207,12 +1207,12 @@
     "art": "/assets/creatures/budclaw::mountain-woods-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 19,
+      "S": 55,
+      "A": 137,
+      "B": 60,
+      "C": 25,
+      "D": 6
     }
   },
   {
@@ -1223,12 +1223,12 @@
     "art": "/assets/creatures/budclaw::thunderstorm.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 26,
+      "S": 60,
+      "A": 147,
+      "B": 75,
+      "C": 22,
+      "D": 6
     }
   },
   {
@@ -1239,11 +1239,11 @@
     "art": "/assets/creatures/shrubclaw.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
+      "S+": 21,
+      "S": 48,
+      "A": 137,
+      "B": 70,
+      "C": 24,
       "D": 5
     }
   },
@@ -1255,11 +1255,11 @@
     "art": "/assets/creatures/shrubclaw::highland-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
+      "S+": 22,
+      "S": 55,
+      "A": 133,
+      "B": 60,
+      "C": 21,
       "D": 5
     }
   },
@@ -1271,12 +1271,12 @@
     "art": "/assets/creatures/shrubclaw::mountain-woods-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 19,
+      "S": 53,
+      "A": 149,
+      "B": 73,
+      "C": 20,
+      "D": 6
     }
   },
   {
@@ -1287,12 +1287,12 @@
     "art": "/assets/creatures/shrubclaw::thunderstorm.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 25,
+      "S": 64,
+      "A": 131,
+      "B": 76,
+      "C": 25,
+      "D": 6
     }
   },
   {
@@ -1303,11 +1303,11 @@
     "art": "/assets/creatures/geoclaw.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
+      "S+": 25,
+      "S": 53,
+      "A": 128,
+      "B": 74,
+      "C": 19,
       "D": 5
     }
   },
@@ -1319,11 +1319,11 @@
     "art": "/assets/creatures/sparki.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
+      "S+": 25,
+      "S": 53,
+      "A": 130,
+      "B": 76,
+      "C": 26,
       "D": 5
     }
   },
@@ -1335,12 +1335,12 @@
     "art": "/assets/creatures/sparki::highland-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 22,
+      "S": 49,
+      "A": 148,
+      "B": 58,
+      "C": 26,
+      "D": 6
     }
   },
   {
@@ -1351,12 +1351,12 @@
     "art": "/assets/creatures/sparki::mountain-woods-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 26,
+      "S": 65,
+      "A": 171,
+      "B": 77,
+      "C": 25,
+      "D": 6
     }
   },
   {
@@ -1367,12 +1367,12 @@
     "art": "/assets/creatures/sparki::thunderstorm.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 21,
+      "S": 61,
+      "A": 147,
+      "B": 62,
+      "C": 22,
+      "D": 6
     }
   },
   {
@@ -1383,12 +1383,12 @@
     "art": "/assets/creatures/flamerion.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 26,
+      "S": 53,
+      "A": 136,
+      "B": 68,
+      "C": 20,
+      "D": 6
     }
   },
   {
@@ -1399,11 +1399,11 @@
     "art": "/assets/creatures/flamerion::highland-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
+      "S+": 22,
+      "S": 54,
       "A": 140,
-      "B": 30,
-      "C": 15,
+      "B": 64,
+      "C": 20,
       "D": 5
     }
   },
@@ -1415,11 +1415,11 @@
     "art": "/assets/creatures/flamerion::mountain-woods-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
+      "S+": 21,
+      "S": 53,
+      "A": 143,
+      "B": 76,
+      "C": 21,
       "D": 5
     }
   },
@@ -1431,12 +1431,12 @@
     "art": "/assets/creatures/flamerion::thunderstorm.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 20,
+      "S": 59,
+      "A": 145,
+      "B": 64,
+      "C": 26,
+      "D": 6
     }
   },
   {
@@ -1447,11 +1447,11 @@
     "art": "/assets/creatures/flutternym.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
+      "S+": 19,
+      "S": 52,
+      "A": 172,
+      "B": 67,
+      "C": 25,
       "D": 5
     }
   },
@@ -1463,12 +1463,12 @@
     "art": "/assets/creatures/flutternym::highland-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 25,
+      "S": 61,
+      "A": 119,
+      "B": 65,
+      "C": 23,
+      "D": 6
     }
   },
   {
@@ -1479,12 +1479,12 @@
     "art": "/assets/creatures/flutternym::mountain-woods-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 25,
+      "S": 63,
+      "A": 166,
+      "B": 77,
+      "C": 22,
+      "D": 6
     }
   },
   {
@@ -1495,12 +1495,12 @@
     "art": "/assets/creatures/flutternym::thunderstorm.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 22,
+      "S": 54,
+      "A": 146,
+      "B": 69,
+      "C": 19,
+      "D": 6
     }
   },
   {
@@ -1511,11 +1511,11 @@
     "art": "/assets/creatures/gracewing.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
+      "S+": 24,
+      "S": 58,
+      "A": 165,
+      "B": 59,
+      "C": 26,
       "D": 5
     }
   },
@@ -1527,11 +1527,11 @@
     "art": "/assets/creatures/gracewing::highland-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
+      "S+": 19,
+      "S": 58,
+      "A": 156,
+      "B": 72,
+      "C": 19,
       "D": 5
     }
   },
@@ -1543,12 +1543,12 @@
     "art": "/assets/creatures/gracewing::mountain-woods-form.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 25,
+      "S": 50,
+      "A": 148,
+      "B": 59,
+      "C": 19,
+      "D": 6
     }
   },
   {
@@ -1559,12 +1559,12 @@
     "art": "/assets/creatures/gracewing::thunderstorm.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 25,
+      "S": 56,
+      "A": 132,
+      "B": 68,
+      "C": 24,
+      "D": 6
     }
   },
   {
@@ -1575,11 +1575,11 @@
     "art": "/assets/creatures/somniwing.webp",
     "tier": "A",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
+      "S+": 25,
+      "S": 54,
+      "A": 167,
+      "B": 67,
+      "C": 23,
       "D": 5
     }
   },
@@ -1589,14 +1589,14 @@
     "element": "wind",
     "element2": null,
     "art": "/assets/creatures/eko.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 10,
+      "S": 19,
+      "A": 77,
+      "B": 141,
+      "C": 38,
+      "D": 12
     }
   },
   {
@@ -1605,14 +1605,14 @@
     "element": "wind",
     "element2": null,
     "art": "/assets/creatures/eklue.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 8,
+      "S": 20,
+      "A": 74,
+      "B": 109,
+      "C": 37,
+      "D": 11
     }
   },
   {
@@ -1621,14 +1621,14 @@
     "element": "grass",
     "element2": null,
     "art": "/assets/creatures/budsquire.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 8,
+      "S": 19,
+      "A": 73,
+      "B": 116,
+      "C": 44,
+      "D": 11
     }
   },
   {
@@ -1637,14 +1637,14 @@
     "element": "grass",
     "element2": null,
     "art": "/assets/creatures/budsquire::highland-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 10,
+      "S": 20,
+      "A": 72,
+      "B": 120,
+      "C": 51,
+      "D": 15
     }
   },
   {
@@ -1653,14 +1653,14 @@
     "element": "grass",
     "element2": null,
     "art": "/assets/creatures/thornblade.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 9,
+      "S": 24,
+      "A": 59,
+      "B": 145,
+      "C": 40,
+      "D": 11
     }
   },
   {
@@ -1669,14 +1669,14 @@
     "element": "grass",
     "element2": "electric",
     "art": "/assets/creatures/thornblade::rainstorm-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 9,
+      "S": 20,
+      "A": 72,
+      "B": 108,
+      "C": 46,
+      "D": 14
     }
   },
   {
@@ -1685,14 +1685,14 @@
     "element": "grass",
     "element2": "water",
     "art": "/assets/creatures/thornblade::prismana-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
+      "S+": 10,
       "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "A": 76,
+      "B": 119,
+      "C": 39,
+      "D": 14
     }
   },
   {
@@ -1701,14 +1701,14 @@
     "element": "grass",
     "element2": null,
     "art": "/assets/creatures/thornblade::highland-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 8,
+      "S": 20,
+      "A": 76,
+      "B": 126,
+      "C": 40,
+      "D": 14
     }
   },
   {
@@ -1717,14 +1717,14 @@
     "element": "grass",
     "element2": null,
     "art": "/assets/creatures/melloblum.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 7,
+      "S": 24,
+      "A": 71,
+      "B": 134,
+      "C": 48,
+      "D": 10
     }
   },
   {
@@ -1733,14 +1733,14 @@
     "element": "grass",
     "element2": "light",
     "art": "/assets/creatures/melloblum::v1032402.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 9,
+      "S": 19,
+      "A": 67,
+      "B": 138,
+      "C": 40,
+      "D": 13
     }
   },
   {
@@ -1749,14 +1749,14 @@
     "element": "grass",
     "element2": null,
     "art": "/assets/creatures/pomegg.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 9,
+      "S": 26,
+      "A": 76,
+      "B": 116,
+      "C": 50,
+      "D": 11
     }
   },
   {
@@ -1765,14 +1765,14 @@
     "element": "grass",
     "element2": "ice",
     "art": "/assets/creatures/pomegg::highland-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 9,
+      "S": 26,
+      "A": 68,
+      "B": 134,
+      "C": 45,
+      "D": 12
     }
   },
   {
@@ -1781,14 +1781,14 @@
     "element": "grass",
     "element2": null,
     "art": "/assets/creatures/pomegg::mountain-woods-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 8,
+      "S": 20,
+      "A": 62,
+      "B": 135,
+      "C": 44,
+      "D": 13
     }
   },
   {
@@ -1797,14 +1797,14 @@
     "element": "grass",
     "element2": null,
     "art": "/assets/creatures/pomegg::thunderstorm.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 10,
+      "S": 24,
+      "A": 54,
+      "B": 138,
+      "C": 47,
+      "D": 11
     }
   },
   {
@@ -1813,14 +1813,14 @@
     "element": "grass",
     "element2": null,
     "art": "/assets/creatures/pomawk.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 10,
+      "S": 22,
+      "A": 65,
+      "B": 123,
+      "C": 47,
+      "D": 12
     }
   },
   {
@@ -1829,14 +1829,14 @@
     "element": "grass",
     "element2": "ice",
     "art": "/assets/creatures/pomawk::highland-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 9,
+      "S": 19,
+      "A": 70,
+      "B": 119,
+      "C": 39,
+      "D": 11
     }
   },
   {
@@ -1845,14 +1845,14 @@
     "element": "grass",
     "element2": null,
     "art": "/assets/creatures/pomawk::mountain-woods-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 10,
+      "S": 26,
+      "A": 71,
+      "B": 122,
+      "C": 52,
+      "D": 15
     }
   },
   {
@@ -1861,14 +1861,14 @@
     "element": "grass",
     "element2": null,
     "art": "/assets/creatures/pomawk::thunderstorm.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 10,
+      "S": 26,
+      "A": 54,
+      "B": 112,
+      "C": 46,
+      "D": 11
     }
   },
   {
@@ -1877,14 +1877,14 @@
     "element": "dark",
     "element2": null,
     "art": "/assets/creatures/dewy.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 10,
+      "S": 22,
+      "A": 63,
+      "B": 149,
+      "C": 48,
+      "D": 13
     }
   },
   {
@@ -1893,14 +1893,14 @@
     "element": "dark",
     "element2": null,
     "art": "/assets/creatures/fragrancier.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
+      "S+": 9,
       "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "A": 77,
+      "B": 142,
+      "C": 47,
+      "D": 12
     }
   },
   {
@@ -1909,14 +1909,14 @@
     "element": "dark",
     "element2": null,
     "art": "/assets/creatures/wisptis.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 10,
+      "S": 23,
+      "A": 63,
+      "B": 123,
+      "C": 44,
+      "D": 10
     }
   },
   {
@@ -1925,14 +1925,14 @@
     "element": "dark",
     "element2": "grass",
     "art": "/assets/creatures/wisptis::highland-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 8,
+      "S": 24,
+      "A": 57,
+      "B": 154,
+      "C": 54,
+      "D": 15
     }
   },
   {
@@ -1941,14 +1941,14 @@
     "element": "dark",
     "element2": "fire",
     "art": "/assets/creatures/wisptis::mountain-woods-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 8,
+      "S": 22,
+      "A": 60,
+      "B": 154,
+      "C": 52,
+      "D": 12
     }
   },
   {
@@ -1957,14 +1957,14 @@
     "element": "dark",
     "element2": null,
     "art": "/assets/creatures/ignitis.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 9,
+      "S": 20,
+      "A": 60,
+      "B": 125,
+      "C": 44,
+      "D": 12
     }
   },
   {
@@ -1973,14 +1973,14 @@
     "element": "dark",
     "element2": "grass",
     "art": "/assets/creatures/ignitis::highland-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 8,
+      "S": 23,
+      "A": 54,
+      "B": 152,
+      "C": 54,
+      "D": 11
     }
   },
   {
@@ -1989,14 +1989,14 @@
     "element": "dark",
     "element2": "fire",
     "art": "/assets/creatures/ignitis::prismana-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 9,
+      "S": 19,
+      "A": 55,
+      "B": 142,
+      "C": 46,
+      "D": 15
     }
   },
   {
@@ -2005,14 +2005,14 @@
     "element": "dark",
     "element2": "fire",
     "art": "/assets/creatures/ignitis::mountain-woods-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 8,
+      "S": 26,
+      "A": 57,
+      "B": 107,
+      "C": 46,
+      "D": 13
     }
   },
   {
@@ -2021,14 +2021,14 @@
     "element": "ice",
     "element2": null,
     "art": "/assets/creatures/bonesky.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 10,
+      "S": 26,
+      "A": 64,
+      "B": 118,
+      "C": 38,
+      "D": 12
     }
   },
   {
@@ -2037,14 +2037,14 @@
     "element": "ice",
     "element2": "dark",
     "art": "/assets/creatures/bonesky::highland-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 10,
+      "S": 20,
+      "A": 56,
+      "B": 132,
+      "C": 52,
+      "D": 10
     }
   },
   {
@@ -2053,14 +2053,14 @@
     "element": "ice",
     "element2": null,
     "art": "/assets/creatures/fenrier.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 7,
+      "S": 21,
+      "A": 58,
+      "B": 143,
+      "C": 46,
+      "D": 10
     }
   },
   {
@@ -2069,14 +2069,14 @@
     "element": "ice",
     "element2": "dark",
     "art": "/assets/creatures/fenrier::highland-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 8,
+      "S": 20,
+      "A": 71,
+      "B": 133,
+      "C": 44,
+      "D": 14
     }
   },
   {
@@ -2085,14 +2085,14 @@
     "element": "ice",
     "element2": null,
     "art": "/assets/creatures/glynsera.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 10,
+      "S": 26,
+      "A": 68,
+      "B": 126,
+      "C": 50,
+      "D": 12
     }
   },
   {
@@ -2101,14 +2101,14 @@
     "element": "ice",
     "element2": "light",
     "art": "/assets/creatures/glynsera::prismana-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 7,
+      "S": 20,
+      "A": 60,
+      "B": 147,
+      "C": 43,
+      "D": 12
     }
   },
   {
@@ -2117,14 +2117,14 @@
     "element": "ice",
     "element2": "dark",
     "art": "/assets/creatures/glynsera::highland-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 7,
+      "S": 21,
+      "A": 61,
+      "B": 118,
+      "C": 54,
+      "D": 10
     }
   },
   {
@@ -2133,14 +2133,14 @@
     "element": "electric",
     "element2": null,
     "art": "/assets/creatures/bolty.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 8,
+      "S": 19,
+      "A": 67,
+      "B": 135,
+      "C": 52,
+      "D": 12
     }
   },
   {
@@ -2149,14 +2149,14 @@
     "element": "electric",
     "element2": null,
     "art": "/assets/creatures/bolty::highland-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 7,
+      "S": 22,
+      "A": 63,
+      "B": 152,
+      "C": 46,
+      "D": 15
     }
   },
   {
@@ -2165,14 +2165,14 @@
     "element": "electric",
     "element2": null,
     "art": "/assets/creatures/blazen.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 10,
+      "S": 20,
+      "A": 75,
+      "B": 121,
+      "C": 45,
+      "D": 15
     }
   },
   {
@@ -2181,14 +2181,14 @@
     "element": "electric",
     "element2": "dark",
     "art": "/assets/creatures/blazen::prismana-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
+      "S+": 8,
       "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "A": 57,
+      "B": 141,
+      "C": 44,
+      "D": 15
     }
   },
   {
@@ -2197,14 +2197,14 @@
     "element": "electric",
     "element2": null,
     "art": "/assets/creatures/blazen::highland-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 8,
+      "S": 23,
+      "A": 58,
+      "B": 111,
+      "C": 38,
+      "D": 11
     }
   },
   {
@@ -2213,14 +2213,14 @@
     "element": "fire",
     "element2": null,
     "art": "/assets/creatures/squarrel.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 9,
+      "S": 23,
+      "A": 68,
+      "B": 114,
+      "C": 51,
+      "D": 15
     }
   },
   {
@@ -2229,14 +2229,14 @@
     "element": "fire",
     "element2": null,
     "art": "/assets/creatures/squashel.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
+      "S+": 9,
       "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "A": 62,
+      "B": 139,
+      "C": 54,
+      "D": 13
     }
   },
   {
@@ -2245,14 +2245,14 @@
     "element": "water",
     "element2": null,
     "art": "/assets/creatures/susuta.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 10,
+      "S": 20,
+      "A": 73,
+      "B": 109,
+      "C": 50,
+      "D": 15
     }
   },
   {
@@ -2261,14 +2261,14 @@
     "element": "water",
     "element2": null,
     "art": "/assets/creatures/susuta::highland-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 9,
+      "S": 23,
+      "A": 54,
+      "B": 112,
+      "C": 44,
+      "D": 15
     }
   },
   {
@@ -2277,14 +2277,14 @@
     "element": "water",
     "element2": null,
     "art": "/assets/creatures/popota.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 7,
+      "S": 23,
+      "A": 72,
+      "B": 109,
+      "C": 42,
+      "D": 13
     }
   },
   {
@@ -2293,14 +2293,14 @@
     "element": "water",
     "element2": null,
     "art": "/assets/creatures/popota::highland-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 10,
+      "S": 23,
+      "A": 59,
+      "B": 144,
+      "C": 50,
+      "D": 15
     }
   },
   {
@@ -2309,14 +2309,14 @@
     "element": "water",
     "element2": null,
     "art": "/assets/creatures/piopiota.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 10,
+      "S": 20,
+      "A": 69,
+      "B": 129,
+      "C": 50,
+      "D": 12
     }
   },
   {
@@ -2325,14 +2325,14 @@
     "element": "water",
     "element2": "dark",
     "art": "/assets/creatures/piopiota::highland-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 9,
+      "S": 20,
+      "A": 59,
+      "B": 128,
+      "C": 50,
+      "D": 15
     }
   },
   {
@@ -2341,14 +2341,14 @@
     "element": "water",
     "element2": null,
     "art": "/assets/creatures/panpanta.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 10,
+      "S": 23,
+      "A": 75,
+      "B": 132,
+      "C": 54,
+      "D": 10
     }
   },
   {
@@ -2357,14 +2357,14 @@
     "element": "water",
     "element2": null,
     "art": "/assets/creatures/panpanta::highland-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 10,
+      "S": 20,
+      "A": 64,
+      "B": 123,
+      "C": 47,
+      "D": 10
     }
   },
   {
@@ -2373,14 +2373,14 @@
     "element": "water",
     "element2": null,
     "art": "/assets/creatures/panpanta::prismana-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 10,
+      "S": 19,
+      "A": 75,
+      "B": 141,
+      "C": 51,
+      "D": 13
     }
   },
   {
@@ -2389,14 +2389,14 @@
     "element": "water",
     "element2": null,
     "art": "/assets/creatures/shelly.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 7,
+      "S": 22,
+      "A": 70,
+      "B": 130,
+      "C": 52,
+      "D": 15
     }
   },
   {
@@ -2405,14 +2405,14 @@
     "element": "water",
     "element2": null,
     "art": "/assets/creatures/sheldon.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 10,
+      "S": 19,
+      "A": 60,
+      "B": 124,
+      "C": 54,
+      "D": 11
     }
   },
   {
@@ -2421,14 +2421,14 @@
     "element": "water",
     "element2": null,
     "art": "/assets/creatures/sherro.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 9,
+      "S": 26,
+      "A": 76,
+      "B": 138,
+      "C": 40,
+      "D": 10
     }
   },
   {
@@ -2437,14 +2437,14 @@
     "element": "water",
     "element2": "electric",
     "art": "/assets/creatures/sherro::thunderstorm-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 8,
+      "S": 21,
+      "A": 63,
+      "B": 142,
+      "C": 37,
+      "D": 14
     }
   },
   {
@@ -2453,14 +2453,14 @@
     "element": "water",
     "element2": "light",
     "art": "/assets/creatures/sherro::prismana-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 10,
+      "S": 20,
+      "A": 61,
+      "B": 114,
+      "C": 51,
+      "D": 10
     }
   },
   {
@@ -2469,14 +2469,14 @@
     "element": "earth",
     "element2": null,
     "art": "/assets/creatures/baleetle.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 8,
+      "S": 26,
+      "A": 76,
+      "B": 125,
+      "C": 53,
+      "D": 15
     }
   },
   {
@@ -2485,14 +2485,14 @@
     "element": "earth",
     "element2": "ice",
     "art": "/assets/creatures/baleetle::highland-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
+      "S+": 9,
       "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "A": 69,
+      "B": 137,
+      "C": 44,
+      "D": 13
     }
   },
   {
@@ -2501,14 +2501,14 @@
     "element": "earth",
     "element2": null,
     "art": "/assets/creatures/waleetle.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
+      "S+": 8,
       "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "A": 60,
+      "B": 145,
+      "C": 53,
+      "D": 15
     }
   },
   {
@@ -2517,14 +2517,14 @@
     "element": "earth",
     "element2": "ice",
     "art": "/assets/creatures/waleetle::highland-form.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 8,
+      "S": 20,
+      "A": 62,
+      "B": 133,
+      "C": 47,
+      "D": 14
     }
   },
   {
@@ -2533,14 +2533,14 @@
     "element": "earth",
     "element2": "dark",
     "art": "/assets/creatures/waleetle::v1045302.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 4,
+      "S": 8,
+      "A": 23,
+      "B": 59,
+      "C": 128,
+      "D": 32
     }
   },
   {
@@ -2549,14 +2549,14 @@
     "element": "earth",
     "element2": null,
     "art": "/assets/creatures/bouldus.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 4,
+      "S": 9,
+      "A": 26,
+      "B": 67,
+      "C": 121,
+      "D": 28
     }
   },
   {
@@ -2565,14 +2565,14 @@
     "element": "earth",
     "element2": "ice",
     "art": "/assets/creatures/bouldus::highland-form.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 4,
+      "S": 11,
+      "A": 26,
+      "B": 60,
+      "C": 103,
+      "D": 34
     }
   },
   {
@@ -2581,14 +2581,14 @@
     "element": "electric",
     "element2": null,
     "art": "/assets/creatures/fentuft.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 3,
+      "S": 11,
+      "A": 22,
+      "B": 63,
+      "C": 93,
+      "D": 28
     }
   },
   {
@@ -2597,14 +2597,14 @@
     "element": "electric",
     "element2": null,
     "art": "/assets/creatures/fenmane.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 4,
+      "S": 11,
+      "A": 25,
+      "B": 71,
+      "C": 100,
+      "D": 30
     }
   },
   {
@@ -2613,14 +2613,14 @@
     "element": "electric",
     "element2": "light",
     "art": "/assets/creatures/fenmane::prismana-form.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 3,
+      "S": 9,
+      "A": 24,
+      "B": 53,
+      "C": 119,
+      "D": 24
     }
   },
   {
@@ -2629,14 +2629,14 @@
     "element": "dark",
     "element2": null,
     "art": "/assets/creatures/helmut.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 4,
+      "S": 8,
+      "A": 21,
+      "B": 63,
+      "C": 100,
+      "D": 24
     }
   },
   {
@@ -2645,14 +2645,14 @@
     "element": "dark",
     "element2": "ice",
     "art": "/assets/creatures/helmut::highland-form.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 4,
+      "S": 10,
+      "A": 24,
+      "B": 69,
+      "C": 116,
+      "D": 33
     }
   },
   {
@@ -2661,14 +2661,14 @@
     "element": "dark",
     "element2": null,
     "art": "/assets/creatures/helmut::mountain-woods-form.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 3,
+      "S": 10,
+      "A": 25,
+      "B": 60,
+      "C": 122,
+      "D": 31
     }
   },
   {
@@ -2677,14 +2677,14 @@
     "element": "dark",
     "element2": null,
     "art": "/assets/creatures/pawney.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 3,
+      "S": 8,
+      "A": 22,
+      "B": 70,
+      "C": 109,
+      "D": 26
     }
   },
   {
@@ -2693,14 +2693,14 @@
     "element": "dark",
     "element2": "ice",
     "art": "/assets/creatures/pawney::highland-form.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 3,
+      "S": 11,
+      "A": 20,
+      "B": 70,
+      "C": 97,
+      "D": 30
     }
   },
   {
@@ -2709,14 +2709,14 @@
     "element": "dark",
     "element2": null,
     "art": "/assets/creatures/pawney::mountain-woods-form.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 3,
+      "S": 10,
+      "A": 19,
+      "B": 51,
+      "C": 111,
+      "D": 23
     }
   },
   {
@@ -2725,14 +2725,14 @@
     "element": "dark",
     "element2": null,
     "art": "/assets/creatures/pawney::prismana-form.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 4,
+      "S": 10,
+      "A": 24,
+      "B": 63,
+      "C": 100,
+      "D": 26
     }
   },
   {
@@ -2741,14 +2741,14 @@
     "element": "dark",
     "element2": null,
     "art": "/assets/creatures/rookey.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 4,
+      "S": 9,
+      "A": 21,
+      "B": 55,
+      "C": 96,
+      "D": 32
     }
   },
   {
@@ -2757,14 +2757,14 @@
     "element": "dark",
     "element2": "ice",
     "art": "/assets/creatures/rookey::highland-form.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 4,
+      "S": 9,
+      "A": 26,
+      "B": 68,
+      "C": 100,
+      "D": 26
     }
   },
   {
@@ -2773,14 +2773,14 @@
     "element": "dark",
     "element2": null,
     "art": "/assets/creatures/rookey::mountain-woods-form.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 4,
+      "S": 10,
+      "A": 26,
+      "B": 58,
+      "C": 91,
+      "D": 30
     }
   },
   {
@@ -2789,14 +2789,14 @@
     "element": "wind",
     "element2": null,
     "art": "/assets/creatures/jawling.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 4,
+      "S": 9,
+      "A": 20,
+      "B": 64,
+      "C": 113,
+      "D": 32
     }
   },
   {
@@ -2805,14 +2805,14 @@
     "element": "wind",
     "element2": null,
     "art": "/assets/creatures/jawling::highland-form.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 4,
+      "S": 11,
+      "A": 23,
+      "B": 64,
+      "C": 110,
+      "D": 26
     }
   },
   {
@@ -2821,14 +2821,14 @@
     "element": "wind",
     "element2": null,
     "art": "/assets/creatures/helmwhelp.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 4,
+      "S": 11,
+      "A": 20,
+      "B": 57,
+      "C": 115,
+      "D": 32
     }
   },
   {
@@ -2837,14 +2837,14 @@
     "element": "wind",
     "element2": null,
     "art": "/assets/creatures/helmwhelp::highland-form.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 4,
+      "S": 10,
+      "A": 23,
+      "B": 50,
+      "C": 116,
+      "D": 27
     }
   },
   {
@@ -2853,14 +2853,14 @@
     "element": "wind",
     "element2": null,
     "art": "/assets/creatures/helgon.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 3,
+      "S": 8,
+      "A": 26,
+      "B": 59,
+      "C": 105,
+      "D": 32
     }
   },
   {
@@ -2869,14 +2869,14 @@
     "element": "wind",
     "element2": null,
     "art": "/assets/creatures/helgon::highland-form.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 4,
+      "S": 9,
+      "A": 22,
+      "B": 69,
+      "C": 107,
+      "D": 33
     }
   },
   {
@@ -2885,14 +2885,14 @@
     "element": "fire",
     "element2": null,
     "art": "/assets/creatures/infergon.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 3,
+      "S": 8,
+      "A": 19,
+      "B": 59,
+      "C": 119,
+      "D": 23
     }
   },
   {
@@ -2901,14 +2901,14 @@
     "element": "fire",
     "element2": "wind",
     "art": "/assets/creatures/infergon::v1002503.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 4,
+      "S": 9,
+      "A": 20,
+      "B": 59,
+      "C": 111,
+      "D": 34
     }
   },
   {
@@ -2917,14 +2917,14 @@
     "element": "earth",
     "element2": null,
     "art": "/assets/creatures/cubbo.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 4,
+      "S": 9,
+      "A": 22,
+      "B": 54,
+      "C": 125,
+      "D": 28
     }
   },
   {
@@ -2933,14 +2933,14 @@
     "element": "earth",
     "element2": null,
     "art": "/assets/creatures/grizbo.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 4,
+      "S": 9,
+      "A": 23,
+      "B": 65,
+      "C": 109,
+      "D": 34
     }
   },
   {
@@ -2949,14 +2949,14 @@
     "element": "earth",
     "element2": "dark",
     "art": "/assets/creatures/grizbo::prismana-form.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 4,
+      "S": 8,
+      "A": 26,
+      "B": 52,
+      "C": 100,
+      "D": 26
     }
   },
   {
@@ -2965,14 +2965,14 @@
     "element": "earth",
     "element2": null,
     "art": "/assets/creatures/pebbling.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 4,
+      "S": 10,
+      "A": 20,
+      "B": 62,
+      "C": 91,
+      "D": 27
     }
   },
   {
@@ -2981,14 +2981,14 @@
     "element": "fire",
     "element2": "earth",
     "art": "/assets/creatures/lavazar.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 3,
+      "S": 11,
+      "A": 24,
+      "B": 71,
+      "C": 107,
+      "D": 32
     }
   },
   {
@@ -2997,14 +2997,14 @@
     "element": "fire",
     "element2": "earth",
     "art": "/assets/creatures/magmarex.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 4,
+      "S": 10,
+      "A": 20,
+      "B": 71,
+      "C": 105,
+      "D": 30
     }
   },
   {
@@ -3013,14 +3013,14 @@
     "element": "fire",
     "element2": "dark",
     "art": "/assets/creatures/magmarex::prismana-form.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 3,
+      "S": 10,
+      "A": 22,
+      "B": 70,
+      "C": 95,
+      "D": 33
     }
   },
   {
@@ -3029,14 +3029,14 @@
     "element": "earth",
     "element2": null,
     "art": "/assets/creatures/geodeback.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 4,
+      "S": 10,
+      "A": 25,
+      "B": 53,
+      "C": 99,
+      "D": 23
     }
   },
   {
@@ -3045,14 +3045,14 @@
     "element": "earth",
     "element2": null,
     "art": "/assets/creatures/minespine.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 3,
+      "S": 10,
+      "A": 26,
+      "B": 53,
+      "C": 97,
+      "D": 26
     }
   },
   {
@@ -3061,14 +3061,14 @@
     "element": "earth",
     "element2": null,
     "art": "/assets/creatures/cozite.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 3,
+      "S": 11,
+      "A": 26,
+      "B": 61,
+      "C": 125,
+      "D": 29
     }
   },
   {
@@ -3077,14 +3077,14 @@
     "element": "earth",
     "element2": null,
     "art": "/assets/creatures/bailite.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 3,
+      "S": 11,
+      "A": 20,
+      "B": 65,
+      "C": 130,
+      "D": 29
     }
   },
   {
@@ -3093,14 +3093,14 @@
     "element": "electric",
     "element2": null,
     "art": "/assets/creatures/bulbly.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 4,
+      "S": 8,
+      "A": 24,
+      "B": 56,
+      "C": 119,
+      "D": 30
     }
   },
   {
@@ -3109,14 +3109,14 @@
     "element": "electric",
     "element2": null,
     "art": "/assets/creatures/veilfloat.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 3,
+      "S": 10,
+      "A": 20,
+      "B": 71,
+      "C": 114,
+      "D": 31
     }
   },
   {
@@ -3125,14 +3125,14 @@
     "element": "electric",
     "element2": null,
     "art": "/assets/creatures/luminelle.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 4,
+      "S": 8,
+      "A": 25,
+      "B": 58,
+      "C": 103,
+      "D": 24
     }
   },
   {
@@ -3141,14 +3141,14 @@
     "element": "electric",
     "element2": "water",
     "art": "/assets/creatures/luminelle::rainstorm-form.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 4,
+      "S": 8,
+      "A": 22,
+      "B": 70,
+      "C": 129,
+      "D": 23
     }
   },
   {
@@ -3157,14 +3157,14 @@
     "element": "electric",
     "element2": "light",
     "art": "/assets/creatures/luminelle::prismana-form.webp",
-    "tier": "A",
+    "tier": "C",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 3,
+      "S": 10,
+      "A": 22,
+      "B": 54,
+      "C": 127,
+      "D": 26
     }
   },
   {
@@ -3173,14 +3173,14 @@
     "element": "water",
     "element2": null,
     "art": "/assets/creatures/fahloo.webp",
-    "tier": "A",
+    "tier": "D",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 1,
+      "S": 3,
+      "A": 9,
+      "B": 22,
+      "C": 47,
+      "D": 83
     }
   },
   {
@@ -3189,14 +3189,14 @@
     "element": "water",
     "element2": null,
     "art": "/assets/creatures/erlath.webp",
-    "tier": "A",
+    "tier": "D",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 1,
+      "S": 4,
+      "A": 9,
+      "B": 21,
+      "C": 54,
+      "D": 90
     }
   },
   {
@@ -3205,14 +3205,14 @@
     "element": "electric",
     "element2": null,
     "art": "/assets/creatures/besauce.webp",
-    "tier": "A",
+    "tier": "D",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 1,
+      "S": 3,
+      "A": 8,
+      "B": 21,
+      "C": 37,
+      "D": 96
     }
   },
   {
@@ -3221,14 +3221,14 @@
     "element": "earth",
     "element2": "water",
     "art": "/assets/creatures/reefish.webp",
-    "tier": "A",
+    "tier": "D",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 1,
+      "S": 4,
+      "A": 8,
+      "B": 21,
+      "C": 45,
+      "D": 77
     }
   },
   {
@@ -3237,14 +3237,14 @@
     "element": "earth",
     "element2": null,
     "art": "/assets/creatures/reefish::highland-form.webp",
-    "tier": "A",
+    "tier": "D",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 1,
+      "S": 4,
+      "A": 8,
+      "B": 20,
+      "C": 52,
+      "D": 102
     }
   },
   {
@@ -3253,14 +3253,14 @@
     "element": "earth",
     "element2": "water",
     "art": "/assets/creatures/coraliz.webp",
-    "tier": "A",
+    "tier": "D",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 2,
+      "S": 3,
+      "A": 11,
+      "B": 22,
+      "C": 38,
+      "D": 107
     }
   },
   {
@@ -3269,14 +3269,14 @@
     "element": "earth",
     "element2": null,
     "art": "/assets/creatures/coraliz::highland-form.webp",
-    "tier": "A",
+    "tier": "D",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 2,
+      "S": 4,
+      "A": 8,
+      "B": 19,
+      "C": 52,
+      "D": 99
     }
   },
   {
@@ -3285,14 +3285,14 @@
     "element": "ice",
     "element2": null,
     "art": "/assets/creatures/cheekie.webp",
-    "tier": "A",
+    "tier": "D",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 2,
+      "S": 3,
+      "A": 11,
+      "B": 26,
+      "C": 39,
+      "D": 79
     }
   },
   {
@@ -3301,14 +3301,14 @@
     "element": "ice",
     "element2": null,
     "art": "/assets/creatures/wavwal.webp",
-    "tier": "A",
+    "tier": "D",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 2,
+      "S": 3,
+      "A": 8,
+      "B": 21,
+      "C": 45,
+      "D": 94
     }
   },
   {
@@ -3317,14 +3317,14 @@
     "element": "grass",
     "element2": "water",
     "art": "/assets/creatures/bubbeep.webp",
-    "tier": "A",
+    "tier": "D",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 2,
+      "S": 4,
+      "A": 11,
+      "B": 25,
+      "C": 40,
+      "D": 81
     }
   },
   {
@@ -3333,14 +3333,14 @@
     "element": "grass",
     "element2": "water",
     "art": "/assets/creatures/glameep.webp",
-    "tier": "A",
+    "tier": "D",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 1,
+      "S": 4,
+      "A": 11,
+      "B": 22,
+      "C": 50,
+      "D": 95
     }
   },
   {
@@ -3349,14 +3349,14 @@
     "element": "grass",
     "element2": "dark",
     "art": "/assets/creatures/glameep::v1058301.webp",
-    "tier": "A",
+    "tier": "D",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 2,
+      "S": 4,
+      "A": 11,
+      "B": 20,
+      "C": 47,
+      "D": 101
     }
   },
   {
@@ -3365,14 +3365,14 @@
     "element": "water",
     "element2": null,
     "art": "/assets/creatures/popapus.webp",
-    "tier": "A",
+    "tier": "D",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 2,
+      "S": 4,
+      "A": 10,
+      "B": 21,
+      "C": 52,
+      "D": 78
     }
   },
   {
@@ -3381,14 +3381,14 @@
     "element": "water",
     "element2": null,
     "art": "/assets/creatures/gachapus.webp",
-    "tier": "A",
+    "tier": "D",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 1,
+      "S": 3,
+      "A": 8,
+      "B": 25,
+      "C": 40,
+      "D": 97
     }
   },
   {
@@ -3397,14 +3397,14 @@
     "element": "ice",
     "element2": null,
     "art": "/assets/creatures/malangel.webp",
-    "tier": "A",
+    "tier": "D",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 1,
+      "S": 3,
+      "A": 10,
+      "B": 20,
+      "C": 50,
+      "D": 96
     }
   },
   {
@@ -3413,14 +3413,14 @@
     "element": "ice",
     "element2": null,
     "art": "/assets/creatures/malevsera.webp",
-    "tier": "A",
+    "tier": "D",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 2,
+      "S": 3,
+      "A": 10,
+      "B": 23,
+      "C": 48,
+      "D": 80
     }
   },
   {
@@ -3429,14 +3429,14 @@
     "element": "electric",
     "element2": null,
     "art": "/assets/creatures/dazmand.webp",
-    "tier": "A",
+    "tier": "D",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 1,
+      "S": 3,
+      "A": 11,
+      "B": 22,
+      "C": 40,
+      "D": 96
     }
   },
   {
@@ -3445,14 +3445,14 @@
     "element": "electric",
     "element2": null,
     "art": "/assets/creatures/fulmintis.webp",
-    "tier": "A",
+    "tier": "D",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 2,
+      "S": 3,
+      "A": 10,
+      "B": 22,
+      "C": 50,
+      "D": 75
     }
   },
   {
@@ -3461,14 +3461,14 @@
     "element": "electric",
     "element2": "light",
     "art": "/assets/creatures/fulmintis::prismana-form.webp",
-    "tier": "A",
+    "tier": "D",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 2,
+      "S": 3,
+      "A": 9,
+      "B": 23,
+      "C": 46,
+      "D": 95
     }
   },
   {
@@ -3477,14 +3477,14 @@
     "element": "light",
     "element2": null,
     "art": "/assets/creatures/helion.webp",
-    "tier": "A",
+    "tier": "D",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 2,
+      "S": 3,
+      "A": 9,
+      "B": 21,
+      "C": 49,
+      "D": 78
     }
   },
   {
@@ -3493,14 +3493,14 @@
     "element": "grass",
     "element2": null,
     "art": "/assets/creatures/irisalis.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
-      "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "S+": 8,
+      "S": 19,
+      "A": 56,
+      "B": 154,
+      "C": 53,
+      "D": 11
     }
   },
   {
@@ -3509,14 +3509,14 @@
     "element": "light",
     "element2": null,
     "art": "/assets/creatures/lunara.webp",
-    "tier": "A",
+    "tier": "B",
     "votes": {
-      "S+": 15,
+      "S+": 10,
       "S": 25,
-      "A": 140,
-      "B": 30,
-      "C": 15,
-      "D": 5
+      "A": 68,
+      "B": 128,
+      "C": 42,
+      "D": 12
     }
   }
 ]

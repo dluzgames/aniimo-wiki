@@ -445,3 +445,25 @@ function setupCommunityModule() {
     </article>
   `;
 }
+
+// -- TOAST UTILITY --
+function showToast(msg, type) {
+  type = type || 'info ';
+  var c = document.getElementById('toast-container');
+  if (!c) return;
+  var colors = {success: '#10B981', error: '#EF4444', info: '#38bcef', warn: '#f59e0b'};
+  var t = document.createElement('div');
+  t.style.background = colors[type]||colors.info;
+  t.style.color = '#fff';
+  t.style.padding = '12px 20px';
+  t.style.borderRadius = '10px';
+  t.style.fontWeight = '700';
+  t.style.fontSize = '14px';
+  t.style.pointerEvents = 'autochtr(39);
+  t.style.boxShadow = '0 4px 20px rgba(0,0,0,0.5)';
+  t.style.maxWidth = '340px';
+  t.textContent = msg;
+  c.appendChild(t);
+  setTimeout(function(){ t.style.opacity=0; t.style.transition='opacity 0.3s'; setTimeout(function(){t.remove();},350); }, 3200);
+}
+window.showToast = showToast;
