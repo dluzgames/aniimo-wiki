@@ -53,7 +53,10 @@ const state = {
 // Helper: Normalize slug to base creature slug
 function getBaseSlug(slugOrName) {
   if (!slugOrName) return 'emberpup';
-  return slugOrName.split('::')[0].split('(')[0].trim().toLowerCase().replace(/[^a-z0-9_-]/g, '');
+  if (typeof slugOrName === 'object') {
+    slugOrName = slugOrName.slug || slugOrName.nameClean || slugOrName.name_en || slugOrName.name_pt || slugOrName.name || 'emberpup';
+  }
+  return String(slugOrName).split('::')[0].split('(')[0].trim().toLowerCase().replace(/[^a-z0-9_-]/g, '');
 }
 
 // 3. INITIALIZATION
@@ -341,16 +344,17 @@ function openCreatureDetailModal(creatureOrSlug) {
 
   // 5. Evolution Chain
   const evoContainer = document.getElementById('cdm-evo-chain');
-  const evoChain = creature.evolution_path || [creature.name_pt || creature.name];
-  evoContainer.innerHTML = evoChain.map((evoName, idx) => {
-    const evoSlug = getBaseSlug(evoName);
+  const evoChain = creature.evolution_path || [creature.name_pt || creature.name || baseSlug];
+  evoContainer.innerHTML = evoChain.map((evoItem, idx) => {
+    const rawName = typeof evoItem === 'object' ? (evoItem.nameClean || evoItem.name || evoItem.slug) : evoItem;
+    const evoSlug = getBaseSlug(evoItem);
     const isCurrent = evoSlug === baseSlug;
     return `
-      <div class="cdm-evo-card ${isCurrent ? 'current' : ''}" onclick="openCreatureDetailModal('${evoSlug}');">
+      <div class="cdm-evo-card ${isCurrent ? 'current' : ''}" onclick="openCreatureDetailModal('${evoSlug}');" style="cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:6px; padding:8px 12px; background:${isCurrent ? 'rgba(56,189,240,0.12)' : 'rgba(255,255,255,0.04)'}; border-radius:10px; border:1px solid ${isCurrent ? '#38bcef' : 'rgba(255,255,255,0.08)'}; transition:transform 0.2s, border-color 0.2s;">
         <img src="/assets/creatures/${evoSlug}.webp" style="width:46px; height:46px; object-fit:contain;" onerror="this.src='/assets/creatures/${evoSlug}.png'; this.onerror=function(){this.src='/assets/dluz-logo.png';};" />
-        <span style="font-size:11px; font-weight:800; color:${isCurrent ? '#38bcef' : '#cbd5e1'};">${evoName}</span>
+        <span style="font-size:11px; font-weight:800; color:${isCurrent ? '#38bcef' : '#cbd5e1'};">${rawName}</span>
       </div>
-      ${idx < evoChain.length - 1 ? '<span style="color:#64748b; font-weight:900;">→</span>' : ''}
+      ${idx < evoChain.length - 1 ? '<span style="color:#64748b; font-weight:900; align-self:center;">→</span>' : ''}
     `;
   }).join('');
 
