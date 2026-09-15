@@ -1,3 +1,26 @@
+// MAP API MOCK INTERCEPTOR
+const origFetch = window.fetch;
+window.fetch = async (url, options) => {
+  const urlStr = typeof url === 'string' ? url : (url.url || '');
+  if (urlStr.includes('/api/map/session')) {
+    return new Response(JSON.stringify({
+      session: "dluz-session-token",
+      expiresIn: 86400
+    }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+  }
+  if (urlStr.includes('/api/map/markers')) {
+    let body = {};
+    try {
+      if (options && options.body) body = JSON.parse(options.body);
+    } catch(e) {}
+    if (body.pois) {
+      return origFetch('/data/markers_pois.json');
+    }
+    return origFetch('/data/markers_species.json');
+  }
+  return origFetch(url, options);
+};
+
 /**
  * ANIIMO TOOLS BRASIL — CORE APPLICATION ENGINE (ENHANCED EDITION)
  * Standard Google Stitch UX/UI, i18n (PT default / EN secondary), 
@@ -335,6 +358,7 @@ function showSection(target) {
   const activeSection = document.getElementById(`section-${target}`) || document.getElementById('section-home');
   if (activeSection) {
     activeSection.classList.add('active');
+    if (target === 'mapa') { setTimeout(() => window.dispatchEvent(new Event('resize')), 50); }
   }
 
   // Update active nav link

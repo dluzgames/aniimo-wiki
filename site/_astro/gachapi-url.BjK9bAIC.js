@@ -1,0 +1,1 @@
+const e="api.aniimotools.dev",n=new Set(["aniimotools.dev","www.aniimotools.dev"]);function t(){const o="https://api.aniimotools.dev".replace(/\/$/,"");return o?typeof location>"u"?o:o.includes(e)&&!n.has(location.hostname)?"":o:""}export{t as resolveGachapiUrl};
