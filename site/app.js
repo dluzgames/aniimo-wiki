@@ -424,42 +424,68 @@ function setupItemsModule() {
 // 10. COMMUNITY MODULE
 // ----------------------------------------------------------------------------
 function setupCommunityModule() {
-  const container = document.getElementById('comm-posts-stream');
+  var container = document.getElementById('comm-posts-stream');
   if (!container) return;
 
-  container.innerHTML = `
-    <article class="comm-card">
-      <header class="comm-card-header">
-        <div class="comm-author-box">
-          <img src="/assets/dluz-logo.png" class="comm-author-avatar" />
-          <div>
-            <strong class="comm-author-name">DLuz Games</strong>
-            <span class="comm-author-badge">Criador Oficial</span>
-          </div>
-        </div>
-      </header>
-      <div class="comm-card-body" style="padding:16px;">
-        <h3>🐾 Bem-vindos ao Aniidex DLuz Brasil!</h3>
-        <p>Fala melhores, beleza? O site oficial do Aniidex DLuz tá 100% atualizado com o clone do Aniidex.com!</p>
-      </div>
-    </article>
-  `;
+  function renderPost(p) {
+    var date = p.created_at ? new Date(p.created_at).toLocaleDateString('pt-BR') : 'Hoje';
+    var author = p.author || 'Usuario';
+    var initials = author.slice(0, 2).toUpperCase();
+    var bgArr = ['#38bcef','#8b5cf6','#10B981','#f59e0b','#EF4444'];
+    var bg = bgArr[author.charCodeAt(0) % bgArr.length];
+    var roleHtml = p.author_role ? ('<span class="comm-author-badge">' + p.author_role + '</span>') : '';
+    var titleHtml = p.title ? ('<h3>' + p.title + '</h3>') : '';
+    var bodyText = p.content || p.body || '';
+    var likes = p.likes || 0;
+    var commentCount = (p.comments || []).length;
+    return '<article class="comm-card">' +
+      '<header class="comm-card-header">' +
+      '<div class="comm-author-box">' +
+      '<div style="width:40px;height:40px;min-width:40px;border-radius:50%;background:' + bg + ';display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.9rem;color:#fff;">' + initials + '</div>' +
+      '<div><strong class="comm-author-name">' + author + '</strong>' + roleHtml + '</div>' +
+      '</div><span style="font-size:0.76rem;color:#475569;">' + date + '</span></header>' +
+      '<div class="comm-card-body">' + titleHtml + '<p>' + bodyText + '</p></div>' +
+      '<footer style="padding:10px 16px;border-top:1px solid rgba(255,255,255,0.05);display:flex;gap:16px;align-items:center;">' +
+      '<span style="color:#94a3b8;font-size:0.82rem;font-weight:700;">\u2764\ufe0f ' + likes + '</span>' +
+      '<span style="color:#64748b;font-size:0.8rem;">\ud83d\udcac ' + commentCount + ' comentarios</span>' +
+      '</footer></article>';
+  }
+
+  fetch('/api/community/posts').then(function(res) {
+    if (res.ok) return res.json();
+    throw new Error('API off');
+  }).then(function(data) {
+    var posts = Array.isArray(data) ? data : (data.posts || []);
+    if (posts.length > 0) {
+      container.innerHTML = posts.map(renderPost).join('');
+    } else {
+      throw new Error('empty');
+    }
+  }).catch(function() {
+    container.innerHTML = renderPost({
+      author: 'DLuz Games', author_role: 'Criador Oficial',
+      title: '\ud83d\udc3e Bem-vindos ao Aniidex DLuz Brasil!',
+      content: 'Fala melhores, beleza? O Aniidex DLuz ta 100% no ar! Explore o mapa interativo, vote na Tier List e compartilhe suas builds!',
+      likes: 42, comments: [], created_at: new Date().toISOString()
+    });
+  });
 }
+
 
 // -- TOAST UTILITY --
 function showToast(msg, type) {
-  type = type || 'info ';
+  type = type || 'info';
   var c = document.getElementById('toast-container');
   if (!c) return;
   var colors = {success: '#10B981', error: '#EF4444', info: '#38bcef', warn: '#f59e0b'};
   var t = document.createElement('div');
-  t.style.background = colors[type]||colors.info;
+  t.style.background = colors[type] || colors.info;
   t.style.color = '#fff';
   t.style.padding = '12px 20px';
   t.style.borderRadius = '10px';
   t.style.fontWeight = '700';
   t.style.fontSize = '14px';
-  t.style.pointerEvents = 'autochtr(39);
+  t.style.pointerEvents = 'auto';
   t.style.boxShadow = '0 4px 20px rgba(0,0,0,0.5)';
   t.style.maxWidth = '340px';
   t.textContent = msg;
@@ -467,3 +493,4 @@ function showToast(msg, type) {
   setTimeout(function(){ t.style.opacity=0; t.style.transition='opacity 0.3s'; setTimeout(function(){t.remove();},350); }, 3200);
 }
 window.showToast = showToast;
+
