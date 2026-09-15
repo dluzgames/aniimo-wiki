@@ -79,7 +79,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   handleRouting();
 });
 
-const APP_VERSION = '20260915_2200';
+window.state = state;
+
+const APP_VERSION = '20260915_2205';
 
 // 4. LOAD ALL DATASETS
 async function loadAppData() {
