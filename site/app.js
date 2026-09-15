@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 window.state = state;
 
-const APP_VERSION = '20260915_2245';
+const APP_VERSION = '20260915_2300';
 
 // 4. LOAD ALL DATASETS
 async function loadAppData() {
