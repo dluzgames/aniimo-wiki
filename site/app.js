@@ -79,14 +79,16 @@ document.addEventListener('DOMContentLoaded', async () => {
   handleRouting();
 });
 
+const APP_VERSION = '20260915_2200';
+
 // 4. LOAD ALL DATASETS
 async function loadAppData() {
   try {
     const [cRes, tRes, iRes, mRes] = await Promise.all([
-      fetch('/data/creatures.json'),
-      fetch('/api/tier-list/votes').catch(() => fetch('/data/tier_list_data.json')),
-      fetch('/data/items.json'),
-      fetch('/data/map_data.json').catch(() => null)
+      fetch(`/data/creatures.json?v=${APP_VERSION}`),
+      fetch('/api/tier-list/votes').catch(() => fetch(`/data/tier_list_data.json?v=${APP_VERSION}`)),
+      fetch(`/data/items.json?v=${APP_VERSION}`),
+      fetch(`/data/map_data.json?v=${APP_VERSION}`).catch(() => null)
     ]);
 
     if (cRes.ok) state.creatures = await cRes.json();
