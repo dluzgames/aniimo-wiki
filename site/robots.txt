@@ -1,11 +1,4 @@
-# Googlebot and Search Engine Rules
 User-agent: *
 Allow: /
-Allow: /item/*
-Allow: /ja/
-Allow: /ko/
-Allow: /tw/
-Disallow: /cdn/Vfx/
-
 Sitemap: https://aniimo.dluz.com.br/sitemap_index.xml
 Sitemap: https://aniimo.dluz.com.br/sitemap.xml
