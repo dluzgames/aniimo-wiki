@@ -345,7 +345,7 @@ function handleRouting() {
   if (foundCreature) {
     showSection('criaturas');
     openCreatureModal(foundCreature, false);
-    document.title = `${foundCreature.name_pt} (${foundCreature.number}) — Aniimo Tools Brasil`;
+    document.title = `${foundCreature.name_pt} (${foundCreature.number}) — Aniimo DLuz Brasil`;
     return;
   }
 
@@ -381,15 +381,15 @@ function handleRouting() {
 
   // Update Page Title dynamically
   const titles = {
-    'home': 'Aniimo Tools Brasil: Banco de Dados, Mapa Interativo, Códigos & Guias',
-    'codigos': 'Códigos Promocionais Ativos de Aniimo — Aniimo Tools Brasil',
-    'criaturas': 'Registro Anii: 94 Criaturas, Fraquezas e Stats — Aniimo Tools Brasil',
-    'comparador': 'Comparador de Criaturas (Versus Mode) — Aniimo Tools Brasil',
-    'mapa': 'Mapa Interativo de Idília (Planícies Ventosas) — Aniimo Tools Brasil',
-    'tabela-tipos': 'Tabela de Tipos e Matchup Elemental — Aniimo Tools Brasil',
-    'tier-list': 'Tier List Oficial do Meta — Aniimo Tools Brasil',
-    'itens': 'Banco de Itens e Dispositivos — Aniimo Tools Brasil',
-    'guias': 'Guias e Requisitos de Sistema — Aniimo Tools Brasil'
+    'home': 'Aniimo DLuz Brasil: Banco de Dados, Mapa Interativo, Códigos & Guias',
+    'codigos': 'Códigos Promocionais Ativos de Aniimo — Aniimo DLuz Brasil',
+    'criaturas': 'Registro Anii: 94 Criaturas, Fraquezas e Stats — Aniimo DLuz Brasil',
+    'comparador': 'Comparador de Criaturas (Versus Mode) — Aniimo DLuz Brasil',
+    'mapa': 'Mapa Interativo de Idília (Planícies Ventosas) — Aniimo DLuz Brasil',
+    'tabela-tipos': 'Tabela de Tipos e Matchup Elemental — Aniimo DLuz Brasil',
+    'tier-list': 'Tier List Oficial do Meta — Aniimo DLuz Brasil',
+    'itens': 'Banco de Itens e Dispositivos — Aniimo DLuz Brasil',
+    'guias': 'Guias e Requisitos de Sistema — Aniimo DLuz Brasil'
   };
   document.title = titles[target] || titles['home'];
 }
@@ -1443,7 +1443,7 @@ function closeCreatureModal() {
     const isCreature = state.creatures && state.creatures.some(c => c.slug.toLowerCase() === segment);
     if (isCreature) {
       history.pushState(null, '', '/criaturas');
-      document.title = 'Registro Anii: 94 Criaturas, Fraquezas e Stats — Aniimo Tools Brasil';
+      document.title = 'Registro Anii: 94 Criaturas, Fraquezas e Stats — Aniimo DLuz Brasil';
     }
   }
 }
