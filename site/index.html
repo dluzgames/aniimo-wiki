@@ -1,339 +1,295 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aniimo Tools Brasil: Banco de Dados, Mapa Interativo, Códigos & Guias</title>
-  <meta name="description" content="A enciclopédia definitiva e suíte de ferramentas de fãs para Aniimo em Português: códigos de resgate ativos, mapa interativo de Idília, tabela de tipos, tier list e registro de todas as 94 criaturas." />
-  
-  <!-- Canonical & SEO -->
-  <link rel="canonical" href="https://aniimo.dluz.com.br/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Aniimo Tools Brasil" />
-  <meta property="og:title" content="Aniimo Tools Brasil: Banco de Dados, Mapa Interativo, Códigos & Guias" />
-  <meta property="og:description" content="A enciclopédia definitiva e suíte de ferramentas de fãs para Aniimo em Português: códigos de resgate ativos, mapa interativo de Idília, tabela de tipos, tier list e registro de todas as 94 criaturas." />
-  <meta property="og:image" content="/assets/logo-512.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  
-  <!-- Favicons -->
-  <link rel="icon" href="/assets/ui/favicon.ico" type="image/x-icon" />
-  <link rel="icon" href="/assets/logo-512.png" type="image/png" />
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="/styles.css" />
-  <link rel="stylesheet" href="/assets/map/imap.css">
+<html data-theme="dark" lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aniimo Tools Brasil: Banco de Dados, Mapa Interativo, Códigos &amp; Guias</title>
+<meta content="A enciclopédia definitiva e suíte de ferramentas de fãs para Aniimo em Português: códigos de resgate ativos, mapa interativo de Idília, tabela de tipos, tier list e registro de todas as 94 criaturas." name="description"/>
+<!-- Canonical & SEO -->
+<link href="https://aniimo.dluz.com.br/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="Aniimo Tools Brasil" property="og:site_name"/>
+<meta content="Aniimo Tools Brasil: Banco de Dados, Mapa Interativo, Códigos &amp; Guias" property="og:title"/>
+<meta content="A enciclopédia definitiva e suíte de ferramentas de fãs para Aniimo em Português: códigos de resgate ativos, mapa interativo de Idília, tabela de tipos, tier list e registro de todas as 94 criaturas." property="og:description"/>
+<meta content="/assets/logo-512.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<!-- Favicons -->
+<link href="/assets/ui/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="/assets/logo-512.png" rel="icon" type="image/png"/>
+<!-- Styles -->
+<link href="/styles.css" rel="stylesheet"/>
+<link href="/assets/map/imap.css" rel="stylesheet"/>
 </head>
 <body>
-
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="/" class="brand-link">
-        <img src="/assets/logo-512.png" alt="Aniimo Tools Logo" class="brand-logo" width="40" height="40" />
-        <div class="brand-text">
-          <span class="brand-name">Aniimo Tools</span>
-          <span class="brand-badge">Brasil</span>
-        </div>
-      </a>
-
-      <!-- Navigation Links -->
-      <ul class="nav-links" id="nav-links">
-        <li class="nav-item"><a href="/" class="active" data-i18n="nav_home">Início</a></li>
-        <li class="nav-item"><a href="/codigos" data-i18n="nav_codes">Códigos</a></li>
-        <li class="nav-item"><a href="/criaturas" data-i18n="nav_creatures">Criaturas</a></li>
-        <li class="nav-item"><a href="/comparador" data-i18n="nav_versus">Comparador</a></li>
-        <li class="nav-item"><a href="/mapa" data-i18n="nav_map">Mapa Interativo</a></li>
-        <li class="nav-item"><a href="/tabela-tipos" data-i18n="nav_type_chart">Tabela de Tipos</a></li>
-        <li class="nav-item"><a href="/tier-list" data-i18n="nav_tier_list">Tier List</a></li>
-        <li class="nav-item"><a href="/itens" data-i18n="nav_items">Itens</a></li>
-        <li class="nav-item"><a href="/guias" data-i18n="nav_guides">Guias</a></li>
-      </ul>
-
-      <!-- Actions -->
-      <div class="header-actions">
-        <!-- Quick Search Button (Ctrl+K) -->
-        <button id="search-trigger" class="search-shortcut-btn" type="button" aria-label="Buscar" title="Atalho: Ctrl+K ou ⌘+K">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-          <span data-i18n="quick_search">Buscar</span>
-          <kbd class="shortcut-kbd">Ctrl+K</kbd>
-        </button>
-
-        <!-- Language Switcher (PT default / EN secondary) -->
-        <button id="lang-toggle" class="lang-toggle-btn" type="button" aria-label="Alternar Idioma" title="Mudar para Inglês">
+<!-- HEADER -->
+<header class="site-header">
+<div class="container header-inner">
+<a class="brand-link" href="/">
+<img alt="Aniimo Tools Logo" class="brand-logo" height="40" src="/assets/logo-512.png" width="40"/>
+<div class="brand-text">
+<span class="brand-name">Aniimo Tools</span>
+<span class="brand-badge">Brasil</span>
+</div>
+</a>
+<!-- Navigation Links -->
+<ul class="nav-links" id="nav-links">
+<li class="nav-item"><a class="active" data-i18n="nav_home" href="/">Início</a></li>
+<li class="nav-item"><a data-i18n="nav_codes" href="/codigos">Códigos</a></li>
+<li class="nav-item"><a data-i18n="nav_creatures" href="/criaturas">Criaturas</a></li>
+<li class="nav-item"><a data-i18n="nav_versus" href="/comparador">Comparador</a></li>
+<li class="nav-item"><a data-i18n="nav_map" href="/mapa">Mapa Interativo</a></li>
+<li class="nav-item"><a data-i18n="nav_type_chart" href="/tabela-tipos">Tabela de Tipos</a></li>
+<li class="nav-item"><a data-i18n="nav_tier_list" href="/tier-list">Tier List</a></li>
+<li class="nav-item"><a data-i18n="nav_items" href="/itens">Itens</a></li>
+<li class="nav-item"><a data-i18n="nav_guides" href="/guias">Guias</a></li>
+</ul>
+<!-- Actions -->
+<div class="header-actions">
+<!-- Quick Search Button (Ctrl+K) -->
+<button aria-label="Buscar" class="search-shortcut-btn" id="search-trigger" title="Atalho: Ctrl+K ou ⌘+K" type="button">
+<svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+<span data-i18n="quick_search">Buscar</span>
+<kbd class="shortcut-kbd">Ctrl+K</kbd>
+</button>
+<!-- Language Switcher (PT default / EN secondary) -->
+<button aria-label="Alternar Idioma" class="lang-toggle-btn" id="lang-toggle" title="Mudar para Inglês" type="button">
           🇧🇷 PT
         </button>
-
-        <!-- Theme Switcher -->
-        <button id="theme-toggle" class="btn-icon" type="button" aria-label="Alternar Tema Claro / Escuro" title="Alternar Tema">
+<!-- Theme Switcher -->
+<button aria-label="Alternar Tema Claro / Escuro" class="btn-icon" id="theme-toggle" title="Alternar Tema" type="button">
           🌙
         </button>
-
-        <!-- Mobile Menu Toggle -->
-        <button id="mobile-toggle" class="btn-icon mobile-toggle-btn" type="button" aria-label="Menu">
+<!-- Mobile Menu Toggle -->
+<button aria-label="Menu" class="btn-icon mobile-toggle-btn" id="mobile-toggle" type="button">
           ☰
         </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- MAIN CONTENT CONTAINER -->
-  <main class="app-main">
-    
-    <!-- 1. SECTION: HOME / DASHBOARD -->
-    <section id="section-home" class="app-section active">
-      <div class="hero-section">
-        <div class="container">
-          <div class="hero-badge">
-            <span class="hero-badge-dot"></span>
-            <span data-i18n="hero_badge">Lançamento Global em Setembro de 2026</span>
-          </div>
-
-          <h1 class="hero-title" data-i18n="hero_title">O Guia e Banco de Dados Definitivo de Aniimo</h1>
-          <p class="hero-subtitle" data-i18n="hero_desc">
+</div>
+</div>
+</header>
+<!-- MAIN CONTENT CONTAINER -->
+<main class="app-main">
+<!-- 1. SECTION: HOME / DASHBOARD -->
+<section class="app-section active" id="section-home">
+<div class="hero-section">
+<div class="container">
+<div class="hero-badge">
+<span class="hero-badge-dot"></span>
+<span data-i18n="hero_badge">Lançamento Global em Setembro de 2026</span>
+</div>
+<h1 class="hero-title" data-i18n="hero_title">O Guia e Banco de Dados Definitivo de Aniimo</h1>
+<p class="hero-subtitle" data-i18n="hero_desc">
             Tudo o que você precisa para explorar Idília: mapa interativo, códigos de resgate ativos, calculadora de tipos, tier list do meta e enciclopédia completa de criaturas.
           </p>
-
-          <!-- Real-Time Countdown Box -->
-          <div class="countdown-box">
-            <span class="countdown-kicker" data-i18n="countdown_kicker">Tempo Restante para o Lançamento</span>
-            <div class="countdown-digits">
-              <div class="countdown-unit">
-                <span class="countdown-num" id="cd-days">00</span>
-                <span class="countdown-label" data-i18n="days">Dias</span>
-              </div>
-              <span class="countdown-sep">:</span>
-              <div class="countdown-unit">
-                <span class="countdown-num" id="cd-hours">00</span>
-                <span class="countdown-label" data-i18n="hours">Horas</span>
-              </div>
-              <span class="countdown-sep">:</span>
-              <div class="countdown-unit">
-                <span class="countdown-num" id="cd-mins">00</span>
-                <span class="countdown-label" data-i18n="mins">Min</span>
-              </div>
-              <span class="countdown-sep">:</span>
-              <div class="countdown-unit">
-                <span class="countdown-num" id="cd-secs">00</span>
-                <span class="countdown-label" data-i18n="secs">Seg</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Platform Support Ribbon -->
-          <div class="platforms-ribbon">
-            <span class="platform-chip">🎮 Steam (PC)</span>
-            <span class="platform-chip">⚡ PlayStation 5</span>
-            <span class="platform-chip">🟢 Xbox Series X|S</span>
-            <span class="platform-chip">📱 Android (23/09)</span>
-            <span class="platform-chip">🍏 iOS (23/09)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Quick Access Tools Grid -->
-      <div class="container">
-        <div class="tools-grid">
-          <a href="/codigos" class="tool-card">
-            <div class="tool-card-icon">🎁</div>
-            <h2 class="tool-card-title" data-i18n="card_codes_title">Códigos de Resgate</h2>
-            <p class="tool-card-desc" data-i18n="card_codes_desc">Resgate recompensas gratuitas como cristais de invocação, ovos raros e moedas de ouro.</p>
-            <span class="tool-card-link" data-i18n="access_tool">Acessar ferramenta →</span>
-          </a>
-
-          <a href="/criaturas" class="tool-card">
-            <div class="tool-card-icon">🐾</div>
-            <h2 class="tool-card-title" data-i18n="card_creatures_title">Registro Anii (94 Criaturas)</h2>
-            <p class="tool-card-desc" data-i18n="card_creatures_desc">Consulte fraquezas, atributos base, habilidades de combate e habitats de todas as criaturas.</p>
-            <span class="tool-card-link" data-i18n="access_tool">Acessar ferramenta →</span>
-          </a>
-
-          <a href="/comparador" class="tool-card">
-            <div class="tool-card-icon">⚔️</div>
-            <h2 class="tool-card-title" data-i18n="card_versus_title">Comparador de Criaturas</h2>
-            <p class="tool-card-desc" data-i18n="card_versus_desc">Compare duas criaturas lado a lado: atributos base, fraquezas elementais e sinergia de equipe.</p>
-            <span class="tool-card-link" data-i18n="access_tool">Acessar ferramenta →</span>
-          </a>
-
-          <a href="/mapa" class="tool-card">
-            <div class="tool-card-icon">🗺️</div>
-            <h2 class="tool-card-title" data-i18n="card_map_title">Mapa Interativo de Idília</h2>
-            <p class="tool-card-desc" data-i18n="card_map_desc">Localize teletransportes, baús secretos, ninhos de ovos, chefes e pontos de coleta.</p>
-            <span class="tool-card-link" data-i18n="access_tool">Acessar ferramenta →</span>
-          </a>
-
-          <a href="/tabela-tipos" class="tool-card">
-            <div class="tool-card-icon">🔮</div>
-            <h2 class="tool-card-title" data-i18n="card_types_title">Tabela de Tipos e Fraquezas</h2>
-            <p class="tool-card-desc" data-i18n="card_types_desc">Descubra vantagens e fraquezas elementais com a matriz e calculadora rápida de dano.</p>
-            <span class="tool-card-link" data-i18n="access_tool">Acessar ferramenta →</span>
-          </a>
-
-          <a href="/tier-list" class="tool-card">
-            <div class="tool-card-icon">🏆</div>
-            <h2 class="tool-card-title" data-i18n="card_tier_title">Tier List do Meta</h2>
-            <p class="tool-card-desc" data-i18n="card_tier_desc">Descubra as melhores criaturas para DPS, Quebra de Escudo, Cura e Suporte.</p>
-            <span class="tool-card-link" data-i18n="access_tool">Acessar ferramenta →</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 2. SECTION: REDEEM CODES -->
-    <section id="section-codigos" class="app-section">
-      <div class="container" style="padding-top: 2.5rem;">
-        <div class="section-header">
-          <h1 class="section-title" data-i18n="active_codes">Códigos Promocionais Ativos</h1>
-          <p class="section-desc" data-i18n="codes_subtitle">Códigos oficiais verificados. Clique para copiar e resgate no menu do jogo.</p>
-        </div>
-
-        <!-- Filter Status (Active / Expired) -->
-        <div class="filter-pills-row" style="justify-content: center; margin-bottom: 1.5rem;">
-          <button class="filter-chip code-filter-btn active" data-code-filter="active" data-i18n="codes_filter_active">Códigos Ativos (5)</button>
-          <button class="filter-chip code-filter-btn" data-code-filter="expired" data-i18n="codes_filter_expired">Códigos Expirados (2)</button>
-        </div>
-
-        <div class="codes-list" id="codes-container"></div>
-
-        <div class="guide-box">
-          <h2 class="guide-box-title" data-i18n="how_to_redeem">Como Resgatar Códigos no Jogo</h2>
-          <ol class="guide-steps" id="guide-steps"></ol>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. SECTION: CREATURES DATABASE (ANIIMODEX) -->
-    <section id="section-criaturas" class="app-section">
-      <div class="container" style="padding-top: 2.5rem;">
-        <div class="section-header">
-          <h1 class="section-title" data-i18n="card_creatures_title">Registro Anii (94 Criaturas)</h1>
-          <p class="section-desc">Enciclopédia completa de criaturas com estatísticas de combate, papéis na equipe, habilidades territoriais e linhagens evolutivas.</p>
-        </div>
-
-        <!-- Search & Filter Panel -->
-        <div class="search-filter-panel">
-          <div class="search-input-wrapper">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-            <input type="search" id="creature-search" class="main-search-input" placeholder="Buscar criatura por nome, número ou elemento..." data-i18n-ph="search_creatures" autocomplete="off" />
-          </div>
-
-          <!-- Element Filters -->
-          <div class="filter-pills-row">
-            <span class="filter-group-label">Elemento:</span>
-            <button class="filter-chip active" data-filter-group="element" data-filter-value="all">Todos</button>
-            <button class="filter-chip" data-filter-group="element" data-filter-value="fire">🔥 Fogo</button>
-            <button class="filter-chip" data-filter-group="element" data-filter-value="water">💧 Água</button>
-            <button class="filter-chip" data-filter-group="element" data-filter-value="grass">🌿 Grama</button>
-            <button class="filter-chip" data-filter-group="element" data-filter-value="electric">⚡ Elétrico</button>
-            <button class="filter-chip" data-filter-group="element" data-filter-value="ice">❄️ Gelo</button>
-            <button class="filter-chip" data-filter-group="element" data-filter-value="earth">🪨 Terra</button>
-            <button class="filter-chip" data-filter-group="element" data-filter-value="wind">🌪️ Vento</button>
-            <button class="filter-chip" data-filter-group="element" data-filter-value="light">✨ Luz</button>
-            <button class="filter-chip" data-filter-group="element" data-filter-value="dark">🔮 Trevas</button>
-          </div>
-
-          <!-- Role & Stage Filters -->
-          <div class="filter-pills-row">
-            <span class="filter-group-label">Função:</span>
-            <button class="filter-chip active" data-filter-group="role" data-filter-value="all">Todas</button>
-            <button class="filter-chip" data-filter-group="role" data-filter-value="dps">⚔️ DPS</button>
-            <button class="filter-chip" data-filter-group="role" data-filter-value="break">🛡️ Quebra de Escudo</button>
-            <button class="filter-chip" data-filter-group="role" data-filter-value="heal">💚 Cura</button>
-            <button class="filter-chip" data-filter-group="role" data-filter-value="support">🪄 Suporte</button>
-
-            <span class="filter-group-label" style="margin-left: 1rem;">Estágio:</span>
-            <button class="filter-chip active" data-filter-group="stage" data-filter-value="all">Todos</button>
-            <button class="filter-chip" data-filter-group="stage" data-filter-value="lumin">Lumin</button>
-            <button class="filter-chip" data-filter-group="stage" data-filter-value="gamma">Gamma</button>
-            <button class="filter-chip" data-filter-group="stage" data-filter-value="nova">Nova</button>
-          </div>
-        </div>
-
-        <!-- Count Indicator -->
-        <div class="results-count-badge" id="creatures-count-badge">Exibindo 94 de 94 criaturas</div>
-
-        <!-- Grid of Cards -->
-        <div class="creatures-grid" id="creatures-grid"></div>
-      </div>
-    </section>
-
-    <!-- 4. SECTION: VERSUS COMPARATOR (NOVA FERRAMENTA!) -->
-    <section id="section-comparador" class="app-section">
-      <div class="container" style="padding-top: 2.5rem;">
-        <div class="section-header">
-          <h1 class="section-title" data-i18n="card_versus_title">Comparador de Criaturas (Versus Mode)</h1>
-          <p class="section-desc">Selecione duas criaturas para comparar atributos de combate, fraquezas elementais e analisar quem leva a melhor em um duelo.</p>
-        </div>
-
-        <div class="versus-section">
-          <div class="versus-grid">
-            <!-- Creature 1 -->
-            <div class="versus-card">
-              <label for="versus-select-1" style="font-weight:700; font-family:var(--font-fun);">Primeira Criatura</label>
-              <select id="versus-select-1" class="versus-select"></select>
-              <img id="versus-img-1" src="/assets/creatures/inferlupa.webp" alt="Criatura 1" class="versus-img" />
-              <h3 id="versus-name-1" style="font-family:var(--font-display); font-size:1.4rem;">Inferlupa</h3>
-              <div style="display:flex; gap:0.4rem;">
-                <span id="versus-elem-1" class="element-pill">Fogo</span>
-                <span id="versus-role-1" class="role-pill">DPS</span>
-              </div>
-
-              <!-- Stat Bars -->
-              <div class="versus-bars">
-                <div class="versus-stat-row"><span>HP</span><span id="vs1-hp">95</span></div>
-                <div class="stat-bar-outer"><div class="stat-bar-inner" id="bar1-hp" style="width:75%;"></div></div>
-
-                <div class="versus-stat-row"><span>ATK</span><span id="vs1-atk">110</span></div>
-                <div class="stat-bar-outer"><div class="stat-bar-inner" id="bar1-atk" style="width:90%;"></div></div>
-
-                <div class="versus-stat-row"><span>DEF</span><span id="vs1-def">80</span></div>
-                <div class="stat-bar-outer"><div class="stat-bar-inner" id="bar1-def" style="width:65%;"></div></div>
-
-                <div class="versus-stat-row"><span>VEL</span><span id="vs1-spd">88</span></div>
-                <div class="stat-bar-outer"><div class="stat-bar-inner" id="bar1-spd" style="width:70%;"></div></div>
-              </div>
-            </div>
-
-            <!-- VS Badge -->
-            <div class="versus-divider">VS</div>
-
-            <!-- Creature 2 -->
-            <div class="versus-card">
-              <label for="versus-select-2" style="font-weight:700; font-family:var(--font-fun);">Segunda Criatura</label>
-              <select id="versus-select-2" class="versus-select"></select>
-              <img id="versus-img-2" src="/assets/creatures/celestis.webp" alt="Criatura 2" class="versus-img" />
-              <h3 id="versus-name-2" style="font-family:var(--font-display); font-size:1.4rem;">Celestis</h3>
-              <div style="display:flex; gap:0.4rem;">
-                <span id="versus-elem-2" class="element-pill">Luz</span>
-                <span id="versus-role-2" class="role-pill">Suporte</span>
-              </div>
-
-              <!-- Stat Bars -->
-              <div class="versus-bars">
-                <div class="versus-stat-row"><span>HP</span><span id="vs2-hp">85</span></div>
-                <div class="stat-bar-outer"><div class="stat-bar-inner" id="bar2-hp" style="width:68%;"></div></div>
-
-                <div class="versus-stat-row"><span>ATK</span><span id="vs2-atk">90</span></div>
-                <div class="stat-bar-outer"><div class="stat-bar-inner" id="bar2-atk" style="width:72%;"></div></div>
-
-                <div class="versus-stat-row"><span>DEF</span><span id="vs2-def">92</span></div>
-                <div class="stat-bar-outer"><div class="stat-bar-inner" id="bar2-def" style="width:75%;"></div></div>
-
-                <div class="versus-stat-row"><span>VEL</span><span id="vs2-spd">105</span></div>
-                <div class="stat-bar-outer"><div class="stat-bar-inner" id="bar2-spd" style="width:85%;"></div></div>
-              </div>
-            </div>
-
-            <!-- Verdict Box -->
-            <div class="versus-matchup-verdict" id="versus-verdict">
+<!-- Real-Time Countdown Box -->
+<div class="countdown-box">
+<span class="countdown-kicker" data-i18n="countdown_kicker">Tempo Restante para o Lançamento</span>
+<div class="countdown-digits">
+<div class="countdown-unit">
+<span class="countdown-num" id="cd-days">00</span>
+<span class="countdown-label" data-i18n="days">Dias</span>
+</div>
+<span class="countdown-sep">:</span>
+<div class="countdown-unit">
+<span class="countdown-num" id="cd-hours">00</span>
+<span class="countdown-label" data-i18n="hours">Horas</span>
+</div>
+<span class="countdown-sep">:</span>
+<div class="countdown-unit">
+<span class="countdown-num" id="cd-mins">00</span>
+<span class="countdown-label" data-i18n="mins">Min</span>
+</div>
+<span class="countdown-sep">:</span>
+<div class="countdown-unit">
+<span class="countdown-num" id="cd-secs">00</span>
+<span class="countdown-label" data-i18n="secs">Seg</span>
+</div>
+</div>
+</div>
+<!-- Platform Support Ribbon -->
+<div class="platforms-ribbon">
+<span class="platform-chip">🎮 Steam (PC)</span>
+<span class="platform-chip">⚡ PlayStation 5</span>
+<span class="platform-chip">🟢 Xbox Series X|S</span>
+<span class="platform-chip">📱 Android (23/09)</span>
+<span class="platform-chip">🍏 iOS (23/09)</span>
+</div>
+</div>
+</div>
+<!-- Quick Access Tools Grid -->
+<div class="container">
+<div class="tools-grid">
+<a class="tool-card" href="/codigos">
+<div class="tool-card-icon">🎁</div>
+<h2 class="tool-card-title" data-i18n="card_codes_title">Códigos de Resgate</h2>
+<p class="tool-card-desc" data-i18n="card_codes_desc">Resgate recompensas gratuitas como cristais de invocação, ovos raros e moedas de ouro.</p>
+<span class="tool-card-link" data-i18n="access_tool">Acessar ferramenta →</span>
+</a>
+<a class="tool-card" href="/criaturas">
+<div class="tool-card-icon">🐾</div>
+<h2 class="tool-card-title" data-i18n="card_creatures_title">Registro Anii (94 Criaturas)</h2>
+<p class="tool-card-desc" data-i18n="card_creatures_desc">Consulte fraquezas, atributos base, habilidades de combate e habitats de todas as criaturas.</p>
+<span class="tool-card-link" data-i18n="access_tool">Acessar ferramenta →</span>
+</a>
+<a class="tool-card" href="/comparador">
+<div class="tool-card-icon">⚔️</div>
+<h2 class="tool-card-title" data-i18n="card_versus_title">Comparador de Criaturas</h2>
+<p class="tool-card-desc" data-i18n="card_versus_desc">Compare duas criaturas lado a lado: atributos base, fraquezas elementais e sinergia de equipe.</p>
+<span class="tool-card-link" data-i18n="access_tool">Acessar ferramenta →</span>
+</a>
+<a class="tool-card" href="/mapa">
+<div class="tool-card-icon">🗺️</div>
+<h2 class="tool-card-title" data-i18n="card_map_title">Mapa Interativo de Idília</h2>
+<p class="tool-card-desc" data-i18n="card_map_desc">Localize teletransportes, baús secretos, ninhos de ovos, chefes e pontos de coleta.</p>
+<span class="tool-card-link" data-i18n="access_tool">Acessar ferramenta →</span>
+</a>
+<a class="tool-card" href="/tabela-tipos">
+<div class="tool-card-icon">🔮</div>
+<h2 class="tool-card-title" data-i18n="card_types_title">Tabela de Tipos e Fraquezas</h2>
+<p class="tool-card-desc" data-i18n="card_types_desc">Descubra vantagens e fraquezas elementais com a matriz e calculadora rápida de dano.</p>
+<span class="tool-card-link" data-i18n="access_tool">Acessar ferramenta →</span>
+</a>
+<a class="tool-card" href="/tier-list">
+<div class="tool-card-icon">🏆</div>
+<h2 class="tool-card-title" data-i18n="card_tier_title">Tier List do Meta</h2>
+<p class="tool-card-desc" data-i18n="card_tier_desc">Descubra as melhores criaturas para DPS, Quebra de Escudo, Cura e Suporte.</p>
+<span class="tool-card-link" data-i18n="access_tool">Acessar ferramenta →</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 2. SECTION: REDEEM CODES -->
+<section class="app-section" id="section-codigos">
+<div class="container" style="padding-top: 2.5rem;">
+<div class="section-header">
+<h1 class="section-title" data-i18n="active_codes">Códigos Promocionais Ativos</h1>
+<p class="section-desc" data-i18n="codes_subtitle">Códigos oficiais verificados. Clique para copiar e resgate no menu do jogo.</p>
+</div>
+<!-- Filter Status (Active / Expired) -->
+<div class="filter-pills-row" style="justify-content: center; margin-bottom: 1.5rem;">
+<button class="filter-chip code-filter-btn active" data-code-filter="active" data-i18n="codes_filter_active">Códigos Ativos (5)</button>
+<button class="filter-chip code-filter-btn" data-code-filter="expired" data-i18n="codes_filter_expired">Códigos Expirados (2)</button>
+</div>
+<div class="codes-list" id="codes-container"></div>
+<div class="guide-box">
+<h2 class="guide-box-title" data-i18n="how_to_redeem">Como Resgatar Códigos no Jogo</h2>
+<ol class="guide-steps" id="guide-steps"></ol>
+</div>
+</div>
+</section>
+<!-- 3. SECTION: CREATURES DATABASE (ANIIMODEX) -->
+<section class="app-section" id="section-criaturas">
+<div class="container" style="padding-top: 2.5rem;">
+<div class="section-header">
+<h1 class="section-title" data-i18n="card_creatures_title">Registro Anii (94 Criaturas)</h1>
+<p class="section-desc">Enciclopédia completa de criaturas com estatísticas de combate, papéis na equipe, habilidades territoriais e linhagens evolutivas.</p>
+</div>
+<!-- Search & Filter Panel -->
+<div class="search-filter-panel">
+<div class="search-input-wrapper">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+<input autocomplete="off" class="main-search-input" data-i18n-ph="search_creatures" id="creature-search" placeholder="Buscar criatura por nome, número ou elemento..." type="search"/>
+</div>
+<!-- Element Filters -->
+<div class="filter-pills-row">
+<span class="filter-group-label">Elemento:</span>
+<button class="filter-chip active" data-filter-group="element" data-filter-value="all">Todos</button>
+<button class="filter-chip" data-filter-group="element" data-filter-value="fire">🔥 Fogo</button>
+<button class="filter-chip" data-filter-group="element" data-filter-value="water">💧 Água</button>
+<button class="filter-chip" data-filter-group="element" data-filter-value="grass">🌿 Grama</button>
+<button class="filter-chip" data-filter-group="element" data-filter-value="electric">⚡ Elétrico</button>
+<button class="filter-chip" data-filter-group="element" data-filter-value="ice">❄️ Gelo</button>
+<button class="filter-chip" data-filter-group="element" data-filter-value="earth">🪨 Terra</button>
+<button class="filter-chip" data-filter-group="element" data-filter-value="wind">🌪️ Vento</button>
+<button class="filter-chip" data-filter-group="element" data-filter-value="light">✨ Luz</button>
+<button class="filter-chip" data-filter-group="element" data-filter-value="dark">🔮 Trevas</button>
+</div>
+<!-- Role & Stage Filters -->
+<div class="filter-pills-row">
+<span class="filter-group-label">Função:</span>
+<button class="filter-chip active" data-filter-group="role" data-filter-value="all">Todas</button>
+<button class="filter-chip" data-filter-group="role" data-filter-value="dps">⚔️ DPS</button>
+<button class="filter-chip" data-filter-group="role" data-filter-value="break">🛡️ Quebra de Escudo</button>
+<button class="filter-chip" data-filter-group="role" data-filter-value="heal">💚 Cura</button>
+<button class="filter-chip" data-filter-group="role" data-filter-value="support">🪄 Suporte</button>
+<span class="filter-group-label" style="margin-left: 1rem;">Estágio:</span>
+<button class="filter-chip active" data-filter-group="stage" data-filter-value="all">Todos</button>
+<button class="filter-chip" data-filter-group="stage" data-filter-value="lumin">Lumin</button>
+<button class="filter-chip" data-filter-group="stage" data-filter-value="gamma">Gamma</button>
+<button class="filter-chip" data-filter-group="stage" data-filter-value="nova">Nova</button>
+</div>
+</div>
+<!-- Count Indicator -->
+<div class="results-count-badge" id="creatures-count-badge">Exibindo 94 de 94 criaturas</div>
+<!-- Grid of Cards -->
+<div class="creatures-grid" id="creatures-grid"></div>
+</div>
+</section>
+<!-- 4. SECTION: VERSUS COMPARATOR (NOVA FERRAMENTA!) -->
+<section class="app-section" id="section-comparador">
+<div class="container" style="padding-top: 2.5rem;">
+<div class="section-header">
+<h1 class="section-title" data-i18n="card_versus_title">Comparador de Criaturas (Versus Mode)</h1>
+<p class="section-desc">Selecione duas criaturas para comparar atributos de combate, fraquezas elementais e analisar quem leva a melhor em um duelo.</p>
+</div>
+<div class="versus-section">
+<div class="versus-grid">
+<!-- Creature 1 -->
+<div class="versus-card">
+<label for="versus-select-1" style="font-weight:700; font-family:var(--font-fun);">Primeira Criatura</label>
+<select class="versus-select" id="versus-select-1"></select>
+<img alt="Criatura 1" class="versus-img" id="versus-img-1" src="/assets/creatures/inferlupa.webp"/>
+<h3 id="versus-name-1" style="font-family:var(--font-display); font-size:1.4rem;">Inferlupa</h3>
+<div style="display:flex; gap:0.4rem;">
+<span class="element-pill" id="versus-elem-1">Fogo</span>
+<span class="role-pill" id="versus-role-1">DPS</span>
+</div>
+<!-- Stat Bars -->
+<div class="versus-bars">
+<div class="versus-stat-row"><span>HP</span><span id="vs1-hp">95</span></div>
+<div class="stat-bar-outer"><div class="stat-bar-inner" id="bar1-hp" style="width:75%;"></div></div>
+<div class="versus-stat-row"><span>ATK</span><span id="vs1-atk">110</span></div>
+<div class="stat-bar-outer"><div class="stat-bar-inner" id="bar1-atk" style="width:90%;"></div></div>
+<div class="versus-stat-row"><span>DEF</span><span id="vs1-def">80</span></div>
+<div class="stat-bar-outer"><div class="stat-bar-inner" id="bar1-def" style="width:65%;"></div></div>
+<div class="versus-stat-row"><span>VEL</span><span id="vs1-spd">88</span></div>
+<div class="stat-bar-outer"><div class="stat-bar-inner" id="bar1-spd" style="width:70%;"></div></div>
+</div>
+</div>
+<!-- VS Badge -->
+<div class="versus-divider">VS</div>
+<!-- Creature 2 -->
+<div class="versus-card">
+<label for="versus-select-2" style="font-weight:700; font-family:var(--font-fun);">Segunda Criatura</label>
+<select class="versus-select" id="versus-select-2"></select>
+<img alt="Criatura 2" class="versus-img" id="versus-img-2" src="/assets/creatures/celestis.webp"/>
+<h3 id="versus-name-2" style="font-family:var(--font-display); font-size:1.4rem;">Celestis</h3>
+<div style="display:flex; gap:0.4rem;">
+<span class="element-pill" id="versus-elem-2">Luz</span>
+<span class="role-pill" id="versus-role-2">Suporte</span>
+</div>
+<!-- Stat Bars -->
+<div class="versus-bars">
+<div class="versus-stat-row"><span>HP</span><span id="vs2-hp">85</span></div>
+<div class="stat-bar-outer"><div class="stat-bar-inner" id="bar2-hp" style="width:68%;"></div></div>
+<div class="versus-stat-row"><span>ATK</span><span id="vs2-atk">90</span></div>
+<div class="stat-bar-outer"><div class="stat-bar-inner" id="bar2-atk" style="width:72%;"></div></div>
+<div class="versus-stat-row"><span>DEF</span><span id="vs2-def">92</span></div>
+<div class="stat-bar-outer"><div class="stat-bar-inner" id="bar2-def" style="width:75%;"></div></div>
+<div class="versus-stat-row"><span>VEL</span><span id="vs2-spd">105</span></div>
+<div class="stat-bar-outer"><div class="stat-bar-inner" id="bar2-spd" style="width:85%;"></div></div>
+</div>
+</div>
+<!-- Verdict Box -->
+<div class="versus-matchup-verdict" id="versus-verdict">
               Analisando duelo elemental entre as criaturas selecionadas...
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. SECTION: INTERACTIVE MAP (FULL 100% FAITHFUL REPLICA) -->
-    <section aria-labelledby="breezy-plains-map-title" class="imap imap--dense imap--v2 is-filters-open" data-map-locale="pt-br" data-map-region-slugs="argent-strait,beast-fang-ridge,berylline-causeway,blitzwood,brightbough-plateau,crescent-bay,driftwise-meadow,echoback-landing,forest-of-falling-stars,island-of-peace,mistwoods,nimbus-fields,rosetower-wood,russet-highlands,sea-of-flowers,tideblossom-coast,zephyrus-landbridge" data-map-spawn-markers="/api/map/markers" data-map-spawn-session="/api/map/session" data-map-v2="" id="section-mapa"> <script data-map-config="" type="application/json">{"projectId":"aniimotools","mapId":"breezy-plains","runtime":"static","title":"Mapa interativo de Aniimo: Planícies Ventosas","description":"Mapa interativo de surgimentos das Planícies Ventosas, a região inicial de Aniimo: surgimentos de Aniimos, baús, pontos de coleta e pontos de interesse nas coordenadas reais do jogo.","image":{"src":"/assets/map/breezy-plains.webp?v=f5e25fb1","width":7168,"height":7168,"alt":"Mapa interativo das Planícies Ventosas, a região inicial de Aniimo","revision":"breezy-plains-09796f56","content":{"w":0.6484,"h":0.4607},"tiles":{"cols":7,"rows":7,"tileSize":1024,"items":[{"id":"t-0-0","x":0,"y":0,"src":"/assets/map/tiles/breezy-plains/0_0.webp?v=f5e25fb1"},{"id":"t-1-0","x":1,"y":0,"src":"/assets/map/tiles/breezy-plains/1_0.webp?v=f5e25fb1"},{"id":"t-2-0","x":2,"y":0,"src":"/assets/map/tiles/breezy-plains/2_0.webp?v=f5e25fb1"},{"id":"t-3-0","x":3,"y":0,"src":"/assets/map/tiles/breezy-plains/3_0.webp?v=f5e25fb1"},{"id":"t-4-0","x":4,"y":0,"src":"/assets/map/tiles/breezy-plains/4_0.webp?v=f5e25fb1"},{"id":"t-5-0","x":5,"y":0,"src":"/assets/map/tiles/breezy-plains/5_0.webp?v=f5e25fb1"},{"id":"t-6-0","x":6,"y":0,"src":"/assets/map/tiles/breezy-plains/6_0.webp?v=f5e25fb1"},{"id":"t-0-1","x":0,"y":1,"src":"/assets/map/tiles/breezy-plains/0_1.webp?v=f5e25fb1"},{"id":"t-1-1","x":1,"y":1,"src":"/assets/map/tiles/breezy-plains/1_1.webp?v=f5e25fb1"},{"id":"t-2-1","x":2,"y":1,"src":"/assets/map/tiles/breezy-plains/2_1.webp?v=f5e25fb1"},{"id":"t-3-1","x":3,"y":1,"src":"/assets/map/tiles/breezy-plains/3_1.webp?v=f5e25fb1"},{"id":"t-4-1","x":4,"y":1,"src":"/assets/map/tiles/breezy-plains/4_1.webp?v=f5e25fb1"},{"id":"t-5-1","x":5,"y":1,"src":"/assets/map/tiles/breezy-plains/5_1.webp?v=f5e25fb1"},{"id":"t-6-1","x":6,"y":1,"src":"/assets/map/tiles/breezy-plains/6_1.webp?v=f5e25fb1"},{"id":"t-0-2","x":0,"y":2,"src":"/assets/map/tiles/breezy-plains/0_2.webp?v=f5e25fb1"},{"id":"t-1-2","x":1,"y":2,"src":"/assets/map/tiles/breezy-plains/1_2.webp?v=f5e25fb1"},{"id":"t-2-2","x":2,"y":2,"src":"/assets/map/tiles/breezy-plains/2_2.webp?v=f5e25fb1"},{"id":"t-3-2","x":3,"y":2,"src":"/assets/map/tiles/breezy-plains/3_2.webp?v=f5e25fb1"},{"id":"t-4-2","x":4,"y":2,"src":"/assets/map/tiles/breezy-plains/4_2.webp?v=f5e25fb1"},{"id":"t-5-2","x":5,"y":2,"src":"/assets/map/tiles/breezy-plains/5_2.webp?v=f5e25fb1"},{"id":"t-6-2","x":6,"y":2,"src":"/assets/map/tiles/breezy-plains/6_2.webp?v=f5e25fb1"},{"id":"t-0-3","x":0,"y":3,"src":"/assets/map/tiles/breezy-plains/0_3.webp?v=f5e25fb1"},{"id":"t-1-3","x":1,"y":3,"src":"/assets/map/tiles/breezy-plains/1_3.webp?v=f5e25fb1"},{"id":"t-2-3","x":2,"y":3,"src":"/assets/map/tiles/breezy-plains/2_3.webp?v=f5e25fb1"},{"id":"t-3-3","x":3,"y":3,"src":"/assets/map/tiles/breezy-plains/3_3.webp?v=f5e25fb1"},{"id":"t-4-3","x":4,"y":3,"src":"/assets/map/tiles/breezy-plains/4_3.webp?v=f5e25fb1"},{"id":"t-5-3","x":5,"y":3,"src":"/assets/map/tiles/breezy-plains/5_3.webp?v=f5e25fb1"},{"id":"t-6-3","x":6,"y":3,"src":"/assets/map/tiles/breezy-plains/6_3.webp?v=f5e25fb1"},{"id":"t-0-4","x":0,"y":4,"src":"/assets/map/tiles/breezy-plains/0_4.webp?v=f5e25fb1"},{"id":"t-1-4","x":1,"y":4,"src":"/assets/map/tiles/breezy-plains/1_4.webp?v=f5e25fb1"},{"id":"t-2-4","x":2,"y":4,"src":"/assets/map/tiles/breezy-plains/2_4.webp?v=f5e25fb1"},{"id":"t-3-4","x":3,"y":4,"src":"/assets/map/tiles/breezy-plains/3_4.webp?v=f5e25fb1"},{"id":"t-4-4","x":4,"y":4,"src":"/assets/map/tiles/breezy-plains/4_4.webp?v=f5e25fb1"},{"id":"t-5-4","x":5,"y":4,"src":"/assets/map/tiles/breezy-plains/5_4.webp?v=f5e25fb1"},{"id":"t-6-4","x":6,"y":4,"src":"/assets/map/tiles/breezy-plains/6_4.webp?v=f5e25fb1"},{"id":"t-0-5","x":0,"y":5,"src":"/assets/map/tiles/breezy-plains/0_5.webp?v=f5e25fb1"},{"id":"t-1-5","x":1,"y":5,"src":"/assets/map/tiles/breezy-plains/1_5.webp?v=f5e25fb1"},{"id":"t-2-5","x":2,"y":5,"src":"/assets/map/tiles/breezy-plains/2_5.webp?v=f5e25fb1"},{"id":"t-3-5","x":3,"y":5,"src":"/assets/map/tiles/breezy-plains/3_5.webp?v=f5e25fb1"},{"id":"t-4-5","x":4,"y":5,"src":"/assets/map/tiles/breezy-plains/4_5.webp?v=f5e25fb1"},{"id":"t-5-5","x":5,"y":5,"src":"/assets/map/tiles/breezy-plains/5_5.webp?v=f5e25fb1"},{"id":"t-6-5","x":6,"y":5,"src":"/assets/map/tiles/breezy-plains/6_5.webp?v=f5e25fb1"},{"id":"t-0-6","x":0,"y":6,"src":"/assets/map/tiles/breezy-plains/0_6.webp?v=f5e25fb1"},{"id":"t-1-6","x":1,"y":6,"src":"/assets/map/tiles/breezy-plains/1_6.webp?v=f5e25fb1"},{"id":"t-2-6","x":2,"y":6,"src":"/assets/map/tiles/breezy-plains/2_6.webp?v=f5e25fb1"},{"id":"t-3-6","x":3,"y":6,"src":"/assets/map/tiles/breezy-plains/3_6.webp?v=f5e25fb1"},{"id":"t-4-6","x":4,"y":6,"src":"/assets/map/tiles/breezy-plains/4_6.webp?v=f5e25fb1"},{"id":"t-5-6","x":5,"y":6,"src":"/assets/map/tiles/breezy-plains/5_6.webp?v=f5e25fb1"},{"id":"t-6-6","x":6,"y":6,"src":"/assets/map/tiles/breezy-plains/6_6.webp?v=f5e25fb1"}]}},"layers":[{"id":"creatures","label":"Aniimo spawns","icon":"map-pin","color":"oklch(64% 0.15 150)","defaultVisible":true,"order":10},{"id":"chests","label":"Chests","icon":"map-pin","iconSrc":"/assets/map/icons/game/chest.webp?v=df57630d","color":"oklch(72% 0.15 85)","defaultVisible":true,"order":20},{"id":"gather","label":"Gathering","icon":"map-pin","iconSrc":"/assets/map/icons/game/amber.webp?v=ed6016f3","color":"oklch(60% 0.13 140)","defaultVisible":true,"order":30},{"id":"items","label":"Collectibles","icon":"map-pin","iconSrc":"/assets/map/icons/items/sunny-daisy.webp?v=245e78fa","color":"oklch(68% 0.12 110)","defaultVisible":true,"order":33},{"id":"aniipods","label":"Aniipods","icon":"map-pin","iconSrc":"/assets/map/icons/items/aniipod.webp?v=9da477b4","color":"oklch(50% 0.18 265)","defaultVisible":true,"order":32},{"id":"digsites","label":"Dig sites","icon":"map-pin","iconSrc":"/assets/map/icons/game/dig-site.webp?v=f19d2d90","color":"oklch(58% 0.12 60)","defaultVisible":true,"order":36},{"id":"eggs","label":"Eggs","icon":"map-pin","iconSrc":"/assets/map/icons/items/elite-egg.webp?v=d7a58a25","color":"oklch(72% 0.12 200)","defaultVisible":true,"order":34},{"id":"bosses","label":"Bosses","icon":"map-pin","iconSrc":"/assets/map/icons/game/field-boss.webp?v=85a6b6b1","color":"oklch(58% 0.19 25)","defaultVisible":true,"order":40},{"id":"teleport","label":"Teleporters","icon":"map-pin","iconSrc":"/assets/map/icons/game/teleport-array.webp?v=55b77d75","color":"oklch(66% 0.16 260)","defaultVisible":true,"order":50},{"id":"temple","label":"Temples","icon":"map-pin","iconSrc":"/assets/map/icons/game/temple.webp?v=ff8d264b","color":"oklch(58% 0.16 285)","defaultVisible":true,"order":60},{"id":"activity","label":"Activities","icon":"map-pin","iconSrc":"/assets/map/icons/game/daily-survey.webp?v=e84adb84","color":"oklch(64% 0.15 320)","defaultVisible":true,"order":70},{"id":"landmark","label":"Landmarks","icon":"map-pin","iconSrc":"/assets/map/icons/game/town.webp?v=3cdf1ba3","color":"oklch(66% 0.15 30)","defaultVisible":true,"order":80},{"id":"ecology","label":"Creature ecology","icon":"map-pin","iconSrc":"/assets/map/icons/game/ecology.webp?v=8757b11a","color":"oklch(62% 0.11 185)","defaultVisible":true,"order":90}],"zones":[{"id":"zone-20200","name":"Nimbus Fields","minLevel":5,"maxLevel":15,"desc":"Soft clouds drift low over the velvety sea of grass as Nimbis bounce lightly across the open wilds, and the scent of fresh grass ripples through the green waves.","pets":["Nimbi","Turbo","Budclaw","Skippy","Pranky","Emberpup","Flameruff","Celestis","Chirpi","Hummin","Iris","Flutternym","Sparki"],"weather":{"rain":["Nimbi","Turbo"],"thunder":["Nimbi","Turbo"],"aurora":["Turbo"]},"cx":16.45,"cy":25.08,"poly":[15.86,20.44,15.83,19.98,16.39,19.54,16.6,19.7,17.02,19.81,17.56,20.26,17.82,20.16,18.09,20.24,18.31,20.46,18.43,20.87,18.67,21.27,18.79,21.6,18.76,22.08,18.97,22.97,18.99,24,20.17,24.45,20.97,24.22,21.52,24.48,22.51,25,23.29,25.34,24.24,25.39,24.91,25.48,25.02,25.79,25.14,26.05,25.3,26.34,24.55,26.87,23.7,27.31,23.52,27.82,22.93,28.88,22.54,29.56,22.44,29.98,21.43,30.03,20.34,30.35,19.47,29.92,18.38,28.84,17.75,28.93,17.25,28.6,16.69,28.18,16.03,28.05,15.47,27.54,14.51,26.85,13.72,27.76,13.26,28,12.91,28.21,12.28,27.39,12.13,27.23,11.92,27.23,11.6,27.06,11.29,26.97,10.97,26.94,10.77,26.83,10.61,26.68,10.46,26.44,10.3,26.25,10.18,26.02,10.21,25.9,10.34,25.8,10.49,25.69,10.49,25.58,10.56,25.45,10.69,25.26,11.2,25.03,11.69,24.94,12.17,24.8,12.53,24.66,12.78,24.35,13.2,23.49,13.5,22.8,13.89,22.41,14.19,22.09,14.8,22.03,15.19,21.33,15.56,21.11,15.59,20.9]},{"id":"zone-20600","name":"Sea of Flowers","minLevel":19,"maxLevel":28,"desc":"An endless sea of flowers paints the land in romantic colors, and the air is rich with their fragrance. A small village known for making perfumes sits nestled among purple flower fields, living alongside Aniimo for generations.","pets":["Flutternym","Thornblade","Iris","Irisal","Dewy","Fragrancier","Budsquire","Hummin","Hexxin","Sparki","Skippy","Pranky","Glacy"],"weather":{"rain":["Thornblade"],"thunder":["Thornblade"],"aurora":["Thornblade"]},"cx":36.25,"cy":24.74,"poly":[34.84,18.41,33.92,18.12,33.59,18.69,33.04,18.97,32.57,19.86,32.5,20.87,31.39,20.92,29.54,21.33,28.81,21.85,29,23.32,27.92,24.39,26.58,24.25,27.37,25.54,28.82,26.72,30.88,27.15,31.32,27.93,33.11,29.07,33.68,28.8,34.36,29.3,35.2,29.81,36.87,30.62,38.19,30.86,39.26,32.98,39.97,35.22,41.54,35.5,42.87,33.69,43.42,32.75,43.66,31.55,43.55,30.3,42.93,27.24,42.59,25.9,42.95,23.05,42.4,22.58,41.69,21.97,41.08,21.54,41.23,19.26,40.93,17.47,41.64,15.91,39.36,15.83,35.96,16.9,35.73,17.89]},{"id":"zone-21200","name":"Forest of Falling Stars","minLevel":20,"maxLevel":25,"desc":"Following the stream upstream into a dense purple forest, Celestises fly among the Starine Trees like tiny shooting stars.","pets":["Stellarys","Celestis","Eko","Eklue","Iris","Irisal","Chirpi","Cornet","Tromber","Skippy","Pranky","Hummin","Pomegg"],"weather":{"rain":["Stellarys","Tromber"],"thunder":["Stellarys","Tromber"],"aurora":["Stellarys"]},"cx":8.76,"cy":21.84,"poly":[10.67,24.94,10.69,25.26,11.2,25.03,11.69,24.94,12.17,24.8,12.53,24.66,12.78,24.35,13.2,23.49,13.5,22.8,13.89,22.41,14.19,22.09,12.55,20.95,12.24,19.98,12.41,19.45,12.2,18.53,11.58,17.65,10.52,17.05,8.78,16.33,7.82,16.3,6.76,16.43,4.22,16.5,2.47,16.48,-0.03,16.36,0,18.49,0,19.93,-0.01,21.63,0,25.24,3.93,25.45,6.53,25.26,7.38,25.32,8.69,24.88,9.21,24.53,9.6,23.95,9.84,23.9,10.1,23.89,10.17,24.27,10.54,24.68]},{"id":"zone-20400","name":"The Argent Strait","minLevel":28,"maxLevel":32,"desc":"Silver sand and blue sea reflect one another as flocks of Chirpis blare trumpet-like calls among the coastal cliffs, adding a lively melody to the bay on the sea breeze.","pets":["Cornet","Chirpi","Tromber","Tubster","Budclaw","Shrubclaw","Emberpup","Flameruff","Celestis","Hummin","Iris","Nimbi"],"weather":{"rain":["Tromber"],"thunder":["Tromber"],"aurora":["Cornet"]},"cx":12.17,"cy":30.15,"poly":[12.13,27.23,11.92,27.23,11.6,27.06,11.29,26.97,10.97,26.94,10.77,26.83,10.61,26.68,10.46,26.44,10.3,26.25,10.2,26.11,10.18,26.02,10.21,25.9,10.34,25.8,10.42,25.75,10.49,25.69,10.49,25.58,10.56,25.45,10.69,25.26,10.67,24.94,10.54,24.68,10.17,24.27,10.1,23.89,9.84,23.9,9.6,23.95,9.21,24.53,8.69,24.88,7.38,25.32,6.53,25.26,3.93,25.45,-0.01,25.26,0.02,28.84,0.02,34.84,0.02,40.2,0.01,45.57,5.34,45.56,8.01,45.55,11.67,45.56,14.43,45.51,16.87,45.52,19.49,45.48,22.5,45.44,22.54,40.09,22.55,36.41,22.44,33.44,22.36,32.17,21.94,30.93,21.43,30.03,20.34,30.35,19.47,29.92,18.38,28.84,17.75,28.93,17.25,28.6,16.69,28.18,16.03,28.05,15.47,27.54,14.51,26.85,13.72,27.76,13.26,28,12.91,28.21,12.28,27.39]},{"id":"zone-21100","name":"Beast Fang Ridge","minLevel":30,"maxLevel":35,"desc":"Giant rocks like wolf fangs tower over the mountaintop, where Emberpups and Boneskies make their home. The two groups often clash in fiery and icy disputes over territory.","pets":["Scorchhowl","Emberpup","Flameruff","Bonesky","Fenrier","Glynsera","Sparki","Flamerion","Flutternym","Gracewing","Iris","Chirpi","Budclaw","Pomegg"],"weather":{"thunder":["Scorchhowl"],"aurora":["Scorchhowl"]},"cx":16.93,"cy":12.38,"poly":[16.39,19.54,15.83,19.98,15.86,20.44,15.59,20.9,15.56,21.11,15.19,21.33,14.8,22.03,14.19,22.09,12.55,20.95,12.24,19.98,12.41,19.45,12.2,18.53,11.58,17.65,11.41,16.56,11.97,15.15,11.95,14.46,11.77,13.75,11.21,13.22,11.15,12.87,11.55,12.51,11.8,12.21,11.92,11.72,12.23,11.36,12.42,10.86,12.69,10.36,12.92,9.67,12.91,9.37,12.96,9.09,13.24,8.33,13.67,8.04,13.99,7.62,14.43,7.53,14.91,7.53,15.21,7.68,15.51,7.67,15.79,7.84,16.37,8.15,16.23,8.47,16.03,8.75,16.1,8.95,16.33,9.1,16.56,9.29,16.74,9.57,16.82,9.84,16.94,10.01,17.18,10.13,17.31,10.13,17.57,9.99,17.68,9.75,17.75,9.43,17.88,9.22,18.07,9.08,18.23,9.05,18.41,9.12,18.53,9.2,18.76,9.19,18.83,9.1,18.97,9.05,19.05,8.98,19.31,9,19.51,9.04,19.68,9.15,19.81,9.12,19.96,8.94,20.01,8.83,20.05,8.78,20.17,8.81,20.24,8.96,20.37,9.21,20.47,9.26,20.53,9.45,20.5,9.92,20.57,10.15,20.57,10.5,20.62,10.64,20.73,10.71,20.81,10.77,20.88,10.88,20.95,11.16,21.09,11.56,20.98,11.87,21.21,12.88,21.31,13.41,21.1,13.74,21.3,14.1,21.17,14.45,20.94,15.1,20.37,15.45,19.69,15.82,19.41,16.58,19.73,17.59,18.09,20.24,17.82,20.16,17.56,20.26,17.02,19.81,16.6,19.7]},{"id":"zone-20300","name":"The Mistwoods","minLevel":35,"maxLevel":37,"desc":"Off-key singing echoes through the rotting deadwood, while the swamp deep in the mist bubbles with poison miasma. Thankfully, gleaming glimmer fruit shines like glass lanterns to guide lost travelers.","pets":["Hexxin","Hummin","Flutternym","Skippy","Pranky","Leafy","Emberpup","Iris","Sparki","Flamerion","Wisptis","Ignitis"],"weather":{"aurora":["Hexxin"]},"cx":23.32,"cy":19.06,"poly":[21.31,13.41,21.1,13.74,21.17,14.45,20.94,15.1,20.37,15.45,19.69,15.82,19.41,16.58,19.73,17.59,18.09,20.24,18.31,20.46,18.43,20.87,18.67,21.27,18.79,21.6,18.76,22.08,18.97,22.97,18.99,24,20.17,24.45,20.97,24.22,21.52,24.48,22.51,25,23.29,25.34,24.24,25.39,24.91,25.48,25.02,25.79,25.14,26.05,25.3,26.34,27.37,25.54,26.58,24.25,27.92,24.39,29,23.32,28.81,21.85,26.69,20.94,26.43,19.72,26.6,19.22,27.05,18.27,27.45,17.75,27.22,16.6,27.1,16.15,26.6,15.37,26.47,14.97,25.88,14.88,25.41,14.89,24.77,14.74,24.83,14.29,24.93,14.14,24.34,13.48,23.93,13.6,23.41,13.26,22.94,12.94,22.21,12.82,21.46,12.83,21.21,12.88]},{"id":"zone-21000","name":"Echoback Landing","minLevel":36,"maxLevel":40,"desc":"Why hasn’t the enormous Aniimo stranded on the shoal returned to the embrace of the deep sea? The answer may lie within the haunting Echoback Song.","pets":["Susuta","Panpanta","Popota","Shelly","Sheldon","Sherro","Budclaw","Shrubclaw","Chirpi","Cornet","Tubster","Emberpup","Flameruff","Celestis"],"weather":{"thunder":["Sherro"],"aurora":["Panpanta"]},"cx":12.91,"cy":9.18,"poly":[11.41,16.56,11.97,15.15,11.95,14.46,11.77,13.75,11.21,13.22,11.15,12.87,11.55,12.51,11.8,12.21,11.92,11.72,12.23,11.36,12.42,10.86,12.69,10.36,12.92,9.67,12.91,9.37,12.96,9.09,13.24,8.33,13.67,8.04,13.99,7.62,14.43,7.53,14.91,7.53,15.21,7.68,15.51,7.67,15.79,7.84,16.37,8.15,16.65,7.69,16.84,7.27,17.19,7.32,17.56,7.24,17.73,6.95,18,6.77,18.19,6.55,18.55,6.41,18.8,6.14,19.12,5.95,19.75,5.14,19.93,3.95,19.56,0.01,17.64,-0.31,15.41,-0.97,10.79,0.07,-0.01,0.01,0,3.32,0.01,9.52,0,16.35,4.22,16.5,6.76,16.43,7.82,16.3,8.78,16.33,10.52,17.05,11.58,17.65]},{"id":"zone-20500","name":"Blitzwood","minLevel":40,"maxLevel":45,"desc":"Drawn by Bolties, thunder carves furrows into the earth, digging gray scorched soil out of a grassy slope while flickering electric sparks crackle in the thunder-struck wood.","pets":["Bolty","Blazen","Flutternym","Gracewing","Hummin","Iris","Irisal","Wisptis","Ignitis","Chirpi","Sparki","Squarrel","Squashel"],"weather":{"aurora":["Blazen"]},"cx":26.93,"cy":31.53,"poly":[21.94,30.93,22.36,32.17,22.44,33.44,22.55,36.38,22.54,40.09,22.54,45.56,33.41,45.39,33.39,42.38,33.29,39.22,34.04,36.88,34.52,34.11,33.2,32.26,33.53,30.25,33.11,29.07,31.32,27.93,30.88,27.15,28.82,26.72,27.37,25.54,25.3,26.34,24.91,25.48,25.02,25.79,25.14,26.05,25.3,26.34,24.55,26.87,23.7,27.31,23.52,27.82,22.93,28.88,22.54,29.56,22.44,29.98,21.43,30.03]},{"id":"zone-20900","name":"Berylline Vale","minLevel":40,"maxLevel":47,"desc":"Stacks of sea-eroded rock rise layer by layer, with wind-carved stone pillars standing among them. Emerald grass spreads across the natural stone terraces step by step.","pets":["Ignitis","Sparki","Flamerion","Baleetle","Waleetle","Bouldus","Wisptis","Iris","Irisal","Budclaw","Shrubclaw","Hummin","Hexxin"],"weather":{"aurora":["Ignitis"]},"cx":20.69,"cy":9.72,"poly":[23.93,13.6,24.34,13.48,24.93,14.14,24.83,14.29,24.77,14.74,25.41,14.89,25.88,14.88,26.47,14.97,26.6,15.37,27.1,16.15,27.22,16.6,29.28,15.76,29.53,13.91,29.35,13.49,28.24,12.77,27.54,11.58,27.19,11.15,25.47,7.33,24.38,4.59,23.01,0,20.8,-0.03,20.1,0.08,19.56,0.01,19.93,3.95,19.75,5.14,19.12,5.95,18.8,6.14,18.55,6.41,18.19,6.55,18,6.77,17.73,6.95,17.56,7.24,17.19,7.32,16.84,7.27,16.65,7.69,16.37,8.15,16.23,8.47,16.03,8.75,16.1,8.95,16.33,9.1,16.56,9.29,16.74,9.57,16.82,9.84,16.94,10.01,17.07,10.1,17.18,10.13,17.31,10.13,17.57,9.99,17.68,9.75,17.75,9.43,17.88,9.22,18.07,9.08,18.23,9.05,18.41,9.12,18.53,9.2,18.65,9.23,18.76,9.19,18.83,9.1,18.97,9.05,19.05,8.98,19.31,9,19.51,9.04,19.68,9.15,19.81,9.12,19.88,9,19.96,8.94,20.01,8.83,20.05,8.78,20.17,8.81,20.24,8.96,20.26,9.12,20.37,9.21,20.47,9.26,20.53,9.45,20.5,9.92,20.57,10.15,20.57,10.5,20.62,10.64,20.73,10.71,20.81,10.77,20.88,10.88,20.95,11.16,21.03,11.39,21.09,11.56,20.98,11.87,21.21,12.88,21.46,12.83,22.21,12.82,22.94,12.94,23.41,13.26]},{"id":"zone-21500","name":"Rosetower Woods","minLevel":43,"maxLevel":50,"desc":"Pines stand tall on both sides of the mountain road, and bear shadows sometimes flicker among the trees. At the end of the path stands a white tower wreathed in thorns, sealed in dust. Will the day come when the Rose blooms?","pets":["Grizbo","Pomegg","Budsquire","Cubbo","Dewy","Pomawk","Thornblade","Melloblum","Bonesky","Fenrier","Glynsera"],"weather":{"snow":["Pomegg"],"aurora":["Grizbo"]},"cx":49.72,"cy":23.19,"poly":[52.28,18.8,64.26,18.82,64.27,22.25,64.31,26.88,64.34,32.38,64.33,34.7,64.28,37.01,55.62,30.69,49.82,29.35,43.66,31.55,43.55,30.3,42.93,27.24,42.59,25.9,42.95,23.05,42.4,22.58,41.69,21.97,41.08,21.54,41.23,19.26,40.93,17.47,41.64,15.91,42.84,15.21,45.71,14.83,47.24,14.51,48.6,15.7,49.36,16.96,50.79,18.15]},{"id":"zone-20800","name":"Russet Highlands","minLevel":45,"maxLevel":50,"desc":"Orange and yellow plants stain the gray rock and soil a deep cinnabar hue as mysterious winged shadows sweep past the steep mountain slopes, stirring up a blazing storm among the altar ruins.","pets":["Helmut","Rookey","Jawling","Helmwhelp","Helgon","Pawney","Emberpup","Flameruff","Iris","Irisal","Chirpi","Tubster","Baleetle","Waleetle","Sparki"],"weather":{"snow":["Helmut","Rookey","Baleetle","Waleetle"],"aurora":["Pawney"]},"cx":34.56,"cy":9.46,"poly":[24.38,4.59,25.47,7.33,27.19,11.15,27.54,11.58,28.24,12.77,29.35,13.49,29.53,13.91,30.84,13.71,31.17,12.83,31.7,11.8,33.77,10.56,35.05,10.47,36.02,9.9,37.13,10.45,38.32,11.92,41.51,11.01,42.85,12.81,45.68,11.12,44.28,7.82,43.4,5.23,43.75,3.19,44.77,0.03,23.01,0]},{"id":"zone-21400","name":"Zephyrus Landbridge","minLevel":47,"maxLevel":57,"desc":"A massive ant fortress of piled sandstone stands at the edge of the cape, with industrious Cozites bustling through its halls, while deep in the valley, scorching heat billows from the cavern below as Lavazars clash with subterranean crystals, scattering sparks like stars.","pets":["Magmarex","Cozite","Bailite","Pebbling","Lavazar","Chirpi","Cornet","Tromber","Tubster","Pomegg","Budclaw","Emberpup","Flameruff","Wisptis","Ignitis"],"weather":{"aurora":["Magmarex"]},"cx":51.73,"cy":10,"poly":[64.32,2.38,64.32,5.28,64.32,13.18,64.32,18.85,64.25,18.83,64.26,18.82,52.28,18.8,50.79,18.15,49.36,16.96,48.6,15.7,47.24,14.51,45.71,14.83,42.84,15.21,42.33,14.5,42.09,13.7,42.85,12.81,45.68,11.12,44.28,7.82,43.4,5.23,43.75,3.19,44.77,0.03,46.84,0.03,50.32,0.03,53.13,0.03,58.65,0.03,64.32,0.05]},{"id":"zone-21300","name":"Driftwise Meadow","minLevel":50,"maxLevel":55,"desc":"Beneath the snowy mountains, Glacy swim through frozen lakes. Their fur crackles with electricity, chasing away the clouds that hang over the meadows.","pets":["Glacy","Fentuft","Fenmane","Nimbi","Turbo","Skippy","Pranky","Bonesky","Fenrier","Iris","Irisal","Sparki","Flamerion","Pomegg"],"weather":{"snow":["Pomegg"],"aurora":["Glacy"]},"cx":33.79,"cy":16.08,"poly":[35.05,10.47,33.77,10.56,31.7,11.8,31.17,12.83,30.84,13.71,29.53,13.91,29.28,15.76,27.22,16.6,27.45,17.75,27.05,18.27,26.6,19.22,26.43,19.72,26.69,20.94,28.81,21.85,29.54,21.33,31.39,20.92,32.5,20.87,32.57,19.86,33.04,18.97,33.59,18.69,33.92,18.12,34.84,18.41,35.73,17.89,35.96,16.9,39.36,15.83,41.64,15.91,42.84,15.21,42.33,14.5,42.09,13.7,42.85,12.81,41.51,11.01,38.32,11.92,37.13,10.45,36.02,9.9]},{"id":"zone-20700","name":"Tideblossom Coast","minLevel":53,"maxLevel":60,"desc":"The dreamy flowers bloom splendidly as if they are blossoming for the last time. The tides carry away all the fallen petals like flowing satin until they disappear at the edge of the shallow waters.","pets":["Luminelle","Bulbly","Veilfloat","Fahloo","Erlath","Budclaw","Shrubclaw","Pomegg"],"weather":{"rain":["Luminelle"],"thunder":["Luminelle"],"aurora":["Luminelle"]},"cx":41.43,"cy":35.96,"poly":[33.11,29.07,33.53,30.25,33.2,32.26,34.52,34.11,34.04,36.88,33.29,39.22,33.39,42.38,33.41,45.39,35.36,45.46,37.54,45.49,42.85,45.57,48.64,45.56,64.32,45.41,64.24,41.64,64.28,37.01,55.62,30.69,49.82,29.35,43.66,31.55,43.42,32.75,42.87,33.69,41.54,35.5,39.97,35.22,39.26,32.98,38.19,30.86,36.87,30.62,35.2,29.81,34.36,29.3,33.68,28.8]}],"publicRegions":[],"publicMarkers":[],"visualHints":[],"search":{"enabled":true,"placeholder":"Search Aniimo, chests, POIs…"},"saves":{"mode":"local","storageKey":"aniimotools.map.breezy-plains.v1","allowFavorites":true,"allowRoutes":false},"stats":{"progressBars":[]},"security":{"sessionTtl":900,"normalBudget":120,"suspiciousBudget":30,"missPenalty":2,"turnstileMode":"adaptive","rateLimit":{"windowSeconds":60,"maxRequests":60}},"endpoints":{"session":"/api/map-session","hit":"/api/map-hit","saveResolve":"/api/map-saves/resolve"}}</script> <script data-map-i18n="" type="application/json">{"region":"breezy-plains","forms":{"Basic":"Básico","Bay":"Forma de Baía","Beach":"Forma de Praia","Cloudmist":"Forma de Brumanuvem","Forest":"Floresta","Grassland":"Forma de Prado","Highland":"Forma de planalto","Mountain":"Montanha","Mountain Woods":"Forma de Bosque-montanhês","Mudflat":"Forma de Lamaçal","Nighttime":"Noturna","Plateau":"Forma de Platô","Prismana":"Prismana","Rainstorm":"Forma de Chuvarada","Sea of Flowers":"Mar de Flores","Snowfield":"Campo Nevado","Thunderstorm":"Tempestuoso","Towerwood":"Forma de Torrilenha"},"weather":{"rain":"Chuvoso","snow":"Nevado","thunder":"Trovão","aurora":"Fluxo de prismana"},"elements":{"Fire":"Fogo","Grass":"Planta","Water":"Água","Earth":"Terra","Lightning":"Raio","Ice":"Gelo","Wind":"Vento","Dark":"Sombra","Light":"Luz"},"level":"Nv.","twins":["/creatures/*/"]}</script> <div class="imap__app"> <div class="imap__map-shell"> <!-- Sidebar: brand · categories · Aniimo picker · nothing else --> <div aria-label="Filtros do mapa" class="imap__sidebar" role="complementary"> <div class="imap__panel-head"> <div class="imap__brand"> <p class="imap__kicker">Mapa interativo</p> <h1 id="breezy-plains-map-title">Mapa interativo de Aniimo: Planícies Ventosas</h1> <nav aria-label="Escolher um mapa" class="imap__regions"> <a aria-current="page" class="imap__region-tab is-current" href="/pt-br/map/">Planícies Ventosas</a><a class="imap__region-tab" href="/pt-br/map/astra/">Astra</a><a class="imap__region-tab" href="/pt-br/map/whisperwake-isles/">Ilhas Sussurrantes</a> </nav> <details class="map-seo" data-astro-cid-7ak3rcgq=""> <summary class="map-seo__toggle" data-astro-cid-7ak3rcgq=""> <span class="map-seo__toggle-more" data-astro-cid-7ak3rcgq="">Mostrar mais</span> <span class="map-seo__toggle-less" data-astro-cid-7ak3rcgq="">Mostrar menos</span> <span class="map-seo__chevron" data-astro-cid-7ak3rcgq=""><svg aria-hidden="true" fill="none" focusable="false" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M6 9l6 6 6-6"></path></svg></span> </summary> <p class="map-seo__lead" data-astro-cid-7ak3rcgq="">Mapa interativo de surgimentos das Planícies Ventosas, a região inicial de Aniimo: surgimentos de Aniimos, baús, pontos de coleta e pontos de interesse nas coordenadas reais do jogo.</p> <p class="map-seo__lead" data-astro-cid-7ak3rcgq="">
+</div>
+</div>
+</div>
+</section>
+<!-- 5. SECTION: INTERACTIVE MAP (FULL 100% FAITHFUL REPLICA) -->
+<section aria-labelledby="breezy-plains-map-title" class="imap imap--dense imap--v2 is-filters-open app-section" data-map-locale="pt-br" data-map-region-slugs="argent-strait,beast-fang-ridge,berylline-causeway,blitzwood,brightbough-plateau,crescent-bay,driftwise-meadow,echoback-landing,forest-of-falling-stars,island-of-peace,mistwoods,nimbus-fields,rosetower-wood,russet-highlands,sea-of-flowers,tideblossom-coast,zephyrus-landbridge" data-map-spawn-markers="/api/map/markers" data-map-spawn-session="/api/map/session" data-map-v2="" id="section-mapa"> <script data-map-config="" type="application/json">{"projectId":"aniimotools","mapId":"breezy-plains","runtime":"static","title":"Mapa interativo de Aniimo: Planícies Ventosas","description":"Mapa interativo de surgimentos das Planícies Ventosas, a região inicial de Aniimo: surgimentos de Aniimos, baús, pontos de coleta e pontos de interesse nas coordenadas reais do jogo.","image":{"src":"/assets/map/breezy-plains.webp?v=f5e25fb1","width":7168,"height":7168,"alt":"Mapa interativo das Planícies Ventosas, a região inicial de Aniimo","revision":"breezy-plains-09796f56","content":{"w":0.6484,"h":0.4607},"tiles":{"cols":7,"rows":7,"tileSize":1024,"items":[{"id":"t-0-0","x":0,"y":0,"src":"/assets/map/tiles/breezy-plains/0_0.webp?v=f5e25fb1"},{"id":"t-1-0","x":1,"y":0,"src":"/assets/map/tiles/breezy-plains/1_0.webp?v=f5e25fb1"},{"id":"t-2-0","x":2,"y":0,"src":"/assets/map/tiles/breezy-plains/2_0.webp?v=f5e25fb1"},{"id":"t-3-0","x":3,"y":0,"src":"/assets/map/tiles/breezy-plains/3_0.webp?v=f5e25fb1"},{"id":"t-4-0","x":4,"y":0,"src":"/assets/map/tiles/breezy-plains/4_0.webp?v=f5e25fb1"},{"id":"t-5-0","x":5,"y":0,"src":"/assets/map/tiles/breezy-plains/5_0.webp?v=f5e25fb1"},{"id":"t-6-0","x":6,"y":0,"src":"/assets/map/tiles/breezy-plains/6_0.webp?v=f5e25fb1"},{"id":"t-0-1","x":0,"y":1,"src":"/assets/map/tiles/breezy-plains/0_1.webp?v=f5e25fb1"},{"id":"t-1-1","x":1,"y":1,"src":"/assets/map/tiles/breezy-plains/1_1.webp?v=f5e25fb1"},{"id":"t-2-1","x":2,"y":1,"src":"/assets/map/tiles/breezy-plains/2_1.webp?v=f5e25fb1"},{"id":"t-3-1","x":3,"y":1,"src":"/assets/map/tiles/breezy-plains/3_1.webp?v=f5e25fb1"},{"id":"t-4-1","x":4,"y":1,"src":"/assets/map/tiles/breezy-plains/4_1.webp?v=f5e25fb1"},{"id":"t-5-1","x":5,"y":1,"src":"/assets/map/tiles/breezy-plains/5_1.webp?v=f5e25fb1"},{"id":"t-6-1","x":6,"y":1,"src":"/assets/map/tiles/breezy-plains/6_1.webp?v=f5e25fb1"},{"id":"t-0-2","x":0,"y":2,"src":"/assets/map/tiles/breezy-plains/0_2.webp?v=f5e25fb1"},{"id":"t-1-2","x":1,"y":2,"src":"/assets/map/tiles/breezy-plains/1_2.webp?v=f5e25fb1"},{"id":"t-2-2","x":2,"y":2,"src":"/assets/map/tiles/breezy-plains/2_2.webp?v=f5e25fb1"},{"id":"t-3-2","x":3,"y":2,"src":"/assets/map/tiles/breezy-plains/3_2.webp?v=f5e25fb1"},{"id":"t-4-2","x":4,"y":2,"src":"/assets/map/tiles/breezy-plains/4_2.webp?v=f5e25fb1"},{"id":"t-5-2","x":5,"y":2,"src":"/assets/map/tiles/breezy-plains/5_2.webp?v=f5e25fb1"},{"id":"t-6-2","x":6,"y":2,"src":"/assets/map/tiles/breezy-plains/6_2.webp?v=f5e25fb1"},{"id":"t-0-3","x":0,"y":3,"src":"/assets/map/tiles/breezy-plains/0_3.webp?v=f5e25fb1"},{"id":"t-1-3","x":1,"y":3,"src":"/assets/map/tiles/breezy-plains/1_3.webp?v=f5e25fb1"},{"id":"t-2-3","x":2,"y":3,"src":"/assets/map/tiles/breezy-plains/2_3.webp?v=f5e25fb1"},{"id":"t-3-3","x":3,"y":3,"src":"/assets/map/tiles/breezy-plains/3_3.webp?v=f5e25fb1"},{"id":"t-4-3","x":4,"y":3,"src":"/assets/map/tiles/breezy-plains/4_3.webp?v=f5e25fb1"},{"id":"t-5-3","x":5,"y":3,"src":"/assets/map/tiles/breezy-plains/5_3.webp?v=f5e25fb1"},{"id":"t-6-3","x":6,"y":3,"src":"/assets/map/tiles/breezy-plains/6_3.webp?v=f5e25fb1"},{"id":"t-0-4","x":0,"y":4,"src":"/assets/map/tiles/breezy-plains/0_4.webp?v=f5e25fb1"},{"id":"t-1-4","x":1,"y":4,"src":"/assets/map/tiles/breezy-plains/1_4.webp?v=f5e25fb1"},{"id":"t-2-4","x":2,"y":4,"src":"/assets/map/tiles/breezy-plains/2_4.webp?v=f5e25fb1"},{"id":"t-3-4","x":3,"y":4,"src":"/assets/map/tiles/breezy-plains/3_4.webp?v=f5e25fb1"},{"id":"t-4-4","x":4,"y":4,"src":"/assets/map/tiles/breezy-plains/4_4.webp?v=f5e25fb1"},{"id":"t-5-4","x":5,"y":4,"src":"/assets/map/tiles/breezy-plains/5_4.webp?v=f5e25fb1"},{"id":"t-6-4","x":6,"y":4,"src":"/assets/map/tiles/breezy-plains/6_4.webp?v=f5e25fb1"},{"id":"t-0-5","x":0,"y":5,"src":"/assets/map/tiles/breezy-plains/0_5.webp?v=f5e25fb1"},{"id":"t-1-5","x":1,"y":5,"src":"/assets/map/tiles/breezy-plains/1_5.webp?v=f5e25fb1"},{"id":"t-2-5","x":2,"y":5,"src":"/assets/map/tiles/breezy-plains/2_5.webp?v=f5e25fb1"},{"id":"t-3-5","x":3,"y":5,"src":"/assets/map/tiles/breezy-plains/3_5.webp?v=f5e25fb1"},{"id":"t-4-5","x":4,"y":5,"src":"/assets/map/tiles/breezy-plains/4_5.webp?v=f5e25fb1"},{"id":"t-5-5","x":5,"y":5,"src":"/assets/map/tiles/breezy-plains/5_5.webp?v=f5e25fb1"},{"id":"t-6-5","x":6,"y":5,"src":"/assets/map/tiles/breezy-plains/6_5.webp?v=f5e25fb1"},{"id":"t-0-6","x":0,"y":6,"src":"/assets/map/tiles/breezy-plains/0_6.webp?v=f5e25fb1"},{"id":"t-1-6","x":1,"y":6,"src":"/assets/map/tiles/breezy-plains/1_6.webp?v=f5e25fb1"},{"id":"t-2-6","x":2,"y":6,"src":"/assets/map/tiles/breezy-plains/2_6.webp?v=f5e25fb1"},{"id":"t-3-6","x":3,"y":6,"src":"/assets/map/tiles/breezy-plains/3_6.webp?v=f5e25fb1"},{"id":"t-4-6","x":4,"y":6,"src":"/assets/map/tiles/breezy-plains/4_6.webp?v=f5e25fb1"},{"id":"t-5-6","x":5,"y":6,"src":"/assets/map/tiles/breezy-plains/5_6.webp?v=f5e25fb1"},{"id":"t-6-6","x":6,"y":6,"src":"/assets/map/tiles/breezy-plains/6_6.webp?v=f5e25fb1"}]}},"layers":[{"id":"creatures","label":"Aniimo spawns","icon":"map-pin","color":"oklch(64% 0.15 150)","defaultVisible":true,"order":10},{"id":"chests","label":"Chests","icon":"map-pin","iconSrc":"/assets/map/icons/game/chest.webp?v=df57630d","color":"oklch(72% 0.15 85)","defaultVisible":true,"order":20},{"id":"gather","label":"Gathering","icon":"map-pin","iconSrc":"/assets/map/icons/game/amber.webp?v=ed6016f3","color":"oklch(60% 0.13 140)","defaultVisible":true,"order":30},{"id":"items","label":"Collectibles","icon":"map-pin","iconSrc":"/assets/map/icons/items/sunny-daisy.webp?v=245e78fa","color":"oklch(68% 0.12 110)","defaultVisible":true,"order":33},{"id":"aniipods","label":"Aniipods","icon":"map-pin","iconSrc":"/assets/map/icons/items/aniipod.webp?v=9da477b4","color":"oklch(50% 0.18 265)","defaultVisible":true,"order":32},{"id":"digsites","label":"Dig sites","icon":"map-pin","iconSrc":"/assets/map/icons/game/dig-site.webp?v=f19d2d90","color":"oklch(58% 0.12 60)","defaultVisible":true,"order":36},{"id":"eggs","label":"Eggs","icon":"map-pin","iconSrc":"/assets/map/icons/items/elite-egg.webp?v=d7a58a25","color":"oklch(72% 0.12 200)","defaultVisible":true,"order":34},{"id":"bosses","label":"Bosses","icon":"map-pin","iconSrc":"/assets/map/icons/game/field-boss.webp?v=85a6b6b1","color":"oklch(58% 0.19 25)","defaultVisible":true,"order":40},{"id":"teleport","label":"Teleporters","icon":"map-pin","iconSrc":"/assets/map/icons/game/teleport-array.webp?v=55b77d75","color":"oklch(66% 0.16 260)","defaultVisible":true,"order":50},{"id":"temple","label":"Temples","icon":"map-pin","iconSrc":"/assets/map/icons/game/temple.webp?v=ff8d264b","color":"oklch(58% 0.16 285)","defaultVisible":true,"order":60},{"id":"activity","label":"Activities","icon":"map-pin","iconSrc":"/assets/map/icons/game/daily-survey.webp?v=e84adb84","color":"oklch(64% 0.15 320)","defaultVisible":true,"order":70},{"id":"landmark","label":"Landmarks","icon":"map-pin","iconSrc":"/assets/map/icons/game/town.webp?v=3cdf1ba3","color":"oklch(66% 0.15 30)","defaultVisible":true,"order":80},{"id":"ecology","label":"Creature ecology","icon":"map-pin","iconSrc":"/assets/map/icons/game/ecology.webp?v=8757b11a","color":"oklch(62% 0.11 185)","defaultVisible":true,"order":90}],"zones":[{"id":"zone-20200","name":"Nimbus Fields","minLevel":5,"maxLevel":15,"desc":"Soft clouds drift low over the velvety sea of grass as Nimbis bounce lightly across the open wilds, and the scent of fresh grass ripples through the green waves.","pets":["Nimbi","Turbo","Budclaw","Skippy","Pranky","Emberpup","Flameruff","Celestis","Chirpi","Hummin","Iris","Flutternym","Sparki"],"weather":{"rain":["Nimbi","Turbo"],"thunder":["Nimbi","Turbo"],"aurora":["Turbo"]},"cx":16.45,"cy":25.08,"poly":[15.86,20.44,15.83,19.98,16.39,19.54,16.6,19.7,17.02,19.81,17.56,20.26,17.82,20.16,18.09,20.24,18.31,20.46,18.43,20.87,18.67,21.27,18.79,21.6,18.76,22.08,18.97,22.97,18.99,24,20.17,24.45,20.97,24.22,21.52,24.48,22.51,25,23.29,25.34,24.24,25.39,24.91,25.48,25.02,25.79,25.14,26.05,25.3,26.34,24.55,26.87,23.7,27.31,23.52,27.82,22.93,28.88,22.54,29.56,22.44,29.98,21.43,30.03,20.34,30.35,19.47,29.92,18.38,28.84,17.75,28.93,17.25,28.6,16.69,28.18,16.03,28.05,15.47,27.54,14.51,26.85,13.72,27.76,13.26,28,12.91,28.21,12.28,27.39,12.13,27.23,11.92,27.23,11.6,27.06,11.29,26.97,10.97,26.94,10.77,26.83,10.61,26.68,10.46,26.44,10.3,26.25,10.18,26.02,10.21,25.9,10.34,25.8,10.49,25.69,10.49,25.58,10.56,25.45,10.69,25.26,11.2,25.03,11.69,24.94,12.17,24.8,12.53,24.66,12.78,24.35,13.2,23.49,13.5,22.8,13.89,22.41,14.19,22.09,14.8,22.03,15.19,21.33,15.56,21.11,15.59,20.9]},{"id":"zone-20600","name":"Sea of Flowers","minLevel":19,"maxLevel":28,"desc":"An endless sea of flowers paints the land in romantic colors, and the air is rich with their fragrance. A small village known for making perfumes sits nestled among purple flower fields, living alongside Aniimo for generations.","pets":["Flutternym","Thornblade","Iris","Irisal","Dewy","Fragrancier","Budsquire","Hummin","Hexxin","Sparki","Skippy","Pranky","Glacy"],"weather":{"rain":["Thornblade"],"thunder":["Thornblade"],"aurora":["Thornblade"]},"cx":36.25,"cy":24.74,"poly":[34.84,18.41,33.92,18.12,33.59,18.69,33.04,18.97,32.57,19.86,32.5,20.87,31.39,20.92,29.54,21.33,28.81,21.85,29,23.32,27.92,24.39,26.58,24.25,27.37,25.54,28.82,26.72,30.88,27.15,31.32,27.93,33.11,29.07,33.68,28.8,34.36,29.3,35.2,29.81,36.87,30.62,38.19,30.86,39.26,32.98,39.97,35.22,41.54,35.5,42.87,33.69,43.42,32.75,43.66,31.55,43.55,30.3,42.93,27.24,42.59,25.9,42.95,23.05,42.4,22.58,41.69,21.97,41.08,21.54,41.23,19.26,40.93,17.47,41.64,15.91,39.36,15.83,35.96,16.9,35.73,17.89]},{"id":"zone-21200","name":"Forest of Falling Stars","minLevel":20,"maxLevel":25,"desc":"Following the stream upstream into a dense purple forest, Celestises fly among the Starine Trees like tiny shooting stars.","pets":["Stellarys","Celestis","Eko","Eklue","Iris","Irisal","Chirpi","Cornet","Tromber","Skippy","Pranky","Hummin","Pomegg"],"weather":{"rain":["Stellarys","Tromber"],"thunder":["Stellarys","Tromber"],"aurora":["Stellarys"]},"cx":8.76,"cy":21.84,"poly":[10.67,24.94,10.69,25.26,11.2,25.03,11.69,24.94,12.17,24.8,12.53,24.66,12.78,24.35,13.2,23.49,13.5,22.8,13.89,22.41,14.19,22.09,12.55,20.95,12.24,19.98,12.41,19.45,12.2,18.53,11.58,17.65,10.52,17.05,8.78,16.33,7.82,16.3,6.76,16.43,4.22,16.5,2.47,16.48,-0.03,16.36,0,18.49,0,19.93,-0.01,21.63,0,25.24,3.93,25.45,6.53,25.26,7.38,25.32,8.69,24.88,9.21,24.53,9.6,23.95,9.84,23.9,10.1,23.89,10.17,24.27,10.54,24.68]},{"id":"zone-20400","name":"The Argent Strait","minLevel":28,"maxLevel":32,"desc":"Silver sand and blue sea reflect one another as flocks of Chirpis blare trumpet-like calls among the coastal cliffs, adding a lively melody to the bay on the sea breeze.","pets":["Cornet","Chirpi","Tromber","Tubster","Budclaw","Shrubclaw","Emberpup","Flameruff","Celestis","Hummin","Iris","Nimbi"],"weather":{"rain":["Tromber"],"thunder":["Tromber"],"aurora":["Cornet"]},"cx":12.17,"cy":30.15,"poly":[12.13,27.23,11.92,27.23,11.6,27.06,11.29,26.97,10.97,26.94,10.77,26.83,10.61,26.68,10.46,26.44,10.3,26.25,10.2,26.11,10.18,26.02,10.21,25.9,10.34,25.8,10.42,25.75,10.49,25.69,10.49,25.58,10.56,25.45,10.69,25.26,10.67,24.94,10.54,24.68,10.17,24.27,10.1,23.89,9.84,23.9,9.6,23.95,9.21,24.53,8.69,24.88,7.38,25.32,6.53,25.26,3.93,25.45,-0.01,25.26,0.02,28.84,0.02,34.84,0.02,40.2,0.01,45.57,5.34,45.56,8.01,45.55,11.67,45.56,14.43,45.51,16.87,45.52,19.49,45.48,22.5,45.44,22.54,40.09,22.55,36.41,22.44,33.44,22.36,32.17,21.94,30.93,21.43,30.03,20.34,30.35,19.47,29.92,18.38,28.84,17.75,28.93,17.25,28.6,16.69,28.18,16.03,28.05,15.47,27.54,14.51,26.85,13.72,27.76,13.26,28,12.91,28.21,12.28,27.39]},{"id":"zone-21100","name":"Beast Fang Ridge","minLevel":30,"maxLevel":35,"desc":"Giant rocks like wolf fangs tower over the mountaintop, where Emberpups and Boneskies make their home. The two groups often clash in fiery and icy disputes over territory.","pets":["Scorchhowl","Emberpup","Flameruff","Bonesky","Fenrier","Glynsera","Sparki","Flamerion","Flutternym","Gracewing","Iris","Chirpi","Budclaw","Pomegg"],"weather":{"thunder":["Scorchhowl"],"aurora":["Scorchhowl"]},"cx":16.93,"cy":12.38,"poly":[16.39,19.54,15.83,19.98,15.86,20.44,15.59,20.9,15.56,21.11,15.19,21.33,14.8,22.03,14.19,22.09,12.55,20.95,12.24,19.98,12.41,19.45,12.2,18.53,11.58,17.65,11.41,16.56,11.97,15.15,11.95,14.46,11.77,13.75,11.21,13.22,11.15,12.87,11.55,12.51,11.8,12.21,11.92,11.72,12.23,11.36,12.42,10.86,12.69,10.36,12.92,9.67,12.91,9.37,12.96,9.09,13.24,8.33,13.67,8.04,13.99,7.62,14.43,7.53,14.91,7.53,15.21,7.68,15.51,7.67,15.79,7.84,16.37,8.15,16.23,8.47,16.03,8.75,16.1,8.95,16.33,9.1,16.56,9.29,16.74,9.57,16.82,9.84,16.94,10.01,17.18,10.13,17.31,10.13,17.57,9.99,17.68,9.75,17.75,9.43,17.88,9.22,18.07,9.08,18.23,9.05,18.41,9.12,18.53,9.2,18.76,9.19,18.83,9.1,18.97,9.05,19.05,8.98,19.31,9,19.51,9.04,19.68,9.15,19.81,9.12,19.96,8.94,20.01,8.83,20.05,8.78,20.17,8.81,20.24,8.96,20.37,9.21,20.47,9.26,20.53,9.45,20.5,9.92,20.57,10.15,20.57,10.5,20.62,10.64,20.73,10.71,20.81,10.77,20.88,10.88,20.95,11.16,21.09,11.56,20.98,11.87,21.21,12.88,21.31,13.41,21.1,13.74,21.3,14.1,21.17,14.45,20.94,15.1,20.37,15.45,19.69,15.82,19.41,16.58,19.73,17.59,18.09,20.24,17.82,20.16,17.56,20.26,17.02,19.81,16.6,19.7]},{"id":"zone-20300","name":"The Mistwoods","minLevel":35,"maxLevel":37,"desc":"Off-key singing echoes through the rotting deadwood, while the swamp deep in the mist bubbles with poison miasma. Thankfully, gleaming glimmer fruit shines like glass lanterns to guide lost travelers.","pets":["Hexxin","Hummin","Flutternym","Skippy","Pranky","Leafy","Emberpup","Iris","Sparki","Flamerion","Wisptis","Ignitis"],"weather":{"aurora":["Hexxin"]},"cx":23.32,"cy":19.06,"poly":[21.31,13.41,21.1,13.74,21.17,14.45,20.94,15.1,20.37,15.45,19.69,15.82,19.41,16.58,19.73,17.59,18.09,20.24,18.31,20.46,18.43,20.87,18.67,21.27,18.79,21.6,18.76,22.08,18.97,22.97,18.99,24,20.17,24.45,20.97,24.22,21.52,24.48,22.51,25,23.29,25.34,24.24,25.39,24.91,25.48,25.02,25.79,25.14,26.05,25.3,26.34,27.37,25.54,26.58,24.25,27.92,24.39,29,23.32,28.81,21.85,26.69,20.94,26.43,19.72,26.6,19.22,27.05,18.27,27.45,17.75,27.22,16.6,27.1,16.15,26.6,15.37,26.47,14.97,25.88,14.88,25.41,14.89,24.77,14.74,24.83,14.29,24.93,14.14,24.34,13.48,23.93,13.6,23.41,13.26,22.94,12.94,22.21,12.82,21.46,12.83,21.21,12.88]},{"id":"zone-21000","name":"Echoback Landing","minLevel":36,"maxLevel":40,"desc":"Why hasn’t the enormous Aniimo stranded on the shoal returned to the embrace of the deep sea? The answer may lie within the haunting Echoback Song.","pets":["Susuta","Panpanta","Popota","Shelly","Sheldon","Sherro","Budclaw","Shrubclaw","Chirpi","Cornet","Tubster","Emberpup","Flameruff","Celestis"],"weather":{"thunder":["Sherro"],"aurora":["Panpanta"]},"cx":12.91,"cy":9.18,"poly":[11.41,16.56,11.97,15.15,11.95,14.46,11.77,13.75,11.21,13.22,11.15,12.87,11.55,12.51,11.8,12.21,11.92,11.72,12.23,11.36,12.42,10.86,12.69,10.36,12.92,9.67,12.91,9.37,12.96,9.09,13.24,8.33,13.67,8.04,13.99,7.62,14.43,7.53,14.91,7.53,15.21,7.68,15.51,7.67,15.79,7.84,16.37,8.15,16.65,7.69,16.84,7.27,17.19,7.32,17.56,7.24,17.73,6.95,18,6.77,18.19,6.55,18.55,6.41,18.8,6.14,19.12,5.95,19.75,5.14,19.93,3.95,19.56,0.01,17.64,-0.31,15.41,-0.97,10.79,0.07,-0.01,0.01,0,3.32,0.01,9.52,0,16.35,4.22,16.5,6.76,16.43,7.82,16.3,8.78,16.33,10.52,17.05,11.58,17.65]},{"id":"zone-20500","name":"Blitzwood","minLevel":40,"maxLevel":45,"desc":"Drawn by Bolties, thunder carves furrows into the earth, digging gray scorched soil out of a grassy slope while flickering electric sparks crackle in the thunder-struck wood.","pets":["Bolty","Blazen","Flutternym","Gracewing","Hummin","Iris","Irisal","Wisptis","Ignitis","Chirpi","Sparki","Squarrel","Squashel"],"weather":{"aurora":["Blazen"]},"cx":26.93,"cy":31.53,"poly":[21.94,30.93,22.36,32.17,22.44,33.44,22.55,36.38,22.54,40.09,22.54,45.56,33.41,45.39,33.39,42.38,33.29,39.22,34.04,36.88,34.52,34.11,33.2,32.26,33.53,30.25,33.11,29.07,31.32,27.93,30.88,27.15,28.82,26.72,27.37,25.54,25.3,26.34,24.91,25.48,25.02,25.79,25.14,26.05,25.3,26.34,24.55,26.87,23.7,27.31,23.52,27.82,22.93,28.88,22.54,29.56,22.44,29.98,21.43,30.03]},{"id":"zone-20900","name":"Berylline Vale","minLevel":40,"maxLevel":47,"desc":"Stacks of sea-eroded rock rise layer by layer, with wind-carved stone pillars standing among them. Emerald grass spreads across the natural stone terraces step by step.","pets":["Ignitis","Sparki","Flamerion","Baleetle","Waleetle","Bouldus","Wisptis","Iris","Irisal","Budclaw","Shrubclaw","Hummin","Hexxin"],"weather":{"aurora":["Ignitis"]},"cx":20.69,"cy":9.72,"poly":[23.93,13.6,24.34,13.48,24.93,14.14,24.83,14.29,24.77,14.74,25.41,14.89,25.88,14.88,26.47,14.97,26.6,15.37,27.1,16.15,27.22,16.6,29.28,15.76,29.53,13.91,29.35,13.49,28.24,12.77,27.54,11.58,27.19,11.15,25.47,7.33,24.38,4.59,23.01,0,20.8,-0.03,20.1,0.08,19.56,0.01,19.93,3.95,19.75,5.14,19.12,5.95,18.8,6.14,18.55,6.41,18.19,6.55,18,6.77,17.73,6.95,17.56,7.24,17.19,7.32,16.84,7.27,16.65,7.69,16.37,8.15,16.23,8.47,16.03,8.75,16.1,8.95,16.33,9.1,16.56,9.29,16.74,9.57,16.82,9.84,16.94,10.01,17.07,10.1,17.18,10.13,17.31,10.13,17.57,9.99,17.68,9.75,17.75,9.43,17.88,9.22,18.07,9.08,18.23,9.05,18.41,9.12,18.53,9.2,18.65,9.23,18.76,9.19,18.83,9.1,18.97,9.05,19.05,8.98,19.31,9,19.51,9.04,19.68,9.15,19.81,9.12,19.88,9,19.96,8.94,20.01,8.83,20.05,8.78,20.17,8.81,20.24,8.96,20.26,9.12,20.37,9.21,20.47,9.26,20.53,9.45,20.5,9.92,20.57,10.15,20.57,10.5,20.62,10.64,20.73,10.71,20.81,10.77,20.88,10.88,20.95,11.16,21.03,11.39,21.09,11.56,20.98,11.87,21.21,12.88,21.46,12.83,22.21,12.82,22.94,12.94,23.41,13.26]},{"id":"zone-21500","name":"Rosetower Woods","minLevel":43,"maxLevel":50,"desc":"Pines stand tall on both sides of the mountain road, and bear shadows sometimes flicker among the trees. At the end of the path stands a white tower wreathed in thorns, sealed in dust. Will the day come when the Rose blooms?","pets":["Grizbo","Pomegg","Budsquire","Cubbo","Dewy","Pomawk","Thornblade","Melloblum","Bonesky","Fenrier","Glynsera"],"weather":{"snow":["Pomegg"],"aurora":["Grizbo"]},"cx":49.72,"cy":23.19,"poly":[52.28,18.8,64.26,18.82,64.27,22.25,64.31,26.88,64.34,32.38,64.33,34.7,64.28,37.01,55.62,30.69,49.82,29.35,43.66,31.55,43.55,30.3,42.93,27.24,42.59,25.9,42.95,23.05,42.4,22.58,41.69,21.97,41.08,21.54,41.23,19.26,40.93,17.47,41.64,15.91,42.84,15.21,45.71,14.83,47.24,14.51,48.6,15.7,49.36,16.96,50.79,18.15]},{"id":"zone-20800","name":"Russet Highlands","minLevel":45,"maxLevel":50,"desc":"Orange and yellow plants stain the gray rock and soil a deep cinnabar hue as mysterious winged shadows sweep past the steep mountain slopes, stirring up a blazing storm among the altar ruins.","pets":["Helmut","Rookey","Jawling","Helmwhelp","Helgon","Pawney","Emberpup","Flameruff","Iris","Irisal","Chirpi","Tubster","Baleetle","Waleetle","Sparki"],"weather":{"snow":["Helmut","Rookey","Baleetle","Waleetle"],"aurora":["Pawney"]},"cx":34.56,"cy":9.46,"poly":[24.38,4.59,25.47,7.33,27.19,11.15,27.54,11.58,28.24,12.77,29.35,13.49,29.53,13.91,30.84,13.71,31.17,12.83,31.7,11.8,33.77,10.56,35.05,10.47,36.02,9.9,37.13,10.45,38.32,11.92,41.51,11.01,42.85,12.81,45.68,11.12,44.28,7.82,43.4,5.23,43.75,3.19,44.77,0.03,23.01,0]},{"id":"zone-21400","name":"Zephyrus Landbridge","minLevel":47,"maxLevel":57,"desc":"A massive ant fortress of piled sandstone stands at the edge of the cape, with industrious Cozites bustling through its halls, while deep in the valley, scorching heat billows from the cavern below as Lavazars clash with subterranean crystals, scattering sparks like stars.","pets":["Magmarex","Cozite","Bailite","Pebbling","Lavazar","Chirpi","Cornet","Tromber","Tubster","Pomegg","Budclaw","Emberpup","Flameruff","Wisptis","Ignitis"],"weather":{"aurora":["Magmarex"]},"cx":51.73,"cy":10,"poly":[64.32,2.38,64.32,5.28,64.32,13.18,64.32,18.85,64.25,18.83,64.26,18.82,52.28,18.8,50.79,18.15,49.36,16.96,48.6,15.7,47.24,14.51,45.71,14.83,42.84,15.21,42.33,14.5,42.09,13.7,42.85,12.81,45.68,11.12,44.28,7.82,43.4,5.23,43.75,3.19,44.77,0.03,46.84,0.03,50.32,0.03,53.13,0.03,58.65,0.03,64.32,0.05]},{"id":"zone-21300","name":"Driftwise Meadow","minLevel":50,"maxLevel":55,"desc":"Beneath the snowy mountains, Glacy swim through frozen lakes. Their fur crackles with electricity, chasing away the clouds that hang over the meadows.","pets":["Glacy","Fentuft","Fenmane","Nimbi","Turbo","Skippy","Pranky","Bonesky","Fenrier","Iris","Irisal","Sparki","Flamerion","Pomegg"],"weather":{"snow":["Pomegg"],"aurora":["Glacy"]},"cx":33.79,"cy":16.08,"poly":[35.05,10.47,33.77,10.56,31.7,11.8,31.17,12.83,30.84,13.71,29.53,13.91,29.28,15.76,27.22,16.6,27.45,17.75,27.05,18.27,26.6,19.22,26.43,19.72,26.69,20.94,28.81,21.85,29.54,21.33,31.39,20.92,32.5,20.87,32.57,19.86,33.04,18.97,33.59,18.69,33.92,18.12,34.84,18.41,35.73,17.89,35.96,16.9,39.36,15.83,41.64,15.91,42.84,15.21,42.33,14.5,42.09,13.7,42.85,12.81,41.51,11.01,38.32,11.92,37.13,10.45,36.02,9.9]},{"id":"zone-20700","name":"Tideblossom Coast","minLevel":53,"maxLevel":60,"desc":"The dreamy flowers bloom splendidly as if they are blossoming for the last time. The tides carry away all the fallen petals like flowing satin until they disappear at the edge of the shallow waters.","pets":["Luminelle","Bulbly","Veilfloat","Fahloo","Erlath","Budclaw","Shrubclaw","Pomegg"],"weather":{"rain":["Luminelle"],"thunder":["Luminelle"],"aurora":["Luminelle"]},"cx":41.43,"cy":35.96,"poly":[33.11,29.07,33.53,30.25,33.2,32.26,34.52,34.11,34.04,36.88,33.29,39.22,33.39,42.38,33.41,45.39,35.36,45.46,37.54,45.49,42.85,45.57,48.64,45.56,64.32,45.41,64.24,41.64,64.28,37.01,55.62,30.69,49.82,29.35,43.66,31.55,43.42,32.75,42.87,33.69,41.54,35.5,39.97,35.22,39.26,32.98,38.19,30.86,36.87,30.62,35.2,29.81,34.36,29.3,33.68,28.8]}],"publicRegions":[],"publicMarkers":[],"visualHints":[],"search":{"enabled":true,"placeholder":"Search Aniimo, chests, POIs…"},"saves":{"mode":"local","storageKey":"aniimotools.map.breezy-plains.v1","allowFavorites":true,"allowRoutes":false},"stats":{"progressBars":[]},"security":{"sessionTtl":900,"normalBudget":120,"suspiciousBudget":30,"missPenalty":2,"turnstileMode":"adaptive","rateLimit":{"windowSeconds":60,"maxRequests":60}},"endpoints":{"session":"/api/map-session","hit":"/api/map-hit","saveResolve":"/api/map-saves/resolve"}}</script> <script data-map-i18n="" type="application/json">{"region":"breezy-plains","forms":{"Basic":"Básico","Bay":"Forma de Baía","Beach":"Forma de Praia","Cloudmist":"Forma de Brumanuvem","Forest":"Floresta","Grassland":"Forma de Prado","Highland":"Forma de planalto","Mountain":"Montanha","Mountain Woods":"Forma de Bosque-montanhês","Mudflat":"Forma de Lamaçal","Nighttime":"Noturna","Plateau":"Forma de Platô","Prismana":"Prismana","Rainstorm":"Forma de Chuvarada","Sea of Flowers":"Mar de Flores","Snowfield":"Campo Nevado","Thunderstorm":"Tempestuoso","Towerwood":"Forma de Torrilenha"},"weather":{"rain":"Chuvoso","snow":"Nevado","thunder":"Trovão","aurora":"Fluxo de prismana"},"elements":{"Fire":"Fogo","Grass":"Planta","Water":"Água","Earth":"Terra","Lightning":"Raio","Ice":"Gelo","Wind":"Vento","Dark":"Sombra","Light":"Luz"},"level":"Nv.","twins":["/creatures/*/"]}</script> <div class="imap__app"> <div class="imap__map-shell"> <!-- Sidebar: brand · categories · Aniimo picker · nothing else --> <div aria-label="Filtros do mapa" class="imap__sidebar" role="complementary"> <div class="imap__panel-head"> <div class="imap__brand"> <p class="imap__kicker">Mapa interativo</p> <h1 id="breezy-plains-map-title">Mapa interativo de Aniimo: Planícies Ventosas</h1> <nav aria-label="Escolher um mapa" class="imap__regions"> <a aria-current="page" class="imap__region-tab is-current" href="/pt-br/map/">Planícies Ventosas</a><a class="imap__region-tab" href="/pt-br/map/astra/">Astra</a><a class="imap__region-tab" href="/pt-br/map/whisperwake-isles/">Ilhas Sussurrantes</a> </nav> <details class="map-seo" data-astro-cid-7ak3rcgq=""> <summary class="map-seo__toggle" data-astro-cid-7ak3rcgq=""> <span class="map-seo__toggle-more" data-astro-cid-7ak3rcgq="">Mostrar mais</span> <span class="map-seo__toggle-less" data-astro-cid-7ak3rcgq="">Mostrar menos</span> <span class="map-seo__chevron" data-astro-cid-7ak3rcgq=""><svg aria-hidden="true" fill="none" focusable="false" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M6 9l6 6 6-6"></path></svg></span> </summary> <p class="map-seo__lead" data-astro-cid-7ak3rcgq="">Mapa interativo de surgimentos das Planícies Ventosas, a região inicial de Aniimo: surgimentos de Aniimos, baús, pontos de coleta e pontos de interesse nas coordenadas reais do jogo.</p> <p class="map-seo__lead" data-astro-cid-7ak3rcgq="">
 Aniimo se passa em <strong data-astro-cid-7ak3rcgq="">Idília</strong>: <strong data-astro-cid-7ak3rcgq="">15 regiões</strong> e mais a
 <strong data-astro-cid-7ak3rcgq="">Island of Peace</strong>, com tema aquático. Essas áreas entram no mapa conforme suas
           coordenadas no jogo são confirmadas.
@@ -347,214 +303,194 @@ Cada surgimento de Aniimo fica exatamente onde ocorre no jogo. Filtre a lista de
 </p> <p class="map-seo__wip" data-astro-cid-7ak3rcgq=""> <strong data-astro-cid-7ak3rcgq="">Em construção.</strong> As fronteiras das regiões, as faixas de nível e as áreas
           restantes de Idília estão sendo adicionadas conforme são confirmadas.
 <span class="map-seo__stamp" data-astro-cid-7ak3rcgq="">Última atualização: 15 de setembro de 2026</span> </p> <a class="map-seo__regions" data-astro-cid-7ak3rcgq="" href="/regions/" hreflang="en">Explorar as 16 regiões de Idília (em inglês) →</a> </details> </div> <button aria-label="Fechar filtros" class="imap__icon-btn" data-map-panel-toggle="" type="button"> <svg aria-hidden="true" fill="none" focusable="false" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><path d="M6 6l12 12M18 6 6 18"></path></svg> </button> </div> <div class="imap__group"> <div class="imap__group-head"><span>Categorias</span><button class="imap__tiny" data-map-reset-filters="" type="button">Redefinir filtros</button></div> <div aria-label="Categorias do mapa" class="imap__layers" role="group"> <div class="imap__layer-group" data-map-layer-group="creatures" style="--cat-color:oklch(64% 0.15 150)"> <div class="imap__cat-row"> <button aria-pressed="true" class="imap__layer is-active" data-map-layer-toggle="creatures" type="button"> <span class="imap__layer-glyph"> <svg aria-hidden="true" class="imap__layer-icon" fill="none" focusable="false" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M12 21s7-6.4 7-11a7 7 0 1 0-14 0c0 4.6 7 11 7 11ZM12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path></svg> </span> <span class="imap__layer-text"><span class="imap__layer-label">Surgimentos de Aniimos</span></span> <span class="imap__layer-count tabular" data-map-layer-count="creatures"></span> <span aria-hidden="true" class="imap__eye"> <svg class="imap__eye-on" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M2 12s3.6-6.6 10-6.6S22 12 22 12s-3.6 6.6-10 6.6S2 12 2 12Z"></path><circle cx="12" cy="12" r="2.6"></circle></svg> <svg class="imap__eye-off" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M3 3l18 18"></path><path d="M10.6 5.2A9.6 9.6 0 0 1 12 5.1c6.4 0 10 6.9 10 6.9a17 17 0 0 1-2.16 3.05M6.24 6.36A16.5 16.5 0 0 0 2 12s3.6 6.9 10 6.9a9.3 9.3 0 0 0 3.54-.68"></path><path d="M9.9 9.98a3 3 0 0 0 4.16 4.14"></path></svg> </span> </button> <button aria-expanded="false" aria-label="Mostrar filtros de Aniimos" class="imap__cat-expand" data-map-group-toggle="creatures" type="button"> <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="16"><path d="m6 9 6 6 6-6"></path></svg> </button> </div> <div aria-label="Filtros de Aniimos" class="imap__cat-body imap__aniimo-filter" data-map-subfilters="creatures" hidden="" role="group"> <div aria-label="Modo de seleção de Aniimos" class="imap__mode" role="group"> <button aria-pressed="true" class="imap__mode-tab is-active" data-map-mode="explore" type="button">Explorar</button> <button aria-pressed="false" class="imap__mode-tab" data-map-mode="hunt" type="button">Caçar</button> </div> <div aria-label="Filtrar Aniimos por elemento" class="imap__element-filter" data-map-element-filter="" hidden="" role="group"></div> <div aria-label="Filtrar Aniimos por horário de surgimento" class="imap__element-filter imap__time-filter" data-map-time-filter="" hidden="" role="group"></div> <div aria-label="Filtrar Aniimos por forma de surgimento" class="imap__form-filter" data-map-form-filter="" hidden="" role="group"></div> <div aria-label="Espécies de Aniimos" class="imap__aniimo-list" data-map-species-list="" role="group"></div> </div> </div><div class="imap__layer-group" data-map-layer-group="chests" style="--cat-color:oklch(72% 0.15 85)"> <div class="imap__cat-row"> <button aria-pressed="true" class="imap__layer is-active" data-map-layer-toggle="chests" type="button"> <span class="imap__layer-glyph has-custom-icon"> <img alt="" decoding="async" draggable="false" loading="lazy" src="/assets/map/icons/game/chest.webp?v=df57630d"/> </span> <span class="imap__layer-text"><span class="imap__layer-label">Baús</span></span> <span class="imap__layer-count tabular" data-map-layer-count="chests"></span> <span aria-hidden="true" class="imap__eye"> <svg class="imap__eye-on" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M2 12s3.6-6.6 10-6.6S22 12 22 12s-3.6 6.6-10 6.6S2 12 2 12Z"></path><circle cx="12" cy="12" r="2.6"></circle></svg> <svg class="imap__eye-off" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M3 3l18 18"></path><path d="M10.6 5.2A9.6 9.6 0 0 1 12 5.1c6.4 0 10 6.9 10 6.9a17 17 0 0 1-2.16 3.05M6.24 6.36A16.5 16.5 0 0 0 2 12s3.6 6.9 10 6.9a9.3 9.3 0 0 0 3.54-.68"></path><path d="M9.9 9.98a3 3 0 0 0 4.16 4.14"></path></svg> </span> </button> <button aria-expanded="false" aria-label="Mostrar subfiltros: Baús" class="imap__cat-expand" data-map-group-toggle="chests" hidden="" type="button"> <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="16"><path d="m6 9 6 6 6-6"></path></svg> </button> </div> <div aria-label="Subfiltros: Baús" class="imap__cat-body imap__subfilters" data-map-subfilters="chests" hidden="" role="group"></div> </div><div class="imap__layer-group" data-map-layer-group="gather" style="--cat-color:oklch(60% 0.13 140)"> <div class="imap__cat-row"> <button aria-pressed="true" class="imap__layer is-active" data-map-layer-toggle="gather" type="button"> <span class="imap__layer-glyph has-custom-icon"> <img alt="" decoding="async" draggable="false" loading="lazy" src="/assets/map/icons/game/amber.webp?v=ed6016f3"/> </span> <span class="imap__layer-text"><span class="imap__layer-label">Coleta</span></span> <span class="imap__layer-count tabular" data-map-layer-count="gather"></span> <span aria-hidden="true" class="imap__eye"> <svg class="imap__eye-on" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M2 12s3.6-6.6 10-6.6S22 12 22 12s-3.6 6.6-10 6.6S2 12 2 12Z"></path><circle cx="12" cy="12" r="2.6"></circle></svg> <svg class="imap__eye-off" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M3 3l18 18"></path><path d="M10.6 5.2A9.6 9.6 0 0 1 12 5.1c6.4 0 10 6.9 10 6.9a17 17 0 0 1-2.16 3.05M6.24 6.36A16.5 16.5 0 0 0 2 12s3.6 6.9 10 6.9a9.3 9.3 0 0 0 3.54-.68"></path><path d="M9.9 9.98a3 3 0 0 0 4.16 4.14"></path></svg> </span> </button> <button aria-expanded="false" aria-label="Mostrar subfiltros: Coleta" class="imap__cat-expand" data-map-group-toggle="gather" hidden="" type="button"> <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="16"><path d="m6 9 6 6 6-6"></path></svg> </button> </div> <div aria-label="Subfiltros: Coleta" class="imap__cat-body imap__subfilters" data-map-subfilters="gather" hidden="" role="group"></div> </div><div class="imap__layer-group" data-map-layer-group="aniipods" style="--cat-color:oklch(50% 0.18 265)"> <div class="imap__cat-row"> <button aria-pressed="true" class="imap__layer is-active" data-map-layer-toggle="aniipods" type="button"> <span class="imap__layer-glyph has-custom-icon"> <img alt="" decoding="async" draggable="false" loading="lazy" src="/assets/map/icons/items/aniipod.webp?v=9da477b4"/> </span> <span class="imap__layer-text"><span class="imap__layer-label">Aniicápsulas</span></span> <span class="imap__layer-count tabular" data-map-layer-count="aniipods"></span> <span aria-hidden="true" class="imap__eye"> <svg class="imap__eye-on" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M2 12s3.6-6.6 10-6.6S22 12 22 12s-3.6 6.6-10 6.6S2 12 2 12Z"></path><circle cx="12" cy="12" r="2.6"></circle></svg> <svg class="imap__eye-off" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M3 3l18 18"></path><path d="M10.6 5.2A9.6 9.6 0 0 1 12 5.1c6.4 0 10 6.9 10 6.9a17 17 0 0 1-2.16 3.05M6.24 6.36A16.5 16.5 0 0 0 2 12s3.6 6.9 10 6.9a9.3 9.3 0 0 0 3.54-.68"></path><path d="M9.9 9.98a3 3 0 0 0 4.16 4.14"></path></svg> </span> </button> <button aria-expanded="false" aria-label="Mostrar subfiltros: Aniicápsulas" class="imap__cat-expand" data-map-group-toggle="aniipods" hidden="" type="button"> <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="16"><path d="m6 9 6 6 6-6"></path></svg> </button> </div> <div aria-label="Subfiltros: Aniicápsulas" class="imap__cat-body imap__subfilters" data-map-subfilters="aniipods" hidden="" role="group"></div> </div><div class="imap__layer-group" data-map-layer-group="items" style="--cat-color:oklch(68% 0.12 110)"> <div class="imap__cat-row"> <button aria-pressed="true" class="imap__layer is-active" data-map-layer-toggle="items" type="button"> <span class="imap__layer-glyph has-custom-icon"> <img alt="" decoding="async" draggable="false" loading="lazy" src="/assets/map/icons/items/sunny-daisy.webp?v=245e78fa"/> </span> <span class="imap__layer-text"><span class="imap__layer-label">Colecionáveis</span></span> <span class="imap__layer-count tabular" data-map-layer-count="items"></span> <span aria-hidden="true" class="imap__eye"> <svg class="imap__eye-on" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M2 12s3.6-6.6 10-6.6S22 12 22 12s-3.6 6.6-10 6.6S2 12 2 12Z"></path><circle cx="12" cy="12" r="2.6"></circle></svg> <svg class="imap__eye-off" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M3 3l18 18"></path><path d="M10.6 5.2A9.6 9.6 0 0 1 12 5.1c6.4 0 10 6.9 10 6.9a17 17 0 0 1-2.16 3.05M6.24 6.36A16.5 16.5 0 0 0 2 12s3.6 6.9 10 6.9a9.3 9.3 0 0 0 3.54-.68"></path><path d="M9.9 9.98a3 3 0 0 0 4.16 4.14"></path></svg> </span> </button> <button aria-expanded="false" aria-label="Mostrar subfiltros: Colecionáveis" class="imap__cat-expand" data-map-group-toggle="items" hidden="" type="button"> <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="16"><path d="m6 9 6 6 6-6"></path></svg> </button> </div> <div aria-label="Subfiltros: Colecionáveis" class="imap__cat-body imap__subfilters" data-map-subfilters="items" hidden="" role="group"></div> </div><div class="imap__layer-group" data-map-layer-group="eggs" style="--cat-color:oklch(72% 0.12 200)"> <div class="imap__cat-row"> <button aria-pressed="true" class="imap__layer is-active" data-map-layer-toggle="eggs" type="button"> <span class="imap__layer-glyph has-custom-icon"> <img alt="" decoding="async" draggable="false" loading="lazy" src="/assets/map/icons/items/elite-egg.webp?v=d7a58a25"/> </span> <span class="imap__layer-text"><span class="imap__layer-label">Ovos</span></span> <span class="imap__layer-count tabular" data-map-layer-count="eggs"></span> <span aria-hidden="true" class="imap__eye"> <svg class="imap__eye-on" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M2 12s3.6-6.6 10-6.6S22 12 22 12s-3.6 6.6-10 6.6S2 12 2 12Z"></path><circle cx="12" cy="12" r="2.6"></circle></svg> <svg class="imap__eye-off" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M3 3l18 18"></path><path d="M10.6 5.2A9.6 9.6 0 0 1 12 5.1c6.4 0 10 6.9 10 6.9a17 17 0 0 1-2.16 3.05M6.24 6.36A16.5 16.5 0 0 0 2 12s3.6 6.9 10 6.9a9.3 9.3 0 0 0 3.54-.68"></path><path d="M9.9 9.98a3 3 0 0 0 4.16 4.14"></path></svg> </span> </button> <button aria-expanded="false" aria-label="Mostrar subfiltros: Ovos" class="imap__cat-expand" data-map-group-toggle="eggs" hidden="" type="button"> <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="16"><path d="m6 9 6 6 6-6"></path></svg> </button> </div> <div aria-label="Subfiltros: Ovos" class="imap__cat-body imap__subfilters" data-map-subfilters="eggs" hidden="" role="group"></div> </div><div class="imap__layer-group" data-map-layer-group="digsites" style="--cat-color:oklch(58% 0.12 60)"> <div class="imap__cat-row"> <button aria-pressed="true" class="imap__layer is-active" data-map-layer-toggle="digsites" type="button"> <span class="imap__layer-glyph has-custom-icon"> <img alt="" decoding="async" draggable="false" loading="lazy" src="/assets/map/icons/game/dig-site.webp?v=f19d2d90"/> </span> <span class="imap__layer-text"><span class="imap__layer-label">Escavações</span></span> <span class="imap__layer-count tabular" data-map-layer-count="digsites"></span> <span aria-hidden="true" class="imap__eye"> <svg class="imap__eye-on" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M2 12s3.6-6.6 10-6.6S22 12 22 12s-3.6 6.6-10 6.6S2 12 2 12Z"></path><circle cx="12" cy="12" r="2.6"></circle></svg> <svg class="imap__eye-off" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M3 3l18 18"></path><path d="M10.6 5.2A9.6 9.6 0 0 1 12 5.1c6.4 0 10 6.9 10 6.9a17 17 0 0 1-2.16 3.05M6.24 6.36A16.5 16.5 0 0 0 2 12s3.6 6.9 10 6.9a9.3 9.3 0 0 0 3.54-.68"></path><path d="M9.9 9.98a3 3 0 0 0 4.16 4.14"></path></svg> </span> </button> <button aria-expanded="false" aria-label="Mostrar subfiltros: Escavações" class="imap__cat-expand" data-map-group-toggle="digsites" hidden="" type="button"> <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="16"><path d="m6 9 6 6 6-6"></path></svg> </button> </div> <div aria-label="Subfiltros: Escavações" class="imap__cat-body imap__subfilters" data-map-subfilters="digsites" hidden="" role="group"></div> </div><div class="imap__layer-group" data-map-layer-group="bosses" style="--cat-color:oklch(58% 0.19 25)"> <div class="imap__cat-row"> <button aria-pressed="true" class="imap__layer is-active" data-map-layer-toggle="bosses" type="button"> <span class="imap__layer-glyph has-custom-icon"> <img alt="" decoding="async" draggable="false" loading="lazy" src="/assets/map/icons/game/field-boss.webp?v=85a6b6b1"/> </span> <span class="imap__layer-text"><span class="imap__layer-label">Chefes</span></span> <span class="imap__layer-count tabular" data-map-layer-count="bosses"></span> <span aria-hidden="true" class="imap__eye"> <svg class="imap__eye-on" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M2 12s3.6-6.6 10-6.6S22 12 22 12s-3.6 6.6-10 6.6S2 12 2 12Z"></path><circle cx="12" cy="12" r="2.6"></circle></svg> <svg class="imap__eye-off" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M3 3l18 18"></path><path d="M10.6 5.2A9.6 9.6 0 0 1 12 5.1c6.4 0 10 6.9 10 6.9a17 17 0 0 1-2.16 3.05M6.24 6.36A16.5 16.5 0 0 0 2 12s3.6 6.9 10 6.9a9.3 9.3 0 0 0 3.54-.68"></path><path d="M9.9 9.98a3 3 0 0 0 4.16 4.14"></path></svg> </span> </button> <button aria-expanded="false" aria-label="Mostrar subfiltros: Chefes" class="imap__cat-expand" data-map-group-toggle="bosses" hidden="" type="button"> <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="16"><path d="m6 9 6 6 6-6"></path></svg> </button> </div> <div aria-label="Subfiltros: Chefes" class="imap__cat-body imap__subfilters" data-map-subfilters="bosses" hidden="" role="group"></div> </div><div class="imap__layer-group" data-map-layer-group="teleport" style="--cat-color:oklch(66% 0.16 260)"> <div class="imap__cat-row"> <button aria-pressed="true" class="imap__layer is-active" data-map-layer-toggle="teleport" type="button"> <span class="imap__layer-glyph has-custom-icon"> <img alt="" decoding="async" draggable="false" loading="lazy" src="/assets/map/icons/game/teleport-array.webp?v=55b77d75"/> </span> <span class="imap__layer-text"><span class="imap__layer-label">Transportadores</span></span> <span class="imap__layer-count tabular" data-map-layer-count="teleport"></span> <span aria-hidden="true" class="imap__eye"> <svg class="imap__eye-on" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M2 12s3.6-6.6 10-6.6S22 12 22 12s-3.6 6.6-10 6.6S2 12 2 12Z"></path><circle cx="12" cy="12" r="2.6"></circle></svg> <svg class="imap__eye-off" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M3 3l18 18"></path><path d="M10.6 5.2A9.6 9.6 0 0 1 12 5.1c6.4 0 10 6.9 10 6.9a17 17 0 0 1-2.16 3.05M6.24 6.36A16.5 16.5 0 0 0 2 12s3.6 6.9 10 6.9a9.3 9.3 0 0 0 3.54-.68"></path><path d="M9.9 9.98a3 3 0 0 0 4.16 4.14"></path></svg> </span> </button> <button aria-expanded="false" aria-label="Mostrar subfiltros: Transportadores" class="imap__cat-expand" data-map-group-toggle="teleport" hidden="" type="button"> <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="16"><path d="m6 9 6 6 6-6"></path></svg> </button> </div> <div aria-label="Subfiltros: Transportadores" class="imap__cat-body imap__subfilters" data-map-subfilters="teleport" hidden="" role="group"></div> </div><div class="imap__layer-group" data-map-layer-group="temple" style="--cat-color:oklch(58% 0.16 285)"> <div class="imap__cat-row"> <button aria-pressed="true" class="imap__layer is-active" data-map-layer-toggle="temple" type="button"> <span class="imap__layer-glyph has-custom-icon"> <img alt="" decoding="async" draggable="false" loading="lazy" src="/assets/map/icons/game/temple.webp?v=ff8d264b"/> </span> <span class="imap__layer-text"><span class="imap__layer-label">Santuários</span></span> <span class="imap__layer-count tabular" data-map-layer-count="temple"></span> <span aria-hidden="true" class="imap__eye"> <svg class="imap__eye-on" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M2 12s3.6-6.6 10-6.6S22 12 22 12s-3.6 6.6-10 6.6S2 12 2 12Z"></path><circle cx="12" cy="12" r="2.6"></circle></svg> <svg class="imap__eye-off" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M3 3l18 18"></path><path d="M10.6 5.2A9.6 9.6 0 0 1 12 5.1c6.4 0 10 6.9 10 6.9a17 17 0 0 1-2.16 3.05M6.24 6.36A16.5 16.5 0 0 0 2 12s3.6 6.9 10 6.9a9.3 9.3 0 0 0 3.54-.68"></path><path d="M9.9 9.98a3 3 0 0 0 4.16 4.14"></path></svg> </span> </button> <button aria-expanded="false" aria-label="Mostrar subfiltros: Santuários" class="imap__cat-expand" data-map-group-toggle="temple" hidden="" type="button"> <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="16"><path d="m6 9 6 6 6-6"></path></svg> </button> </div> <div aria-label="Subfiltros: Santuários" class="imap__cat-body imap__subfilters" data-map-subfilters="temple" hidden="" role="group"></div> </div><div class="imap__layer-group" data-map-layer-group="activity" style="--cat-color:oklch(64% 0.15 320)"> <div class="imap__cat-row"> <button aria-pressed="true" class="imap__layer is-active" data-map-layer-toggle="activity" type="button"> <span class="imap__layer-glyph has-custom-icon"> <img alt="" decoding="async" draggable="false" loading="lazy" src="/assets/map/icons/game/daily-survey.webp?v=e84adb84"/> </span> <span class="imap__layer-text"><span class="imap__layer-label">Atividades</span></span> <span class="imap__layer-count tabular" data-map-layer-count="activity"></span> <span aria-hidden="true" class="imap__eye"> <svg class="imap__eye-on" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M2 12s3.6-6.6 10-6.6S22 12 22 12s-3.6 6.6-10 6.6S2 12 2 12Z"></path><circle cx="12" cy="12" r="2.6"></circle></svg> <svg class="imap__eye-off" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M3 3l18 18"></path><path d="M10.6 5.2A9.6 9.6 0 0 1 12 5.1c6.4 0 10 6.9 10 6.9a17 17 0 0 1-2.16 3.05M6.24 6.36A16.5 16.5 0 0 0 2 12s3.6 6.9 10 6.9a9.3 9.3 0 0 0 3.54-.68"></path><path d="M9.9 9.98a3 3 0 0 0 4.16 4.14"></path></svg> </span> </button> <button aria-expanded="false" aria-label="Mostrar subfiltros: Atividades" class="imap__cat-expand" data-map-group-toggle="activity" hidden="" type="button"> <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="16"><path d="m6 9 6 6 6-6"></path></svg> </button> </div> <div aria-label="Subfiltros: Atividades" class="imap__cat-body imap__subfilters" data-map-subfilters="activity" hidden="" role="group"></div> </div><div class="imap__layer-group" data-map-layer-group="landmark" style="--cat-color:oklch(66% 0.15 30)"> <div class="imap__cat-row"> <button aria-pressed="true" class="imap__layer is-active" data-map-layer-toggle="landmark" type="button"> <span class="imap__layer-glyph has-custom-icon"> <img alt="" decoding="async" draggable="false" loading="lazy" src="/assets/map/icons/game/town.webp?v=3cdf1ba3"/> </span> <span class="imap__layer-text"><span class="imap__layer-label">Pontos de referência</span></span> <span class="imap__layer-count tabular" data-map-layer-count="landmark"></span> <span aria-hidden="true" class="imap__eye"> <svg class="imap__eye-on" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M2 12s3.6-6.6 10-6.6S22 12 22 12s-3.6 6.6-10 6.6S2 12 2 12Z"></path><circle cx="12" cy="12" r="2.6"></circle></svg> <svg class="imap__eye-off" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M3 3l18 18"></path><path d="M10.6 5.2A9.6 9.6 0 0 1 12 5.1c6.4 0 10 6.9 10 6.9a17 17 0 0 1-2.16 3.05M6.24 6.36A16.5 16.5 0 0 0 2 12s3.6 6.9 10 6.9a9.3 9.3 0 0 0 3.54-.68"></path><path d="M9.9 9.98a3 3 0 0 0 4.16 4.14"></path></svg> </span> </button> <button aria-expanded="false" aria-label="Mostrar subfiltros: Pontos de referência" class="imap__cat-expand" data-map-group-toggle="landmark" hidden="" type="button"> <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="16"><path d="m6 9 6 6 6-6"></path></svg> </button> </div> <div aria-label="Subfiltros: Pontos de referência" class="imap__cat-body imap__subfilters" data-map-subfilters="landmark" hidden="" role="group"></div> </div><div class="imap__layer-group" data-map-layer-group="ecology" style="--cat-color:oklch(62% 0.11 185)"> <div class="imap__cat-row"> <button aria-pressed="true" class="imap__layer is-active" data-map-layer-toggle="ecology" type="button"> <span class="imap__layer-glyph has-custom-icon"> <img alt="" decoding="async" draggable="false" loading="lazy" src="/assets/map/icons/game/ecology.webp?v=8757b11a"/> </span> <span class="imap__layer-text"><span class="imap__layer-label">Ecologia dos Aniimos</span></span> <span class="imap__layer-count tabular" data-map-layer-count="ecology"></span> <span aria-hidden="true" class="imap__eye"> <svg class="imap__eye-on" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M2 12s3.6-6.6 10-6.6S22 12 22 12s-3.6 6.6-10 6.6S2 12 2 12Z"></path><circle cx="12" cy="12" r="2.6"></circle></svg> <svg class="imap__eye-off" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M3 3l18 18"></path><path d="M10.6 5.2A9.6 9.6 0 0 1 12 5.1c6.4 0 10 6.9 10 6.9a17 17 0 0 1-2.16 3.05M6.24 6.36A16.5 16.5 0 0 0 2 12s3.6 6.9 10 6.9a9.3 9.3 0 0 0 3.54-.68"></path><path d="M9.9 9.98a3 3 0 0 0 4.16 4.14"></path></svg> </span> </button> <button aria-expanded="false" aria-label="Mostrar subfiltros: Ecologia dos Aniimos" class="imap__cat-expand" data-map-group-toggle="ecology" hidden="" type="button"> <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="16"><path d="m6 9 6 6 6-6"></path></svg> </button> </div> <div aria-label="Subfiltros: Ecologia dos Aniimos" class="imap__cat-body imap__subfilters" data-map-subfilters="ecology" hidden="" role="group"></div> </div> </div> </div> <div class="imap__group"> <div class="imap__group-head"><span>Progresso e salvamentos</span><span class="imap__saved-badge tabular" data-map-saved-count="">0</span></div> <div class="imap__tools"> <button aria-pressed="false" class="imap__tool-toggle" data-map-view-toggle="hide-found" type="button"> <svg aria-hidden="true" fill="none" focusable="false" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15"><path d="M20 6 9 17l-5-5"></path></svg><span>Ocultar encontrados</span> </button> <button aria-pressed="false" class="imap__tool-toggle" data-map-view-toggle="favorites" type="button"> <svg aria-hidden="true" fill="none" focusable="false" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15"><path d="M12 3.5l2.55 5.17 5.7.83-4.12 4.02.97 5.68L12 16.52l-5.1 2.68.97-5.68L3.75 9.5l5.7-.83z"></path></svg><span>Apenas favoritos</span> </button> <div class="imap__tool-row"> <button class="imap__tiny" data-map-export="" type="button">Exportar</button> <label class="imap__tiny imap__tiny--file">Importar<input accept="application/json" class="sr-only" data-map-import="" type="file"/></label> </div> <p aria-live="polite" class="imap__tool-msg" data-map-import-msg="" hidden=""></p> </div> <div class="imap__stats" data-map-stats="" hidden=""></div> </div> </div> <!-- Canvas: preview raster (base) + high-res tile grid + markers, same layering as v1 --> <div aria-label="Área do mapa: Mapa interativo de Aniimo: Planícies Ventosas" class="imap__canvas" data-map-surface="" role="application" tabindex="0"> <div aria-hidden="true" class="imap__loading-bar"></div> <div class="imap__stage" data-map-stage="" style="--map-width:7168px;--map-height:7168px;--map-clip-right:35.160%;--map-clip-bottom:53.930%;"></div> <canvas aria-hidden="true" class="imap__markers-canvas" data-map-markers-canvas=""></canvas> <!-- Hover tooltip: the chip under the cursor names itself without needing a click --> <div aria-hidden="true" class="imap__tip" data-map-tip="" hidden=""> <span class="imap__tip-label" data-map-tip-label=""></span> <span class="imap__tip-meta" data-map-tip-meta=""></span> </div> <div class="imap__error" data-map-error="" hidden="" role="alert"> <p>Não foi possível carregar os pontos do mapa agora.</p> <button class="imap__tiny" data-map-retry="" type="button">Tentar de novo</button> </div> <div class="imap__topbar imap__topbar--v2"> <button aria-pressed="true" class="imap__chip" data-map-panel-toggle="" type="button"> <svg aria-hidden="true" fill="none" focusable="false" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><path d="M4 8h9M17 8h3M4 16h3M11 16h9M13 6v4M9 14v4"></path></svg> <span>Filtros</span> </button> <label class="imap__command-search"> <svg aria-hidden="true" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14ZM20 20l-4-4"></path></svg> <span class="sr-only">Buscar no mapa</span> <input autocomplete="off" data-map-search="" placeholder="Buscar Aniimos, baús, locais…" type="search"/> <span aria-live="polite" class="imap__search-count tabular" data-map-search-count="" hidden=""></span> </label> <button aria-label="Abrir a paleta de comandos" class="imap__chip imap__chip--kbd" data-map-palette-open="" type="button"> <svg aria-hidden="true" fill="none" focusable="false" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M15 6a3 3 0 1 1 3 3h-3V6ZM9 6a3 3 0 1 0-3 3h3V6ZM9 18a3 3 0 1 0 3-3H9v3ZM15 18a3 3 0 1 1 3-3h-3v3ZM9 9h6v6H9V9Z"></path></svg><span class="imap__kbd">K</span> </button> <div aria-label="Controles de zoom" class="imap__zoom"> <button aria-label="Mostrar ou ocultar as fronteiras das regiões" aria-pressed="true" class="imap__icon-btn imap__icon-btn--toggle is-active" data-map-zones-toggle="" type="button"><svg aria-hidden="true" fill="none" focusable="false" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><path d="M9 5 3 7v12l6-2 6 2 6-2V5l-6 2-6-2ZM9 5v12M15 7v12"></path></svg></button> <button aria-label="Aproximar" class="imap__icon-btn" data-map-zoom-in="" type="button"><svg aria-hidden="true" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M12 5v14M5 12h14"></path></svg></button> <button aria-label="Afastar" class="imap__icon-btn" data-map-zoom-out="" type="button"><svg aria-hidden="true" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M5 12h14"></path></svg></button> <button aria-label="Recentralizar" class="imap__icon-btn" data-map-reset="" type="button"><svg aria-hidden="true" fill="none" focusable="false" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8ZM12 2v3M12 19v3M2 12h3M19 12h3"></path></svg></button> <button aria-label="Ver o mapa em tela cheia" aria-pressed="false" class="imap__icon-btn" data-map-fullscreen="" type="button"><svg aria-hidden="true" fill="none" focusable="false" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M21 16v3a2 2 0 0 1-2 2h-3M8 21H5a2 2 0 0 1-2-2v-3"></path></svg></button> </div> <span aria-live="polite" class="imap__sync" data-map-sync="" hidden="" title="Sincronizado com a sua conta"></span> </div> </div> </div> <!-- Detail panel: reuses v1's .imap__panel for its full positioning + mobile bottom-sheet rules
-         (imap.css). Route-mode-only v1 selectors never match here since v2 has no route mode. --> <aside aria-label="Detalhes do ponto" class="imap__detail imap__panel" data-map-detail="" hidden="" tabindex="-1"> <button aria-label="Fechar detalhes" class="imap__icon-btn imap__detail-close" data-map-detail-close="" type="button"><svg aria-hidden="true" fill="none" focusable="false" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><path d="M6 6l12 12M18 6 6 18"></path></svg></button> <div class="imap__detail-head"> <span class="imap__detail-ic" data-map-detail-icon="" hidden=""><img alt="" draggable="false" src=""/></span> <div class="imap__detail-headings"> <h3 class="imap__detail-title" data-map-detail-title="">Selecione um ponto</h3> <p class="imap__detail-meta" data-map-detail-meta="">Ponto do mapa</p> </div> </div> <!-- the game's own description, folded: the name, kind and actions stay the panel's first read --> <details class="imap__detail-more" data-map-detail-more="" hidden=""> <summary>Descrição no jogo</summary> <p class="imap__detail-summary" data-map-detail-summary=""></p> </details> <!-- creature-only: spawn facts (element · stage · spawn-time window · region + level) --> <div class="imap__detail-facts" data-map-detail-facts="" hidden=""></div> <!-- region-only: the zone's Aniimo roster (from the game's own petList) --> <div class="imap__detail-pets" data-map-detail-pets="" hidden=""> <span class="imap__detail-pets-label">Aniimos aqui</span> <span class="imap__detail-pets-list" data-map-detail-pets-list=""></span> </div> <!-- region-only: weather-conditional spawns (rain / thunder / snow / aurora), from map_block_config_data --> <div class="imap__detail-weather" data-map-detail-weather="" hidden=""></div> <div class="imap__detail-actions" data-map-detail-actions="" hidden=""> <button aria-pressed="false" class="imap__detail-act imap__detail-act--found" data-map-found="" type="button"> <svg aria-hidden="true" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5"></path></svg><span>Marcar como encontrado</span> </button> <button aria-pressed="false" class="imap__detail-act" data-map-favorite="" type="button"> <svg aria-hidden="true" fill="none" focusable="false" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M12 3.5l2.55 5.17 5.7.83-4.12 4.02.97 5.68L12 16.52l-5.1 2.68.97-5.68L3.75 9.5l5.7-.83z"></path></svg><span>Favorito</span> </button> </div> <a class="imap__detail-link" data-map-detail-link="" hidden="" href="#">Ver detalhes →</a> <div class="pslot pslot--display imap__detail-ad" data-astro-cid-vs7tkiu7="" data-slot="" style="--ad-min-h:250px"><div class="pslot__mount" data-astro-cid-vs7tkiu7="" data-unit-opts='{"format":"display","sizes":[[300,250],[250,250]],"renderVisibleOnly":true,"delayLoading":true,"refreshTime":30,"refreshLimit":10,"refreshVisibleOnly":true,"report":{"enabled":true,"wording":"Report Ad","position":"top-right"}}' id="map-detail"></div><div class="pslot__note" data-astro-cid-vs7tkiu7="" data-slot-note="" hidden=""><img alt="" class="pslot__mascot" data-astro-cid-vs7tkiu7="" decoding="async" height="179" loading="lazy" src="/assets/mascot/mascot-about.webp" width="192"/><div class="pslot__copy" data-astro-cid-vs7tkiu7=""><p class="pslot__title" data-astro-cid-vs7tkiu7="">O Aniimo Tools é gratuito e feito por uma só pessoa</p><p class="pslot__body" data-astro-cid-vs7tkiu7="">Navegue no Aniimo Tools sem anúncios: torne-se Supporter no Patreon, € 3/mês.</p><div class="pslot__links" data-astro-cid-vs7tkiu7=""><a class="pslot__btn pslot__btn--patreon" data-astro-cid-vs7tkiu7="" href="https://www.patreon.com/Irissia" rel="noopener nofollow" target="_blank">Patreon</a><a class="pslot__btn" data-astro-cid-vs7tkiu7="" href="https://ko-fi.com/irissia" rel="noopener nofollow" target="_blank">Ko-fi</a></div></div></div><script>window.nitroAds&&window.nitroAds.createAd("map-detail",{"format":"display","sizes":[[300,250],[250,250]],"renderVisibleOnly":true,"delayLoading":true,"refreshTime":30,"refreshLimit":10,"refreshVisibleOnly":true,"report":{"enabled":true,"wording":"Report Ad","position":"top-right"}});</script></div> <section aria-label="Capturas de tela e notas da comunidade" class="imap-comm" data-map-detail-community="" hidden=""></section> </aside> <!-- Command palette (⌘/Ctrl-K) --> <div aria-label="Paleta de comandos" aria-modal="true" class="imap__palette" data-map-palette="" data-map-palette-state="closed" hidden="" role="dialog"> <div class="imap__palette-box"> <label class="imap__palette-search"> <svg aria-hidden="true" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14ZM20 20l-4-4"></path></svg> <span class="sr-only">Buscar espécie, categoria ou ponto</span> <input autocomplete="off" data-map-palette-input="" placeholder="Ir para um Aniimo, uma categoria ou um ponto…" type="search"/> </label> <ul class="imap__palette-list" data-map-palette-list=""></ul> </div> </div> </div> </section> </aside> <!-- Command palette (⌘/Ctrl-K) --> <div class="imap__palette" data-map-palette="" hidden="" data-map-palette-state="closed" role="dialog" aria-modal="true" aria-label="Paleta de comandos"> <div class="imap__palette-box"> <label class="imap__palette-search"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14ZM20 20l-4-4"></path></svg> <span class="sr-only">Buscar espécie, categoria ou ponto</span> <input type="search" data-map-palette-input="" placeholder="Ir para um Aniimo, uma categoria ou um ponto…" autocomplete="off"> </label> <ul class="imap__palette-list" data-map-palette-list=""></ul> </div> </div> </div> </section>
-
-    <!-- 6. SECTION: TYPE CHART & CALCULATOR -->
-    <section id="section-tabela-tipos" class="app-section">
-      <div class="container" style="padding-top: 2.5rem;">
-        <div class="section-header">
-          <h1 class="section-title" data-i18n="card_types_title">Tabela de Tipos e Fraquezas</h1>
-          <p class="section-desc">Calcule fraquezas e imunidades para montar composições invencíveis nas masmorras e chefes.</p>
-        </div>
-
-        <div class="type-chart-layout">
-          <!-- Interactive Calculator -->
-          <div class="type-calc-card">
-            <h2 class="tool-card-title" data-i18n="type_calc_title">Calculadora de Matchup Elemental</h2>
-            <div class="type-calc-row">
-              <div class="type-select-group">
-                <label for="calc-attacker" data-i18n="attacker_element">Elemento Atacante</label>
-                <select id="calc-attacker" class="type-dropdown"></select>
-              </div>
-              <div style="font-size: 1.5rem; font-weight: 700; color: var(--accent-strong);">VS</div>
-              <div class="type-select-group">
-                <label for="calc-defender" data-i18n="defender_element">Elemento Defensor</label>
-                <select id="calc-defender" class="type-dropdown"></select>
-              </div>
-              <div class="type-result-box">
-                <span class="type-result-mult" id="type-multiplier">1.0x</span>
-                <span style="font-size: 0.95rem; font-weight: 600; color: var(--ink);" id="type-calc-desc">Dano Normal.</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- 9x9 Matrix Table -->
-          <div class="table-responsive">
-            <table class="type-matrix-table" id="type-matrix-table"></table>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 7. SECTION: TIER LIST -->
-    <section id="section-tier-list" class="app-section">
-      <div class="container" style="padding-top: 2.5rem;">
-        <div class="section-header">
-          <h1 class="section-title" data-i18n="card_tier_title">Tier List do Meta</h1>
-          <p class="section-desc">Classificação das criaturas mais fortes para progressão rápida na campanha, chefes mundiais e combate de arena.</p>
-        </div>
-
-        <!-- Role Filter Buttons -->
-        <div class="filter-pills-row" style="justify-content: center; margin-bottom: 2rem;">
-          <span class="filter-group-label" data-i18n="filter_role">Filtrar por Papel:</span>
-          <button class="filter-chip tier-role-btn active" data-role="all" data-i18n="all">Todos</button>
-          <button class="filter-chip tier-role-btn" data-role="DPS">⚔️ DPS</button>
-          <button class="filter-chip tier-role-btn" data-role="Break">🛡️ Quebra de Escudo</button>
-          <button class="filter-chip tier-role-btn" data-role="Heal">💚 Cura</button>
-          <button class="filter-chip tier-role-btn" data-role="Support">🪄 Suporte</button>
-        </div>
-
-        <div class="tier-list-container">
-          <!-- S+ Tier -->
-          <div class="tier-row">
-            <div class="tier-header tier-s-plus">S+</div>
-            <div class="tier-content" id="tier-content-s-plus"></div>
-          </div>
-          <!-- S Tier -->
-          <div class="tier-row">
-            <div class="tier-header tier-s">S</div>
-            <div class="tier-content" id="tier-content-s"></div>
-          </div>
-          <!-- A Tier -->
-          <div class="tier-row">
-            <div class="tier-header tier-a">A</div>
-            <div class="tier-content" id="tier-content-a"></div>
-          </div>
-          <!-- B Tier -->
-          <div class="tier-row">
-            <div class="tier-header tier-b">B</div>
-            <div class="tier-content" id="tier-content-b"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 8. SECTION: ITEMS DATABASE -->
-    <section id="section-itens" class="app-section">
-      <div class="container" style="padding-top: 2.5rem;">
-        <div class="section-header">
-          <h1 class="section-title" data-i18n="nav_items">Banco de Itens</h1>
-          <p class="section-desc">Catálogo de consumíveis, dispositivos de captura (Aniipods), runas de combate e materiais de evolução.</p>
-        </div>
-        <div class="tools-grid" id="items-container"></div>
-      </div>
-    </section>
-
-    <!-- 9. SECTION: GUIDES -->
-    <section id="section-guias" class="app-section">
-      <div class="container" style="padding-top: 2.5rem;">
-        <div class="section-header">
-          <h1 class="section-title" data-i18n="nav_guides">Guias e Requisitos</h1>
-          <p class="section-desc">Tudo o que você precisa saber para se preparar para o lançamento de Aniimo em 16 de setembro de 2026.</p>
-        </div>
-        <div id="guides-container"></div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- COMMAND PALETTE (CTRL+K SPOTLIGHT SEARCH MODAL) -->
-  <div class="command-palette-overlay" id="command-palette">
-    <div class="command-palette-dialog">
-      <div class="command-search-head">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--ink-muted);"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-        <input type="search" id="command-input" class="command-search-input" placeholder="Buscar qualquer criatura, código ou ferramenta..." autocomplete="off" />
-        <kbd class="shortcut-kbd">ESC para fechar</kbd>
-      </div>
-      <ul class="command-results-list" id="command-results"></ul>
-    </div>
-  </div>
-
-  <!-- CREATURE DETAIL MODAL -->
-  <div class="modal-overlay" id="creature-modal">
-    <div class="modal-card">
-      <button class="modal-close-btn" aria-label="Fechar">✕</button>
-      <div style="display:flex; align-items:center; gap:1.5rem; margin-bottom:1.5rem;">
-        <img id="modal-img" src="" alt="" style="width:110px; height:110px; object-fit:contain; filter:drop-shadow(0 4px 10px rgba(0,0,0,0.2));" />
-        <div>
-          <h2 id="modal-title" style="font-family:var(--font-display); font-size:1.8rem; color:var(--ink);"></h2>
-          <div style="display:flex; gap:0.5rem; margin-top:0.35rem;">
-            <span id="modal-element" class="element-pill"></span>
-            <span id="modal-role" class="role-pill"></span>
-          </div>
-        </div>
-      </div>
-
-      <p id="modal-desc" style="color:var(--ink-soft); font-size:0.95rem; margin-bottom:1.25rem;"></p>
-
-      <!-- Attributes Grid -->
-      <h4 style="font-family:var(--font-display); margin-bottom:0.5rem;">Atributos de Combate</h4>
-      <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:0.6rem; text-align:center; margin-bottom:1.5rem;">
-        <div style="background:var(--surface-2); padding:0.6rem; border-radius:var(--radius-md); border:1px solid var(--border);">
-          <small style="color:var(--ink-muted); font-weight:700;">HP</small>
-          <div id="stat-hp" style="font-family:var(--font-display); font-size:1.2rem; font-weight:700;"></div>
-        </div>
-        <div style="background:var(--surface-2); padding:0.6rem; border-radius:var(--radius-md); border:1px solid var(--border);">
-          <small style="color:var(--ink-muted); font-weight:700;">ATK</small>
-          <div id="stat-atk" style="font-family:var(--font-display); font-size:1.2rem; font-weight:700;"></div>
-        </div>
-        <div style="background:var(--surface-2); padding:0.6rem; border-radius:var(--radius-md); border:1px solid var(--border);">
-          <small style="color:var(--ink-muted); font-weight:700;">DEF</small>
-          <div id="stat-def" style="font-family:var(--font-display); font-size:1.2rem; font-weight:700;"></div>
-        </div>
-        <div style="background:var(--surface-2); padding:0.6rem; border-radius:var(--radius-md); border:1px solid var(--border);">
-          <small style="color:var(--ink-muted); font-weight:700;">VEL (Haste)</small>
-          <div id="stat-spd" style="font-family:var(--font-display); font-size:1.2rem; font-weight:700;"></div>
-        </div>
-      </div>
-
-      <!-- Homeland & Skills -->
-      <h4 style="font-family:var(--font-display); margin-bottom:0.4rem;" data-i18n="homeland_ability">Habilidade Territorial</h4>
-      <p id="modal-homeland" style="color:var(--ink-soft); font-size:0.9rem; margin-bottom:1.25rem;"></p>
-
-      <h4 style="font-family:var(--font-display); margin-bottom:0.6rem;" data-i18n="combat_skills">Habilidades de Combate</h4>
-      <div id="modal-skills"></div>
-
-      <h4 style="font-family:var(--font-display); margin-top:1rem; margin-bottom:0.4rem;" data-i18n="habitat">Habitats Naturais</h4>
-      <p id="modal-habitat" style="color:var(--ink-soft); font-size:0.9rem;"></p>
-    </div>
-  </div>
-
-  <!-- TOAST NOTIFICATIONS -->
-  <div class="toast-container" id="toast-container"></div>
-
-  <!-- SIGNATURE FOOTER WITH CREATURES AND SVG WAVES -->
-  <footer class="site-footer">
-    <div class="footer-crest" aria-hidden="true">
-      <div class="footer-creatures">
-        <img src="/assets/creatures/skippy.webp" alt="" class="footer-creature-img" />
-        <img src="/assets/creatures/wavwal.webp" alt="" class="footer-creature-img" />
-        <img src="/assets/creatures/reefish.webp" alt="" class="footer-creature-img" />
-      </div>
-      <svg class="footer-wave" viewBox="0 0 1440 120" preserveAspectRatio="none" fill="currentColor">
-        <path d="M0,54 C220,94 430,20 720,48 C1010,76 1230,22 1440,54 L1440,120 L0,120 Z" opacity="0.4" fill="var(--surface-2)"></path>
-        <path d="M0,76 C240,46 470,104 720,76 C970,48 1220,100 1440,74 L1440,120 L0,120 Z" fill="var(--surface-1)"></path>
-      </svg>
-    </div>
-
-    <div class="footer-body">
-      <div class="container">
-        <p class="footer-signoff">
+         (imap.css). Route-mode-only v1 selectors never match here since v2 has no route mode. --> <aside aria-label="Detalhes do ponto" class="imap__detail imap__panel" data-map-detail="" hidden="" tabindex="-1"> <button aria-label="Fechar detalhes" class="imap__icon-btn imap__detail-close" data-map-detail-close="" type="button"><svg aria-hidden="true" fill="none" focusable="false" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><path d="M6 6l12 12M18 6 6 18"></path></svg></button> <div class="imap__detail-head"> <span class="imap__detail-ic" data-map-detail-icon="" hidden=""><img alt="" draggable="false" src=""/></span> <div class="imap__detail-headings"> <h3 class="imap__detail-title" data-map-detail-title="">Selecione um ponto</h3> <p class="imap__detail-meta" data-map-detail-meta="">Ponto do mapa</p> </div> </div> <!-- the game's own description, folded: the name, kind and actions stay the panel's first read --> <details class="imap__detail-more" data-map-detail-more="" hidden=""> <summary>Descrição no jogo</summary> <p class="imap__detail-summary" data-map-detail-summary=""></p> </details> <!-- creature-only: spawn facts (element · stage · spawn-time window · region + level) --> <div class="imap__detail-facts" data-map-detail-facts="" hidden=""></div> <!-- region-only: the zone's Aniimo roster (from the game's own petList) --> <div class="imap__detail-pets" data-map-detail-pets="" hidden=""> <span class="imap__detail-pets-label">Aniimos aqui</span> <span class="imap__detail-pets-list" data-map-detail-pets-list=""></span> </div> <!-- region-only: weather-conditional spawns (rain / thunder / snow / aurora), from map_block_config_data --> <div class="imap__detail-weather" data-map-detail-weather="" hidden=""></div> <div class="imap__detail-actions" data-map-detail-actions="" hidden=""> <button aria-pressed="false" class="imap__detail-act imap__detail-act--found" data-map-found="" type="button"> <svg aria-hidden="true" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5"></path></svg><span>Marcar como encontrado</span> </button> <button aria-pressed="false" class="imap__detail-act" data-map-favorite="" type="button"> <svg aria-hidden="true" fill="none" focusable="false" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M12 3.5l2.55 5.17 5.7.83-4.12 4.02.97 5.68L12 16.52l-5.1 2.68.97-5.68L3.75 9.5l5.7-.83z"></path></svg><span>Favorito</span> </button> </div> <a class="imap__detail-link" data-map-detail-link="" hidden="" href="#">Ver detalhes →</a> <div class="pslot pslot--display imap__detail-ad" data-astro-cid-vs7tkiu7="" data-slot="" style="--ad-min-h:250px"><div class="pslot__mount" data-astro-cid-vs7tkiu7="" data-unit-opts='{"format":"display","sizes":[[300,250],[250,250]],"renderVisibleOnly":true,"delayLoading":true,"refreshTime":30,"refreshLimit":10,"refreshVisibleOnly":true,"report":{"enabled":true,"wording":"Report Ad","position":"top-right"}}' id="map-detail"></div><div class="pslot__note" data-astro-cid-vs7tkiu7="" data-slot-note="" hidden=""><img alt="" class="pslot__mascot" data-astro-cid-vs7tkiu7="" decoding="async" height="179" loading="lazy" src="/assets/mascot/mascot-about.webp" width="192"/><div class="pslot__copy" data-astro-cid-vs7tkiu7=""><p class="pslot__title" data-astro-cid-vs7tkiu7="">O Aniimo Tools é gratuito e feito por uma só pessoa</p><p class="pslot__body" data-astro-cid-vs7tkiu7="">Navegue no Aniimo Tools sem anúncios: torne-se Supporter no Patreon, € 3/mês.</p><div class="pslot__links" data-astro-cid-vs7tkiu7=""><a class="pslot__btn pslot__btn--patreon" data-astro-cid-vs7tkiu7="" href="https://www.patreon.com/Irissia" rel="noopener nofollow" target="_blank">Patreon</a><a class="pslot__btn" data-astro-cid-vs7tkiu7="" href="https://ko-fi.com/irissia" rel="noopener nofollow" target="_blank">Ko-fi</a></div></div></div><script>window.nitroAds&&window.nitroAds.createAd("map-detail",{"format":"display","sizes":[[300,250],[250,250]],"renderVisibleOnly":true,"delayLoading":true,"refreshTime":30,"refreshLimit":10,"refreshVisibleOnly":true,"report":{"enabled":true,"wording":"Report Ad","position":"top-right"}});</script></div> <section aria-label="Capturas de tela e notas da comunidade" class="imap-comm" data-map-detail-community="" hidden=""></section> </aside> <!-- Command palette (⌘/Ctrl-K) --> <div aria-label="Paleta de comandos" aria-modal="true" class="imap__palette" data-map-palette="" data-map-palette-state="closed" hidden="" role="dialog"> <div class="imap__palette-box"> <label class="imap__palette-search"> <svg aria-hidden="true" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14ZM20 20l-4-4"></path></svg> <span class="sr-only">Buscar espécie, categoria ou ponto</span> <input autocomplete="off" data-map-palette-input="" placeholder="Ir para um Aniimo, uma categoria ou um ponto…" type="search"/> </label> <ul class="imap__palette-list" data-map-palette-list=""></ul> </div> </div> </div> </section> <!-- Command palette (⌘/Ctrl-K) --> <div aria-label="Paleta de comandos" aria-modal="true" class="imap__palette" data-map-palette="" data-map-palette-state="closed" hidden="" role="dialog"> <div class="imap__palette-box"> <label class="imap__palette-search"> <svg aria-hidden="true" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14ZM20 20l-4-4"></path></svg> <span class="sr-only">Buscar espécie, categoria ou ponto</span> <input autocomplete="off" data-map-palette-input="" placeholder="Ir para um Aniimo, uma categoria ou um ponto…" type="search"/> </label> <ul class="imap__palette-list" data-map-palette-list=""></ul> </div> </div>
+<!-- 6. SECTION: TYPE CHART & CALCULATOR -->
+<section class="app-section" id="section-tabela-tipos">
+<div class="container" style="padding-top: 2.5rem;">
+<div class="section-header">
+<h1 class="section-title" data-i18n="card_types_title">Tabela de Tipos e Fraquezas</h1>
+<p class="section-desc">Calcule fraquezas e imunidades para montar composições invencíveis nas masmorras e chefes.</p>
+</div>
+<div class="type-chart-layout">
+<!-- Interactive Calculator -->
+<div class="type-calc-card">
+<h2 class="tool-card-title" data-i18n="type_calc_title">Calculadora de Matchup Elemental</h2>
+<div class="type-calc-row">
+<div class="type-select-group">
+<label data-i18n="attacker_element" for="calc-attacker">Elemento Atacante</label>
+<select class="type-dropdown" id="calc-attacker"></select>
+</div>
+<div style="font-size: 1.5rem; font-weight: 700; color: var(--accent-strong);">VS</div>
+<div class="type-select-group">
+<label data-i18n="defender_element" for="calc-defender">Elemento Defensor</label>
+<select class="type-dropdown" id="calc-defender"></select>
+</div>
+<div class="type-result-box">
+<span class="type-result-mult" id="type-multiplier">1.0x</span>
+<span id="type-calc-desc" style="font-size: 0.95rem; font-weight: 600; color: var(--ink);">Dano Normal.</span>
+</div>
+</div>
+</div>
+<!-- 9x9 Matrix Table -->
+<div class="table-responsive">
+<table class="type-matrix-table" id="type-matrix-table"></table>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. SECTION: TIER LIST -->
+<section class="app-section" id="section-tier-list">
+<div class="container" style="padding-top: 2.5rem;">
+<div class="section-header">
+<h1 class="section-title" data-i18n="card_tier_title">Tier List do Meta</h1>
+<p class="section-desc">Classificação das criaturas mais fortes para progressão rápida na campanha, chefes mundiais e combate de arena.</p>
+</div>
+<!-- Role Filter Buttons -->
+<div class="filter-pills-row" style="justify-content: center; margin-bottom: 2rem;">
+<span class="filter-group-label" data-i18n="filter_role">Filtrar por Papel:</span>
+<button class="filter-chip tier-role-btn active" data-i18n="all" data-role="all">Todos</button>
+<button class="filter-chip tier-role-btn" data-role="DPS">⚔️ DPS</button>
+<button class="filter-chip tier-role-btn" data-role="Break">🛡️ Quebra de Escudo</button>
+<button class="filter-chip tier-role-btn" data-role="Heal">💚 Cura</button>
+<button class="filter-chip tier-role-btn" data-role="Support">🪄 Suporte</button>
+</div>
+<div class="tier-list-container">
+<!-- S+ Tier -->
+<div class="tier-row">
+<div class="tier-header tier-s-plus">S+</div>
+<div class="tier-content" id="tier-content-s-plus"></div>
+</div>
+<!-- S Tier -->
+<div class="tier-row">
+<div class="tier-header tier-s">S</div>
+<div class="tier-content" id="tier-content-s"></div>
+</div>
+<!-- A Tier -->
+<div class="tier-row">
+<div class="tier-header tier-a">A</div>
+<div class="tier-content" id="tier-content-a"></div>
+</div>
+<!-- B Tier -->
+<div class="tier-row">
+<div class="tier-header tier-b">B</div>
+<div class="tier-content" id="tier-content-b"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. SECTION: ITEMS DATABASE -->
+<section class="app-section" id="section-itens">
+<div class="container" style="padding-top: 2.5rem;">
+<div class="section-header">
+<h1 class="section-title" data-i18n="nav_items">Banco de Itens</h1>
+<p class="section-desc">Catálogo de consumíveis, dispositivos de captura (Aniipods), runas de combate e materiais de evolução.</p>
+</div>
+<div class="tools-grid" id="items-container"></div>
+</div>
+</section>
+<!-- 9. SECTION: GUIDES -->
+<section class="app-section" id="section-guias">
+<div class="container" style="padding-top: 2.5rem;">
+<div class="section-header">
+<h1 class="section-title" data-i18n="nav_guides">Guias e Requisitos</h1>
+<p class="section-desc">Tudo o que você precisa saber para se preparar para o lançamento de Aniimo em 16 de setembro de 2026.</p>
+</div>
+<div id="guides-container"></div>
+</div>
+</section>
+</main>
+<!-- COMMAND PALETTE (CTRL+K SPOTLIGHT SEARCH MODAL) -->
+<div class="command-palette-overlay" id="command-palette">
+<div class="command-palette-dialog">
+<div class="command-search-head">
+<svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="color:var(--ink-muted);" viewbox="0 0 24 24" width="22"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+<input autocomplete="off" class="command-search-input" id="command-input" placeholder="Buscar qualquer criatura, código ou ferramenta..." type="search"/>
+<kbd class="shortcut-kbd">ESC para fechar</kbd>
+</div>
+<ul class="command-results-list" id="command-results"></ul>
+</div>
+</div>
+<!-- CREATURE DETAIL MODAL -->
+<div class="modal-overlay" id="creature-modal">
+<div class="modal-card">
+<button aria-label="Fechar" class="modal-close-btn">✕</button>
+<div style="display:flex; align-items:center; gap:1.5rem; margin-bottom:1.5rem;">
+<img alt="" id="modal-img" src="" style="width:110px; height:110px; object-fit:contain; filter:drop-shadow(0 4px 10px rgba(0,0,0,0.2));"/>
+<div>
+<h2 id="modal-title" style="font-family:var(--font-display); font-size:1.8rem; color:var(--ink);"></h2>
+<div style="display:flex; gap:0.5rem; margin-top:0.35rem;">
+<span class="element-pill" id="modal-element"></span>
+<span class="role-pill" id="modal-role"></span>
+</div>
+</div>
+</div>
+<p id="modal-desc" style="color:var(--ink-soft); font-size:0.95rem; margin-bottom:1.25rem;"></p>
+<!-- Attributes Grid -->
+<h4 style="font-family:var(--font-display); margin-bottom:0.5rem;">Atributos de Combate</h4>
+<div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:0.6rem; text-align:center; margin-bottom:1.5rem;">
+<div style="background:var(--surface-2); padding:0.6rem; border-radius:var(--radius-md); border:1px solid var(--border);">
+<small style="color:var(--ink-muted); font-weight:700;">HP</small>
+<div id="stat-hp" style="font-family:var(--font-display); font-size:1.2rem; font-weight:700;"></div>
+</div>
+<div style="background:var(--surface-2); padding:0.6rem; border-radius:var(--radius-md); border:1px solid var(--border);">
+<small style="color:var(--ink-muted); font-weight:700;">ATK</small>
+<div id="stat-atk" style="font-family:var(--font-display); font-size:1.2rem; font-weight:700;"></div>
+</div>
+<div style="background:var(--surface-2); padding:0.6rem; border-radius:var(--radius-md); border:1px solid var(--border);">
+<small style="color:var(--ink-muted); font-weight:700;">DEF</small>
+<div id="stat-def" style="font-family:var(--font-display); font-size:1.2rem; font-weight:700;"></div>
+</div>
+<div style="background:var(--surface-2); padding:0.6rem; border-radius:var(--radius-md); border:1px solid var(--border);">
+<small style="color:var(--ink-muted); font-weight:700;">VEL (Haste)</small>
+<div id="stat-spd" style="font-family:var(--font-display); font-size:1.2rem; font-weight:700;"></div>
+</div>
+</div>
+<!-- Homeland & Skills -->
+<h4 data-i18n="homeland_ability" style="font-family:var(--font-display); margin-bottom:0.4rem;">Habilidade Territorial</h4>
+<p id="modal-homeland" style="color:var(--ink-soft); font-size:0.9rem; margin-bottom:1.25rem;"></p>
+<h4 data-i18n="combat_skills" style="font-family:var(--font-display); margin-bottom:0.6rem;">Habilidades de Combate</h4>
+<div id="modal-skills"></div>
+<h4 data-i18n="habitat" style="font-family:var(--font-display); margin-top:1rem; margin-bottom:0.4rem;">Habitats Naturais</h4>
+<p id="modal-habitat" style="color:var(--ink-soft); font-size:0.9rem;"></p>
+</div>
+</div>
+<!-- TOAST NOTIFICATIONS -->
+<div class="toast-container" id="toast-container"></div>
+<!-- SIGNATURE FOOTER WITH CREATURES AND SVG WAVES -->
+<footer class="site-footer">
+<div aria-hidden="true" class="footer-crest">
+<div class="footer-creatures">
+<img alt="" class="footer-creature-img" src="/assets/creatures/skippy.webp"/>
+<img alt="" class="footer-creature-img" src="/assets/creatures/wavwal.webp"/>
+<img alt="" class="footer-creature-img" src="/assets/creatures/reefish.webp"/>
+</div>
+<svg class="footer-wave" fill="currentColor" preserveaspectratio="none" viewbox="0 0 1440 120">
+<path d="M0,54 C220,94 430,20 720,48 C1010,76 1230,22 1440,54 L1440,120 L0,120 Z" fill="var(--surface-2)" opacity="0.4"></path>
+<path d="M0,76 C240,46 470,104 720,76 C970,48 1220,100 1440,74 L1440,120 L0,120 Z" fill="var(--surface-1)"></path>
+</svg>
+</div>
+<div class="footer-body">
+<div class="container">
+<p class="footer-signoff">
           🐾 <span data-i18n="footer_motto">Mantenha as patas para cima, Desbravante. Nos vemos em Idília.</span>
-          <span class="footer-slogan">Be One, Be All.</span>
-        </p>
-        <p class="footer-disclaimer" data-i18n="footer_disclaimer">
+<span class="footer-slogan">Be One, Be All.</span>
+</p>
+<p class="footer-disclaimer" data-i18n="footer_disclaimer">
           aniimo.dluz.com.br é um recurso não oficial feito por fãs para a comunidade de Aniimo. Todos os direitos de imagens e marcas pertencem à Pawprint Studio e FunPlus.
         </p>
-        <ul class="footer-links">
-          <li><a href="/codigos" data-i18n="nav_codes">Códigos</a></li>
-          <li><a href="/criaturas" data-i18n="nav_creatures">Criaturas</a></li>
-          <li><a href="/comparador" data-i18n="nav_versus">Comparador</a></li>
-          <li><a href="/mapa" data-i18n="nav_map">Mapa</a></li>
-          <li><a href="/tabela-tipos" data-i18n="nav_type_chart">Tabela de Tipos</a></li>
-          <li><a href="/tier-list" data-i18n="nav_tier_list">Tier List</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
-
-  <!-- App Script -->
-  <script src="/app.js"></script>
-  <script type="module" src="/assets/map/js/MapV2_bundle.js"></script>
+<ul class="footer-links">
+<li><a data-i18n="nav_codes" href="/codigos">Códigos</a></li>
+<li><a data-i18n="nav_creatures" href="/criaturas">Criaturas</a></li>
+<li><a data-i18n="nav_versus" href="/comparador">Comparador</a></li>
+<li><a data-i18n="nav_map" href="/mapa">Mapa</a></li>
+<li><a data-i18n="nav_type_chart" href="/tabela-tipos">Tabela de Tipos</a></li>
+<li><a data-i18n="nav_tier_list" href="/tier-list">Tier List</a></li>
+</ul>
+</div>
+</div>
+</footer>
+<!-- App Script -->
+<script src="/app.js"></script>
+<script src="/assets/map/js/MapV2_bundle.js" type="module"></script>
 </body>
 </html>
