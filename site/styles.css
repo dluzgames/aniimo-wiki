@@ -494,12 +494,22 @@ input, select { font: inherit; color: inherit; }
    APP SECTIONS SPA VISIBILITY
    ========================================================================== */
 .app-section {
-  display: none;
+  display: none !important;
   animation: fadeIn 0.25s ease-out;
 }
 
 .app-section.active {
-  display: block;
+  display: block !important;
+}
+
+#section-mapa:not(.active),
+.imap:not(.active) {
+  display: none !important;
+}
+
+#section-mapa.active,
+.imap.active {
+  display: grid !important;
 }
 
 @keyframes fadeIn {

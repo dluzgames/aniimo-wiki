@@ -1,3 +1,4 @@
+.imap:not(.active) { display: none !important; }
 .imap { display: grid; margin: calc(-1 * var(--space-8)) calc(-1 * var(--space-gutter)) 0; min-block-size: max(32rem,calc(100svh - var(--header-height))); --imap-tools-width: min(18rem, 34vw); }
 .imap.is-fullscreen { position: fixed; inset: 0px; z-index: var(--z-modal); margin: 0px; min-block-size: 100svh; background: var(--surface-0); }
 .imap.is-fullscreen .imap__app { block-size: max(32rem, 100svh); min-block-size: max(32rem, 100svh); }

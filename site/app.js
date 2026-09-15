@@ -1,8 +1,11 @@
 // MAP API MOCK INTERCEPTOR
 const origFetch = window.fetch;
+let _cachedPois = null;
+let _cachedSpecies = null;
+
 window.fetch = async (url, options) => {
   const urlStr = typeof url === 'string' ? url : (url.url || '');
-  if (urlStr.includes('/api/map/session')) {
+  if (urlStr.includes('/api/map/session') || urlStr.includes('/api/map-session')) {
     return new Response(JSON.stringify({
       session: "dluz-session-token",
       expiresIn: 86400
@@ -13,10 +16,39 @@ window.fetch = async (url, options) => {
     try {
       if (options && options.body) body = JSON.parse(options.body);
     } catch(e) {}
+
     if (body.pois) {
-      return origFetch('/data/markers_pois.json');
+      if (!_cachedPois) {
+        const res = await origFetch('/data/markers_pois.json');
+        _cachedPois = await res.json();
+      }
+      return new Response(JSON.stringify(_cachedPois), {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' }
+      });
     }
-    return origFetch('/data/markers_species.json');
+
+    if (!_cachedSpecies) {
+      const res = await origFetch('/data/markers_species.json');
+      _cachedSpecies = await res.json();
+    }
+
+    if (body.species) {
+      const idx = _cachedSpecies.n ? _cachedSpecies.n.indexOf(body.species) : -1;
+      const filtered = {
+        ..._cachedSpecies,
+        m: idx >= 0 ? _cachedSpecies.m.filter(p => p[2] === idx) : _cachedSpecies.m
+      };
+      return new Response(JSON.stringify(filtered), {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+
+    return new Response(JSON.stringify(_cachedSpecies), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' }
+    });
   }
   return origFetch(url, options);
 };
