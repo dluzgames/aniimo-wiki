@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 window.state = state;
 
-const APP_VERSION = '20260915_2300';
+const APP_VERSION = '20260915_2315';
 
 // 4. LOAD ALL DATASETS
 async function loadAppData() {
@@ -1255,7 +1255,8 @@ window.goToItemsPage = function(p) {
   document.getElementById('section-itens')?.scrollIntoView({ behavior: 'smooth' });
 };
 
-// 15. COMMUNITY MODULE() {
+// 15. COMMUNITY MODULE
+function setupCommunityModule() {
   const container = document.getElementById('comm-posts-stream');
   if (!container) return;
 
