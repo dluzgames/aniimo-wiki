@@ -1,0 +1,62 @@
+[
+  {
+    "id": "item_1",
+    "name_pt": "Aniipod Básico",
+    "name_en": "Basic Aniipod",
+    "category_pt": "Dispositivo de Captura",
+    "category_en": "Capture Device",
+    "rarity": 2,
+    "desc_pt": "Cápsula esférica padrão para captura de Aniimos selvagens em estágio Lumin.",
+    "desc_en": "Standard capture capsule for wild Lumin-stage Aniimos."
+  },
+  {
+    "id": "item_2",
+    "name_pt": "Aniipod Reforçado",
+    "name_en": "Reinforced Aniipod",
+    "category_pt": "Dispositivo de Captura",
+    "category_en": "Capture Device",
+    "rarity": 4,
+    "desc_pt": "Aumenta drasticamente a taxa de sucesso na captura de criaturas Gamma e Nova.",
+    "desc_en": "Drastically increases catch rate for Gamma and Nova creatures."
+  },
+  {
+    "id": "item_3",
+    "name_pt": "Cristal de Invocação",
+    "name_en": "Summon Crystal",
+    "category_pt": "Moeda Especial",
+    "category_en": "Special Currency",
+    "rarity": 5,
+    "desc_pt": "Pedra ressonante usada para atrair criaturas raras e parceiros míticos.",
+    "desc_en": "Resonant stone used to summon rare creatures and mythical companions."
+  },
+  {
+    "id": "item_4",
+    "name_pt": "Frasco de Ressonância Primordial",
+    "name_en": "Primordial Resonance Vial",
+    "category_pt": "Material de Evolução",
+    "category_en": "Evolution Material",
+    "rarity": 5,
+    "desc_pt": "Catalisador mágico necessário para desbloquear a forma Nova de qualquer criatura.",
+    "desc_en": "Magical catalyst required to unlock the Nova form of any Aniimo."
+  },
+  {
+    "id": "item_5",
+    "name_pt": "Runa da Fúria Ígnea (5 Estrelas)",
+    "name_en": "Blazing Fury Rune (5-Star)",
+    "category_pt": "Runa Equipável",
+    "category_en": "Equippable Rune",
+    "rarity": 5,
+    "desc_pt": "Concede +25% de Dano de Fogo e +15% de Taxa de Crítico para o portador.",
+    "desc_en": "Grants +25% Fire Damage and +15% Critical Rate to the holder."
+  },
+  {
+    "id": "item_6",
+    "name_pt": "Ovo Misterioso de Idília",
+    "name_en": "Mysterious Idylia Egg",
+    "category_pt": "Ovo de Aniimo",
+    "category_en": "Aniimo Egg",
+    "rarity": 4,
+    "desc_pt": "Incube em sua base residencial (Homeland) para chocar uma criatura com talentos especiais.",
+    "desc_en": "Incubate in your Homeland base to hatch an Aniimo with unique talents."
+  }
+]

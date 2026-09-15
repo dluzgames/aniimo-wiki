@@ -1,0 +1,95 @@
+[
+  {
+    "id": "post-1",
+    "author": {
+      "name": "DLuz Games",
+      "avatar": "/assets/dluz-logo.png",
+      "email": "contato@dluz.com.br",
+      "badge": "Criador Oficial"
+    },
+    "title": "🐾 Bem-vindos à Comunidade Oficial Aniimo DLuz!",
+    "content": "Fala melhores, beleza? Esse é o espaço oficial da nossa comunidade de inscritos! Aqui vocês podem compartilhar capturas raras, discutir builds para o PvP/PvE, votar na nossa Tier List em tempo real e trocar ideias sobre o lançamento global de Aniimo. Sintam-se em casa e deixem o feedback de vocês!",
+    "category": "geral",
+    "creatureSlug": "inferlupa",
+    "createdAt": "2026-09-15T10:00:00.000Z",
+    "likes": [
+      "user-1",
+      "user-2",
+      "user-3",
+      "user-4",
+      "user-5"
+    ],
+    "comments": [
+      {
+        "id": "c-1",
+        "author": {
+          "name": "Gabriel Santos",
+          "avatar": "/assets/creatures/skippy.webp",
+          "badge": "Inscrito VIP"
+        },
+        "content": "A plataforma ficou sensacional DLuz! O mapa interativo e a calculadora de dano ajudam demais nos testes.",
+        "createdAt": "2026-09-15T11:15:00.000Z"
+      },
+      {
+        "id": "c-2",
+        "author": {
+          "name": "Rodrigo Silva",
+          "avatar": "/assets/creatures/emberpup.webp",
+          "badge": "Inscrito VIP"
+        },
+        "content": "Já deixei meu voto pro Emberpup no S+, melhor starter de fogo disparado!",
+        "createdAt": "2026-09-15T12:30:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "post-2",
+    "author": {
+      "name": "Lucas Alencar",
+      "avatar": "/assets/creatures/bolty.webp",
+      "email": "lucas@gamer.com",
+      "badge": "Inscrito VIP"
+    },
+    "title": "⚡ Guia Rápido: Por que o Bolty é indispensável no início?",
+    "content": "Testando a beta fechada percebi que a passiva de Sobrecarga do Bolty reduz o tempo de recarga de habilidades de todos os aliados do tipo Raio. Se você combinar ele com o Sparki, o dano em área limpa qualquer acampamento das Planícies Ventosas em segundos!",
+    "category": "builds",
+    "creatureSlug": "bolty",
+    "createdAt": "2026-09-15T12:45:00.000Z",
+    "likes": [
+      "user-2",
+      "user-6",
+      "user-7"
+    ],
+    "comments": [
+      {
+        "id": "c-3",
+        "author": {
+          "name": "Matheus Costa",
+          "avatar": "/assets/creatures/glacy.webp",
+          "badge": "Inscrito VIP"
+        },
+        "content": "Verdade, fora que ele quebra escudo de água instantaneamente nos chefes.",
+        "createdAt": "2026-09-15T13:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "post-3",
+    "author": {
+      "name": "Camila Fernandes",
+      "avatar": "/assets/creatures/chirpi.webp",
+      "email": "camila@gamer.com",
+      "badge": "Inscrito VIP"
+    },
+    "title": "📍 Localização secreta do ninho de ovos de Chirpi",
+    "content": "Galera, marquem no mapa interativo: logo atrás do penhasco das Planícies Ventosas tem um ninho escondido entre as pedras com ovos de nível Elite! Consegui tirar um Chirpi com atributo de Ataque com bônus de 15%.",
+    "category": "dicas",
+    "creatureSlug": "chirpi",
+    "createdAt": "2026-09-15T14:10:00.000Z",
+    "likes": [
+      "user-1",
+      "user-8"
+    ],
+    "comments": []
+  }
+]

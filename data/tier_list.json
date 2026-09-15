@@ -1,0 +1,142 @@
+{
+  "tiers": [
+    "S+",
+    "S",
+    "A",
+    "B"
+  ],
+  "roles": [
+    "DPS",
+    "Break",
+    "Heal",
+    "Support"
+  ],
+  "items": [
+    {
+      "slug": "inferlupa",
+      "name": "Inferlupa",
+      "tier": "S+",
+      "role": "DPS",
+      "element": "Fogo",
+      "reason_pt": "DPS de fogo incomparável no meta atual. Habilidade suprema absorve a essência elemental e causa dano massivo em área.",
+      "reason_en": "Top-tier fire DPS in the current meta. Ultimate ability absorbs elemental essence for massive AoE damage."
+    },
+    {
+      "slug": "celestis",
+      "name": "Celestis",
+      "tier": "S+",
+      "role": "Support",
+      "element": "Luz",
+      "reason_pt": "Melhor amplificador de atributos do jogo. Sua aura aumenta o ataque de todos os aliados e concede imunidade a controle de grupo.",
+      "reason_en": "Best stat amplifier in the game. Aura boosts team attack and provides crowd control immunity."
+    },
+    {
+      "slug": "magmarex",
+      "name": "Magmarex",
+      "tier": "S+",
+      "role": "Break",
+      "element": "Fogo",
+      "reason_pt": "Especialista absoluto em quebra de escudos em chefes mundiais e masmorras de alta dificuldade.",
+      "reason_en": "Absolute specialist in shield breaking for world bosses and high-tier dungeons."
+    },
+    {
+      "slug": "malevsera",
+      "name": "Malevsera",
+      "tier": "S+",
+      "role": "DPS",
+      "element": "Trevas",
+      "reason_pt": "Dano contínuo devastador e roubo de vida. Essencial para lutas de longa duração.",
+      "reason_en": "Devastating damage-over-time and lifesteal. Essential for extended boss encounters."
+    },
+    {
+      "slug": "emberpup",
+      "name": "Emberpup",
+      "tier": "S",
+      "role": "DPS",
+      "element": "Fogo",
+      "reason_pt": "Inicial de fogo com progressão extremamente rápida e alta sinergia com outras criaturas de fogo.",
+      "reason_en": "Fire starter with ultra-fast progression and strong synergy with fire allies."
+    },
+    {
+      "slug": "fenmane",
+      "name": "Fenmane",
+      "tier": "S",
+      "role": "Break",
+      "element": "Vento",
+      "reason_pt": "Alta velocidade de ataque que quebra barras de postura com extrema facilidade.",
+      "reason_en": "High attack speed that shreds stance bars with extreme ease."
+    },
+    {
+      "slug": "bonesky",
+      "name": "Bonesky",
+      "tier": "S",
+      "role": "Heal",
+      "element": "Água",
+      "reason_pt": "Cura contínua em área com escudo protetor baseado no HP máximo.",
+      "reason_en": "AoE heal-over-time with a protective barrier scaling on max HP."
+    },
+    {
+      "slug": "dazmand",
+      "name": "Dazmand",
+      "tier": "S",
+      "role": "Support",
+      "element": "Terra",
+      "reason_pt": "Provoca inimigos e reduz o dano sofrido por toda a equipe em 30%.",
+      "reason_en": "Taunts enemies and mitigates team damage by 30%."
+    },
+    {
+      "slug": "blazen",
+      "name": "Blazen",
+      "tier": "A",
+      "role": "DPS",
+      "element": "Fogo",
+      "reason_pt": "Excelente opção de dano rápido para a fase inicial e intermediária do jogo.",
+      "reason_en": "Great burst damage pick for early and mid-game content."
+    },
+    {
+      "slug": "coraliz",
+      "name": "Coraliz",
+      "tier": "A",
+      "role": "Heal",
+      "element": "Água",
+      "reason_pt": "Cura direta potente com remoção de efeitos negativos.",
+      "reason_en": "Potent single-target burst heal with debuff cleansing."
+    },
+    {
+      "slug": "geoclaw",
+      "name": "Geoclaw",
+      "tier": "A",
+      "role": "Break",
+      "element": "Terra",
+      "reason_pt": "Golpes pesados com efeito de atordoamento frequente.",
+      "reason_en": "Heavy impact blows with frequent stun procs."
+    },
+    {
+      "slug": "flutternym",
+      "name": "Flutternym",
+      "tier": "A",
+      "role": "Support",
+      "element": "Grama",
+      "reason_pt": "Acelera a recuperação de energia de habilidade de todos os membros do grupo.",
+      "reason_en": "Accelerates skill energy recovery for all team members."
+    },
+    {
+      "slug": "bolty",
+      "name": "Bolty",
+      "tier": "B",
+      "role": "DPS",
+      "element": "Elétrico",
+      "reason_pt": "Bom dano elétrico rápido, porém com baixa durabilidade defensiva.",
+      "reason_en": "Good burst lightning damage, but fragile defenses."
+    },
+    {
+      "slug": "dewy",
+      "name": "Dewy",
+      "tier": "B",
+      "role": "Heal",
+      "element": "Água",
+      "reason_pt": "Curador inicial acessível e confiável até o meio da campanha.",
+      "reason_en": "Accessible early-game healer reliable until mid-campaign."
+    }
+  ]
+}

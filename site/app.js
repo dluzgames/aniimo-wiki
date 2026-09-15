@@ -229,7 +229,15 @@ const state = {
   selectedFilterStage: 'all',
   searchQuery: '',
   versusCreature1: 'inferlupa',
-  versusCreature2: 'celestis'
+  versusCreature2: 'celestis',
+  tierListData: null,
+  tierListFilter: 'all',
+  tierListSearch: '',
+  myTierVotes: JSON.parse(localStorage.getItem('aniimo_my_votes') || '{}'),
+  communityPosts: [],
+  communityCategory: 'all',
+  communitySort: 'recent',
+  myLikedPosts: new Set(JSON.parse(localStorage.getItem('aniimo_my_likes') || '[]'))
 };
 
 // INITIALIZATION
@@ -252,6 +260,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   setupMap();
   setupTypeChart();
   setupTierList();
+  setupCommunity();
   setupItemsAndGuides();
 
   // Initial Route Dispatch
@@ -364,6 +373,9 @@ function handleRouting() {
     'tabela-tipos': 'tabela-tipos',
     'type-chart': 'tabela-tipos',
     'tier-list': 'tier-list',
+    'tierlist': 'tier-list',
+    'comunidade': 'comunidade',
+    'community': 'comunidade',
     'itens': 'itens',
     'items': 'itens',
     'guias': 'guias',
@@ -387,7 +399,8 @@ function handleRouting() {
     'comparador': 'Comparador de Criaturas (Versus Mode) — Aniimo DLuz Brasil',
     'mapa': 'Mapa Interativo de Idília (Planícies Ventosas) — Aniimo DLuz Brasil',
     'tabela-tipos': 'Tabela de Tipos e Matchup Elemental — Aniimo DLuz Brasil',
-    'tier-list': 'Tier List Oficial do Meta — Aniimo DLuz Brasil',
+    'tier-list': 'Tier List Oficial do Meta (Votação da Comunidade) — Aniimo DLuz Brasil',
+    'comunidade': 'Clube de Inscritos & Comunidade Aniimo — Aniimo DLuz Brasil',
     'itens': 'Banco de Itens e Dispositivos — Aniimo DLuz Brasil',
     'guias': 'Guias e Requisitos de Sistema — Aniimo DLuz Brasil'
   };
@@ -402,6 +415,8 @@ function showSection(target) {
   if (activeSection) {
     activeSection.classList.add('active');
     if (target === 'mapa') { setTimeout(() => window.dispatchEvent(new Event('resize')), 50); }
+    if (target === 'tier-list') { onTierListOpened(); }
+    if (target === 'comunidade') { onCommunityOpened(); }
   }
 
   // Update active nav link
@@ -1333,57 +1348,997 @@ function calculateTypeMatchup() {
   }
 }
 
-// TIER LIST
-function setupTierList() {
-  renderTierList();
+// ============================================================================
+// ANIIMO DLUZ — INTERACTIVE TIER LIST & COMMUNITY SUBSCRIBER HUB
+// ============================================================================
 
-  document.querySelectorAll('.tier-role-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.tier-role-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const role = btn.getAttribute('data-role');
-      filterTierList(role);
+const ELEMENT_LABELS = {
+  fogo: 'Fogo',
+  fire: 'Fogo',
+  agua: 'Água',
+  water: 'Água',
+  grama: 'Grama',
+  grass: 'Grama',
+  eletrico: 'Elétrico',
+  electric: 'Elétrico',
+  vento: 'Vento',
+  wind: 'Vento',
+  terra: 'Terra',
+  earth: 'Terra',
+  gelo: 'Gelo',
+  ice: 'Gelo',
+  luz: 'Luz',
+  light: 'Luz',
+  trevas: 'Trevas',
+  dark: 'Trevas'
+};
+
+const ELEMENT_ICONS = {
+  fogo: '🔥',
+  fire: '🔥',
+  agua: '💧',
+  water: '💧',
+  grama: '🌿',
+  grass: '🌿',
+  eletrico: '⚡',
+  electric: '⚡',
+  vento: '🌪️',
+  wind: '🌪️',
+  terra: '🪨',
+  earth: '🪨',
+  gelo: '❄️',
+  ice: '❄️',
+  luz: '✨',
+  light: '✨',
+  trevas: '🌑',
+  dark: '🌑'
+};
+
+function formatRelativeTime(dateString) {
+  try {
+    const diff = Math.floor((Date.now() - new Date(dateString).getTime()) / 1000);
+    if (diff < 60) return 'agora há pouco';
+    if (diff < 3600) return `há ${Math.floor(diff / 60)} min`;
+    if (diff < 86400) return `há ${Math.floor(diff / 3600)}h`;
+    if (diff < 604800) return `há ${Math.floor(diff / 86400)}d`;
+    return new Date(dateString).toLocaleDateString('pt-BR');
+  } catch(e) {
+    return 'recentemente';
+  }
+}
+
+// ----------------------------------------------------------------------------
+// 1. TIER LIST CONTROLLER
+// ----------------------------------------------------------------------------
+async function onTierListOpened() {
+  if (!state.tierListData) {
+    await loadTierListData();
+  } else {
+    renderTierListBoards();
+  }
+}
+
+async function loadTierListData() {
+  try {
+    const res = await fetch('/api/tier-list/votes');
+    if (res.ok) {
+      state.tierListData = await res.json();
+    } else {
+      const fb = await fetch('/data/tier_list_data.json');
+      state.tierListData = await fb.json();
+    }
+  } catch (err) {
+    console.warn('API /api/tier-list/votes not available, using fallback:', err);
+    try {
+      const fb = await fetch('/data/tier_list_data.json');
+      state.tierListData = await fb.json();
+    } catch (e2) {
+      console.error('Failed to load tier_list_data.json:', e2);
+      state.tierListData = [];
+    }
+  }
+  renderTierListBoards();
+}
+
+function setupTierList() {
+  // Load data in background
+  loadTierListData();
+
+  // Tab switching: Community Vote vs Editorial Meta
+  const btnCommTab = document.getElementById('tl-tab-community');
+  const btnEditTab = document.getElementById('tl-tab-editorial');
+  const boardComm = document.getElementById('tl-board-community');
+  const boardEdit = document.getElementById('tl-board-editorial');
+
+  if (btnCommTab && btnEditTab && boardComm && boardEdit) {
+    btnCommTab.addEventListener('click', () => {
+      btnCommTab.classList.add('active');
+      btnEditTab.classList.remove('active');
+      boardComm.style.display = 'block';
+      boardEdit.style.display = 'none';
+    });
+
+    btnEditTab.addEventListener('click', () => {
+      btnEditTab.classList.add('active');
+      btnCommTab.classList.remove('active');
+      boardComm.style.display = 'none';
+      boardEdit.style.display = 'block';
+    });
+  }
+
+  // Element filter chips
+  document.querySelectorAll('.tl-filter-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('.tl-filter-chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      state.tierListFilter = chip.getAttribute('data-element') || 'all';
+      renderCommunityTierBoard();
     });
   });
+
+  // Search input
+  const searchInput = document.getElementById('tl-search-input');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      state.tierListSearch = e.target.value.toLowerCase().trim();
+      renderCommunityTierBoard();
+    });
+  }
+
+  // Setup Vote Modal Listeners
+  setupTierVoteModal();
 }
 
-function filterTierList(role) {
-  if (!state.tierList) return;
-  const filtered = role === 'all' 
-    ? state.tierList.items 
-    : state.tierList.items.filter(i => i.role.toLowerCase() === role.toLowerCase());
-  renderTierRows(filtered);
+function renderTierListBoards() {
+  if (!state.tierListData || !state.tierListData.length) return;
+  renderCommunityTierBoard();
+  updateTierListStats();
 }
 
-function renderTierList() {
-  if (!state.tierList) return;
-  renderTierRows(state.tierList.items);
-}
+function renderCommunityTierBoard() {
+  if (!state.tierListData) return;
 
-function renderTierRows(items) {
-  const tiers = ["S+", "S", "A", "B"];
+  const tiers = ["S+", "S", "A", "B", "C", "D"];
+  const filterElem = state.tierListFilter.toLowerCase();
+  const search = state.tierListSearch.toLowerCase();
+
   tiers.forEach(t => {
-    const container = document.getElementById(`tier-content-${t.replace('+', '-plus').toLowerCase()}`);
+    // getElementById handles + safely
+    const container = document.getElementById(`tiles-tier-${t}`);
     if (!container) return;
 
-    const tierItems = items.filter(i => i.tier === t);
-    container.innerHTML = tierItems.map(item => `
-      <div class="tier-creature-item" data-slug="${item.slug}">
-        <img class="tier-creature-img" src="/assets/creatures/${item.slug}.webp" alt="${item.name}" />
-        <span class="tier-creature-name">${item.name}</span>
-        <small style="font-size:0.68rem; color:var(--ink-muted)">${item.role}</small>
-      </div>
-    `).join('');
+    const matchingCreatures = state.tierListData.filter(item => {
+      // Check tier
+      const currentTier = calculateItemTopTier(item);
+      if (currentTier !== t) return false;
 
-    container.querySelectorAll('.tier-creature-item').forEach(card => {
+      // Check element
+      if (filterElem !== 'all') {
+        const el1 = (item.element || '').toLowerCase();
+        const el2 = (item.element2 || '').toLowerCase();
+        const elemLabel = (ELEMENT_LABELS[filterElem] || filterElem).toLowerCase();
+        if (el1 !== filterElem && el2 !== filterElem && el1 !== elemLabel && el2 !== elemLabel) {
+          return false;
+        }
+      }
+
+      // Check search
+      if (search) {
+        const nameMatch = item.name.toLowerCase().includes(search);
+        const slugMatch = item.slug.toLowerCase().includes(search);
+        if (!nameMatch && !slugMatch) return false;
+      }
+
+      return true;
+    });
+
+    if (matchingCreatures.length === 0) {
+      container.innerHTML = `<span class="tl-empty-tier">Nenhuma criatura nesta faixa com os filtros atuais</span>`;
+      return;
+    }
+
+    container.innerHTML = matchingCreatures.map(item => {
+      const votesObj = item.votes || {};
+      const totalVotes = Object.values(votesObj).reduce((a, b) => a + b, 0);
+      const myVote = state.myTierVotes[item.slug];
+      const elem = item.element || 'fire';
+      const icon = ELEMENT_ICONS[elem] || '🐾';
+
+      return `
+        <div class="tl-card" data-slug="${item.slug}" title="Clique para votar ou ver detalhes de ${item.name}">
+          <div class="tl-card-avatar-wrap">
+            <img class="tl-card-img" 
+                 src="/assets/creatures/${item.slug}.webp" 
+                 alt="${item.name}" 
+                 loading="lazy"
+                 onerror="this.onerror=null; this.src='/assets/creatures/${item.slug}.png'; this.onerror=function(){this.src='/assets/dluz-logo.png';};" />
+            <span class="tl-card-elem-badge" title="${ELEMENT_LABELS[elem] || elem}">${icon}</span>
+            ${myVote ? `<span class="tl-card-myvote-pill">Seu: ${myVote}</span>` : ''}
+          </div>
+          <span class="tl-card-name">${item.name}</span>
+          <span class="tl-card-votes">${totalVotes} votos</span>
+        </div>
+      `;
+    }).join('');
+
+    // Attach click listeners to open vote modal
+    container.querySelectorAll('.tl-card').forEach(card => {
       card.addEventListener('click', () => {
         const slug = card.getAttribute('data-slug');
-        const c = state.creatures.find(cr => cr.slug === slug);
-        if (c) openCreatureModal(c);
+        openTierVoteModal(slug);
       });
     });
   });
 }
+
+function calculateItemTopTier(item) {
+  if (!item.votes) return item.tier || 'B';
+  let topTier = 'B';
+  let maxVotes = -1;
+  const tiersOrder = ["S+", "S", "A", "B", "C", "D"];
+  for (const t of tiersOrder) {
+    const v = item.votes[t] || 0;
+    if (v > maxVotes) {
+      maxVotes = v;
+      topTier = t;
+    }
+  }
+  return topTier;
+}
+
+function updateTierListStats() {
+  if (!state.tierListData) return;
+  let totalVotes = 0;
+  let topCreature = null;
+  let maxV = -1;
+
+  state.tierListData.forEach(c => {
+    const votesObj = c.votes || {};
+    const sum = Object.values(votesObj).reduce((a, b) => a + b, 0);
+    totalVotes += sum;
+    if (sum > maxV) {
+      maxV = sum;
+      topCreature = c;
+    }
+  });
+
+  const totalVotesEl = document.getElementById('tl-total-votes');
+  if (totalVotesEl) totalVotesEl.textContent = totalVotes.toLocaleString('pt-BR');
+
+  const totalCreaturesEl = document.getElementById('tl-total-creatures');
+  if (totalCreaturesEl) totalCreaturesEl.textContent = state.tierListData.length.toString();
+
+  const topCreatureEl = document.getElementById('tl-top-creature');
+  if (topCreatureEl && topCreature) {
+    topCreatureEl.textContent = `${topCreature.name} (${maxV} votos)`;
+  }
+}
+
+// ----------------------------------------------------------------------------
+// TIER VOTE MODAL CONTROLLER
+// ----------------------------------------------------------------------------
+let currentVotingSlug = null;
+let currentSelectedVoteTier = null;
+
+function setupTierVoteModal() {
+  const modal = document.getElementById('modal-tier-vote');
+  const closeBtn = document.getElementById('modal-vote-close');
+  const submitBtn = document.getElementById('btn-submit-tier-vote');
+
+  if (closeBtn && modal) {
+    closeBtn.addEventListener('click', () => {
+      modal.classList.remove('open');
+    });
+  }
+
+  // Click outside to close
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('open');
+    }
+  });
+
+  // Vote Tier selector buttons
+  document.querySelectorAll('.vote-tier-opt').forEach(opt => {
+    opt.addEventListener('click', () => {
+      document.querySelectorAll('.vote-tier-opt').forEach(o => o.classList.remove('selected'));
+      opt.classList.add('selected');
+      currentSelectedVoteTier = opt.getAttribute('data-tier');
+    });
+  });
+
+  // Submit vote
+  if (submitBtn) {
+    submitBtn.addEventListener('click', async () => {
+      if (!currentVotingSlug || !currentSelectedVoteTier) {
+        showToast('Selecione uma faixa de Tier (S+, S, A, B, C ou D) para votar!', 'warning');
+        return;
+      }
+
+      // Subscriber Auth check
+      if (typeof Auth !== 'undefined' && !Auth.isLoggedIn()) {
+        Auth.openLoginModal();
+        showToast('Faça login com sua conta Google de inscrito para votar!', 'info');
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Registrando voto...';
+
+      const user = (typeof Auth !== 'undefined' && Auth.getUser()) || {
+        id: 'anon_' + Date.now(),
+        name: 'Inscrito DLuz'
+      };
+
+      try {
+        const res = await fetch('/api/tier-list/vote', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            slug: currentVotingSlug,
+            tier: currentSelectedVoteTier,
+            user: user
+          })
+        });
+
+        if (res.ok) {
+          const result = await res.json();
+          // Update local state item
+          const idx = state.tierListData.findIndex(i => i.slug === currentVotingSlug);
+          if (idx !== -1 && result.item) {
+            state.tierListData[idx] = result.item;
+          }
+        } else {
+          throw new Error('Fallback local vote');
+        }
+      } catch (err) {
+        // Local fallback if offline
+        const item = state.tierListData.find(i => i.slug === currentVotingSlug);
+        if (item) {
+          if (!item.votes) item.votes = { 'S+': 0, S: 0, A: 0, B: 0, C: 0, D: 0 };
+          item.votes[currentSelectedVoteTier] = (item.votes[currentSelectedVoteTier] || 0) + 1;
+          item.tier = calculateItemTopTier(item);
+        }
+      }
+
+      // Record in user's localStorage
+      state.myTierVotes[currentVotingSlug] = currentSelectedVoteTier;
+      localStorage.setItem('aniimo_my_votes', JSON.stringify(state.myTierVotes));
+
+      showToast(`Voto registrado com sucesso! Você votou ${currentSelectedVoteTier} para esta criatura.`, 'success');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Confirmar Voto Oficial';
+
+      if (modal) modal.classList.remove('open');
+      renderCommunityTierBoard();
+      updateTierListStats();
+    });
+  }
+}
+
+function openTierVoteModal(slug) {
+  const item = state.tierListData && state.tierListData.find(i => i.slug === slug);
+  if (!item) return;
+
+  currentVotingSlug = slug;
+  const modal = document.getElementById('modal-tier-vote');
+  if (!modal) return;
+
+  const imgEl = document.getElementById('vote-creature-img');
+  const nameEl = document.getElementById('vote-creature-name');
+  const metaEl = document.getElementById('vote-creature-meta');
+  const barsContainer = document.getElementById('vote-distribution-bars');
+
+  if (imgEl) {
+    imgEl.src = `/assets/creatures/${item.slug}.webp`;
+    imgEl.onerror = function() {
+      this.onerror = null;
+      this.src = `/assets/creatures/${item.slug}.png`;
+      this.onerror = function() { this.src = '/assets/dluz-logo.png'; };
+    };
+  }
+  if (nameEl) nameEl.textContent = item.name;
+  if (metaEl) {
+    const elemName = ELEMENT_LABELS[item.element] || item.element;
+    const elemIcon = ELEMENT_ICONS[item.element] || '🐾';
+    metaEl.innerHTML = `<span>${elemIcon} ${elemName}</span> • <span>Tier Atual: <strong>${item.tier || calculateItemTopTier(item)}</strong></span>`;
+  }
+
+  // Pre-select user's existing vote or default to S
+  const userVote = state.myTierVotes[slug] || item.tier || 'A';
+  currentSelectedVoteTier = userVote;
+  document.querySelectorAll('.vote-tier-opt').forEach(opt => {
+    if (opt.getAttribute('data-tier') === userVote) {
+      opt.classList.add('selected');
+    } else {
+      opt.classList.remove('selected');
+    }
+  });
+
+  // Render Vote Distribution Bars
+  if (barsContainer) {
+    const votes = item.votes || { 'S+': 10, S: 20, A: 30, B: 15, C: 5, D: 2 };
+    const total = Object.values(votes).reduce((a, b) => a + b, 0) || 1;
+    const tiers = ['S+', 'S', 'A', 'B', 'C', 'D'];
+
+    barsContainer.innerHTML = tiers.map(t => {
+      const count = votes[t] || 0;
+      const pct = Math.round((count / total) * 100);
+      return `
+        <div class="vote-bar-row">
+          <span class="vote-bar-label tier-${t.replace('+', '-plus').toLowerCase()}">${t}</span>
+          <div class="vote-bar-track">
+            <div class="vote-bar-fill fill-${t.replace('+', '-plus').toLowerCase()}" style="width: ${pct}%;"></div>
+          </div>
+          <span class="vote-bar-pct">${pct}% <small>(${count})</small></span>
+        </div>
+      `;
+    }).join('');
+  }
+
+  modal.classList.add('open');
+}
+
+
+// ----------------------------------------------------------------------------
+// 2. SUBSCRIBER COMMUNITY FEED CONTROLLER
+// ----------------------------------------------------------------------------
+async function onCommunityOpened() {
+  if (!state.communityPosts || !state.communityPosts.length) {
+    await loadCommunityData();
+  } else {
+    renderCommunityFeed();
+  }
+  updateCommunitySidebar();
+}
+
+async function loadCommunityData() {
+  try {
+    const res = await fetch('/api/community/posts');
+    if (res.ok) {
+      state.communityPosts = await res.json();
+    } else {
+      const fb = await fetch('/data/community_seed.json');
+      state.communityPosts = await fb.json();
+    }
+  } catch (err) {
+    console.warn('API /api/community/posts not reachable, loading seed:', err);
+    try {
+      const fb = await fetch('/data/community_seed.json');
+      state.communityPosts = await fb.json();
+    } catch (e2) {
+      state.communityPosts = [];
+    }
+  }
+  renderCommunityFeed();
+  updateCommunitySidebar();
+}
+
+function setupCommunity() {
+  // Category tabs
+  document.querySelectorAll('.comm-filter-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('.comm-filter-chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      state.communityCategory = chip.getAttribute('data-category') || 'all';
+      renderCommunityFeed();
+    });
+  });
+
+  // Sort dropdown
+  const sortSelect = document.getElementById('comm-sort-select');
+  if (sortSelect) {
+    sortSelect.addEventListener('change', (e) => {
+      state.communitySort = e.target.value;
+      renderCommunityFeed();
+    });
+  }
+
+  // Create post modal triggers
+  const btnCreate = document.getElementById('btn-create-post-trigger');
+  const modalNewPost = document.getElementById('modal-new-post');
+  const btnCancelPost = document.getElementById('btn-cancel-post');
+  const formNewPost = document.getElementById('form-new-post');
+
+  if (btnCreate && modalNewPost) {
+    btnCreate.addEventListener('click', () => {
+      if (typeof Auth !== 'undefined' && !Auth.isLoggedIn()) {
+        Auth.openLoginModal();
+        showToast('Faça login com sua conta Google para publicar na comunidade!', 'info');
+        return;
+      }
+      populateCreatureSelectDropdown();
+      modalNewPost.classList.add('open');
+    });
+  }
+
+  if (btnCancelPost && modalNewPost) {
+    btnCancelPost.addEventListener('click', () => {
+      modalNewPost.classList.remove('open');
+    });
+  }
+
+  window.addEventListener('click', (e) => {
+    if (e.target === modalNewPost) {
+      modalNewPost.classList.remove('open');
+    }
+  });
+
+  // New Post Submission
+  if (formNewPost) {
+    formNewPost.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      if (typeof Auth !== 'undefined' && !Auth.isLoggedIn()) {
+        Auth.openLoginModal();
+        showToast('Faça login para publicar!', 'warning');
+        return;
+      }
+
+      const user = Auth.getUser();
+      const title = document.getElementById('post-input-title').value.trim();
+      const category = document.getElementById('post-select-category').value;
+      const creatureSlug = document.getElementById('post-select-creature').value || null;
+      const content = document.getElementById('post-input-content').value.trim();
+      const tagsRaw = document.getElementById('post-input-tags').value.trim();
+
+      if (!title || !content) {
+        showToast('Preencha o título e o conteúdo da postagem.', 'warning');
+        return;
+      }
+
+      const tags = tagsRaw ? tagsRaw.split(',').map(t => t.trim().replace(/^#/, '')).filter(Boolean) : [];
+
+      const submitBtn = formNewPost.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Publicando...';
+      }
+
+      const newPostPayload = {
+        title,
+        content,
+        category,
+        creatureSlug,
+        tags,
+        author: user
+      };
+
+      try {
+        const res = await fetch('/api/community/posts', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(newPostPayload)
+        });
+
+        if (res.ok) {
+          const created = await res.json();
+          state.communityPosts.unshift(created);
+        } else {
+          throw new Error('API offline');
+        }
+      } catch (err) {
+        // Offline fallback
+        const mockCreated = {
+          id: 'post-' + Date.now(),
+          ...newPostPayload,
+          createdAt: new Date().toISOString(),
+          likes: [],
+          comments: []
+        };
+        state.communityPosts.unshift(mockCreated);
+      }
+
+      formNewPost.reset();
+      if (modalNewPost) modalNewPost.classList.remove('open');
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Publicar no Clube';
+      }
+
+      showToast('Publicação compartilhada com sucesso no Clube de Inscritos!', 'success');
+      renderCommunityFeed();
+      updateCommunitySidebar();
+    });
+  }
+
+  // Pre-fetch community data
+  loadCommunityData();
+}
+
+function populateCreatureSelectDropdown() {
+  const select = document.getElementById('post-select-creature');
+  if (!select || select.children.length > 2) return;
+
+  const creatures = state.creatures || [];
+  if (!creatures.length) return;
+
+  const sorted = [...creatures].sort((a, b) => a.name_pt.localeCompare(b.name_pt));
+  sorted.forEach(c => {
+    const opt = document.createElement('option');
+    opt.value = c.slug;
+    opt.textContent = `${c.name_pt} (#${c.number})`;
+    select.appendChild(opt);
+  });
+}
+
+function renderCommunityFeed() {
+  const container = document.getElementById('comm-posts-stream');
+  if (!container) return;
+
+  let posts = [...(state.communityPosts || [])];
+
+  // Category filter
+  if (state.communityCategory !== 'all') {
+    posts = posts.filter(p => p.category === state.communityCategory);
+  }
+
+  // Sorting
+  if (state.communitySort === 'recent') {
+    posts.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+  } else if (state.communitySort === 'popular') {
+    posts.sort((a, b) => (b.likes ? b.likes.length : 0) - (a.likes ? a.likes.length : 0));
+  } else if (state.communitySort === 'comments') {
+    posts.sort((a, b) => (b.comments ? b.comments.length : 0) - (a.comments ? a.comments.length : 0));
+  }
+
+  if (posts.length === 0) {
+    container.innerHTML = `
+      <div class="comm-empty-state">
+        <div class="comm-empty-icon">💬</div>
+        <h3>Nenhuma publicação encontrada</h3>
+        <p>Seja o primeiro a compartilhar uma análise, build ou dúvida com a comunidade!</p>
+        <button class="btn btn-primary" onclick="document.getElementById('btn-create-post-trigger').click()">
+          ✍️ Criar Primeira Publicação
+        </button>
+      </div>
+    `;
+    return;
+  }
+
+  const currentUserId = typeof Auth !== 'undefined' && Auth.getUser() ? Auth.getUser().id : null;
+
+  container.innerHTML = posts.map(post => {
+    const isLiked = (post.likes && currentUserId && post.likes.includes(currentUserId)) || 
+                    state.myLikedPosts.has(post.id);
+    const likeCount = (post.likes ? post.likes.length : 0);
+    const comments = post.comments || [];
+    const relativeTime = formatRelativeTime(post.createdAt);
+    const categoryName = {
+      builds: 'Build & Guia',
+      meta: 'Tier & Meta',
+      duvidas: 'Dúvida',
+      fanart: 'Arte & Captura',
+      guias: 'Tutorial',
+      geral: 'Comunidade'
+    }[post.category] || post.category;
+
+    let creatureTagHtml = '';
+    if (post.creatureSlug) {
+      creatureTagHtml = `
+        <div class="comm-card-creature-tag">
+          <img src="/assets/creatures/${post.creatureSlug}.webp" 
+               alt="${post.creatureSlug}" 
+               onerror="this.src='/assets/creatures/${post.creatureSlug}.png'; this.onerror=function(){this.src='/assets/dluz-logo.png';};" />
+          <span>${post.creatureSlug.toUpperCase()}</span>
+        </div>
+      `;
+    }
+
+    return `
+      <article class="comm-card" id="comm-post-${post.id}">
+        <header class="comm-card-header">
+          <div class="comm-author-box">
+            <img src="${post.author.avatar || '/assets/dluz-logo.png'}" 
+                 alt="${post.author.name}" 
+                 class="comm-author-avatar"
+                 onerror="this.src='/assets/dluz-logo.png';" />
+            <div>
+              <div class="comm-author-name-row">
+                <strong class="comm-author-name">${post.author.name}</strong>
+                <span class="comm-author-badge">${post.author.badge || 'Inscrito VIP'}</span>
+              </div>
+              <span class="comm-post-time">${relativeTime}</span>
+            </div>
+          </div>
+          <span class="comm-category-pill pill-${post.category}">${categoryName}</span>
+        </header>
+
+        <div class="comm-card-body">
+          <h3 class="comm-post-title">${escapeHtml(post.title)}</h3>
+          ${creatureTagHtml}
+          <div class="comm-post-content">${escapeHtml(post.content).replace(/\n/g, '<br>')}</div>
+          ${post.tags && post.tags.length ? `
+            <div class="comm-post-tags">
+              ${post.tags.map(t => `<span class="comm-tag">#${escapeHtml(t)}</span>`).join('')}
+            </div>
+          ` : ''}
+        </div>
+
+        <footer class="comm-card-footer">
+          <button class="comm-action-btn btn-like ${isLiked ? 'active' : ''}" 
+                  data-post-id="${post.id}" 
+                  type="button">
+            <span class="heart-icon">${isLiked ? '❤️' : '🤍'}</span>
+            <span class="like-count">${likeCount}</span>
+          </button>
+
+          <button class="comm-action-btn btn-comments-toggle" 
+                  data-post-id="${post.id}" 
+                  type="button">
+            <span>💬</span>
+            <span class="comment-count">${comments.length} comentários</span>
+          </button>
+
+          <button class="comm-action-btn btn-share-post" 
+                  data-post-id="${post.id}" 
+                  type="button" 
+                  title="Compartilhar link">
+            <span>🔗</span>
+            <span>Compartilhar</span>
+          </button>
+        </footer>
+
+        <!-- Comments Expandable Tray -->
+        <div class="comm-comments-tray" id="comments-tray-${post.id}">
+          <div class="comm-comments-list" id="comments-list-${post.id}">
+            ${comments.map(c => `
+              <div class="comm-comment-item">
+                <img src="${c.author.avatar || '/assets/dluz-logo.png'}" 
+                     class="comm-comment-avatar" 
+                     onerror="this.src='/assets/dluz-logo.png';" />
+                <div class="comm-comment-body">
+                  <div class="comm-comment-header">
+                    <strong>${c.author.name}</strong>
+                    <span class="comm-comment-badge">${c.author.badge || 'VIP'}</span>
+                    <small>${formatRelativeTime(c.createdAt)}</small>
+                  </div>
+                  <p class="comm-comment-text">${escapeHtml(c.content)}</p>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+
+          <!-- Add comment input form -->
+          <div class="comm-add-comment-row">
+            <input type="text" 
+                   class="comm-comment-input" 
+                   id="input-comment-${post.id}" 
+                   placeholder="Escreva um comentário como inscrito..." 
+                   maxlength="300" />
+            <button class="btn btn-sm btn-primary btn-submit-comment" data-post-id="${post.id}">
+              Comentar
+            </button>
+          </div>
+        </div>
+      </article>
+    `;
+  }).join('');
+
+  attachCommunityEventHandlers(container);
+}
+
+function attachCommunityEventHandlers(container) {
+  // Likes
+  container.querySelectorAll('.btn-like').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      if (typeof Auth !== 'undefined' && !Auth.isLoggedIn()) {
+        Auth.openLoginModal();
+        showToast('Faça login com sua conta Google para curtir!', 'info');
+        return;
+      }
+
+      const postId = btn.getAttribute('data-post-id');
+      const user = Auth.getUser();
+      const post = state.communityPosts.find(p => p.id === postId);
+      if (!post) return;
+
+      if (!post.likes) post.likes = [];
+      const userIdx = post.likes.indexOf(user.id);
+      let likedNow = false;
+
+      if (userIdx >= 0) {
+        post.likes.splice(userIdx, 1);
+        state.myLikedPosts.delete(postId);
+      } else {
+        post.likes.push(user.id);
+        state.myLikedPosts.add(postId);
+        likedNow = true;
+      }
+
+      localStorage.setItem('aniimo_my_likes', JSON.stringify([...state.myLikedPosts]));
+
+      // Update UI button immediately
+      btn.classList.toggle('active', likedNow);
+      btn.querySelector('.heart-icon').textContent = likedNow ? '❤️' : '🤍';
+      btn.querySelector('.like-count').textContent = post.likes.length;
+
+      // Send to server
+      try {
+        await fetch(`/api/community/posts/${postId}/like`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ userId: user.id })
+        });
+      } catch(e) {}
+    });
+  });
+
+  // Comments Toggle
+  container.querySelectorAll('.btn-comments-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const postId = btn.getAttribute('data-post-id');
+      const tray = document.getElementById(`comments-tray-${postId}`);
+      if (tray) {
+        tray.classList.toggle('open');
+        if (tray.classList.contains('open')) {
+          const input = document.getElementById(`input-comment-${postId}`);
+          if (input) input.focus();
+        }
+      }
+    });
+  });
+
+  // Share button
+  container.querySelectorAll('.btn-share-post').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const postId = btn.getAttribute('data-post-id');
+      const shareUrl = `${window.location.origin}/comunidade#${postId}`;
+      navigator.clipboard.writeText(shareUrl).then(() => {
+        showToast('Link do post copiado para a área de transferência!', 'success');
+      }).catch(() => {
+        showToast('Link: ' + shareUrl, 'info');
+      });
+    });
+  });
+
+  // Add Comment Submit
+  container.querySelectorAll('.btn-submit-comment').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const postId = btn.getAttribute('data-post-id');
+      const input = document.getElementById(`input-comment-${postId}`);
+      if (!input) return;
+
+      const content = input.value.trim();
+      if (!content) return;
+
+      if (typeof Auth !== 'undefined' && !Auth.isLoggedIn()) {
+        Auth.openLoginModal();
+        showToast('Faça login com sua conta Google para comentar!', 'warning');
+        return;
+      }
+
+      const user = Auth.getUser();
+      btn.disabled = true;
+
+      const newComment = {
+        id: 'c-' + Date.now(),
+        author: {
+          name: user.name,
+          avatar: user.avatar,
+          badge: user.badge || 'Inscrito VIP'
+        },
+        content: content,
+        createdAt: new Date().toISOString()
+      };
+
+      const post = state.communityPosts.find(p => p.id === postId);
+      if (post) {
+        if (!post.comments) post.comments = [];
+        post.comments.push(newComment);
+      }
+
+      try {
+        await fetch(`/api/community/posts/${postId}/comments`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            author: user,
+            content: content
+          })
+        });
+      } catch(e) {}
+
+      input.value = '';
+      btn.disabled = false;
+      showToast('Comentário enviado!', 'success');
+
+      // Refresh comment list in place
+      const listEl = document.getElementById(`comments-list-${postId}`);
+      if (listEl) {
+        const item = document.createElement('div');
+        item.className = 'comm-comment-item';
+        item.innerHTML = `
+          <img src="${user.avatar || '/assets/dluz-logo.png'}" 
+               class="comm-comment-avatar" 
+               onerror="this.src='/assets/dluz-logo.png';" />
+          <div class="comm-comment-body">
+            <div class="comm-comment-header">
+              <strong>${user.name}</strong>
+              <span class="comm-comment-badge">${user.badge || 'VIP'}</span>
+              <small>agora mesmo</small>
+            </div>
+            <p class="comm-comment-text">${escapeHtml(content)}</p>
+          </div>
+        `;
+        listEl.appendChild(item);
+      }
+
+      // Update count on toggle button
+      const postCard = document.getElementById(`comm-post-${postId}`);
+      if (postCard && post) {
+        const toggleBtn = postCard.querySelector('.btn-comments-toggle .comment-count');
+        if (toggleBtn) toggleBtn.textContent = `${post.comments.length} comentários`;
+      }
+    });
+  });
+
+  // Enter key in comment input
+  container.querySelectorAll('.comm-comment-input').forEach(input => {
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const postId = input.id.replace('input-comment-', '');
+        const btn = container.querySelector(`.btn-submit-comment[data-post-id="${postId}"]`);
+        if (btn) btn.click();
+      }
+    });
+  });
+}
+
+function updateCommunitySidebar() {
+  const postsCountEl = document.getElementById('comm-stat-posts');
+  if (postsCountEl) {
+    postsCountEl.textContent = (state.communityPosts ? state.communityPosts.length : 0).toString();
+  }
+
+  const usersCountEl = document.getElementById('comm-stat-users');
+  if (usersCountEl) {
+    usersCountEl.textContent = '1.420';
+  }
+
+  const votesCountEl = document.getElementById('comm-stat-votes');
+  if (votesCountEl && state.tierListData) {
+    let sum = 0;
+    state.tierListData.forEach(c => {
+      if (c.votes) sum += Object.values(c.votes).reduce((a, b) => a + b, 0);
+    });
+    votesCountEl.textContent = sum.toLocaleString('pt-BR');
+  }
+
+  const topSidebarList = document.getElementById('comm-sidebar-top-creatures');
+  if (topSidebarList && state.tierListData) {
+    const sorted = [...state.tierListData].sort((a, b) => {
+      const sumA = a.votes ? Object.values(a.votes).reduce((x, y) => x + y, 0) : 0;
+      const sumB = b.votes ? Object.values(b.votes).reduce((x, y) => x + y, 0) : 0;
+      return sumB - sumA;
+    }).slice(0, 4);
+
+    topSidebarList.innerHTML = sorted.map((c, idx) => {
+      const votes = c.votes ? Object.values(c.votes).reduce((x, y) => x + y, 0) : 0;
+      const rankBadges = ['🥇', '🥈', '🥉', '⭐'];
+      return `
+        <li class="comm-top-creature-item" onclick="openTierVoteModal('${c.slug}')">
+          <span class="comm-top-creature-rank">${rankBadges[idx] || (idx+1)}</span>
+          <img src="/assets/creatures/${c.slug}.webp" 
+               class="comm-top-creature-thumb" 
+               onerror="this.src='/assets/creatures/${c.slug}.png'; this.onerror=function(){this.src='/assets/dluz-logo.png';};" />
+          <div class="comm-top-creature-info">
+            <span class="comm-top-creature-name">${c.name}</span>
+            <small class="comm-top-creature-tier">Tier ${c.tier || calculateItemTopTier(c)} • ${votes} votos</small>
+          </div>
+        </li>
+      `;
+    }).join('');
+  }
+}
+
+function escapeHtml(text) {
+  if (!text) return '';
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
 
 // ITEMS & GUIDES
 function setupItemsAndGuides() {
@@ -1423,15 +2378,36 @@ function renderGuides() {
   `).join('');
 }
 
-// TOAST HELPER
-function showToast(msg) {
-  const container = document.getElementById('toast-container');
-  if (!container) return;
+// ENHANCED TOAST HELPER (DLuz Cyber Design)
+window.showToast = function(msg, type = 'info') {
+  let container = document.getElementById('toast-container');
+  if (!container) {
+    container = document.createElement('div');
+    container.id = 'toast-container';
+    container.className = 'toast-container';
+    document.body.appendChild(container);
+  }
+  const icons = {
+    success: '✅',
+    info: '💡',
+    warning: '⚠️',
+    error: '❌'
+  };
   const toast = document.createElement('div');
-  toast.className = 'toast';
-  toast.textContent = msg;
+  toast.className = `toast-item toast-${type}`;
+  toast.innerHTML = `
+    <span class="toast-icon">${icons[type] || '✨'}</span>
+    <span class="toast-msg">${msg}</span>
+  `;
   container.appendChild(toast);
-  setTimeout(() => { toast.remove(); }, 3000);
+  requestAnimationFrame(() => toast.classList.add('visible'));
+  setTimeout(() => {
+    toast.classList.remove('visible');
+    setTimeout(() => toast.remove(), 350);
+  }, 3500);
+};
+function showToast(msg, type = 'info') {
+  window.showToast(msg, type);
 }
 
 // MODAL CLOSE LISTENERS & KEYBOARD ESCAPE

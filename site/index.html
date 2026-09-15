@@ -20,7 +20,7 @@
 <!-- Styles -->
 <link href="/styles.css" rel="stylesheet"/>
 <link href="/assets/map/imap.css" rel="stylesheet"/>
-</head>
+<script async="" defer="" src="https://accounts.google.com/gsi/client"></script></head>
 <body>
 <!-- HEADER -->
 <header class="site-header">
@@ -34,12 +34,12 @@
 <li class="nav-item"><a data-i18n="nav_versus" href="/comparador">Comparador</a></li>
 <li class="nav-item"><a data-i18n="nav_map" href="/mapa">Mapa Interativo</a></li>
 <li class="nav-item"><a data-i18n="nav_type_chart" href="/tabela-tipos">Tabela de Tipos</a></li>
-<li class="nav-item"><a data-i18n="nav_tier_list" href="/tier-list">Tier List</a></li>
+<li class="nav-item"><a data-i18n="nav_tier_list" href="/tier-list">Tier List</a></li><li class="nav-item"><a data-i18n="nav_community" href="/comunidade">💬 Comunidade</a></li>
 <li class="nav-item"><a data-i18n="nav_items" href="/itens">Itens</a></li>
 <li class="nav-item"><a data-i18n="nav_guides" href="/guias">Guias</a></li>
 </ul>
 <!-- Actions -->
-<div class="header-actions">
+<div class="header-actions"><div id="header-auth-container"></div>
 <!-- Quick Search Button (Ctrl+K) -->
 <button aria-label="Buscar" class="search-shortcut-btn" id="search-trigger" title="Atalho: Ctrl+K ou ⌘+K" type="button">
 <svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
@@ -334,44 +334,251 @@ Cada surgimento de Aniimo fica exatamente onde ocorre no jogo. Filtre a lista de
 </section>
 <!-- 7. SECTION: TIER LIST -->
 <section class="app-section" id="section-tier-list">
-<div class="container" style="padding-top: 2.5rem;">
-<div class="section-header">
-<h1 class="section-title" data-i18n="card_tier_title">Tier List do Meta</h1>
-<p class="section-desc">Classificação das criaturas mais fortes para progressão rápida na campanha, chefes mundiais e combate de arena.</p>
+<div class="container" style="padding-top: 2rem;">
+<div class="section-header" style="margin-bottom: 1.5rem;">
+<div class="badge-pill-glow" style="margin-bottom: 0.5rem; display: inline-flex;">🌟 Ranking da Comunidade &amp; Meta Oficial</div>
+<h1 class="section-title">Tier List Aniimo DLuz</h1>
+<p class="section-desc">Classificação em tempo real votada pelos inscritos e análise editorial do meta de combate.</p>
 </div>
-<!-- Role Filter Buttons -->
-<div class="filter-pills-row" style="justify-content: center; margin-bottom: 2rem;">
-<span class="filter-group-label" data-i18n="filter_role">Filtrar por Papel:</span>
-<button class="filter-chip tier-role-btn active" data-i18n="all" data-role="all">Todos</button>
-<button class="filter-chip tier-role-btn" data-role="DPS">⚔️ DPS</button>
-<button class="filter-chip tier-role-btn" data-role="Break">🛡️ Quebra de Escudo</button>
-<button class="filter-chip tier-role-btn" data-role="Heal">💚 Cura</button>
-<button class="filter-chip tier-role-btn" data-role="Support">🪄 Suporte</button>
+<!-- Tab Switcher: Community Vote vs Editorial Board -->
+<div class="tl-main-tabs">
+<button class="tl-tab-btn active" data-target="community" id="tl-tab-community">
+<span class="tab-icon">🌟</span>
+<span>Votação da Comunidade</span>
+<span class="tab-badge" id="tl-votes-total-badge">220 Aniimos</span>
+</button>
+<button class="tl-tab-btn" data-target="editorial" id="tl-tab-editorial">
+<span class="tab-icon">📋</span>
+<span>Quadro Editorial &amp; Meta</span>
+<span class="tab-badge" style="background: rgba(0, 240, 255, 0.2); color: #00f0ff;">PvE &amp; PvP</span>
+</button>
 </div>
-<div class="tier-list-container">
-<!-- S+ Tier -->
-<div class="tier-row">
-<div class="tier-header tier-s-plus">S+</div>
-<div class="tier-content" id="tier-content-s-plus"></div>
+<!-- TAB 1: COMMUNITY VOTE -->
+<div class="tl-panel active" id="tl-panel-community">
+<!-- Element Filter Chips -->
+<div class="tl-element-filters" id="tl-element-filters">
+<button class="tl-filter-chip active" data-element="all">✨ Todos</button>
+<button class="tl-filter-chip" data-element="fire">🔥 Fogo</button>
+<button class="tl-filter-chip" data-element="water">💧 Água</button>
+<button class="tl-filter-chip" data-element="grass">🌿 Planta</button>
+<button class="tl-filter-chip" data-element="electric">⚡ Raio</button>
+<button class="tl-filter-chip" data-element="ice">❄️ Gelo</button>
+<button class="tl-filter-chip" data-element="earth">🪨 Terra</button>
+<button class="tl-filter-chip" data-element="wind">🌪️ Vento</button>
+<button class="tl-filter-chip" data-element="light">☀️ Luz</button>
+<button class="tl-filter-chip" data-element="dark">🌑 Sombra</button>
 </div>
-<!-- S Tier -->
-<div class="tier-row">
-<div class="tier-header tier-s">S</div>
-<div class="tier-content" id="tier-content-s"></div>
+<!-- Community Board Rows (S+, S, A, B, C, D) -->
+<div class="ct-board" id="ct-board-rows">
+<!-- S+ Row -->
+<div class="ct-row ct-row--s-plus" data-tier="S+">
+<div class="ct-row__header">
+<div class="ct-row__tier-badge tier-badge-splus">S+</div>
+<div class="ct-row__info">
+<span class="ct-row__label">Favoritos da Comunidade</span>
+<span class="ct-row__count" id="count-tier-S+">0</span>
 </div>
-<!-- A Tier -->
-<div class="tier-row">
-<div class="tier-header tier-a">A</div>
-<div class="tier-content" id="tier-content-a"></div>
 </div>
-<!-- B Tier -->
-<div class="tier-row">
-<div class="tier-header tier-b">B</div>
-<div class="tier-content" id="tier-content-b"></div>
+<div class="ct-row__tiles" id="tiles-tier-S+"></div>
+</div>
+<!-- S Row -->
+<div class="ct-row ct-row--s" data-tier="S">
+<div class="ct-row__header">
+<div class="ct-row__tier-badge tier-badge-s">S</div>
+<div class="ct-row__info">
+<span class="ct-row__label">Altamente Avaliados</span>
+<span class="ct-row__count" id="count-tier-S">0</span>
+</div>
+</div>
+<div class="ct-row__tiles" id="tiles-tier-S"></div>
+</div>
+<!-- A Row -->
+<div class="ct-row ct-row--a" data-tier="A">
+<div class="ct-row__header">
+<div class="ct-row__tier-badge tier-badge-a">A</div>
+<div class="ct-row__info">
+<span class="ct-row__label">Fortes no Meta</span>
+<span class="ct-row__count" id="count-tier-A">0</span>
+</div>
+</div>
+<div class="ct-row__tiles" id="tiles-tier-A"></div>
+</div>
+<!-- B Row -->
+<div class="ct-row ct-row--b" data-tier="B">
+<div class="ct-row__header">
+<div class="ct-row__tier-badge tier-badge-b">B</div>
+<div class="ct-row__info">
+<span class="ct-row__label">Sólidos &amp; Equilibrados</span>
+<span class="ct-row__count" id="count-tier-B">0</span>
+</div>
+</div>
+<div class="ct-row__tiles" id="tiles-tier-B"></div>
+</div>
+<!-- C Row -->
+<div class="ct-row ct-row--c" data-tier="C">
+<div class="ct-row__header">
+<div class="ct-row__tier-badge tier-badge-c">C</div>
+<div class="ct-row__info">
+<span class="ct-row__label">Situacionais</span>
+<span class="ct-row__count" id="count-tier-C">0</span>
+</div>
+</div>
+<div class="ct-row__tiles" id="tiles-tier-C"></div>
+</div>
+<!-- D Row -->
+<div class="ct-row ct-row--d" data-tier="D">
+<div class="ct-row__header">
+<div class="ct-row__tier-badge tier-badge-d">D</div>
+<div class="ct-row__info">
+<span class="ct-row__label">Nicho Específico</span>
+<span class="ct-row__count" id="count-tier-D">0</span>
+</div>
+</div>
+<div class="ct-row__tiles" id="tiles-tier-D"></div>
+</div>
+</div>
+</div>
+<!-- TAB 2: EDITORIAL BOARD -->
+<div class="tl-panel" id="tl-panel-editorial">
+<!-- Meta Analysis Grid -->
+<div class="editorial-grid">
+<div class="editorial-card">
+<div class="editorial-card-header">
+<span class="card-icon">⚔️</span>
+<h3>Melhores DPS (Dano Bruto)</h3>
+</div>
+<p class="editorial-card-desc">Criaturas com maior taxa de dano crítico por segundo e quebra de linha de frente.</p>
+<div class="editorial-creature-list" id="editorial-list-dps"></div>
+</div>
+<div class="editorial-card">
+<div class="editorial-card-header">
+<span class="card-icon">🛡️</span>
+<h3>Melhores Quebra de Escudo (Break)</h3>
+</div>
+<p class="editorial-card-desc">Essenciais contra chefes mundiais e guardiões de santuário em Idília.</p>
+<div class="editorial-creature-list" id="editorial-list-break"></div>
+</div>
+<div class="editorial-card">
+<div class="editorial-card-header">
+<span class="card-icon">💚</span>
+<h3>Melhores Suporte &amp; Cura (Support)</h3>
+</div>
+<p class="editorial-card-desc">Sustentabilidade para combates prolongados em masmorras e chefes de equipe.</p>
+<div class="editorial-creature-list" id="editorial-list-support"></div>
+</div>
+</div>
+<!-- Beta Ceilings Datamined -->
+<div class="beta-ceilings-box">
+<h3 class="beta-ceilings-title">📊 Tetos de Atributos Máximos (Beta Datamined)</h3>
+<div class="beta-stats-grid">
+<div class="beta-stat-card">
+<span class="stat-lbl">Maior Vida (HP)</span>
+<span class="stat-val stat-hp">2.840 HP</span>
+<span class="stat-creature">Bouldus (Terra)</span>
+</div>
+<div class="beta-stat-card">
+<span class="stat-lbl">Maior Ataque (ATK)</span>
+<span class="stat-val stat-atk">642 ATK</span>
+<span class="stat-creature">Inferlupa / Scorchhowl</span>
+</div>
+<div class="beta-stat-card">
+<span class="stat-lbl">Maior Defesa (DEF)</span>
+<span class="stat-val stat-def">589 DEF</span>
+<span class="stat-creature">Sheldon / Waleetle</span>
+</div>
+<div class="beta-stat-card">
+<span class="stat-lbl">Maior Velocidade (Haste)</span>
+<span class="stat-val stat-spd">420 SPD</span>
+<span class="stat-creature">Bolty / Chirpi</span>
+</div>
+</div>
 </div>
 </div>
 </div>
 </section>
+<section class="app-section" id="section-comunidade">
+<div class="container" style="padding-top: 2rem;">
+<!-- Community Hero Banner -->
+<div class="community-hero">
+<div class="community-hero-content">
+<div class="badge-pill-glow">🔥 Clube Oficial dos Desbravantes</div>
+<h1 class="community-title">Comunidade Aniimo DLuz</h1>
+<p class="community-subtitle">Compartilhe builds, tire dúvidas, mostre suas capturas raras e converse com outros inscritos do canal!</p>
+</div>
+<div class="community-hero-action">
+<button class="btn-create-post" id="btn-open-create-post" type="button">
+<span>✍️ Criar Publicação</span>
+</button>
+</div>
+</div>
+<!-- Community Layout: Feed (Left) + Sidebar (Right) -->
+<div class="community-layout">
+<!-- MAIN FEED -->
+<main class="community-feed">
+<!-- Feed Filter Tabs -->
+<div class="community-tabs">
+<button class="comm-tab-btn active" data-filter="all">🔥 Todos</button>
+<button class="comm-tab-btn" data-filter="trending">⚡ Em Alta</button>
+<button class="comm-tab-btn" data-filter="builds">⚔️ Builds &amp; Equipes</button>
+<button class="comm-tab-btn" data-filter="dicas">💡 Dicas &amp; Guias</button>
+<button class="comm-tab-btn" data-filter="duvidas">❓ Dúvidas</button>
+</div>
+<!-- Posts Stream -->
+<div class="community-posts-stream" id="community-posts-stream">
+<div class="community-loading">Carregando publicações da comunidade...</div>
+</div>
+</main>
+<!-- SIDEBAR -->
+<aside class="community-sidebar">
+<!-- Subscriber Profile Card -->
+<div class="comm-side-card" id="comm-side-profile-card">
+<div class="comm-profile-logged-out" id="comm-profile-logged-out">
+<img class="comm-profile-empty-avatar" src="/assets/dluz-logo.png"/>
+<h4>Olá, Desbravante!</h4>
+<p>Conecte sua conta Google para participar dos debates, curtir e publicar no feed.</p>
+<button class="btn-sidebar-login" onclick="Auth.openLoginModal()" type="button">
+<span>Entrar com Google</span>
+</button>
+</div>
+<div class="comm-profile-logged-in" id="comm-profile-logged-in" style="display:none;">
+<div class="comm-profile-head">
+<img class="comm-side-avatar" id="comm-side-avatar" src=""/>
+<div>
+<h4 id="comm-side-name">Inscrito</h4>
+<span class="badge-pill" id="comm-side-badge">Inscrito VIP</span>
+</div>
+</div>
+<div class="comm-profile-stats">
+<div class="comm-stat-box">
+<span class="stat-num" id="comm-side-my-posts">0</span>
+<span class="stat-tag">Posts</span>
+</div>
+<div class="comm-stat-box">
+<span class="stat-num" id="comm-side-my-votes">0</span>
+<span class="stat-tag">Votos</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Top Aniimos of the Week -->
+<div class="comm-side-card">
+<h4 class="comm-side-title">🏆 Top Aniimos Mais Votados</h4>
+<div class="comm-top-aniimos" id="comm-top-aniimos"></div>
+</div>
+<!-- Rules Card -->
+<div class="comm-side-card comm-rules-card">
+<h4 class="comm-side-title">📜 Regras do Clube DLuz</h4>
+<ul class="comm-rules-list">
+<li>🐾 Respeito mútuo entre todos os inscritos.</li>
+<li>⚔️ Compartilhe apenas dicas verificadas da beta.</li>
+<li>💬 Mantenha o foco em estratégias de Aniimo.</li>
+</ul>
+</div>
+</aside>
+</div>
+</div>
+</section>
+
 <!-- 8. SECTION: ITEMS DATABASE -->
 <section class="app-section" id="section-itens">
 <div class="container" style="padding-top: 2.5rem;">
@@ -451,6 +658,96 @@ Cada surgimento de Aniimo fica exatamente onde ocorre no jogo. Filtre a lista de
 <!-- TOAST NOTIFICATIONS -->
 <div class="toast-container" id="toast-container"></div>
 <!-- SIGNATURE FOOTER WITH CREATURES AND SVG WAVES -->
+
+<!-- MODAL: TIER LIST VOTE -->
+<div class="modal-overlay" id="modal-tier-vote">
+<div class="modal-box modal-box--vote">
+<button class="modal-close" id="btn-close-vote-modal">×</button>
+<div class="vote-modal-head">
+<img class="vote-modal-creature-art" id="vote-modal-art" src=""/>
+<div>
+<h3 class="vote-modal-title" id="vote-modal-name">Emberpup</h3>
+<p class="vote-modal-meta" id="vote-modal-element">🔥 Tipo Fogo</p>
+</div>
+</div>
+<div class="vote-modal-prompt">Qual é a sua classificação para esta criatura?</div>
+<div class="vote-tiers-buttons">
+<button class="vote-tier-btn btn-tier-splus" data-tier="S+">
+<span class="vt-badge">S+</span>
+<span class="vt-label">Favorito</span>
+</button>
+<button class="vote-tier-btn btn-tier-s" data-tier="S">
+<span class="vt-badge">S</span>
+<span class="vt-label">Altamente Avaliado</span>
+</button>
+<button class="vote-tier-btn btn-tier-a" data-tier="A">
+<span class="vt-badge">A</span>
+<span class="vt-label">Forte</span>
+</button>
+<button class="vote-tier-btn btn-tier-b" data-tier="B">
+<span class="vt-badge">B</span>
+<span class="vt-label">Sólido</span>
+</button>
+<button class="vote-tier-btn btn-tier-c" data-tier="C">
+<span class="vt-badge">C</span>
+<span class="vt-label">Situacional</span>
+</button>
+<button class="vote-tier-btn btn-tier-d" data-tier="D">
+<span class="vt-badge">D</span>
+<span class="vt-label">Nicho</span>
+</button>
+</div>
+<!-- Strategy Note Input -->
+<div class="vote-note-wrap">
+<label class="vote-note-label" for="vote-note-input">📝 Deixe uma dica ou estratégia da comunidade (opcional):</label>
+<textarea class="vote-note-textarea" id="vote-note-input" placeholder="Ex: Excelente para combate contra chefes de gelo..." rows="2"></textarea>
+</div>
+<div class="vote-modal-footer">
+<button class="btn-submit-vote" disabled="" id="btn-submit-tier-vote" type="button">
+        Confirmar Voto
+      </button>
+</div>
+</div>
+</div>
+<!-- MODAL: CREATE COMMUNITY POST -->
+<div class="modal-overlay" id="modal-new-post">
+<div class="modal-box modal-box--post">
+<button class="modal-close" id="btn-close-post-modal">×</button>
+<div class="post-modal-head">
+<h3>✍️ Nova Publicação na Comunidade</h3>
+<p>Compartilhe sua estratégia, build de combate ou tire dúvidas com os inscritos.</p>
+</div>
+<form class="post-modal-form" id="form-new-post">
+<div class="form-group">
+<label for="post-category-select">Categoria:</label>
+<select class="form-select" id="post-category-select">
+<option value="builds">⚔️ Builds &amp; Equipes</option>
+<option value="dicas">💡 Dicas &amp; Guias</option>
+<option value="duvidas">❓ Dúvidas</option>
+<option value="geral">🐾 Discussão Geral</option>
+</select>
+</div>
+<div class="form-group">
+<label for="post-creature-select">Aniimo Relacionado (Opcional):</label>
+<select class="form-select" id="post-creature-select">
+<option value="">Nenhum / Geral</option>
+</select>
+</div>
+<div class="form-group">
+<label for="post-title-input">Título da Publicação:</label>
+<input class="form-input" id="post-title-input" placeholder="Ex: Melhor build de queimadura para Emberpup" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="post-content-input">Conteúdo:</label>
+<textarea class="form-textarea" id="post-content-input" placeholder="Escreva os detalhes da sua dica, combinações de habilidades ou pergunta..." required="" rows="4"></textarea>
+</div>
+<div class="post-modal-actions">
+<button class="btn-cancel" id="btn-cancel-post" type="button">Cancelar</button>
+<button class="btn-publish" id="btn-submit-post" type="submit">Publicar no Feed</button>
+</div>
+</form>
+</div>
+</div>
 <footer class="site-footer">
 <div aria-hidden="true" class="footer-crest">
 <div class="footer-creatures">
@@ -484,7 +781,7 @@ Cada surgimento de Aniimo fica exatamente onde ocorre no jogo. Filtre a lista de
 </div>
 </footer>
 <!-- App Script -->
-<script src="/app.js"></script>
+<script src="/auth.js"></script><script src="/app.js"></script>
 <script src="/assets/map/js/MapV2_bundle.js" type="module"></script>
 </body>
 </html>

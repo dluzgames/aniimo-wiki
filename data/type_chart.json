@@ -1,0 +1,105 @@
+{
+  "elements_pt": [
+    "Fogo",
+    "Água",
+    "Grama",
+    "Elétrico",
+    "Gelo",
+    "Terra",
+    "Vento",
+    "Luz",
+    "Trevas"
+  ],
+  "elements_en": [
+    "Fire",
+    "Water",
+    "Grass",
+    "Electric",
+    "Ice",
+    "Earth",
+    "Wind",
+    "Light",
+    "Dark"
+  ],
+  "matrix": {
+    "Fogo": {
+      "Grama": 2.0,
+      "Gelo": 2.0,
+      "Água": 0.5,
+      "Terra": 0.5,
+      "Fogo": 0.5
+    },
+    "Água": {
+      "Fogo": 2.0,
+      "Terra": 2.0,
+      "Grama": 0.5,
+      "Elétrico": 0.5,
+      "Água": 0.5
+    },
+    "Grama": {
+      "Água": 2.0,
+      "Terra": 2.0,
+      "Fogo": 0.5,
+      "Gelo": 0.5,
+      "Grama": 0.5
+    },
+    "Elétrico": {
+      "Água": 2.0,
+      "Vento": 2.0,
+      "Terra": 0.0,
+      "Grama": 0.5,
+      "Elétrico": 0.5
+    },
+    "Gelo": {
+      "Grama": 2.0,
+      "Terra": 2.0,
+      "Vento": 2.0,
+      "Fogo": 0.5,
+      "Gelo": 0.5
+    },
+    "Terra": {
+      "Fogo": 2.0,
+      "Elétrico": 2.0,
+      "Gelo": 2.0,
+      "Grama": 0.5,
+      "Vento": 0.0
+    },
+    "Vento": {
+      "Grama": 2.0,
+      "Terra": 2.0,
+      "Gelo": 0.5,
+      "Elétrico": 0.5,
+      "Vento": 0.5
+    },
+    "Luz": {
+      "Trevas": 2.0,
+      "Luz": 0.5
+    },
+    "Trevas": {
+      "Luz": 2.0,
+      "Trevas": 0.5
+    }
+  },
+  "descriptions_pt": {
+    "Fogo": "Poder ofensivo agressivo com dano contínuo de queimadura. Forte contra Grama e Gelo.",
+    "Água": "Controle de campo e alta mobilidade. Causa dano crítico em Fogo e Terra.",
+    "Grama": "Cura, regeneração e absorção de vida. Domina Água e Terra.",
+    "Elétrico": "Velocidade extrema e atordoamento. Super efetivo contra Água e Vento, mas nulo contra Terra.",
+    "Gelo": "Redução de velocidade de ataque e congelamento. Forte contra Grama, Terra e Vento.",
+    "Terra": "Máxima defesa, escudos pesados e controle de solo. Bate forte em Fogo e Elétrico.",
+    "Vento": "Evasão, reposicionamento rápido e repelência. Vence Grama e Terra.",
+    "Luz": "Amplificação de atributos, suporte e dano sagrado contra Trevas.",
+    "Trevas": "Dano explosivo e enfraquecimento de alvos contra Luz."
+  },
+  "descriptions_en": {
+    "Fire": "Aggressive offensive power with burn damage over time. Strong against Grass and Ice.",
+    "Water": "Field control and fluid mobility. Super effective on Fire and Earth.",
+    "Grass": "Healing, regeneration, and life leech. Dominates Water and Earth.",
+    "Electric": "Extreme speed and stun potential. Strong against Water and Wind, nullified by Earth.",
+    "Ice": "Slowdown effects and deep freeze. Strong against Grass, Earth, and Wind.",
+    "Earth": "Peak physical defense, sturdy shields, and ground control. Crushes Fire and Electric.",
+    "Wind": "High evasion, repositioning, and knockback. Triumphs over Grass and Earth.",
+    "Light": "Stat amplification, support, and radiant damage against Dark.",
+    "Dark": "Burst damage and status weakening against Light."
+  }
+}

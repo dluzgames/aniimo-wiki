@@ -1,11 +1,14 @@
-FROM nginx:alpine
+FROM node:20-alpine
 
-# Copy custom Nginx configuration
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+WORKDIR /app
 
-# Copy site files
-COPY site /usr/share/nginx/html
+COPY package.json ./
+RUN npm install --production
+
+COPY server.js ./
+COPY site ./site
+COPY data ./data
 
 EXPOSE 80
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["node", "server.js"]
