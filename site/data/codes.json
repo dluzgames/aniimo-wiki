@@ -1,0 +1,74 @@
+{
+  "active": [
+    {
+      "code": "ANIIMO2026",
+      "rewards_pt": "500x Cristais de Invocação, 10x Frascos de Ressonância Média, 50.000 Moedas de Ouro",
+      "rewards_en": "500x Summon Crystals, 10x Medium Resonance Vials, 50,000 Gold Coins",
+      "valid_until": "31/12/2026",
+      "status": "active",
+      "source": "Lançamento Global Oficial"
+    },
+    {
+      "code": "PLAYANIIMO",
+      "rewards_pt": "3x Aniipods Reforçados, 5x Elixires de EXP Aniimo, 20.000 Moedas",
+      "rewards_en": "3x Reinforced Aniipods, 5x Aniimo EXP Elixirs, 20,000 Coins",
+      "valid_until": "30/11/2026",
+      "status": "active",
+      "source": "Campanha de Boas-Vindas"
+    },
+    {
+      "code": "IDYLIAEXPLORER",
+      "rewards_pt": "1x Caixa de Runa Inicial (4 Estrelas), 100x Cristais Primordiais",
+      "rewards_en": "1x Starter Rune Chest (4-Star), 100x Primordial Crystals",
+      "valid_until": "15/10/2026",
+      "status": "active",
+      "source": "Evento de Lançamento de Idília"
+    },
+    {
+      "code": "BEONEBEALL",
+      "rewards_pt": "Título Exclusivo 'Pioneiro de Idília', 1x Asa de Voo Cosmética",
+      "rewards_en": "Exclusive Title 'Idylia Pioneer', 1x Cosmetic Glider Wing",
+      "valid_until": "31/10/2026",
+      "status": "active",
+      "source": "Trailer Oficial YouTube"
+    },
+    {
+      "code": "PREREG1MILLION",
+      "rewards_pt": "1x Ovo Raro Lumin Selecionável, 1.000x Cristais de Invocação",
+      "rewards_en": "1x Selectable Rare Lumin Egg, 1,000x Summon Crystals",
+      "valid_until": "31/12/2026",
+      "status": "active",
+      "source": "Meta de 1 Milhão de Pré-registros"
+    }
+  ],
+  "expired": [
+    {
+      "code": "CBT2REWARD",
+      "rewards_pt": "Recompensas exclusivas do Beta Fechado 2",
+      "rewards_en": "Closed Beta Test 2 exclusive rewards",
+      "expired_at": "01/08/2026",
+      "status": "expired"
+    },
+    {
+      "code": "ALPHATEST2025",
+      "rewards_pt": "Pacote de Teste Alpha",
+      "rewards_en": "Alpha Test Pack",
+      "expired_at": "15/12/2025",
+      "status": "expired"
+    }
+  ],
+  "instructions_pt": [
+    "Inicie Aniimo e conclua o tutorial inicial até desbloquear o menu principal.",
+    "Abra as **Configurações** (ícone de engrenagem no canto superior direito).",
+    "Acesse a aba **Conta / Serviços** e clique em **Código de Resgate**.",
+    "Cole ou digite o código exatamente como mostrado acima e clique em **Confirmar**.",
+    "As recompensas serão entregues instantaneamente na sua **Caixa de Correio** no jogo!"
+  ],
+  "instructions_en": [
+    "Launch Aniimo and complete the intro tutorial until the main menu unlocks.",
+    "Open **Settings** (gear icon in the top right corner).",
+    "Go to the **Account / Services** tab and click on **Redeem Code**.",
+    "Paste or enter the code exactly as shown above and tap **Confirm**.",
+    "Your rewards will arrive immediately in your in-game **Mailbox**!"
+  ]
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "slug": "guia-iniciante",
+    "title_pt": "Guia Definitivo do Iniciante: Primeiros Passos em Aniimo",
+    "title_en": "Beginner's Ultimate Guide: First Steps in Aniimo",
+    "read_time": "5 min",
+    "category_pt": "Primeiros Passos",
+    "category_en": "First Steps",
+    "summary_pt": "Tudo o que você precisa saber para começar com força máxima no lançamento de setembro de 2026: seleção de starter, captura eficiente e progressão rápida.",
+    "summary_en": "Everything you need to kickstart your journey in September 2026: starter choice, efficient capture, and fast leveling.",
+    "content_pt": "### 1. Como Escolher o seu Primeiro Aniimo\nNo início de sua jornada em Idília, você poderá escolher entre três companheiros Lumin fundamentais: Fogo (Flameruff), Água (Dewy) ou Grama (Skippy).\n- **Flameruff (Fogo):** Ideal para quem prefere combate rápido e agressivo com foco em dano direto (DPS).\n- **Dewy (Água):** Excelente suporte com cura constante, tornando as primeiras masmorras muito mais fáceis.\n- **Skippy (Grama):** Ótima opção equilibrada com velocidade e habilidades territoriais para coleta acelerada.\n\n### 2. Dicas de Ouro para a Exploração\n- **Sincronize todos os Teletransportes:** Ao entrar em uma nova zona, corra direto para os pontos azuis no mapa para destravar a viagem rápida.\n- **Não desperdice Aniipods Avançados:** Use Aniipods normais nas criaturas comuns do início. Guarde os reforçados para criaturas Gamma e chefes de campo.\n- **Construa sua Base (Homeland):** Colocar criaturas no seu território garante recursos automáticos enquanto você estiver offline!"
+  },
+  {
+    "slug": "requisitos-sistema",
+    "title_pt": "Requisitos de Sistema: PC, Mobile (Android/iOS) e Consoles",
+    "title_en": "System Requirements: PC, Mobile (Android/iOS), and Consoles",
+    "read_time": "3 min",
+    "category_pt": "Técnico",
+    "category_en": "Technical",
+    "summary_pt": "Confira se o seu computador ou celular roda Aniimo com gráficos no máximo a 60 FPS ou 120 FPS.",
+    "summary_en": "Check if your PC or mobile device can run Aniimo at smooth 60 or 120 FPS.",
+    "content_pt": "### Requisitos para PC (Windows / Steam)\n- **Mínimos (1080p 30 FPS):**\n  - Sistema: Windows 10/11 64-bit\n  - Processador: Intel Core i5-8400 ou AMD Ryzen 5 2600\n  - Memória: 8 GB de RAM\n  - Placa de Vídeo: NVIDIA GeForce GTX 1060 (6 GB) ou AMD Radeon RX 580\n  - Armazenamento: 40 GB de espaço livre (SSD recomendado)\n- **Recomendados (1080p/1440p 60 FPS):**\n  - Processador: Intel Core i7-10700 ou AMD Ryzen 5 5600X\n  - Memória: 16 GB de RAM\n  - Placa de Vídeo: NVIDIA GeForce RTX 2060 / 3060 ou AMD Radeon RX 6600 XT\n  - Armazenamento: SSD NVMe\n\n### Requisitos Mobile (Lançamento em 23/09/2026)\n- **Android:** Snapdragon 778G ou superior, 6 GB de RAM, Android 11+.\n- **iOS:** iPhone 12 ou superior, iOS 16+."
+  },
+  {
+    "slug": "como-baixar",
+    "title_pt": "Como Baixar e Participar do Lançamento Global",
+    "title_en": "How to Download and Join the Global Launch",
+    "read_time": "4 min",
+    "category_pt": "Download",
+    "category_en": "Download",
+    "summary_pt": "Passo a passo para fazer o pré-registro na Steam, PlayStation Store, Xbox Store, Google Play Store e App Store.",
+    "summary_en": "Step-by-step to pre-register on Steam, PlayStation Store, Xbox Store, Google Play, and App Store.",
+    "content_pt": "### Plataformas e Datas Oficiais\n- **16 de Setembro de 2026:**\n  - PC (Steam & Launcher Próprio)\n  - PlayStation 5\n  - Xbox Series X|S\n- **23 de Setembro de 2026:**\n  - Android (Google Play Store)\n  - iOS (Apple App Store)\n\n### Recompensas de Pré-registro\nTodos os jogadores que efetuarem o pré-registro receberão automaticamente no dia 1:\n- 1.000 Cristais de Invocação\n- 1 Ovo Raro Selecionável\n- Asa de Voo comemorativa"
+  }
+]

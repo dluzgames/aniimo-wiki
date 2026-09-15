@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://aniimo.dluz.com.br/sitemap_index.xml
+
 Sitemap: https://aniimo.dluz.com.br/sitemap.xml

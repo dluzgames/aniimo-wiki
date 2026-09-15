@@ -1,0 +1,213 @@
+{
+  "region_name_pt": "Planícies Ventosas (Breezy Plains)",
+  "region_name_en": "Breezy Plains",
+  "description_pt": "A verdejante região inicial de Idília, repleta de criaturas Lumin, ruínas antigas e pontos de teletransporte.",
+  "description_en": "The lush starting region of Idylia, teeming with Lumin creatures, ancient ruins, and fast-travel teleporters.",
+  "map_image": "/assets/map/breezy-plains.webp",
+  "categories": [
+    {
+      "id": "aniimo",
+      "name_pt": "Surgimento de Aniimos",
+      "name_en": "Aniimo Spawns",
+      "color": "#ff6b8b",
+      "icon": "🐾"
+    },
+    {
+      "id": "teleport",
+      "name_pt": "Teletransportes",
+      "name_en": "Teleporters",
+      "color": "#38bdf8",
+      "icon": "🌀"
+    },
+    {
+      "id": "chest",
+      "name_pt": "Baús de Tesouro",
+      "name_en": "Chests",
+      "color": "#facc15",
+      "icon": "📦"
+    },
+    {
+      "id": "boss",
+      "name_pt": "Chefes Mundiais",
+      "name_en": "World Bosses",
+      "color": "#ef4444",
+      "icon": "👑"
+    },
+    {
+      "id": "egg",
+      "name_pt": "Ninhos de Ovos",
+      "name_en": "Egg Nests",
+      "color": "#a855f7",
+      "icon": "🥚"
+    },
+    {
+      "id": "resource",
+      "name_pt": "Coleta & Mineração",
+      "name_en": "Gathering & Mining",
+      "color": "#22c55e",
+      "icon": "🌿"
+    }
+  ],
+  "markers": [
+    {
+      "id": "m1",
+      "cat": "teleport",
+      "name_pt": "Teleporte: Pátio do Despertar",
+      "name_en": "Teleport: Awakening Courtyard",
+      "x": 48.5,
+      "y": 52.0,
+      "desc_pt": "Ponto de renascimento principal dos novos Desbravantes.",
+      "desc_en": "Main spawn point for new Pathfinders."
+    },
+    {
+      "id": "m2",
+      "cat": "teleport",
+      "name_pt": "Teleporte: Colina dos Ventos",
+      "name_en": "Teleport: Windhill Ridge",
+      "x": 62.0,
+      "y": 38.4,
+      "desc_pt": "Mirante elevado com visão panorâmica de todo o vale.",
+      "desc_en": "High viewpoint offering a panoramic overlook of the valley."
+    },
+    {
+      "id": "m3",
+      "cat": "teleport",
+      "name_pt": "Teleporte: Bosque Fluente",
+      "name_en": "Teleport: Fluent Grove",
+      "x": 35.2,
+      "y": 68.1,
+      "desc_pt": "Acesso rápido às margens do rio de Idília.",
+      "desc_en": "Fast access to the banks of Idylia River."
+    },
+    {
+      "id": "m4",
+      "cat": "boss",
+      "name_pt": "Chefe: Flamerion Alfa (Nível 25)",
+      "name_en": "Boss: Alpha Flamerion (Level 25)",
+      "x": 71.3,
+      "y": 28.5,
+      "desc_pt": "Chefe poderoso de Fogo. Recomenda-se equipe com criaturas de Água.",
+      "desc_en": "Mighty Fire Boss. Water creatures strongly recommended."
+    },
+    {
+      "id": "m5",
+      "cat": "boss",
+      "name_pt": "Chefe: Bouldus Ancestral (Nível 30)",
+      "name_en": "Boss: Ancient Bouldus (Level 30)",
+      "x": 22.8,
+      "y": 81.0,
+      "desc_pt": "Guerreiro de Pedra imenso com alta resistência física.",
+      "desc_en": "Colossal Stone guardian with massive physical defense."
+    },
+    {
+      "id": "m6",
+      "cat": "aniimo",
+      "name_pt": "Habitat de Flameruff",
+      "name_en": "Flameruff Habitat",
+      "x": 58.4,
+      "y": 44.2,
+      "desc_pt": "Caninos de Fogo em bando durante o dia e entardecer.",
+      "desc_en": "Fire canines wandering in packs during daytime and dusk."
+    },
+    {
+      "id": "m7",
+      "cat": "aniimo",
+      "name_pt": "Habitat de Skippy",
+      "name_en": "Skippy Habitat",
+      "x": 43.1,
+      "y": 59.0,
+      "desc_pt": "Pequenas criaturas de Grama ágeis nas clareiras abertas.",
+      "desc_en": "Nimble Grass creatures in open clearings."
+    },
+    {
+      "id": "m8",
+      "cat": "aniimo",
+      "name_pt": "Habitat de Wavwal",
+      "name_en": "Wavwal Habitat",
+      "x": 32.5,
+      "y": 64.7,
+      "desc_pt": "Criaturas aquáticas perto das cachoeiras e lagos calmos.",
+      "desc_en": "Aquatic creatures near waterfalls and calm ponds."
+    },
+    {
+      "id": "m9",
+      "cat": "aniimo",
+      "name_pt": "Habitat de Bolty",
+      "name_en": "Bolty Habitat",
+      "x": 67.0,
+      "y": 35.1,
+      "desc_pt": "Criaturas elétricas atraídas pelos geradores das ruínas.",
+      "desc_en": "Electric creatures attracted to ruin generators."
+    },
+    {
+      "id": "m10",
+      "cat": "chest",
+      "name_pt": "Baú Raro Escondido",
+      "name_en": "Hidden Rare Chest",
+      "x": 51.2,
+      "y": 32.7,
+      "desc_pt": "Contém Runa de 4 Estrelas e Cristais de Invocação.",
+      "desc_en": "Contains 4-Star Rune and Summon Crystals."
+    },
+    {
+      "id": "m11",
+      "cat": "chest",
+      "name_pt": "Baú Trancado por Enigma",
+      "name_en": "Puzzle-Locked Chest",
+      "x": 75.8,
+      "y": 42.0,
+      "desc_pt": "Ative os 3 pilares elementais ao redor para destravar.",
+      "desc_en": "Activate the 3 surrounding elemental pillars to unlock."
+    },
+    {
+      "id": "m12",
+      "cat": "chest",
+      "name_pt": "Baú do Vale Subterrâneo",
+      "name_en": "Underground Valley Chest",
+      "x": 28.9,
+      "y": 74.3,
+      "desc_pt": "Tesouro protegido por guardiões do bosque.",
+      "desc_en": "Treasure guarded by woodland sentinels."
+    },
+    {
+      "id": "m13",
+      "cat": "egg",
+      "name_pt": "Ninho de Ovo Lumin Ardente",
+      "name_en": "Blazing Lumin Egg Nest",
+      "x": 64.9,
+      "y": 25.4,
+      "desc_pt": "Pode chocar um Flameruff ou Emberpup com atributos elevados.",
+      "desc_en": "Can hatch high-stat Flameruff or Emberpup."
+    },
+    {
+      "id": "m14",
+      "cat": "egg",
+      "name_pt": "Ninho de Ovo da Floresta",
+      "name_en": "Forest Egg Nest",
+      "x": 40.0,
+      "y": 72.5,
+      "desc_pt": "Ovo de criatura de Grama ou Água.",
+      "desc_en": "Egg containing Grass or Water Aniimo."
+    },
+    {
+      "id": "m15",
+      "cat": "resource",
+      "name_pt": "Veio de Cristal Primordial",
+      "name_en": "Primordial Crystal Vein",
+      "x": 53.0,
+      "y": 66.8,
+      "desc_pt": "Minério essencial para forjar e aprimorar equipamentos.",
+      "desc_en": "Essential ore for crafting and upgrading gear."
+    },
+    {
+      "id": "m16",
+      "cat": "resource",
+      "name_pt": "Jardim de Ervas de Cura",
+      "name_en": "Healing Herb Garden",
+      "x": 38.6,
+      "y": 49.3,
+      "desc_pt": "Ingredientes de alta qualidade para poções de cura.",
+      "desc_en": "High quality ingredients for restorative potions."
+    }
+  ]
+}

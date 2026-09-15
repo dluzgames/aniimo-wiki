@@ -1,588 +1,1185 @@
-// Official Aniimo Wiki - Compact Encyclopedia App
-const CREATURES = [{"number": "001", "id": "10002767", "name": "Emberpup", "element": "fire", "role": "dps", "image": "10051", "stage": "Lumin Stage", "desc": "The lively creatures like to follow Flameruffs around. Once the smoldering fur starts to burn, they thrive.", "attributes": {"HP": 67, "ATK": 86, "M.ATK": 38, "P.DEF": 60, "M.DEF": 53, "HASTE": 67}, "totalAttributes": 371, "habitats": ["Volcanic Caldera", "Scorched Plateau", "Echoback Landing", "Cinder Valley"], "homeland": "12 Mobility", "skills": [{"name": "Flame Strike", "type": "Physical", "cost": 0, "power": 75, "desc": "Lashes out with burning claws, dealing Fire damage to the target."}, {"name": "Emberpup Blazing Nova", "type": "Magic", "cost": 15, "power": 120, "desc": "Unleashes a surge of intense heat that scorches all nearby foes."}], "trait": {"name": "Kindled Fury", "desc": "Increases Fire damage by 20% when facing foes weak to Fire."}, "evolution": [], "relatedIds": ["10002767", "10002859", "10002760", "10002753"], "evolutionPath": [{"id": "10002767", "number": "001", "name": "Emberpup", "stage": "Lumin Stage", "image": "10051", "slug": "emberpup", "nameClean": "Emberpup"}, {"id": "10002859", "number": "002", "name": "Flameruff", "stage": "Gamma Stage", "image": "10052", "slug": "flameruff", "nameClean": "Flameruff"}, {"id": "10002760", "number": "003", "name": "Scorchhowl", "stage": "Nova Stage", "image": "10053", "slug": "scorchhowl", "nameClean": "Scorchhowl"}, {"id": "10002753", "number": "004", "name": "Inferlupa", "stage": "Nova Stage", "image": "10055", "slug": "inferlupa", "nameClean": "Inferlupa"}], "homelandType": "Combat Instinct", "slug": "emberpup", "nameClean": "Emberpup", "desc_pt": "Criaturas animadas que adoram seguir os Flameruffs. Quando sua pelagem fumegante começa a queimar, tornam-se incrivelmente ativas e velozes.", "habitats_pt": ["Caldeira Vulcânica", "Planalto Chamuscado", "Pouso do Eco", "Vale das Cinzas"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "002", "id": "10002859", "name": "Flameruff", "element": "fire", "role": "dps", "image": "10052", "stage": "Gamma Stage", "desc": "Pack creatures that prize loyalty and unity, these hunters maintain focused, calm eyes that mask their fiery hearts.", "attributes": {"HP": 81, "ATK": 104, "M.ATK": 45, "P.DEF": 72, "M.DEF": 63, "HASTE": 80}, "totalAttributes": 445, "habitats": ["Volcanic Caldera", "Scorched Plateau", "Echoback Landing", "Cinder Valley"], "homeland": "12 Mobility", "skills": [{"name": "Flame Strike", "type": "Physical", "cost": 0, "power": 75, "desc": "Lashes out with burning claws, dealing Fire damage to the target."}, {"name": "Flameruff Blazing Nova", "type": "Magic", "cost": 15, "power": 120, "desc": "Unleashes a surge of intense heat that scorches all nearby foes."}], "trait": {"name": "Kindled Fury", "desc": "Increases Fire damage by 20% when facing foes weak to Fire."}, "evolution": [], "relatedIds": ["10002767", "10002859", "10002760", "10002753"], "evolutionPath": [{"id": "10002767", "number": "001", "name": "Emberpup", "stage": "Lumin Stage", "image": "10051", "slug": "emberpup", "nameClean": "Emberpup"}, {"id": "10002859", "number": "002", "name": "Flameruff", "stage": "Gamma Stage", "image": "10052", "slug": "flameruff", "nameClean": "Flameruff"}, {"id": "10002760", "number": "003", "name": "Scorchhowl", "stage": "Nova Stage", "image": "10053", "slug": "scorchhowl", "nameClean": "Scorchhowl"}, {"id": "10002753", "number": "004", "name": "Inferlupa", "stage": "Nova Stage", "image": "10055", "slug": "inferlupa", "nameClean": "Inferlupa"}], "homelandType": "Combat Instinct", "slug": "flameruff", "nameClean": "Flameruff", "desc_pt": "Um Aniimo leal cuja juba arde com chamas contínuas. Protege ferozmente seu bando e domina ataques físicos de fogo.", "habitats_pt": ["Caldeira Vulcânica", "Planalto Chamuscado", "Pouso do Eco", "Vale das Cinzas"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "003", "id": "10002760", "name": "Scorchhowl", "element": "fire", "role": "dps", "image": "10053", "stage": "Nova Stage", "desc": "They enjoy the thrill of the fight since flame and burning mark their growth.", "attributes": {"HP": 90, "ATK": 115, "M.ATK": 50, "P.DEF": 80, "M.DEF": 70, "HASTE": 90}, "totalAttributes": 495, "habitats": ["Volcanic Caldera", "Scorched Plateau", "Echoback Landing", "Cinder Valley"], "homeland": "12 Mobility", "skills": [{"name": "Flame Strike", "type": "Physical", "cost": 0, "power": 75, "desc": "Lashes out with burning claws, dealing Fire damage to the target."}, {"name": "Scorchhowl Blazing Nova", "type": "Magic", "cost": 15, "power": 120, "desc": "Unleashes a surge of intense heat that scorches all nearby foes."}], "trait": {"name": "Kindled Fury", "desc": "Increases Fire damage by 20% when facing foes weak to Fire."}, "evolution": [], "relatedIds": ["10002767", "10002859", "10002760", "10002753"], "evolutionPath": [{"id": "10002767", "number": "001", "name": "Emberpup", "stage": "Lumin Stage", "image": "10051", "slug": "emberpup", "nameClean": "Emberpup"}, {"id": "10002859", "number": "002", "name": "Flameruff", "stage": "Gamma Stage", "image": "10052", "slug": "flameruff", "nameClean": "Flameruff"}, {"id": "10002760", "number": "003", "name": "Scorchhowl", "stage": "Nova Stage", "image": "10053", "slug": "scorchhowl", "nameClean": "Scorchhowl"}, {"id": "10002753", "number": "004", "name": "Inferlupa", "stage": "Nova Stage", "image": "10055", "slug": "inferlupa", "nameClean": "Inferlupa"}], "homelandType": "Combat Instinct", "slug": "scorchhowl", "nameClean": "Scorchhowl", "desc_pt": "Uiva para inflamar as chamas ao seu redor. Sua temperatura corporal pode derreter rochas quando entra em frenesi de batalha.", "habitats_pt": ["Caldeira Vulcânica", "Planalto Chamuscado", "Pouso do Eco", "Vale das Cinzas"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "004", "id": "10002753", "name": "Inferlupa", "element": "fire", "role": "break", "image": "10055", "stage": "Nova Stage", "desc": "A Flameruff who challenged the strong and lost, absorbing the souls of companions who fell with equal bitterness. It is driven by the desire for revenge.", "attributes": {"HP": 95, "ATK": 89, "M.ATK": 113, "P.DEF": 70, "M.DEF": 80, "HASTE": 104}, "totalAttributes": 551, "habitats": ["Volcanic Caldera", "Scorched Plateau", "Echoback Landing", "Cinder Valley"], "homeland": "14 Crushing", "skills": [{"name": "Flame Strike", "type": "Physical", "cost": 0, "power": 75, "desc": "Lashes out with burning claws, dealing Fire damage to the target."}, {"name": "Inferlupa Blazing Nova", "type": "Magic", "cost": 15, "power": 120, "desc": "Unleashes a surge of intense heat that scorches all nearby foes."}], "trait": {"name": "Kindled Fury", "desc": "Increases Fire damage by 20% when facing foes weak to Fire."}, "evolution": [], "relatedIds": ["10002767", "10002859", "10002760", "10002753"], "evolutionPath": [{"id": "10002767", "number": "001", "name": "Emberpup", "stage": "Lumin Stage", "image": "10051", "slug": "emberpup", "nameClean": "Emberpup"}, {"id": "10002859", "number": "002", "name": "Flameruff", "stage": "Gamma Stage", "image": "10052", "slug": "flameruff", "nameClean": "Flameruff"}, {"id": "10002760", "number": "003", "name": "Scorchhowl", "stage": "Nova Stage", "image": "10053", "slug": "scorchhowl", "nameClean": "Scorchhowl"}, {"id": "10002753", "number": "004", "name": "Inferlupa", "stage": "Nova Stage", "image": "10055", "slug": "inferlupa", "nameClean": "Inferlupa"}], "homelandType": "Rock Shatter", "slug": "inferlupa", "nameClean": "Inferlupa", "desc_pt": "Um Flameruff veterano que desafiou os mais fortes e sobreviveu, absorvendo a essência ardente de seus companheiros caídos. Move-se com fúria implacável.", "habitats_pt": ["Caldeira Vulcânica", "Planalto Chamuscado", "Pouso do Eco", "Vale das Cinzas"], "homeland_pt": "14 Esmagamento", "homelandType_pt": "Quebra-Rochas"}, {"number": "005", "id": "10002903", "name": "Celestis", "element": "dark", "role": "dps", "image": "10011", "stage": "Lumin Stage", "desc": "They love food! When they search the forest for food, the glowing stars on their heads are often mistaken for comets. They like hoarding food, adorning their nest with it.", "attributes": {"HP": 77, "ATK": 106, "M.ATK": 42, "P.DEF": 54, "M.DEF": 57, "HASTE": 76}, "totalAttributes": 412, "habitats": ["Twilight Ruins", "Umbral Hollow", "Shadowed Vale", "Beast Fang Ridge"], "homeland": "12 Mobility", "skills": [{"name": "Shadow Bite", "type": "Physical", "cost": 0, "power": 76, "desc": "Engulfs the target in shadows, inflicting Break damage."}, {"name": "Celestis Abyssal Rift", "type": "Magic", "cost": 16, "power": 125, "desc": "Opens a dark vortex that consumes enemy buffs."}], "trait": {"name": "Nightfall Stalker", "desc": "Increases Critical Strike rate by 25% during combat."}, "evolution": [], "relatedIds": ["10002903", "10002742"], "evolutionPath": [{"id": "10002903", "number": "005", "name": "Celestis", "stage": "Lumin Stage", "image": "10011", "slug": "celestis", "nameClean": "Celestis"}, {"id": "10002742", "number": "006", "name": "Stellarys", "stage": "Nova Stage", "image": "10012", "slug": "stellarys", "nameClean": "Stellarys"}], "homelandType": "Combat Instinct", "slug": "celestis", "nameClean": "Celestis", "desc_pt": "Uma criatura enigmática envolta em sombras estelares. Move-se silenciosamente pela escuridão absorvendo energia cósmica.", "habitats_pt": ["Ruínas do Crepúsculo", "Cova Umbrática", "Vale Sombrio", "Cordilheira Presa da Fera"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "006", "id": "10002742", "name": "Stellarys", "element": "dark", "role": "dps", "image": "10012", "stage": "Nova Stage", "desc": "They prefer solitude and often move through the night. With their starry, cloak-like forms, they resemble mysterious mages and can teleport using psychic energy.", "attributes": {"HP": 90, "ATK": 125, "M.ATK": 50, "P.DEF": 63, "M.DEF": 67, "HASTE": 90}, "totalAttributes": 485, "habitats": ["Twilight Ruins", "Umbral Hollow", "Shadowed Vale", "Beast Fang Ridge"], "homeland": "12 Mobility", "skills": [{"name": "Shadow Bite", "type": "Physical", "cost": 0, "power": 76, "desc": "Engulfs the target in shadows, inflicting Break damage."}, {"name": "Stellarys Abyssal Rift", "type": "Magic", "cost": 16, "power": 125, "desc": "Opens a dark vortex that consumes enemy buffs."}], "trait": {"name": "Nightfall Stalker", "desc": "Increases Critical Strike rate by 25% during combat."}, "evolution": [], "relatedIds": ["10002903", "10002742"], "evolutionPath": [{"id": "10002903", "number": "005", "name": "Celestis", "stage": "Lumin Stage", "image": "10011", "slug": "celestis", "nameClean": "Celestis"}, {"id": "10002742", "number": "006", "name": "Stellarys", "stage": "Nova Stage", "image": "10012", "slug": "stellarys", "nameClean": "Stellarys"}], "homelandType": "Combat Instinct", "slug": "stellarys", "nameClean": "Stellarys", "desc_pt": "Possui orbes celestiais que brilham fracamente sob a noite. Dizem que seus ataques distorcem o próprio tecido das sombras.", "habitats_pt": ["Ruínas do Crepúsculo", "Cova Umbrática", "Vale Sombrio", "Cordilheira Presa da Fera"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "007", "id": "10002813", "name": "Chirpi", "element": "wind", "role": "sup", "image": "10181", "stage": "Lumin Stage", "desc": "They often hover at low altitudes, paying attention to every movement on the beach so they won't miss any opportunity.", "attributes": {"HP": 96, "ATK": 75, "M.ATK": 43, "P.DEF": 67, "M.DEF": 69, "HASTE": 93}, "totalAttributes": 443, "habitats": ["Highland Peaks", "Breezy Steppe", "The Argent Strait", "Skyward Isle"], "homeland": "11 Mobility", "skills": [{"name": "Gale Slash", "type": "Physical", "cost": 0, "power": 73, "desc": "Slices forward with razor-sharp gusts of compressed wind."}, {"name": "Chirpi Cyclone Spiral", "type": "Magic", "cost": 12, "power": 108, "desc": "Spins into a whirlwind that lifts and scatters enemy formations."}], "trait": {"name": "Tailwind Grace", "desc": "Increases haste and evasion for the entire squad."}, "evolution": [], "relatedIds": ["10002813", "10002873", "10002799", "10002792"], "evolutionPath": [{"id": "10002813", "number": "007", "name": "Chirpi", "stage": "Lumin Stage", "image": "10181", "slug": "chirpi", "nameClean": "Chirpi"}, {"id": "10002873", "number": "008", "name": "Tromber", "stage": "Nova Stage", "image": "10184", "slug": "tromber", "nameClean": "Tromber"}, {"id": "10002799", "number": "009", "name": "Cornet", "stage": "Nova Stage", "image": "10185", "slug": "cornet", "nameClean": "Cornet"}, {"id": "10002792", "number": "010", "name": "Tubster", "stage": "Nova Stage", "image": "10187", "slug": "tubster", "nameClean": "Tubster"}], "homelandType": "Target Tracking", "slug": "chirpi", "nameClean": "Chirpi", "desc_pt": "Pequeno pássaro dos ventos que flutua nas correntes de ar. Emite melodias cristalinas que acalmam seus aliados.", "habitats_pt": ["Picos das Terras Altas", "Estepe Arejada", "Estreito de Prata", "Ilha Celeste"], "homeland_pt": "11 Mobilidade", "homelandType_pt": "Rastreamento de Alvos"}, {"number": "008", "id": "10002873", "name": "Tromber", "element": "wind", "role": "sup", "image": "10184", "stage": "Nova Stage", "desc": "They like having fun and producing rhythmic music, so don't be surprised to see a grand symphony.", "attributes": {"HP": 113, "ATK": 88, "M.ATK": 51, "P.DEF": 79, "M.DEF": 81, "HASTE": 110}, "totalAttributes": 522, "habitats": ["Highland Peaks", "Breezy Steppe", "The Argent Strait", "Skyward Isle"], "homeland": "11 Mobility", "skills": [{"name": "Gale Slash", "type": "Physical", "cost": 0, "power": 73, "desc": "Slices forward with razor-sharp gusts of compressed wind."}, {"name": "Tromber Cyclone Spiral", "type": "Magic", "cost": 12, "power": 108, "desc": "Spins into a whirlwind that lifts and scatters enemy formations."}], "trait": {"name": "Tailwind Grace", "desc": "Increases haste and evasion for the entire squad."}, "evolution": [], "relatedIds": ["10002813", "10002873", "10002799", "10002792"], "evolutionPath": [{"id": "10002813", "number": "007", "name": "Chirpi", "stage": "Lumin Stage", "image": "10181", "slug": "chirpi", "nameClean": "Chirpi"}, {"id": "10002873", "number": "008", "name": "Tromber", "stage": "Nova Stage", "image": "10184", "slug": "tromber", "nameClean": "Tromber"}, {"id": "10002799", "number": "009", "name": "Cornet", "stage": "Nova Stage", "image": "10185", "slug": "cornet", "nameClean": "Cornet"}, {"id": "10002792", "number": "010", "name": "Tubster", "stage": "Nova Stage", "image": "10187", "slug": "tubster", "nameClean": "Tubster"}], "homelandType": "Target Tracking", "slug": "tromber", "nameClean": "Tromber", "desc_pt": "Seu bico ressonante amplifica rajadas de vento poderosas, capazes de desorientar predadores a longas distâncias.", "habitats_pt": ["Picos das Terras Altas", "Estepe Arejada", "Estreito de Prata", "Ilha Celeste"], "homeland_pt": "11 Mobilidade", "homelandType_pt": "Rastreamento de Alvos"}, {"number": "009", "id": "10002799", "name": "Cornet", "element": "wind", "role": "dps", "image": "10185", "stage": "Nova Stage", "desc": "They can produce loud, piercing noises that resonate throughout the entire beach just to draw attention.", "attributes": {"HP": 93, "ATK": 121, "M.ATK": 50, "P.DEF": 66, "M.DEF": 65, "HASTE": 94}, "totalAttributes": 489, "habitats": ["Highland Peaks", "Breezy Steppe", "The Argent Strait", "Skyward Isle"], "homeland": "12 Mobility", "skills": [{"name": "Gale Slash", "type": "Physical", "cost": 0, "power": 73, "desc": "Slices forward with razor-sharp gusts of compressed wind."}, {"name": "Cornet Cyclone Spiral", "type": "Magic", "cost": 12, "power": 108, "desc": "Spins into a whirlwind that lifts and scatters enemy formations."}], "trait": {"name": "Tailwind Grace", "desc": "Increases haste and evasion for the entire squad."}, "evolution": [], "relatedIds": ["10002813", "10002873", "10002799", "10002792"], "evolutionPath": [{"id": "10002813", "number": "007", "name": "Chirpi", "stage": "Lumin Stage", "image": "10181", "slug": "chirpi", "nameClean": "Chirpi"}, {"id": "10002873", "number": "008", "name": "Tromber", "stage": "Nova Stage", "image": "10184", "slug": "tromber", "nameClean": "Tromber"}, {"id": "10002799", "number": "009", "name": "Cornet", "stage": "Nova Stage", "image": "10185", "slug": "cornet", "nameClean": "Cornet"}, {"id": "10002792", "number": "010", "name": "Tubster", "stage": "Nova Stage", "image": "10187", "slug": "tubster", "nameClean": "Tubster"}], "homelandType": "Combat Instinct", "slug": "cornet", "nameClean": "Cornet", "desc_pt": "Voa em espirais cortantes com precisão milimétrica. Usa o vento para acelerar seus ataques até que se tornem invisíveis ao olho humano.", "habitats_pt": ["Picos das Terras Altas", "Estepe Arejada", "Estreito de Prata", "Ilha Celeste"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "010", "id": "10002792", "name": "Tubster", "element": "wind", "role": "break", "image": "10187", "stage": "Nova Stage", "desc": "Creates deep, tuba-like sounds that match its steady, friendly character.", "attributes": {"HP": 108, "ATK": 75, "M.ATK": 101, "P.DEF": 61, "M.DEF": 110, "HASTE": 80}, "totalAttributes": 535, "habitats": ["Highland Peaks", "Breezy Steppe", "The Argent Strait", "Skyward Isle"], "homeland": "14 Crushing", "skills": [{"name": "Gale Slash", "type": "Physical", "cost": 0, "power": 73, "desc": "Slices forward with razor-sharp gusts of compressed wind."}, {"name": "Tubster Cyclone Spiral", "type": "Magic", "cost": 12, "power": 108, "desc": "Spins into a whirlwind that lifts and scatters enemy formations."}], "trait": {"name": "Tailwind Grace", "desc": "Increases haste and evasion for the entire squad."}, "evolution": [], "relatedIds": ["10002813", "10002873", "10002799", "10002792"], "evolutionPath": [{"id": "10002813", "number": "007", "name": "Chirpi", "stage": "Lumin Stage", "image": "10181", "slug": "chirpi", "nameClean": "Chirpi"}, {"id": "10002873", "number": "008", "name": "Tromber", "stage": "Nova Stage", "image": "10184", "slug": "tromber", "nameClean": "Tromber"}, {"id": "10002799", "number": "009", "name": "Cornet", "stage": "Nova Stage", "image": "10185", "slug": "cornet", "nameClean": "Cornet"}, {"id": "10002792", "number": "010", "name": "Tubster", "stage": "Nova Stage", "image": "10187", "slug": "tubster", "nameClean": "Tubster"}], "homelandType": "Rock Shatter", "slug": "tubster", "nameClean": "Tubster", "desc_pt": "Um defensor pesado dos céus. Suas asas criam barreiras de pressão atmosférica que barram até os projéteis mais densos.", "habitats_pt": ["Picos das Terras Altas", "Estepe Arejada", "Estreito de Prata", "Ilha Celeste"], "homeland_pt": "14 Esmagamento", "homelandType_pt": "Quebra-Rochas"}, {"number": "011", "id": "10002717", "name": "Iris", "element": "grass", "role": "dps", "image": "10211", "stage": "Lumin Stage", "desc": "Iris possesses an extremely lightweight body, often lifted by the wind. It then either slowly spirals downward using the resistance from its petal skirt, or simply allows itself to be carried away by the wind.", "attributes": {"HP": 69, "ATK": 101, "M.ATK": 50, "P.DEF": 53, "M.DEF": 53, "HASTE": 71}, "totalAttributes": 397, "habitats": ["Nimbus Fields", "Verdant Canopy", "Whispering Grove", "Flora Reach"], "homeland": "12 Mobility", "skills": [{"name": "Vine Whip", "type": "Physical", "cost": 0, "power": 72, "desc": "Strikes fiercely with hardened floral vines."}, {"name": "Iris Verdant Bloom", "type": "Magic", "cost": 10, "power": 105, "desc": "Sprouts radiant flora that saps enemy defenses and grants Regen."}], "trait": {"name": "Photosynthesis", "desc": "Regenerates energy over time while in sunlit or grassy terrain."}, "evolution": [], "relatedIds": ["10002717", "10002835"], "evolutionPath": [{"id": "10002717", "number": "011", "name": "Iris", "stage": "Lumin Stage", "image": "10211", "slug": "iris", "nameClean": "Iris"}, {"id": "10002835", "number": "012", "name": "Irisal", "stage": "Nova Stage", "image": "10212", "slug": "irisal", "nameClean": "Irisal"}], "homelandType": "Combat Instinct", "slug": "iris", "nameClean": "Iris", "desc_pt": "Um ser floral delicado que floresce em solo fértil. Libera pólen curativo e chicotes vegetais velozes.", "habitats_pt": ["Campos de Nimbos", "Dossel Verdejante", "Bosque dos Sussurros", "Recanto da Flora"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "012", "id": "10002835", "name": "Irisal", "element": "grass", "role": "dps", "image": "10212", "stage": "Nova Stage", "desc": "Devoted to the art of dance, they constantly hone their craft, hoping to share the pure joy and energy of movement.", "attributes": {"HP": 100, "ATK": 116, "M.ATK": 50, "P.DEF": 70, "M.DEF": 70, "HASTE": 98}, "totalAttributes": 504, "habitats": ["Nimbus Fields", "Verdant Canopy", "Whispering Grove", "Flora Reach"], "homeland": "12 Mobility", "skills": [{"name": "Vine Whip", "type": "Physical", "cost": 0, "power": 72, "desc": "Strikes fiercely with hardened floral vines."}, {"name": "Irisal Verdant Bloom", "type": "Magic", "cost": 10, "power": 105, "desc": "Sprouts radiant flora that saps enemy defenses and grants Regen."}], "trait": {"name": "Photosynthesis", "desc": "Regenerates energy over time while in sunlit or grassy terrain."}, "evolution": [], "relatedIds": ["10002717", "10002835"], "evolutionPath": [{"id": "10002717", "number": "011", "name": "Iris", "stage": "Lumin Stage", "image": "10211", "slug": "iris", "nameClean": "Iris"}, {"id": "10002835", "number": "012", "name": "Irisal", "stage": "Nova Stage", "image": "10212", "slug": "irisal", "nameClean": "Irisal"}], "homelandType": "Combat Instinct", "slug": "irisal", "nameClean": "Irisal", "desc_pt": "A forma evoluída de Iris, com pétalas laminadas capazes de desferir cortes precisos de energia vegetal.", "habitats_pt": ["Campos de Nimbos", "Dossel Verdejante", "Bosque dos Sussurros", "Recanto da Flora"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "014", "id": "10002802", "name": "Skippy", "element": "water", "role": "heal", "image": "10041", "stage": "Lumin Stage", "desc": "They like to hide underwater and observe their surroundings using a lotus leaf as a strikingly ineffective disguise.", "attributes": {"HP": 69, "ATK": 54, "M.ATK": 50, "P.DEF": 45, "M.DEF": 66, "HASTE": 48}, "totalAttributes": 332, "habitats": ["Azure Shoals", "Mistwoods Lagoon", "The Argent Strait", "Coral Abyss"], "homeland": "10 Gathering", "skills": [{"name": "Aqua Jet", "type": "Magic", "cost": 0, "power": 70, "desc": "Fires a concentrated pressurized stream of water at high velocity."}, {"name": "Skippy Surging Torrent", "type": "Magic", "cost": 12, "power": 110, "desc": "Conjures a tidal rush that restores allies and pushes back enemies."}], "trait": {"name": "Aquatic Harmony", "desc": "Heals the party for 5% max HP when triggering an elemental reaction."}, "evolution": [], "relatedIds": ["10002802", "10002894", "10002795", "10002788"], "evolutionPath": [{"id": "10002802", "number": "014", "name": "Skippy", "stage": "Lumin Stage", "image": "10041", "slug": "skippy", "nameClean": "Skippy"}, {"id": "10002894", "number": "015", "name": "Pranky", "stage": "Gamma Stage", "image": "10042", "slug": "pranky", "nameClean": "Pranky"}, {"id": "10002795", "number": "016", "name": "Glacy", "stage": "Nova Stage", "image": "10043", "slug": "glacy", "nameClean": "Glacy"}, {"id": "10002788", "number": "017", "name": "Leafy", "stage": "Nova Stage", "image": "10045", "slug": "leafy", "nameClean": "Leafy"}], "homelandType": "Herbal Foraging", "slug": "skippy", "nameClean": "Skippy", "desc_pt": "Saltador aquático ágil que navega pelos baixios com facilidade. Suas bolhas refrescantes restauram as forças da equipe.", "habitats_pt": ["Baixios Azuis", "Lagoa da Floresta das Névoas", "Estreito de Prata", "Abismo de Coral"], "homeland_pt": "10 Coleta", "homelandType_pt": "Colheita de Ervas"}, {"number": "015", "id": "10002894", "name": "Pranky", "element": "water", "role": "heal", "image": "10042", "stage": "Gamma Stage", "desc": "They like to stay cool and moist. That's what the layer of film over their bodies is for.", "attributes": {"HP": 106, "ATK": 81, "M.ATK": 45, "P.DEF": 65, "M.DEF": 99, "HASTE": 72}, "totalAttributes": 468, "habitats": ["Azure Shoals", "Mistwoods Lagoon", "The Argent Strait", "Coral Abyss"], "homeland": "10 Gathering", "skills": [{"name": "Aqua Jet", "type": "Magic", "cost": 0, "power": 70, "desc": "Fires a concentrated pressurized stream of water at high velocity."}, {"name": "Pranky Surging Torrent", "type": "Magic", "cost": 12, "power": 110, "desc": "Conjures a tidal rush that restores allies and pushes back enemies."}], "trait": {"name": "Aquatic Harmony", "desc": "Heals the party for 5% max HP when triggering an elemental reaction."}, "evolution": [], "relatedIds": ["10002802", "10002894", "10002795", "10002788"], "evolutionPath": [{"id": "10002802", "number": "014", "name": "Skippy", "stage": "Lumin Stage", "image": "10041", "slug": "skippy", "nameClean": "Skippy"}, {"id": "10002894", "number": "015", "name": "Pranky", "stage": "Gamma Stage", "image": "10042", "slug": "pranky", "nameClean": "Pranky"}, {"id": "10002795", "number": "016", "name": "Glacy", "stage": "Nova Stage", "image": "10043", "slug": "glacy", "nameClean": "Glacy"}, {"id": "10002788", "number": "017", "name": "Leafy", "stage": "Nova Stage", "image": "10045", "slug": "leafy", "nameClean": "Leafy"}], "homelandType": "Herbal Foraging", "slug": "pranky", "nameClean": "Pranky", "desc_pt": "Travesso e brincalhão, usa jatos de água inesperados para desestabilizar adversários enquanto cura seus companheiros.", "habitats_pt": ["Baixios Azuis", "Lagoa da Floresta das Névoas", "Estreito de Prata", "Abismo de Coral"], "homeland_pt": "10 Coleta", "homelandType_pt": "Colheita de Ervas"}, {"number": "016", "id": "10002795", "name": "Glacy", "element": "water", "role": "heal", "image": "10043", "stage": "Nova Stage", "desc": "They are elegant and kind aniimo that always take care of weaker ones, and freeze anyone who crosses them in ice.", "attributes": {"HP": 118, "ATK": 90, "M.ATK": 50, "P.DEF": 72, "M.DEF": 110, "HASTE": 80}, "totalAttributes": 520, "habitats": ["Azure Shoals", "Mistwoods Lagoon", "The Argent Strait", "Coral Abyss"], "homeland": "10 Gathering", "skills": [{"name": "Aqua Jet", "type": "Magic", "cost": 0, "power": 70, "desc": "Fires a concentrated pressurized stream of water at high velocity."}, {"name": "Glacy Surging Torrent", "type": "Magic", "cost": 12, "power": 110, "desc": "Conjures a tidal rush that restores allies and pushes back enemies."}], "trait": {"name": "Aquatic Harmony", "desc": "Heals the party for 5% max HP when triggering an elemental reaction."}, "evolution": [], "relatedIds": ["10002802", "10002894", "10002795", "10002788"], "evolutionPath": [{"id": "10002802", "number": "014", "name": "Skippy", "stage": "Lumin Stage", "image": "10041", "slug": "skippy", "nameClean": "Skippy"}, {"id": "10002894", "number": "015", "name": "Pranky", "stage": "Gamma Stage", "image": "10042", "slug": "pranky", "nameClean": "Pranky"}, {"id": "10002795", "number": "016", "name": "Glacy", "stage": "Nova Stage", "image": "10043", "slug": "glacy", "nameClean": "Glacy"}, {"id": "10002788", "number": "017", "name": "Leafy", "stage": "Nova Stage", "image": "10045", "slug": "leafy", "nameClean": "Leafy"}], "homelandType": "Herbal Foraging", "slug": "glacy", "nameClean": "Glacy", "desc_pt": "Uma criatura límpida cujas águas começam a se cristalizar em gelo puro, concedendo bênçãos regenerativas.", "habitats_pt": ["Baixios Azuis", "Lagoa da Floresta das Névoas", "Estreito de Prata", "Abismo de Coral"], "homeland_pt": "10 Coleta", "homelandType_pt": "Colheita de Ervas"}, {"number": "017", "id": "10002788", "name": "Leafy", "element": "grass", "role": "energy", "image": "10045", "stage": "Nova Stage", "desc": "They live among lotus flowers and use their lotus leaf tails to conceal their face and show off their elegant nature.", "attributes": {"HP": 120, "ATK": 90, "M.ATK": 50, "P.DEF": 82, "M.DEF": 82, "HASTE": 106}, "totalAttributes": 530, "habitats": ["Nimbus Fields", "Verdant Canopy", "Whispering Grove", "Flora Reach"], "homeland": "13 Lumbering", "skills": [{"name": "Vine Whip", "type": "Physical", "cost": 0, "power": 72, "desc": "Strikes fiercely with hardened floral vines."}, {"name": "Leafy Verdant Bloom", "type": "Magic", "cost": 10, "power": 105, "desc": "Sprouts radiant flora that saps enemy defenses and grants Regen."}], "trait": {"name": "Photosynthesis", "desc": "Regenerates energy over time while in sunlit or grassy terrain."}, "evolution": [], "relatedIds": ["10002802", "10002894", "10002795", "10002788"], "evolutionPath": [{"id": "10002802", "number": "014", "name": "Skippy", "stage": "Lumin Stage", "image": "10041", "slug": "skippy", "nameClean": "Skippy"}, {"id": "10002894", "number": "015", "name": "Pranky", "stage": "Gamma Stage", "image": "10042", "slug": "pranky", "nameClean": "Pranky"}, {"id": "10002795", "number": "016", "name": "Glacy", "stage": "Nova Stage", "image": "10043", "slug": "glacy", "nameClean": "Glacy"}, {"id": "10002788", "number": "017", "name": "Leafy", "stage": "Nova Stage", "image": "10045", "slug": "leafy", "nameClean": "Leafy"}], "homelandType": "Resonance Beacon", "slug": "leafy", "nameClean": "Leafy", "desc_pt": "Possui uma cauda com folhas largas que absorvem luz solar pura, convertendo-a em energia vital contínua.", "habitats_pt": ["Campos de Nimbos", "Dossel Verdejante", "Bosque dos Sussurros", "Recanto da Flora"], "homeland_pt": "13 Corte de Lenha", "homelandType_pt": "Farol de Ressonância"}, {"number": "018", "id": "10002793", "name": "Nimbi", "element": "wind", "role": "sup", "image": "10261", "stage": "Lumin Stage", "desc": "Don't be surprised to see them floating in the clouds in small groups above the grasslands.", "attributes": {"HP": 80, "ATK": 76, "M.ATK": 43, "P.DEF": 68, "M.DEF": 82, "HASTE": 93}, "totalAttributes": 442, "habitats": ["Highland Peaks", "Breezy Steppe", "The Argent Strait", "Skyward Isle"], "homeland": "11 Mobility", "skills": [{"name": "Gale Slash", "type": "Physical", "cost": 0, "power": 73, "desc": "Slices forward with razor-sharp gusts of compressed wind."}, {"name": "Nimbi Cyclone Spiral", "type": "Magic", "cost": 12, "power": 108, "desc": "Spins into a whirlwind that lifts and scatters enemy formations."}], "trait": {"name": "Tailwind Grace", "desc": "Increases haste and evasion for the entire squad."}, "evolution": [], "relatedIds": ["10002793", "10002690", "10002786"], "evolutionPath": [{"id": "10002793", "number": "018", "name": "Nimbi", "stage": "Lumin Stage", "image": "10261", "slug": "nimbi", "nameClean": "Nimbi"}, {"id": "10002690", "number": "019", "name": "Turbo", "stage": "Nova Stage", "image": "10262", "slug": "turbo", "nameClean": "Turbo"}, {"id": "10002786", "number": "020", "name": "Dreaple", "stage": "Nova Stage", "image": "10263", "slug": "dreaple", "nameClean": "Dreaple"}], "homelandType": "Target Tracking", "slug": "nimbi", "nameClean": "Nimbi", "desc_pt": "Nuvem viva e graciosa que paira sobre colinas. Gera brisas suaves que amplificam a mobilidade de seus aliados.", "habitats_pt": ["Picos das Terras Altas", "Estepe Arejada", "Estreito de Prata", "Ilha Celeste"], "homeland_pt": "11 Mobilidade", "homelandType_pt": "Rastreamento de Alvos"}, {"number": "019", "id": "10002690", "name": "Turbo", "element": "wind", "role": "sup", "image": "10262", "stage": "Nova Stage", "desc": "They like to sleep hidden in the clouds, because with the presence of wind pressure and static electricity, the fluffy wool easily attracts things that drift by on the wind.", "attributes": {"HP": 95, "ATK": 90, "M.ATK": 50, "P.DEF": 80, "M.DEF": 96, "HASTE": 109}, "totalAttributes": 520, "habitats": ["Highland Peaks", "Breezy Steppe", "The Argent Strait", "Skyward Isle"], "homeland": "11 Mobility", "skills": [{"name": "Gale Slash", "type": "Physical", "cost": 0, "power": 73, "desc": "Slices forward with razor-sharp gusts of compressed wind."}, {"name": "Turbo Cyclone Spiral", "type": "Magic", "cost": 12, "power": 108, "desc": "Spins into a whirlwind that lifts and scatters enemy formations."}], "trait": {"name": "Tailwind Grace", "desc": "Increases haste and evasion for the entire squad."}, "evolution": [], "relatedIds": ["10002793", "10002690", "10002786"], "evolutionPath": [{"id": "10002793", "number": "018", "name": "Nimbi", "stage": "Lumin Stage", "image": "10261", "slug": "nimbi", "nameClean": "Nimbi"}, {"id": "10002690", "number": "019", "name": "Turbo", "stage": "Nova Stage", "image": "10262", "slug": "turbo", "nameClean": "Turbo"}, {"id": "10002786", "number": "020", "name": "Dreaple", "stage": "Nova Stage", "image": "10263", "slug": "dreaple", "nameClean": "Dreaple"}], "homelandType": "Target Tracking", "slug": "turbo", "nameClean": "Turbo", "desc_pt": "Acelera as correntes de ar ao seu redor, criando vórtices que impulsionam companheiros e afastam ameaças.", "habitats_pt": ["Picos das Terras Altas", "Estepe Arejada", "Estreito de Prata", "Ilha Celeste"], "homeland_pt": "11 Mobilidade", "homelandType_pt": "Rastreamento de Alvos"}, {"number": "020", "id": "10002786", "name": "Dreaple", "element": "dark", "role": "sup", "image": "10263", "stage": "Nova Stage", "desc": "Their fur that has absorbed dream energy presents a mesmerizing illusion of colors. When they use this fur as a pillow to sleep, they sink into sweet dreams.", "attributes": {"HP": 120, "ATK": 90, "M.ATK": 55, "P.DEF": 77, "M.DEF": 108, "HASTE": 80}, "totalAttributes": 530, "habitats": ["Twilight Ruins", "Umbral Hollow", "Shadowed Vale", "Beast Fang Ridge"], "homeland": "11 Mobility", "skills": [{"name": "Shadow Bite", "type": "Physical", "cost": 0, "power": 76, "desc": "Engulfs the target in shadows, inflicting Break damage."}, {"name": "Dreaple Abyssal Rift", "type": "Magic", "cost": 16, "power": 125, "desc": "Opens a dark vortex that consumes enemy buffs."}], "trait": {"name": "Nightfall Stalker", "desc": "Increases Critical Strike rate by 25% during combat."}, "evolution": [], "relatedIds": ["10002793", "10002690", "10002786"], "evolutionPath": [{"id": "10002793", "number": "018", "name": "Nimbi", "stage": "Lumin Stage", "image": "10261", "slug": "nimbi", "nameClean": "Nimbi"}, {"id": "10002690", "number": "019", "name": "Turbo", "stage": "Nova Stage", "image": "10262", "slug": "turbo", "nameClean": "Turbo"}, {"id": "10002786", "number": "020", "name": "Dreaple", "stage": "Nova Stage", "image": "10263", "slug": "dreaple", "nameClean": "Dreaple"}], "homelandType": "Target Tracking", "slug": "dreaple", "nameClean": "Dreaple", "desc_pt": "Um espírito sombrio dos ventos que desvia a atenção dos adversários com ilusões de névoa e sombras.", "habitats_pt": ["Ruínas do Crepúsculo", "Cova Umbrática", "Vale Sombrio", "Cordilheira Presa da Fera"], "homeland_pt": "11 Mobilidade", "homelandType_pt": "Rastreamento de Alvos"}, {"number": "021", "id": "10002746", "name": "Hummin", "element": "grass", "role": "break", "image": "10201", "stage": "Lumin Stage", "desc": "They live on the grassland in groups, they like burrowing for nutrients, and they love singing off-key together!", "attributes": {"HP": 94, "ATK": 60, "M.ATK": 80, "P.DEF": 70, "M.DEF": 94, "HASTE": 60}, "totalAttributes": 458, "habitats": ["Nimbus Fields", "Verdant Canopy", "Whispering Grove", "Flora Reach"], "homeland": "14 Crushing", "skills": [{"name": "Vine Whip", "type": "Physical", "cost": 0, "power": 72, "desc": "Strikes fiercely with hardened floral vines."}, {"name": "Hummin Verdant Bloom", "type": "Magic", "cost": 10, "power": 105, "desc": "Sprouts radiant flora that saps enemy defenses and grants Regen."}], "trait": {"name": "Photosynthesis", "desc": "Regenerates energy over time while in sunlit or grassy terrain."}, "evolution": [], "relatedIds": ["10002746", "10002739", "10002729"], "evolutionPath": [{"id": "10002746", "number": "021", "name": "Hummin", "stage": "Lumin Stage", "image": "10201", "slug": "hummin", "nameClean": "Hummin"}, {"id": "10002739", "number": "022", "name": "Witchin", "stage": "Nova Stage", "image": "10203", "slug": "witchin", "nameClean": "Witchin"}, {"id": "10002729", "number": "023", "name": "Tuckin", "stage": "Nova Stage", "image": "10207", "slug": "tuckin", "nameClean": "Tuckin"}], "homelandType": "Rock Shatter", "slug": "hummin", "nameClean": "Hummin", "desc_pt": "Um pequeno colibri veloz que bate as asas com frequência ensurdecedora, quebrando a guarda de oponentes.", "habitats_pt": ["Campos de Nimbos", "Dossel Verdejante", "Bosque dos Sussurros", "Recanto da Flora"], "homeland_pt": "14 Esmagamento", "homelandType_pt": "Quebra-Rochas"}, {"number": "022", "id": "10002739", "name": "Witchin", "element": "dark", "role": "energy", "image": "10203", "stage": "Nova Stage", "desc": "They make bizarre noises to drive intruders to madness, lower their defenses and even cause them to pass out.", "attributes": {"HP": 115, "ATK": 80, "M.ATK": 50, "P.DEF": 80, "M.DEF": 90, "HASTE": 115}, "totalAttributes": 530, "habitats": ["Twilight Ruins", "Umbral Hollow", "Shadowed Vale", "Beast Fang Ridge"], "homeland": "13 Lumbering", "skills": [{"name": "Shadow Bite", "type": "Physical", "cost": 0, "power": 76, "desc": "Engulfs the target in shadows, inflicting Break damage."}, {"name": "Witchin Abyssal Rift", "type": "Magic", "cost": 16, "power": 125, "desc": "Opens a dark vortex that consumes enemy buffs."}], "trait": {"name": "Nightfall Stalker", "desc": "Increases Critical Strike rate by 25% during combat."}, "evolution": [], "relatedIds": ["10002746", "10002739", "10002729"], "evolutionPath": [{"id": "10002746", "number": "021", "name": "Hummin", "stage": "Lumin Stage", "image": "10201", "slug": "hummin", "nameClean": "Hummin"}, {"id": "10002739", "number": "022", "name": "Witchin", "stage": "Nova Stage", "image": "10203", "slug": "witchin", "nameClean": "Witchin"}, {"id": "10002729", "number": "023", "name": "Tuckin", "stage": "Nova Stage", "image": "10207", "slug": "tuckin", "nameClean": "Tuckin"}], "homelandType": "Resonance Beacon", "slug": "witchin", "nameClean": "Witchin", "desc_pt": "Canaliza magia obscura das florestas antigas para drenar a vitalidade de inimigos desavisados.", "habitats_pt": ["Ruínas do Crepúsculo", "Cova Umbrática", "Vale Sombrio", "Cordilheira Presa da Fera"], "homeland_pt": "13 Corte de Lenha", "homelandType_pt": "Farol de Ressonância"}, {"number": "023", "id": "10002729", "name": "Tuckin", "element": "grass", "role": "break", "image": "10207", "stage": "Nova Stage", "desc": "They need to absorb nutrients from the soil through their roots to maintain vitality and hate leaving the ground.", "attributes": {"HP": 106, "ATK": 80, "M.ATK": 100, "P.DEF": 83, "M.DEF": 110, "HASTE": 71}, "totalAttributes": 550, "habitats": ["Nimbus Fields", "Verdant Canopy", "Whispering Grove", "Flora Reach"], "homeland": "14 Crushing", "skills": [{"name": "Vine Whip", "type": "Physical", "cost": 0, "power": 72, "desc": "Strikes fiercely with hardened floral vines."}, {"name": "Tuckin Verdant Bloom", "type": "Magic", "cost": 10, "power": 105, "desc": "Sprouts radiant flora that saps enemy defenses and grants Regen."}], "trait": {"name": "Photosynthesis", "desc": "Regenerates energy over time while in sunlit or grassy terrain."}, "evolution": [], "relatedIds": ["10002746", "10002739", "10002729"], "evolutionPath": [{"id": "10002746", "number": "021", "name": "Hummin", "stage": "Lumin Stage", "image": "10201", "slug": "hummin", "nameClean": "Hummin"}, {"id": "10002739", "number": "022", "name": "Witchin", "stage": "Nova Stage", "image": "10203", "slug": "witchin", "nameClean": "Witchin"}, {"id": "10002729", "number": "023", "name": "Tuckin", "stage": "Nova Stage", "image": "10207", "slug": "tuckin", "nameClean": "Tuckin"}], "homelandType": "Rock Shatter", "slug": "tuckin", "nameClean": "Tuckin", "desc_pt": "Enrola-se em uma couraça impenetrável de cipós rígidos para absorver impactos devastadores.", "habitats_pt": ["Campos de Nimbos", "Dossel Verdejante", "Bosque dos Sussurros", "Recanto da Flora"], "homeland_pt": "14 Esmagamento", "homelandType_pt": "Quebra-Rochas"}, {"number": "024", "id": "10002892", "name": "Budclaw.", "element": "rock", "role": "break", "image": "10161", "stage": "Lumin Stage", "desc": "Mating for life, they're always found in pairs. The heartbloom atop their shells indicates their state of happiness.", "attributes": {"HP": 76, "ATK": 64, "M.ATK": 84, "P.DEF": 93, "M.DEF": 65, "HASTE": 72}, "totalAttributes": 454, "habitats": ["Beast Fang Ridge", "Obsidian Quarry", "Granite Canyon", "Stony Bastion"], "homeland": "14 Crushing", "skills": [{"name": "Boulder Crash", "type": "Physical", "cost": 0, "power": 82, "desc": "Slams with stony mass, dealing massive Break damage."}, {"name": "Budclaw. Terra Tremor", "type": "Physical", "cost": 15, "power": 120, "desc": "Shatters the ground below, staggering all surrounding foes."}], "trait": {"name": "Solid Bastion", "desc": "Grants high resistance against staggering and knockdown."}, "evolution": [], "relatedIds": ["10002892", "10002787", "10002876"], "evolutionPath": [{"id": "10002892", "number": "024", "name": "Budclaw.", "stage": "Lumin Stage", "image": "10161", "slug": "budclaw", "nameClean": "Budclaw"}, {"id": "10002787", "number": "025", "name": "Shrubclaw", "stage": "Nova Stage", "image": "10162", "slug": "shrubclaw", "nameClean": "Shrubclaw"}, {"id": "10002876", "number": "026", "name": "Geoclaw", "stage": "Nova Stage", "image": "10163", "slug": "geoclaw", "nameClean": "Geoclaw"}], "homelandType": "Rock Shatter", "slug": "budclaw", "nameClean": "Budclaw", "desc_pt": "Criatura nativa de Aniimo com afinidade para o elemento Rocha e estilo de combate focado em Quebra.", "habitats_pt": ["Cordilheira Presa da Fera", "Pedreira de Obsidiana", "Cânion de Granito", "Bastião Pedregoso"], "homeland_pt": "14 Esmagamento", "homelandType_pt": "Quebra-Rochas"}, {"number": "025", "id": "10002787", "name": "Shrubclaw", "element": "rock", "role": "break", "image": "10162", "stage": "Nova Stage", "desc": "The lush plants that cover their shells convert sunlight into nutrients, so they don't even need to eat on sunny days.", "attributes": {"HP": 90, "ATK": 75, "M.ATK": 99, "P.DEF": 109, "M.DEF": 77, "HASTE": 85}, "totalAttributes": 535, "habitats": ["Beast Fang Ridge", "Obsidian Quarry", "Granite Canyon", "Stony Bastion"], "homeland": "14 Crushing", "skills": [{"name": "Boulder Crash", "type": "Physical", "cost": 0, "power": 82, "desc": "Slams with stony mass, dealing massive Break damage."}, {"name": "Shrubclaw Terra Tremor", "type": "Physical", "cost": 15, "power": 120, "desc": "Shatters the ground below, staggering all surrounding foes."}], "trait": {"name": "Solid Bastion", "desc": "Grants high resistance against staggering and knockdown."}, "evolution": [], "relatedIds": ["10002892", "10002787", "10002876"], "evolutionPath": [{"id": "10002892", "number": "024", "name": "Budclaw.", "stage": "Lumin Stage", "image": "10161", "slug": "budclaw", "nameClean": "Budclaw"}, {"id": "10002787", "number": "025", "name": "Shrubclaw", "stage": "Nova Stage", "image": "10162", "slug": "shrubclaw", "nameClean": "Shrubclaw"}, {"id": "10002876", "number": "026", "name": "Geoclaw", "stage": "Nova Stage", "image": "10163", "slug": "geoclaw", "nameClean": "Geoclaw"}], "homelandType": "Rock Shatter", "slug": "shrubclaw", "nameClean": "Shrubclaw", "desc_pt": "Garras revestidas de raízes fossilizadas. Desfere golpes pesados que quebram escudos rochosos.", "habitats_pt": ["Cordilheira Presa da Fera", "Pedreira de Obsidiana", "Cânion de Granito", "Bastião Pedregoso"], "homeland_pt": "14 Esmagamento", "homelandType_pt": "Quebra-Rochas"}, {"number": "026", "id": "10002876", "name": "Geoclaw", "element": "ice", "role": "break", "image": "10163", "stage": "Nova Stage", "desc": "They live in caves, feed on minerals, and use their beautifully crystallized shells to lure prey.", "attributes": {"HP": 93, "ATK": 80, "M.ATK": 103, "P.DEF": 113, "M.DEF": 79, "HASTE": 82}, "totalAttributes": 550, "habitats": ["Frostbite Ridge", "Glacier Crest", "Frozen Taiga", "Permafrost Valley"], "homeland": "14 Crushing", "skills": [{"name": "Frost Fang", "type": "Physical", "cost": 0, "power": 74, "desc": "Bites with freezing fangs, lowering the enemy's move speed."}, {"name": "Geoclaw Glacial Blizzard", "type": "Magic", "cost": 14, "power": 115, "desc": "Freezes the battlefield in a harsh howling blizzard."}], "trait": {"name": "Permafrost Shield", "desc": "Reduces incoming Physical and Magic damage by 15%."}, "evolution": [], "relatedIds": ["10002892", "10002787", "10002876"], "evolutionPath": [{"id": "10002892", "number": "024", "name": "Budclaw.", "stage": "Lumin Stage", "image": "10161", "slug": "budclaw", "nameClean": "Budclaw"}, {"id": "10002787", "number": "025", "name": "Shrubclaw", "stage": "Nova Stage", "image": "10162", "slug": "shrubclaw", "nameClean": "Shrubclaw"}, {"id": "10002876", "number": "026", "name": "Geoclaw", "stage": "Nova Stage", "image": "10163", "slug": "geoclaw", "nameClean": "Geoclaw"}], "homelandType": "Rock Shatter", "slug": "geoclaw", "nameClean": "Geoclaw", "desc_pt": "Seu corpo cristalizou-se em gelo e pedra, transformando-o em uma força avassaladora de quebra de guarda.", "habitats_pt": ["Crista da Congelação", "Cume Glacial", "Taiga Congelada", "Vale do Permafrost"], "homeland_pt": "14 Esmagamento", "homelandType_pt": "Quebra-Rochas"}, {"number": "027", "id": "10002734", "name": "Sparki", "element": "fire", "role": "energy", "image": "10331", "stage": "Lumin Stage", "desc": "Though they look like fire, those flames are only flowing energy. They give off no heat at all—in fact, they absorb heat from their surroundings. Sometimes they use this to disguise themselves as campfires and play tricks on others.", "attributes": {"HP": 68, "ATK": 92, "M.ATK": 41, "P.DEF": 60, "M.DEF": 67, "HASTE": 98}, "totalAttributes": 426, "habitats": ["Volcanic Caldera", "Scorched Plateau", "Echoback Landing", "Cinder Valley"], "homeland": "13 Lumbering", "skills": [{"name": "Flame Strike", "type": "Physical", "cost": 0, "power": 75, "desc": "Lashes out with burning claws, dealing Fire damage to the target."}, {"name": "Sparki Blazing Nova", "type": "Magic", "cost": 15, "power": 120, "desc": "Unleashes a surge of intense heat that scorches all nearby foes."}], "trait": {"name": "Kindled Fury", "desc": "Increases Fire damage by 20% when facing foes weak to Fire."}, "evolution": [], "relatedIds": ["10002734", "10002832"], "evolutionPath": [{"id": "10002734", "number": "027", "name": "Sparki", "stage": "Lumin Stage", "image": "10331", "slug": "sparki", "nameClean": "Sparki"}, {"id": "10002832", "number": "028", "name": "Flamerion", "stage": "Nova Stage", "image": "10333", "slug": "flamerion", "nameClean": "Flamerion"}], "homelandType": "Resonance Beacon", "slug": "sparki", "nameClean": "Sparki", "desc_pt": "Chispas incandescentes pulsam em seu dorso. Gera energia térmica abundante em qualquer clima.", "habitats_pt": ["Caldeira Vulcânica", "Planalto Chamuscado", "Pouso do Eco", "Vale das Cinzas"], "homeland_pt": "13 Corte de Lenha", "homelandType_pt": "Farol de Ressonância"}, {"number": "028", "id": "10002832", "name": "Flamerion", "element": "fire", "role": "energy", "image": "10333", "stage": "Nova Stage", "desc": "They only come out at night and their bodies are made of gaseous energy and can split as they want!", "attributes": {"HP": 80, "ATK": 108, "M.ATK": 50, "P.DEF": 70, "M.DEF": 79, "HASTE": 115}, "totalAttributes": 502, "habitats": ["Volcanic Caldera", "Scorched Plateau", "Echoback Landing", "Cinder Valley"], "homeland": "13 Lumbering", "skills": [{"name": "Flame Strike", "type": "Physical", "cost": 0, "power": 75, "desc": "Lashes out with burning claws, dealing Fire damage to the target."}, {"name": "Flamerion Blazing Nova", "type": "Magic", "cost": 15, "power": 120, "desc": "Unleashes a surge of intense heat that scorches all nearby foes."}], "trait": {"name": "Kindled Fury", "desc": "Increases Fire damage by 20% when facing foes weak to Fire."}, "evolution": [], "relatedIds": ["10002734", "10002832"], "evolutionPath": [{"id": "10002734", "number": "027", "name": "Sparki", "stage": "Lumin Stage", "image": "10331", "slug": "sparki", "nameClean": "Sparki"}, {"id": "10002832", "number": "028", "name": "Flamerion", "stage": "Nova Stage", "image": "10333", "slug": "flamerion", "nameClean": "Flamerion"}], "homelandType": "Resonance Beacon", "slug": "flamerion", "nameClean": "Flamerion", "desc_pt": "Uma fera de pura brasa cujos rugidos liberam ondas de calor que abastecem os poderes dos aliados.", "habitats_pt": ["Caldeira Vulcânica", "Planalto Chamuscado", "Pouso do Eco", "Vale das Cinzas"], "homeland_pt": "13 Corte de Lenha", "homelandType_pt": "Farol de Ressonância"}, {"number": "029", "id": "10002867", "name": "Flutternym", "element": "wind", "role": "heal", "image": "10231", "stage": "Lumin Stage", "desc": "They are timid and hide whenever they sense danger, but the fluorescent scales they shake off always give them away.", "attributes": {"HP": 94, "ATK": 81, "M.ATK": 41, "P.DEF": 68, "M.DEF": 68, "HASTE": 85}, "totalAttributes": 437, "habitats": ["Highland Peaks", "Breezy Steppe", "The Argent Strait", "Skyward Isle"], "homeland": "10 Gathering", "skills": [{"name": "Gale Slash", "type": "Physical", "cost": 0, "power": 73, "desc": "Slices forward with razor-sharp gusts of compressed wind."}, {"name": "Flutternym Cyclone Spiral", "type": "Magic", "cost": 12, "power": 108, "desc": "Spins into a whirlwind that lifts and scatters enemy formations."}], "trait": {"name": "Tailwind Grace", "desc": "Increases haste and evasion for the entire squad."}, "evolution": [], "relatedIds": ["10002867", "10002765", "10002888"], "evolutionPath": [{"id": "10002867", "number": "029", "name": "Flutternym", "stage": "Lumin Stage", "image": "10231", "slug": "flutternym", "nameClean": "Flutternym"}, {"id": "10002765", "number": "030", "name": "Gracewing", "stage": "Nova Stage", "image": "10232", "slug": "gracewing", "nameClean": "Gracewing"}, {"id": "10002888", "number": "031", "name": "Somniwing", "stage": "Lumin Stage", "image": "10233", "slug": "somniwing", "nameClean": "Somniwing"}], "homelandType": "Herbal Foraging", "slug": "flutternym", "nameClean": "Flutternym", "desc_pt": "Borboleta etérea que dispersa orvalho suave, trazendo tranquilidade e cura profunda para quem está próximo.", "habitats_pt": ["Picos das Terras Altas", "Estepe Arejada", "Estreito de Prata", "Ilha Celeste"], "homeland_pt": "10 Coleta", "homelandType_pt": "Colheita de Ervas"}, {"number": "030", "id": "10002765", "name": "Gracewing", "element": "wind", "role": "heal", "image": "10232", "stage": "Nova Stage", "desc": "Lone wanderers. They create illusions by shedding scales from their wings when threats approach.", "attributes": {"HP": 110, "ATK": 95, "M.ATK": 50, "P.DEF": 80, "M.DEF": 80, "HASTE": 100}, "totalAttributes": 515, "habitats": ["Highland Peaks", "Breezy Steppe", "The Argent Strait", "Skyward Isle"], "homeland": "10 Gathering", "skills": [{"name": "Gale Slash", "type": "Physical", "cost": 0, "power": 73, "desc": "Slices forward with razor-sharp gusts of compressed wind."}, {"name": "Gracewing Cyclone Spiral", "type": "Magic", "cost": 12, "power": 108, "desc": "Spins into a whirlwind that lifts and scatters enemy formations."}], "trait": {"name": "Tailwind Grace", "desc": "Increases haste and evasion for the entire squad."}, "evolution": [], "relatedIds": ["10002867", "10002765", "10002888"], "evolutionPath": [{"id": "10002867", "number": "029", "name": "Flutternym", "stage": "Lumin Stage", "image": "10231", "slug": "flutternym", "nameClean": "Flutternym"}, {"id": "10002765", "number": "030", "name": "Gracewing", "stage": "Nova Stage", "image": "10232", "slug": "gracewing", "nameClean": "Gracewing"}, {"id": "10002888", "number": "031", "name": "Somniwing", "stage": "Lumin Stage", "image": "10233", "slug": "somniwing", "nameClean": "Somniwing"}], "homelandType": "Herbal Foraging", "slug": "gracewing", "nameClean": "Gracewing", "desc_pt": "Asas translúcidas que refratam a luz, criando auras calmantes que aceleram a regeneração de ferimentos.", "habitats_pt": ["Picos das Terras Altas", "Estepe Arejada", "Estreito de Prata", "Ilha Celeste"], "homeland_pt": "10 Coleta", "homelandType_pt": "Colheita de Ervas"}, {"number": "031", "id": "10002888", "name": "Somniwing", "element": "wind", "role": "energy", "image": "10233", "stage": "Lumin Stage", "desc": "Their magnificent wings spread scales to help flowers grow and spread vitality wherever they fly.", "attributes": {"HP": 111, "ATK": 92, "M.ATK": 50, "P.DEF": 80, "M.DEF": 80, "HASTE": 115}, "totalAttributes": 528, "habitats": ["Highland Peaks", "Breezy Steppe", "The Argent Strait", "Skyward Isle"], "homeland": "13 Lumbering", "skills": [{"name": "Gale Slash", "type": "Physical", "cost": 0, "power": 73, "desc": "Slices forward with razor-sharp gusts of compressed wind."}, {"name": "Somniwing Cyclone Spiral", "type": "Magic", "cost": 12, "power": 108, "desc": "Spins into a whirlwind that lifts and scatters enemy formations."}], "trait": {"name": "Tailwind Grace", "desc": "Increases haste and evasion for the entire squad."}, "evolution": [], "relatedIds": ["10002867", "10002765", "10002888"], "evolutionPath": [{"id": "10002867", "number": "029", "name": "Flutternym", "stage": "Lumin Stage", "image": "10231", "slug": "flutternym", "nameClean": "Flutternym"}, {"id": "10002765", "number": "030", "name": "Gracewing", "stage": "Nova Stage", "image": "10232", "slug": "gracewing", "nameClean": "Gracewing"}, {"id": "10002888", "number": "031", "name": "Somniwing", "stage": "Lumin Stage", "image": "10233", "slug": "somniwing", "nameClean": "Somniwing"}], "homelandType": "Resonance Beacon", "slug": "somniwing", "nameClean": "Somniwing", "desc_pt": "Suas asas induzem um transe tranquilo, restaurando continuamente o foco e a energia de todo o time.", "habitats_pt": ["Picos das Terras Altas", "Estepe Arejada", "Estreito de Prata", "Ilha Celeste"], "homeland_pt": "13 Corte de Lenha", "homelandType_pt": "Farol de Ressonância"}, {"number": "032", "id": "10002693", "name": "Eko", "element": "wind", "role": "sup", "image": "10441", "stage": "Lumin Stage", "desc": "With their big ears perked up, they are extremely sensitive to sound. They won't miss any movement that catches their attention, near or far.", "attributes": {"HP": 70, "ATK": 112, "M.ATK": 42, "P.DEF": 70, "M.DEF": 57, "HASTE": 89}, "totalAttributes": 440, "habitats": ["Highland Peaks", "Breezy Steppe", "The Argent Strait", "Skyward Isle"], "homeland": "11 Mobility", "skills": [{"name": "Gale Slash", "type": "Physical", "cost": 0, "power": 73, "desc": "Slices forward with razor-sharp gusts of compressed wind."}, {"name": "Eko Cyclone Spiral", "type": "Magic", "cost": 12, "power": 108, "desc": "Spins into a whirlwind that lifts and scatters enemy formations."}], "trait": {"name": "Tailwind Grace", "desc": "Increases haste and evasion for the entire squad."}, "evolution": [], "relatedIds": ["10002693", "10002688"], "evolutionPath": [{"id": "10002693", "number": "032", "name": "Eko", "stage": "Lumin Stage", "image": "10441", "slug": "eko", "nameClean": "Eko"}, {"id": "10002688", "number": "033", "name": "Eklue", "stage": "Nova Stage", "image": "10443", "slug": "eklue", "nameClean": "Eklue"}], "homelandType": "Target Tracking", "slug": "eko", "nameClean": "Eko", "desc_pt": "Curioso e atento a rastros e pistas. Consegue captar vibrações ultrassônicas à distância.", "habitats_pt": ["Picos das Terras Altas", "Estepe Arejada", "Estreito de Prata", "Ilha Celeste"], "homeland_pt": "11 Mobilidade", "homelandType_pt": "Rastreamento de Alvos"}, {"number": "033", "id": "10002688", "name": "Eklue", "element": "wind", "role": "sup", "image": "10443", "stage": "Nova Stage", "desc": "Curious and keen on searching for traces and tracking targets. The ring on their tail amplifies ultrasound, allowing them to easily see through cloaked creatures.", "attributes": {"HP": 82, "ATK": 132, "M.ATK": 49, "P.DEF": 83, "M.DEF": 67, "HASTE": 105}, "totalAttributes": 518, "habitats": ["Highland Peaks", "Breezy Steppe", "The Argent Strait", "Skyward Isle"], "homeland": "11 Mobility", "skills": [{"name": "Gale Slash", "type": "Physical", "cost": 0, "power": 73, "desc": "Slices forward with razor-sharp gusts of compressed wind."}, {"name": "Eklue Cyclone Spiral", "type": "Magic", "cost": 12, "power": 108, "desc": "Spins into a whirlwind that lifts and scatters enemy formations."}], "trait": {"name": "Tailwind Grace", "desc": "Increases haste and evasion for the entire squad."}, "evolution": [], "relatedIds": ["10002693", "10002688"], "evolutionPath": [{"id": "10002693", "number": "032", "name": "Eko", "stage": "Lumin Stage", "image": "10441", "slug": "eko", "nameClean": "Eko"}, {"id": "10002688", "number": "033", "name": "Eklue", "stage": "Nova Stage", "image": "10443", "slug": "eklue", "nameClean": "Eklue"}], "homelandType": "Target Tracking", "slug": "eklue", "nameClean": "Eklue", "desc_pt": "O anel em sua cauda amplifica ondas ultrassônicas, revelando a localização de qualquer inimigo oculto.", "habitats_pt": ["Picos das Terras Altas", "Estepe Arejada", "Estreito de Prata", "Ilha Celeste"], "homeland_pt": "11 Mobilidade", "homelandType_pt": "Rastreamento de Alvos"}, {"number": "034", "id": "10002840", "name": "Budsquire", "element": "grass", "role": "dps", "image": "10321", "stage": "Lumin Stage", "desc": "The timid crybabies can also rise up against enemies when cornered. The buds on their heads will blossom as they do so.", "attributes": {"HP": 82, "ATK": 103, "M.ATK": 43, "P.DEF": 59, "M.DEF": 59, "HASTE": 78}, "totalAttributes": 424, "habitats": ["Nimbus Fields", "Verdant Canopy", "Whispering Grove", "Flora Reach"], "homeland": "12 Mobility", "skills": [{"name": "Vine Whip", "type": "Physical", "cost": 0, "power": 72, "desc": "Strikes fiercely with hardened floral vines."}, {"name": "Budsquire Verdant Bloom", "type": "Magic", "cost": 10, "power": 105, "desc": "Sprouts radiant flora that saps enemy defenses and grants Regen."}], "trait": {"name": "Photosynthesis", "desc": "Regenerates energy over time while in sunlit or grassy terrain."}, "evolution": [], "relatedIds": ["10002840", "10002821", "10002703"], "evolutionPath": [{"id": "10002840", "number": "034", "name": "Budsquire", "stage": "Lumin Stage", "image": "10321", "slug": "budsquire", "nameClean": "Budsquire"}, {"id": "10002821", "number": "035", "name": "Thornblade", "stage": "Nova Stage", "image": "10323", "slug": "thornblade", "nameClean": "Thornblade"}, {"id": "10002703", "number": "036", "name": "Melloblum", "stage": "Nova Stage", "image": "10324", "slug": "melloblum", "nameClean": "Melloblum"}], "homelandType": "Combat Instinct", "slug": "budsquire", "nameClean": "Budsquire", "desc_pt": "Jovem guerreiro botânico que empunha galhos afiados com postura impecável e disciplina marcial.", "habitats_pt": ["Campos de Nimbos", "Dossel Verdejante", "Bosque dos Sussurros", "Recanto da Flora"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "035", "id": "10002821", "name": "Thornblade", "element": "grass", "role": "dps", "image": "10323", "stage": "Nova Stage", "desc": "The swords made from thorny stems are drawn only when it's time to protect their pack against enemies.", "attributes": {"HP": 96, "ATK": 121, "M.ATK": 50, "P.DEF": 70, "M.DEF": 70, "HASTE": 92}, "totalAttributes": 499, "habitats": ["Nimbus Fields", "Verdant Canopy", "Whispering Grove", "Flora Reach"], "homeland": "12 Mobility", "skills": [{"name": "Vine Whip", "type": "Physical", "cost": 0, "power": 72, "desc": "Strikes fiercely with hardened floral vines."}, {"name": "Thornblade Verdant Bloom", "type": "Magic", "cost": 10, "power": 105, "desc": "Sprouts radiant flora that saps enemy defenses and grants Regen."}], "trait": {"name": "Photosynthesis", "desc": "Regenerates energy over time while in sunlit or grassy terrain."}, "evolution": [], "relatedIds": ["10002840", "10002821", "10002703"], "evolutionPath": [{"id": "10002840", "number": "034", "name": "Budsquire", "stage": "Lumin Stage", "image": "10321", "slug": "budsquire", "nameClean": "Budsquire"}, {"id": "10002821", "number": "035", "name": "Thornblade", "stage": "Nova Stage", "image": "10323", "slug": "thornblade", "nameClean": "Thornblade"}, {"id": "10002703", "number": "036", "name": "Melloblum", "stage": "Nova Stage", "image": "10324", "slug": "melloblum", "nameClean": "Melloblum"}], "homelandType": "Combat Instinct", "slug": "thornblade", "nameClean": "Thornblade", "desc_pt": "Suas lâminas de espinhos cortam com veneno vegetal, punindo qualquer um que se aproxime.", "habitats_pt": ["Campos de Nimbos", "Dossel Verdejante", "Bosque dos Sussurros", "Recanto da Flora"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "036", "id": "10002703", "name": "Melloblum", "element": "grass", "role": "sup", "image": "10324", "stage": "Nova Stage", "desc": "To quell disputes, they scatter fragrant petals, causing those who touch them to feel happiness and crush their fighting spirit.", "attributes": {"HP": 95, "ATK": 108, "M.ATK": 91, "P.DEF": 70, "M.DEF": 70, "HASTE": 78}, "totalAttributes": 512, "habitats": ["Nimbus Fields", "Verdant Canopy", "Whispering Grove", "Flora Reach"], "homeland": "11 Mobility", "skills": [{"name": "Vine Whip", "type": "Physical", "cost": 0, "power": 72, "desc": "Strikes fiercely with hardened floral vines."}, {"name": "Melloblum Verdant Bloom", "type": "Magic", "cost": 10, "power": 105, "desc": "Sprouts radiant flora that saps enemy defenses and grants Regen."}], "trait": {"name": "Photosynthesis", "desc": "Regenerates energy over time while in sunlit or grassy terrain."}, "evolution": [], "relatedIds": ["10002840", "10002821", "10002703"], "evolutionPath": [{"id": "10002840", "number": "034", "name": "Budsquire", "stage": "Lumin Stage", "image": "10321", "slug": "budsquire", "nameClean": "Budsquire"}, {"id": "10002821", "number": "035", "name": "Thornblade", "stage": "Nova Stage", "image": "10323", "slug": "thornblade", "nameClean": "Thornblade"}, {"id": "10002703", "number": "036", "name": "Melloblum", "stage": "Nova Stage", "image": "10324", "slug": "melloblum", "nameClean": "Melloblum"}], "homelandType": "Target Tracking", "slug": "melloblum", "nameClean": "Melloblum", "desc_pt": "Guardião sereno que projeta barreiras de pétalas aromáticas para proteger os mais jovens do grupo.", "habitats_pt": ["Campos de Nimbos", "Dossel Verdejante", "Bosque dos Sussurros", "Recanto da Flora"], "homeland_pt": "11 Mobilidade", "homelandType_pt": "Rastreamento de Alvos"}, {"number": "037", "id": "10002781", "name": "Pomegg", "element": "grass", "role": "break", "image": "10471", "stage": "Lumin Stage", "desc": "They retreat into their shells to rest, often getting mistaken for eggs. They fear battle but love a crowd, dancing with grass balls to cheer others on.", "attributes": {"HP": 74, "ATK": 72, "M.ATK": 91, "P.DEF": 68, "M.DEF": 65, "HASTE": 85}, "totalAttributes": 455, "habitats": ["Nimbus Fields", "Verdant Canopy", "Whispering Grove", "Flora Reach"], "homeland": "14 Crushing", "skills": [{"name": "Vine Whip", "type": "Physical", "cost": 0, "power": 72, "desc": "Strikes fiercely with hardened floral vines."}, {"name": "Pomegg Verdant Bloom", "type": "Magic", "cost": 10, "power": 105, "desc": "Sprouts radiant flora that saps enemy defenses and grants Regen."}], "trait": {"name": "Photosynthesis", "desc": "Regenerates energy over time while in sunlit or grassy terrain."}, "evolution": [], "relatedIds": ["10002781", "10002699", "10002768"], "evolutionPath": [{"id": "10002781", "number": "037", "name": "Pomegg", "stage": "Lumin Stage", "image": "10471", "slug": "pomegg", "nameClean": "Pomegg"}, {"id": "10002699", "number": "038", "name": "Dazmand", "stage": "Nova Stage", "image": "10474", "slug": "dazmand", "nameClean": "Dazmand"}, {"id": "10002768", "number": "039", "name": "Pomawk", "stage": "Nova Stage", "image": "10475", "slug": "pomawk", "nameClean": "Pomawk"}], "homelandType": "Rock Shatter", "slug": "pomegg", "nameClean": "Pomegg", "desc_pt": "Semente protegida por casca ultrarresistente. Rebota contra agressores para interromper seus ataques.", "habitats_pt": ["Campos de Nimbos", "Dossel Verdejante", "Bosque dos Sussurros", "Recanto da Flora"], "homeland_pt": "14 Esmagamento", "homelandType_pt": "Quebra-Rochas"}, {"number": "038", "id": "10002699", "name": "Dazmand", "element": "electric", "role": "sup", "image": "10474", "stage": "Nova Stage", "desc": "They have flexible limbs and love to show off their flashy kicks to anyone watching. They wear their shed skin over their heads like a cool hood.", "attributes": {"HP": 100, "ATK": 108, "M.ATK": 91, "P.DEF": 81, "M.DEF": 81, "HASTE": 71}, "totalAttributes": 532, "habitats": ["Thunder Peak", "Echoback Landing", "Lightning Crag", "Stormy Bluffs"], "homeland": "11 Mobility", "skills": [{"name": "Volt Jab", "type": "Physical", "cost": 0, "power": 78, "desc": "Discharges an electric punch that shocks the opponent."}, {"name": "Dazmand Thunderstorm Wrath", "type": "Magic", "cost": 18, "power": 130, "desc": "Calls down a devastating lightning strike from above."}], "trait": {"name": "Static Charge", "desc": "Has a 25% chance to paralyze the attacker on contact."}, "evolution": [], "relatedIds": ["10002781", "10002699", "10002768"], "evolutionPath": [{"id": "10002781", "number": "037", "name": "Pomegg", "stage": "Lumin Stage", "image": "10471", "slug": "pomegg", "nameClean": "Pomegg"}, {"id": "10002699", "number": "038", "name": "Dazmand", "stage": "Nova Stage", "image": "10474", "slug": "dazmand", "nameClean": "Dazmand"}, {"id": "10002768", "number": "039", "name": "Pomawk", "stage": "Nova Stage", "image": "10475", "slug": "pomawk", "nameClean": "Pomawk"}], "homelandType": "Target Tracking", "slug": "dazmand", "nameClean": "Dazmand", "desc_pt": "Carregado de estática pulsante, atrai descargas elétricas para alimentar as habilidades da equipe.", "habitats_pt": ["Pico do Trovão", "Pouso do Eco", "Penhasco dos Raios", "Escarpa Tempestuosa"], "homeland_pt": "11 Mobilidade", "homelandType_pt": "Rastreamento de Alvos"}, {"number": "039", "id": "10002768", "name": "Pomawk", "element": "grass", "role": "break", "image": "10475", "stage": "Nova Stage", "desc": "Their towering manes display their wild nature, while their feral roars reveal their true colors. Their tails are built to store sound waves, releasing a sonic boom when they strike an opponent.", "attributes": {"HP": 87, "ATK": 85, "M.ATK": 107, "P.DEF": 80, "M.DEF": 76, "HASTE": 100}, "totalAttributes": 535, "habitats": ["Nimbus Fields", "Verdant Canopy", "Whispering Grove", "Flora Reach"], "homeland": "14 Crushing", "skills": [{"name": "Vine Whip", "type": "Physical", "cost": 0, "power": 72, "desc": "Strikes fiercely with hardened floral vines."}, {"name": "Pomawk Verdant Bloom", "type": "Magic", "cost": 10, "power": 105, "desc": "Sprouts radiant flora that saps enemy defenses and grants Regen."}], "trait": {"name": "Photosynthesis", "desc": "Regenerates energy over time while in sunlit or grassy terrain."}, "evolution": [], "relatedIds": ["10002781", "10002699", "10002768"], "evolutionPath": [{"id": "10002781", "number": "037", "name": "Pomegg", "stage": "Lumin Stage", "image": "10471", "slug": "pomegg", "nameClean": "Pomegg"}, {"id": "10002699", "number": "038", "name": "Dazmand", "stage": "Nova Stage", "image": "10474", "slug": "dazmand", "nameClean": "Dazmand"}, {"id": "10002768", "number": "039", "name": "Pomawk", "stage": "Nova Stage", "image": "10475", "slug": "pomawk", "nameClean": "Pomawk"}], "homelandType": "Rock Shatter", "slug": "pomawk", "nameClean": "Pomawk", "desc_pt": "A forma final da semente, agora uma árvore robusta com espinhos de combate para demolição de defesas.", "habitats_pt": ["Campos de Nimbos", "Dossel Verdejante", "Bosque dos Sussurros", "Recanto da Flora"], "homeland_pt": "14 Esmagamento", "homelandType_pt": "Quebra-Rochas"}, {"number": "040", "id": "10002828", "name": "Dewy", "element": "dark", "role": "sup", "image": "10351", "stage": "Lumin Stage", "desc": "As partners to perfumers, they store and ferment nectar within their bodies, transforming it into perfume ingredients.", "attributes": {"HP": 71, "ATK": 90, "M.ATK": 69, "P.DEF": 58, "M.DEF": 55, "HASTE": 94}, "totalAttributes": 437, "habitats": ["Twilight Ruins", "Umbral Hollow", "Shadowed Vale", "Beast Fang Ridge"], "homeland": "11 Mobility", "skills": [{"name": "Shadow Bite", "type": "Physical", "cost": 0, "power": 76, "desc": "Engulfs the target in shadows, inflicting Break damage."}, {"name": "Dewy Abyssal Rift", "type": "Magic", "cost": 16, "power": 125, "desc": "Opens a dark vortex that consumes enemy buffs."}], "trait": {"name": "Nightfall Stalker", "desc": "Increases Critical Strike rate by 25% during combat."}, "evolution": [], "relatedIds": ["10002828", "10002846"], "evolutionPath": [{"id": "10002828", "number": "040", "name": "Dewy", "stage": "Lumin Stage", "image": "10351", "slug": "dewy", "nameClean": "Dewy"}, {"id": "10002846", "number": "041", "name": "Fragrancier", "stage": "Nova Stage", "image": "10352", "slug": "fragrancier", "nameClean": "Fragrancier"}], "homelandType": "Target Tracking", "slug": "dewy", "nameClean": "Dewy", "desc_pt": "Gotas escuras condensam-se em seu corpo, gerando campos gravitacionais sutis que auxiliam a equipe.", "habitats_pt": ["Ruínas do Crepúsculo", "Cova Umbrática", "Vale Sombrio", "Cordilheira Presa da Fera"], "homeland_pt": "11 Mobilidade", "homelandType_pt": "Rastreamento de Alvos"}, {"number": "041", "id": "10002846", "name": "Fragrancier", "element": "dark", "role": "sup", "image": "10352", "stage": "Nova Stage", "desc": "They're picky about odors, so they harvest and store various nectar within them to craft unique perfume ingredients.", "attributes": {"HP": 84, "ATK": 106, "M.ATK": 81, "P.DEF": 68, "M.DEF": 65, "HASTE": 110}, "totalAttributes": 514, "habitats": ["Twilight Ruins", "Umbral Hollow", "Shadowed Vale", "Beast Fang Ridge"], "homeland": "11 Mobility", "skills": [{"name": "Shadow Bite", "type": "Physical", "cost": 0, "power": 76, "desc": "Engulfs the target in shadows, inflicting Break damage."}, {"name": "Fragrancier Abyssal Rift", "type": "Magic", "cost": 16, "power": 125, "desc": "Opens a dark vortex that consumes enemy buffs."}], "trait": {"name": "Nightfall Stalker", "desc": "Increases Critical Strike rate by 25% during combat."}, "evolution": [], "relatedIds": ["10002828", "10002846"], "evolutionPath": [{"id": "10002828", "number": "040", "name": "Dewy", "stage": "Lumin Stage", "image": "10351", "slug": "dewy", "nameClean": "Dewy"}, {"id": "10002846", "number": "041", "name": "Fragrancier", "stage": "Nova Stage", "image": "10352", "slug": "fragrancier", "nameClean": "Fragrancier"}], "homelandType": "Target Tracking", "slug": "fragrancier", "nameClean": "Fragrancier", "desc_pt": "Exala perfumes exóticos das sombras que confundem sentidos e reduzem a precisão inimiga.", "habitats_pt": ["Ruínas do Crepúsculo", "Cova Umbrática", "Vale Sombrio", "Cordilheira Presa da Fera"], "homeland_pt": "11 Mobilidade", "homelandType_pt": "Rastreamento de Alvos"}, {"number": "042", "id": "10002833", "name": "Wisptis", "element": "dark", "role": "dps", "image": "10031", "stage": "Lumin Stage", "desc": "If the only way to evolve is to defeat other Wisptises, then there is no other choice but to keep their claws sharp.", "attributes": {"HP": 77, "ATK": 108, "M.ATK": 43, "P.DEF": 60, "M.DEF": 54, "HASTE": 77}, "totalAttributes": 419, "habitats": ["Twilight Ruins", "Umbral Hollow", "Shadowed Vale", "Beast Fang Ridge"], "homeland": "12 Mobility", "skills": [{"name": "Shadow Bite", "type": "Physical", "cost": 0, "power": 76, "desc": "Engulfs the target in shadows, inflicting Break damage."}, {"name": "Wisptis Abyssal Rift", "type": "Magic", "cost": 16, "power": 125, "desc": "Opens a dark vortex that consumes enemy buffs."}], "trait": {"name": "Nightfall Stalker", "desc": "Increases Critical Strike rate by 25% during combat."}, "evolution": [], "relatedIds": ["10002833", "10002694", "10002826"], "evolutionPath": [{"id": "10002833", "number": "042", "name": "Wisptis", "stage": "Lumin Stage", "image": "10031", "slug": "wisptis", "nameClean": "Wisptis"}, {"id": "10002694", "number": "043", "name": "Ignitis", "stage": "Nova Stage", "image": "10032", "slug": "ignitis", "nameClean": "Ignitis"}, {"id": "10002826", "number": "044", "name": "Fulmintis", "stage": "Nova Stage", "image": "10033", "slug": "fulmintis", "nameClean": "Fulmintis"}], "homelandType": "Combat Instinct", "slug": "wisptis", "nameClean": "Wisptis", "desc_pt": "Fogo-fátuo espectral que vagueia por noites escuras atacando com labaredas sombrias.", "habitats_pt": ["Ruínas do Crepúsculo", "Cova Umbrática", "Vale Sombrio", "Cordilheira Presa da Fera"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "043", "id": "10002694", "name": "Ignitis", "element": "dark", "role": "dps", "image": "10032", "stage": "Nova Stage", "desc": "They sharpen their blades and wait for the perfect moment, hiding in the shadows as they toy with their prey. As cold-blooded assassins, they seek to end every fight in a single strike.", "attributes": {"HP": 90, "ATK": 128, "M.ATK": 50, "P.DEF": 70, "M.DEF": 63, "HASTE": 91}, "totalAttributes": 492, "habitats": ["Twilight Ruins", "Umbral Hollow", "Shadowed Vale", "Beast Fang Ridge"], "homeland": "12 Mobility", "skills": [{"name": "Shadow Bite", "type": "Physical", "cost": 0, "power": 76, "desc": "Engulfs the target in shadows, inflicting Break damage."}, {"name": "Ignitis Abyssal Rift", "type": "Magic", "cost": 16, "power": 125, "desc": "Opens a dark vortex that consumes enemy buffs."}], "trait": {"name": "Nightfall Stalker", "desc": "Increases Critical Strike rate by 25% during combat."}, "evolution": [], "relatedIds": ["10002833", "10002694", "10002826"], "evolutionPath": [{"id": "10002833", "number": "042", "name": "Wisptis", "stage": "Lumin Stage", "image": "10031", "slug": "wisptis", "nameClean": "Wisptis"}, {"id": "10002694", "number": "043", "name": "Ignitis", "stage": "Nova Stage", "image": "10032", "slug": "ignitis", "nameClean": "Ignitis"}, {"id": "10002826", "number": "044", "name": "Fulmintis", "stage": "Nova Stage", "image": "10033", "slug": "fulmintis", "nameClean": "Fulmintis"}], "homelandType": "Combat Instinct", "slug": "ignitis", "nameClean": "Ignitis", "desc_pt": "Suas labaredas negras ardem mesmo submersas, consumindo as defesas mágicas dos alvos.", "habitats_pt": ["Ruínas do Crepúsculo", "Cova Umbrática", "Vale Sombrio", "Cordilheira Presa da Fera"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "044", "id": "10002826", "name": "Fulmintis", "element": "electric", "role": "dps", "image": "10033", "stage": "Nova Stage", "desc": "Evolved from a Wisptis with broken forelimbs absorbing the power of lightning. The reshaped reverse blades are incredibly sharp and flash with dazzling electric light.", "attributes": {"HP": 99, "ATK": 130, "M.ATK": 50, "P.DEF": 66, "M.DEF": 70, "HASTE": 105}, "totalAttributes": 520, "habitats": ["Thunder Peak", "Echoback Landing", "Lightning Crag", "Stormy Bluffs"], "homeland": "12 Mobility", "skills": [{"name": "Volt Jab", "type": "Physical", "cost": 0, "power": 78, "desc": "Discharges an electric punch that shocks the opponent."}, {"name": "Fulmintis Thunderstorm Wrath", "type": "Magic", "cost": 18, "power": 130, "desc": "Calls down a devastating lightning strike from above."}], "trait": {"name": "Static Charge", "desc": "Has a 25% chance to paralyze the attacker on contact."}, "evolution": [], "relatedIds": ["10002833", "10002694", "10002826"], "evolutionPath": [{"id": "10002833", "number": "042", "name": "Wisptis", "stage": "Lumin Stage", "image": "10031", "slug": "wisptis", "nameClean": "Wisptis"}, {"id": "10002694", "number": "043", "name": "Ignitis", "stage": "Nova Stage", "image": "10032", "slug": "ignitis", "nameClean": "Ignitis"}, {"id": "10002826", "number": "044", "name": "Fulmintis", "stage": "Nova Stage", "image": "10033", "slug": "fulmintis", "nameClean": "Fulmintis"}], "homelandType": "Combat Instinct", "slug": "fulmintis", "nameClean": "Fulmintis", "desc_pt": "Fundiu a sombra ao relâmpago, disparando trovões negros que cortam o campo de batalha.", "habitats_pt": ["Pico do Trovão", "Pouso do Eco", "Penhasco dos Raios", "Escarpa Tempestuosa"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "045", "id": "10002747", "name": "Bonesky", "element": "ice", "role": "dps", "image": "10131", "stage": "Lumin Stage", "desc": "An energetic pup with a pair of big ears. The ice-bone bow tie on its chest is its favorite toy. It hates Emberpups that don’t respect personal space.", "attributes": {"HP": 71, "ATK": 88, "M.ATK": 38, "P.DEF": 56, "M.DEF": 57, "HASTE": 67}, "totalAttributes": 377, "habitats": ["Frostbite Ridge", "Glacier Crest", "Frozen Taiga", "Permafrost Valley"], "homeland": "12 Mobility", "skills": [{"name": "Frost Fang", "type": "Physical", "cost": 0, "power": 74, "desc": "Bites with freezing fangs, lowering the enemy's move speed."}, {"name": "Bonesky Glacial Blizzard", "type": "Magic", "cost": 14, "power": 115, "desc": "Freezes the battlefield in a harsh howling blizzard."}], "trait": {"name": "Permafrost Shield", "desc": "Reduces incoming Physical and Magic damage by 15%."}, "evolution": [], "relatedIds": ["10002747", "10002900", "10002740"], "evolutionPath": [{"id": "10002747", "number": "045", "name": "Bonesky", "stage": "Lumin Stage", "image": "10131", "slug": "bonesky", "nameClean": "Bonesky"}, {"id": "10002900", "number": "046", "name": "Fenrier", "stage": "Gamma Stage", "image": "10132", "slug": "fenrier", "nameClean": "Fenrier"}, {"id": "10002740", "number": "047", "name": "Glynsera", "stage": "Nova Stage", "image": "10133", "slug": "glynsera", "nameClean": "Glynsera"}], "homelandType": "Combat Instinct", "slug": "bonesky", "nameClean": "Bonesky", "desc_pt": "Um filhote enérgico com orelhas pontiagudas e um laço de osso congelado no peito. Odeia quem invade seu espaço pessoal.", "habitats_pt": ["Crista da Congelação", "Cume Glacial", "Taiga Congelada", "Vale do Permafrost"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "046", "id": "10002900", "name": "Fenrier", "element": "ice", "role": "dps", "image": "10132", "stage": "Gamma Stage", "desc": "Resisting gentle pets that might soften its resolve, it leads pack hunts with its ice blade.", "attributes": {"HP": 86, "ATK": 105, "M.ATK": 45, "P.DEF": 68, "M.DEF": 68, "HASTE": 81}, "totalAttributes": 453, "habitats": ["Frostbite Ridge", "Glacier Crest", "Frozen Taiga", "Permafrost Valley"], "homeland": "12 Mobility", "skills": [{"name": "Frost Fang", "type": "Physical", "cost": 0, "power": 74, "desc": "Bites with freezing fangs, lowering the enemy's move speed."}, {"name": "Fenrier Glacial Blizzard", "type": "Magic", "cost": 14, "power": 115, "desc": "Freezes the battlefield in a harsh howling blizzard."}], "trait": {"name": "Permafrost Shield", "desc": "Reduces incoming Physical and Magic damage by 15%."}, "evolution": [], "relatedIds": ["10002747", "10002900", "10002740"], "evolutionPath": [{"id": "10002747", "number": "045", "name": "Bonesky", "stage": "Lumin Stage", "image": "10131", "slug": "bonesky", "nameClean": "Bonesky"}, {"id": "10002900", "number": "046", "name": "Fenrier", "stage": "Gamma Stage", "image": "10132", "slug": "fenrier", "nameClean": "Fenrier"}, {"id": "10002740", "number": "047", "name": "Glynsera", "stage": "Nova Stage", "image": "10133", "slug": "glynsera", "nameClean": "Glynsera"}], "homelandType": "Combat Instinct", "slug": "fenrier", "nameClean": "Fenrier", "desc_pt": "Lobo ártico imponente cujo sopro congela a relva. Lidera caçadas nas neves eternas.", "habitats_pt": ["Crista da Congelação", "Cume Glacial", "Taiga Congelada", "Vale do Permafrost"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "047", "id": "10002740", "name": "Glynsera", "element": "ice", "role": "dps", "image": "10133", "stage": "Nova Stage", "desc": "Proud and confident warriors, the chilling blades in its mouth send shivers down its enemies' spines.", "attributes": {"HP": 95, "ATK": 117, "M.ATK": 50, "P.DEF": 75, "M.DEF": 76, "HASTE": 90}, "totalAttributes": 503, "habitats": ["Frostbite Ridge", "Glacier Crest", "Frozen Taiga", "Permafrost Valley"], "homeland": "12 Mobility", "skills": [{"name": "Frost Fang", "type": "Physical", "cost": 0, "power": 74, "desc": "Bites with freezing fangs, lowering the enemy's move speed."}, {"name": "Glynsera Glacial Blizzard", "type": "Magic", "cost": 14, "power": 115, "desc": "Freezes the battlefield in a harsh howling blizzard."}], "trait": {"name": "Permafrost Shield", "desc": "Reduces incoming Physical and Magic damage by 15%."}, "evolution": [], "relatedIds": ["10002747", "10002900", "10002740"], "evolutionPath": [{"id": "10002747", "number": "045", "name": "Bonesky", "stage": "Lumin Stage", "image": "10131", "slug": "bonesky", "nameClean": "Bonesky"}, {"id": "10002900", "number": "046", "name": "Fenrier", "stage": "Gamma Stage", "image": "10132", "slug": "fenrier", "nameClean": "Fenrier"}, {"id": "10002740", "number": "047", "name": "Glynsera", "stage": "Nova Stage", "image": "10133", "slug": "glynsera", "nameClean": "Glynsera"}], "homelandType": "Combat Instinct", "slug": "glynsera", "nameClean": "Glynsera", "desc_pt": "Monarca do gelo cujos olhos congelam o coração dos invasores com apenas um olhar sereno.", "habitats_pt": ["Crista da Congelação", "Cume Glacial", "Taiga Congelada", "Vale do Permafrost"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "048", "id": "10002849", "name": "Bolty", "element": "electric", "role": "break", "image": "10221", "stage": "Lumin Stage", "desc": "They live among the trees. When they attack, golden sparks flash from their tails with crackling electric sounds. Agile and quick on their feet, they are very difficult to catch.", "attributes": {"HP": 85, "ATK": 85, "M.ATK": 87, "P.DEF": 60, "M.DEF": 60, "HASTE": 73}, "totalAttributes": 450, "habitats": ["Thunder Peak", "Echoback Landing", "Lightning Crag", "Stormy Bluffs"], "homeland": "14 Crushing", "skills": [{"name": "Volt Jab", "type": "Physical", "cost": 0, "power": 78, "desc": "Discharges an electric punch that shocks the opponent."}, {"name": "Bolty Thunderstorm Wrath", "type": "Magic", "cost": 18, "power": 130, "desc": "Calls down a devastating lightning strike from above."}], "trait": {"name": "Static Charge", "desc": "Has a 25% chance to paralyze the attacker on contact."}, "evolution": [], "relatedIds": ["10002849", "10002800"], "evolutionPath": [{"id": "10002849", "number": "048", "name": "Bolty", "stage": "Lumin Stage", "image": "10221", "slug": "bolty", "nameClean": "Bolty"}, {"id": "10002800", "number": "049", "name": "Blazen", "stage": "Nova Stage", "image": "10222", "slug": "blazen", "nameClean": "Blazen"}], "homelandType": "Rock Shatter", "slug": "bolty", "nameClean": "Bolty", "desc_pt": "Cheio de centelhas e curiosidade, salta contra oponentes quebrando escudos com estática intensa.", "habitats_pt": ["Pico do Trovão", "Pouso do Eco", "Penhasco dos Raios", "Escarpa Tempestuosa"], "homeland_pt": "14 Esmagamento", "homelandType_pt": "Quebra-Rochas"}, {"number": "049", "id": "10002800", "name": "Blazen", "element": "electric", "role": "break", "image": "10222", "stage": "Nova Stage", "desc": "They use their special fur to capture charged particles in the air to produce and store electricity.", "attributes": {"HP": 100, "ATK": 100, "M.ATK": 104, "P.DEF": 70, "M.DEF": 70, "HASTE": 86}, "totalAttributes": 530, "habitats": ["Thunder Peak", "Echoback Landing", "Lightning Crag", "Stormy Bluffs"], "homeland": "14 Crushing", "skills": [{"name": "Volt Jab", "type": "Physical", "cost": 0, "power": 78, "desc": "Discharges an electric punch that shocks the opponent."}, {"name": "Blazen Thunderstorm Wrath", "type": "Magic", "cost": 18, "power": 130, "desc": "Calls down a devastating lightning strike from above."}], "trait": {"name": "Static Charge", "desc": "Has a 25% chance to paralyze the attacker on contact."}, "evolution": [], "relatedIds": ["10002849", "10002800"], "evolutionPath": [{"id": "10002849", "number": "048", "name": "Bolty", "stage": "Lumin Stage", "image": "10221", "slug": "bolty", "nameClean": "Bolty"}, {"id": "10002800", "number": "049", "name": "Blazen", "stage": "Nova Stage", "image": "10222", "slug": "blazen", "nameClean": "Blazen"}], "homelandType": "Rock Shatter", "slug": "blazen", "nameClean": "Blazen", "desc_pt": "Descargas voltaicas percorrem seu corpo veloz, rompendo barreiras defensivas em segundos.", "habitats_pt": ["Pico do Trovão", "Pouso do Eco", "Penhasco dos Raios", "Escarpa Tempestuosa"], "homeland_pt": "14 Esmagamento", "homelandType_pt": "Quebra-Rochas"}, {"number": "050", "id": "10002848", "name": "Susuta", "element": "water", "role": "break", "image": "10171", "stage": "Lumin Stage", "desc": "They dig around to search for gifts to give to their crushes, but their wooing always fails because they are so shy.", "attributes": {"HP": 81, "ATK": 61, "M.ATK": 72, "P.DEF": 53, "M.DEF": 80, "HASTE": 64}, "totalAttributes": 411, "habitats": ["Azure Shoals", "Mistwoods Lagoon", "The Argent Strait", "Coral Abyss"], "homeland": "14 Crushing", "skills": [{"name": "Aqua Jet", "type": "Magic", "cost": 0, "power": 70, "desc": "Fires a concentrated pressurized stream of water at high velocity."}, {"name": "Susuta Surging Torrent", "type": "Magic", "cost": 12, "power": 110, "desc": "Conjures a tidal rush that restores allies and pushes back enemies."}], "trait": {"name": "Aquatic Harmony", "desc": "Heals the party for 5% max HP when triggering an elemental reaction."}, "evolution": [], "relatedIds": ["10002848", "10002723", "10002841", "10002891"], "evolutionPath": [{"id": "10002848", "number": "050", "name": "Susuta", "stage": "Lumin Stage", "image": "10171", "slug": "susuta", "nameClean": "Susuta"}, {"id": "10002723", "number": "051", "name": "Popota", "stage": "Gamma Stage", "image": "10172", "slug": "popota", "nameClean": "Popota"}, {"id": "10002841", "number": "052", "name": "Piopiota", "stage": "Nova Stage", "image": "10173", "slug": "piopiota", "nameClean": "Piopiota"}, {"id": "10002891", "number": "053", "name": "Panpanta", "stage": "Nova Stage", "image": "10174", "slug": "panpanta", "nameClean": "Panpanta"}], "homelandType": "Rock Shatter", "slug": "susuta", "nameClean": "Susuta", "desc_pt": "Pequeno ser aquático anfíbio que suporta pressões submarinas extremas.", "habitats_pt": ["Baixios Azuis", "Lagoa da Floresta das Névoas", "Estreito de Prata", "Abismo de Coral"], "homeland_pt": "14 Esmagamento", "homelandType_pt": "Quebra-Rochas"}, {"number": "051", "id": "10002723", "name": "Popota", "element": "water", "role": "break", "image": "10172", "stage": "Gamma Stage", "desc": "They select shells and make them into shovels. It's said that they produce pink bubbles when they see someone they love.", "attributes": {"HP": 92, "ATK": 96, "M.ATK": 80, "P.DEF": 68, "M.DEF": 68, "HASTE": 67}, "totalAttributes": 471, "habitats": ["Azure Shoals", "Mistwoods Lagoon", "The Argent Strait", "Coral Abyss"], "homeland": "14 Crushing", "skills": [{"name": "Aqua Jet", "type": "Magic", "cost": 0, "power": 70, "desc": "Fires a concentrated pressurized stream of water at high velocity."}, {"name": "Popota Surging Torrent", "type": "Magic", "cost": 12, "power": 110, "desc": "Conjures a tidal rush that restores allies and pushes back enemies."}], "trait": {"name": "Aquatic Harmony", "desc": "Heals the party for 5% max HP when triggering an elemental reaction."}, "evolution": [], "relatedIds": ["10002848", "10002723", "10002841", "10002891"], "evolutionPath": [{"id": "10002848", "number": "050", "name": "Susuta", "stage": "Lumin Stage", "image": "10171", "slug": "susuta", "nameClean": "Susuta"}, {"id": "10002723", "number": "051", "name": "Popota", "stage": "Gamma Stage", "image": "10172", "slug": "popota", "nameClean": "Popota"}, {"id": "10002841", "number": "052", "name": "Piopiota", "stage": "Nova Stage", "image": "10173", "slug": "piopiota", "nameClean": "Piopiota"}, {"id": "10002891", "number": "053", "name": "Panpanta", "stage": "Nova Stage", "image": "10174", "slug": "panpanta", "nameClean": "Panpanta"}], "homelandType": "Rock Shatter", "slug": "popota", "nameClean": "Popota", "desc_pt": "Expele bolhas de alta pressão capazes de rachar rochas sedimentares e proteger seu refúgio.", "habitats_pt": ["Baixios Azuis", "Lagoa da Floresta das Névoas", "Estreito de Prata", "Abismo de Coral"], "homeland_pt": "14 Esmagamento", "homelandType_pt": "Quebra-Rochas"}, {"number": "052", "id": "10002841", "name": "Piopiota", "element": "water", "role": "sup", "image": "10173", "stage": "Nova Stage", "desc": "Narcissistic little creatures who spend a large amount of time grooming their fur and striking the perfect pose.", "attributes": {"HP": 102, "ATK": 108, "M.ATK": 98, "P.DEF": 75, "M.DEF": 75, "HASTE": 74}, "totalAttributes": 532, "habitats": ["Azure Shoals", "Mistwoods Lagoon", "The Argent Strait", "Coral Abyss"], "homeland": "11 Mobility", "skills": [{"name": "Aqua Jet", "type": "Magic", "cost": 0, "power": 70, "desc": "Fires a concentrated pressurized stream of water at high velocity."}, {"name": "Piopiota Surging Torrent", "type": "Magic", "cost": 12, "power": 110, "desc": "Conjures a tidal rush that restores allies and pushes back enemies."}], "trait": {"name": "Aquatic Harmony", "desc": "Heals the party for 5% max HP when triggering an elemental reaction."}, "evolution": [], "relatedIds": ["10002848", "10002723", "10002841", "10002891"], "evolutionPath": [{"id": "10002848", "number": "050", "name": "Susuta", "stage": "Lumin Stage", "image": "10171", "slug": "susuta", "nameClean": "Susuta"}, {"id": "10002723", "number": "051", "name": "Popota", "stage": "Gamma Stage", "image": "10172", "slug": "popota", "nameClean": "Popota"}, {"id": "10002841", "number": "052", "name": "Piopiota", "stage": "Nova Stage", "image": "10173", "slug": "piopiota", "nameClean": "Piopiota"}, {"id": "10002891", "number": "053", "name": "Panpanta", "stage": "Nova Stage", "image": "10174", "slug": "panpanta", "nameClean": "Panpanta"}], "homelandType": "Target Tracking", "slug": "piopiota", "nameClean": "Piopiota", "desc_pt": "Navega suavemente nas profundezas marinhas guiando seus companheiros com luzes bioluminescentes.", "habitats_pt": ["Baixios Azuis", "Lagoa da Floresta das Névoas", "Estreito de Prata", "Abismo de Coral"], "homeland_pt": "11 Mobilidade", "homelandType_pt": "Rastreamento de Alvos"}, {"number": "053", "id": "10002891", "name": "Panpanta", "element": "water", "role": "break", "image": "10174", "stage": "Nova Stage", "desc": "They are strong and powerful, but they'd rather stay in their nests and decorate than show off their muscles.", "attributes": {"HP": 104, "ATK": 85, "M.ATK": 100, "P.DEF": 70, "M.DEF": 106, "HASTE": 80}, "totalAttributes": 545, "habitats": ["Azure Shoals", "Mistwoods Lagoon", "The Argent Strait", "Coral Abyss"], "homeland": "14 Crushing", "skills": [{"name": "Aqua Jet", "type": "Magic", "cost": 0, "power": 70, "desc": "Fires a concentrated pressurized stream of water at high velocity."}, {"name": "Panpanta Surging Torrent", "type": "Magic", "cost": 12, "power": 110, "desc": "Conjures a tidal rush that restores allies and pushes back enemies."}], "trait": {"name": "Aquatic Harmony", "desc": "Heals the party for 5% max HP when triggering an elemental reaction."}, "evolution": [], "relatedIds": ["10002848", "10002723", "10002841", "10002891"], "evolutionPath": [{"id": "10002848", "number": "050", "name": "Susuta", "stage": "Lumin Stage", "image": "10171", "slug": "susuta", "nameClean": "Susuta"}, {"id": "10002723", "number": "051", "name": "Popota", "stage": "Gamma Stage", "image": "10172", "slug": "popota", "nameClean": "Popota"}, {"id": "10002841", "number": "052", "name": "Piopiota", "stage": "Nova Stage", "image": "10173", "slug": "piopiota", "nameClean": "Piopiota"}, {"id": "10002891", "number": "053", "name": "Panpanta", "stage": "Nova Stage", "image": "10174", "slug": "panpanta", "nameClean": "Panpanta"}], "homelandType": "Rock Shatter", "slug": "panpanta", "nameClean": "Panpanta", "desc_pt": "Guerreiro couraçado dos mares, suas investidas quebram as defesas mais resistentes.", "habitats_pt": ["Baixios Azuis", "Lagoa da Floresta das Névoas", "Estreito de Prata", "Abismo de Coral"], "homeland_pt": "14 Esmagamento", "homelandType_pt": "Quebra-Rochas"}, {"number": "054", "id": "10002778", "name": "Shelly", "element": "water", "role": "dps", "image": "10191", "stage": "Lumin Stage", "desc": "Conceals itself among beach shells using its soft appendages to hold shells in place. Remains sealed during daylight.", "attributes": {"HP": 75, "ATK": 90, "M.ATK": 39, "P.DEF": 56, "M.DEF": 56, "HASTE": 66}, "totalAttributes": 382, "habitats": ["Azure Shoals", "Mistwoods Lagoon", "The Argent Strait", "Coral Abyss"], "homeland": "12 Mobility", "skills": [{"name": "Aqua Jet", "type": "Magic", "cost": 0, "power": 70, "desc": "Fires a concentrated pressurized stream of water at high velocity."}, {"name": "Shelly Surging Torrent", "type": "Magic", "cost": 12, "power": 110, "desc": "Conjures a tidal rush that restores allies and pushes back enemies."}], "trait": {"name": "Aquatic Harmony", "desc": "Heals the party for 5% max HP when triggering an elemental reaction."}, "evolution": [], "relatedIds": ["10002778", "10002902", "10002895"], "evolutionPath": [{"id": "10002778", "number": "054", "name": "Shelly", "stage": "Lumin Stage", "image": "10191", "slug": "shelly", "nameClean": "Shelly"}, {"id": "10002902", "number": "055", "name": "Sheldon", "stage": "Gamma Stage", "image": "10192", "slug": "sheldon", "nameClean": "Sheldon"}, {"id": "10002895", "number": "056", "name": "Sherro", "stage": "Nova Stage", "image": "10194", "slug": "sherro", "nameClean": "Sherro"}], "homelandType": "Combat Instinct", "slug": "shelly", "nameClean": "Shelly", "desc_pt": "Carrega uma concha iridescente afiada que usa como projétil nos recifes de coral.", "habitats_pt": ["Baixios Azuis", "Lagoa da Floresta das Névoas", "Estreito de Prata", "Abismo de Coral"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "055", "id": "10002902", "name": "Sheldon", "element": "water", "role": "dps", "image": "10192", "stage": "Gamma Stage", "desc": "Lying on their shells, they face the night sky, drowning in a dream woven by the stars.", "attributes": {"HP": 90, "ATK": 109, "M.ATK": 44, "P.DEF": 68, "M.DEF": 68, "HASTE": 79}, "totalAttributes": 458, "habitats": ["Azure Shoals", "Mistwoods Lagoon", "The Argent Strait", "Coral Abyss"], "homeland": "12 Mobility", "skills": [{"name": "Aqua Jet", "type": "Magic", "cost": 0, "power": 70, "desc": "Fires a concentrated pressurized stream of water at high velocity."}, {"name": "Sheldon Surging Torrent", "type": "Magic", "cost": 12, "power": 110, "desc": "Conjures a tidal rush that restores allies and pushes back enemies."}], "trait": {"name": "Aquatic Harmony", "desc": "Heals the party for 5% max HP when triggering an elemental reaction."}, "evolution": [], "relatedIds": ["10002778", "10002902", "10002895"], "evolutionPath": [{"id": "10002778", "number": "054", "name": "Shelly", "stage": "Lumin Stage", "image": "10191", "slug": "shelly", "nameClean": "Shelly"}, {"id": "10002902", "number": "055", "name": "Sheldon", "stage": "Gamma Stage", "image": "10192", "slug": "sheldon", "nameClean": "Sheldon"}, {"id": "10002895", "number": "056", "name": "Sherro", "stage": "Nova Stage", "image": "10194", "slug": "sherro", "nameClean": "Sherro"}], "homelandType": "Combat Instinct", "slug": "sheldon", "nameClean": "Sheldon", "desc_pt": "Concha reforçada por madrepérola impenetrável. Lança rajadas cortantes de água a grande distância.", "habitats_pt": ["Baixios Azuis", "Lagoa da Floresta das Névoas", "Estreito de Prata", "Abismo de Coral"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "056", "id": "10002895", "name": "Sherro", "element": "water", "role": "dps", "image": "10194", "stage": "Nova Stage", "desc": "They turn the shells that once covered them into swords and shields to protect fragile Shellies along the coastline.", "attributes": {"HP": 100, "ATK": 121, "M.ATK": 50, "P.DEF": 75, "M.DEF": 75, "HASTE": 88}, "totalAttributes": 509, "habitats": ["Azure Shoals", "Mistwoods Lagoon", "The Argent Strait", "Coral Abyss"], "homeland": "12 Mobility", "skills": [{"name": "Aqua Jet", "type": "Magic", "cost": 0, "power": 70, "desc": "Fires a concentrated pressurized stream of water at high velocity."}, {"name": "Sherro Surging Torrent", "type": "Magic", "cost": 12, "power": 110, "desc": "Conjures a tidal rush that restores allies and pushes back enemies."}], "trait": {"name": "Aquatic Harmony", "desc": "Heals the party for 5% max HP when triggering an elemental reaction."}, "evolution": [], "relatedIds": ["10002778", "10002902", "10002895"], "evolutionPath": [{"id": "10002778", "number": "054", "name": "Shelly", "stage": "Lumin Stage", "image": "10191", "slug": "shelly", "nameClean": "Shelly"}, {"id": "10002902", "number": "055", "name": "Sheldon", "stage": "Gamma Stage", "image": "10192", "slug": "sheldon", "nameClean": "Sheldon"}, {"id": "10002895", "number": "056", "name": "Sherro", "stage": "Nova Stage", "image": "10194", "slug": "sherro", "nameClean": "Sherro"}], "homelandType": "Combat Instinct", "slug": "sherro", "nameClean": "Sherro", "desc_pt": "Guerreiro temível dos oceanos cujos dardos perfuram o casco de navios antigos.", "habitats_pt": ["Baixios Azuis", "Lagoa da Floresta das Névoas", "Estreito de Prata", "Abismo de Coral"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "057", "id": "10002890", "name": "Baleetle", "element": "rock", "role": "dps", "image": "10451", "stage": "Lumin Stage", "desc": "They never go anywhere without their stone balls, and the constant rolling makes the balls rounder and stranger.", "attributes": {"HP": 77, "ATK": 102, "M.ATK": 42, "P.DEF": 68, "M.DEF": 68, "HASTE": 85}, "totalAttributes": 442, "habitats": ["Beast Fang Ridge", "Obsidian Quarry", "Granite Canyon", "Stony Bastion"], "homeland": "12 Mobility", "skills": [{"name": "Boulder Crash", "type": "Physical", "cost": 0, "power": 82, "desc": "Slams with stony mass, dealing massive Break damage."}, {"name": "Baleetle Terra Tremor", "type": "Physical", "cost": 15, "power": 120, "desc": "Shatters the ground below, staggering all surrounding foes."}], "trait": {"name": "Solid Bastion", "desc": "Grants high resistance against staggering and knockdown."}, "evolution": [], "relatedIds": ["10002890", "10002801", "10002791"], "evolutionPath": [{"id": "10002890", "number": "057", "name": "Baleetle", "stage": "Lumin Stage", "image": "10451", "slug": "baleetle", "nameClean": "Baleetle"}, {"id": "10002801", "number": "058", "name": "Waleetle", "stage": "Nova Stage", "image": "10453", "slug": "waleetle", "nameClean": "Waleetle"}, {"id": "10002791", "number": "059", "name": "Bouldus", "stage": "Nova Stage", "image": "10454", "slug": "bouldus", "nameClean": "Bouldus"}], "homelandType": "Combat Instinct", "slug": "baleetle", "nameClean": "Baleetle", "desc_pt": "Besouro com carapaça de arenito resistente. Usa chifres pesados para investidas contundentes.", "habitats_pt": ["Cordilheira Presa da Fera", "Pedreira de Obsidiana", "Cânion de Granito", "Bastião Pedregoso"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "058", "id": "10002801", "name": "Waleetle", "element": "rock", "role": "dps", "image": "10453", "stage": "Nova Stage", "desc": "They move backwards like their kin, but in a much fancier way.", "attributes": {"HP": 90, "ATK": 120, "M.ATK": 50, "P.DEF": 80, "M.DEF": 80, "HASTE": 100}, "totalAttributes": 520, "habitats": ["Beast Fang Ridge", "Obsidian Quarry", "Granite Canyon", "Stony Bastion"], "homeland": "12 Mobility", "skills": [{"name": "Boulder Crash", "type": "Physical", "cost": 0, "power": 82, "desc": "Slams with stony mass, dealing massive Break damage."}, {"name": "Waleetle Terra Tremor", "type": "Physical", "cost": 15, "power": 120, "desc": "Shatters the ground below, staggering all surrounding foes."}], "trait": {"name": "Solid Bastion", "desc": "Grants high resistance against staggering and knockdown."}, "evolution": [], "relatedIds": ["10002890", "10002801", "10002791"], "evolutionPath": [{"id": "10002890", "number": "057", "name": "Baleetle", "stage": "Lumin Stage", "image": "10451", "slug": "baleetle", "nameClean": "Baleetle"}, {"id": "10002801", "number": "058", "name": "Waleetle", "stage": "Nova Stage", "image": "10453", "slug": "waleetle", "nameClean": "Waleetle"}, {"id": "10002791", "number": "059", "name": "Bouldus", "stage": "Nova Stage", "image": "10454", "slug": "bouldus", "nameClean": "Bouldus"}], "homelandType": "Combat Instinct", "slug": "waleetle", "nameClean": "Waleetle", "desc_pt": "Suas placas rochosas suportam quedas de desfiladeiros sem sofrer um único arranhão.", "habitats_pt": ["Cordilheira Presa da Fera", "Pedreira de Obsidiana", "Cânion de Granito", "Bastião Pedregoso"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "059", "id": "10002791", "name": "Bouldus", "element": "rock", "role": "sup", "image": "10454", "stage": "Nova Stage", "desc": "A round stone that had stayed with Baleetle day and night woke up from all that bumping. Tired of being controlled, it swallowed an insect and could finally move by its own will.", "attributes": {"HP": 91, "ATK": 119, "M.ATK": 52, "P.DEF": 101, "M.DEF": 54, "HASTE": 104}, "totalAttributes": 521, "habitats": ["Beast Fang Ridge", "Obsidian Quarry", "Granite Canyon", "Stony Bastion"], "homeland": "11 Mobility", "skills": [{"name": "Boulder Crash", "type": "Physical", "cost": 0, "power": 82, "desc": "Slams with stony mass, dealing massive Break damage."}, {"name": "Bouldus Terra Tremor", "type": "Physical", "cost": 15, "power": 120, "desc": "Shatters the ground below, staggering all surrounding foes."}], "trait": {"name": "Solid Bastion", "desc": "Grants high resistance against staggering and knockdown."}, "evolution": [], "relatedIds": ["10002890", "10002801", "10002791"], "evolutionPath": [{"id": "10002890", "number": "057", "name": "Baleetle", "stage": "Lumin Stage", "image": "10451", "slug": "baleetle", "nameClean": "Baleetle"}, {"id": "10002801", "number": "058", "name": "Waleetle", "stage": "Nova Stage", "image": "10453", "slug": "waleetle", "nameClean": "Waleetle"}, {"id": "10002791", "number": "059", "name": "Bouldus", "stage": "Nova Stage", "image": "10454", "slug": "bouldus", "nameClean": "Bouldus"}], "homelandType": "Target Tracking", "slug": "bouldus", "nameClean": "Bouldus", "desc_pt": "Montanha ambulante em miniatura, ancora-se no chão para apoiar a linha de frente.", "habitats_pt": ["Cordilheira Presa da Fera", "Pedreira de Obsidiana", "Cânion de Granito", "Bastião Pedregoso"], "homeland_pt": "11 Mobilidade", "homelandType_pt": "Rastreamento de Alvos"}, {"number": "060", "id": "10002704", "name": "Fentuft", "element": "electric", "role": "dps", "image": "10291", "stage": "Lumin Stage", "desc": "They always wear a signature smile and invite other aniimo to play. Though they sometimes cause trouble due to mischief and greed, they are always forgiven.", "attributes": {"HP": 85, "ATK": 106, "M.ATK": 41, "P.DEF": 60, "M.DEF": 60, "HASTE": 77}, "totalAttributes": 429, "habitats": ["Thunder Peak", "Echoback Landing", "Lightning Crag", "Stormy Bluffs"], "homeland": "12 Mobility", "skills": [{"name": "Volt Jab", "type": "Physical", "cost": 0, "power": 78, "desc": "Discharges an electric punch that shocks the opponent."}, {"name": "Fentuft Thunderstorm Wrath", "type": "Magic", "cost": 18, "power": 130, "desc": "Calls down a devastating lightning strike from above."}], "trait": {"name": "Static Charge", "desc": "Has a 25% chance to paralyze the attacker on contact."}, "evolution": [], "relatedIds": ["10002704", "10002701"], "evolutionPath": [{"id": "10002704", "number": "060", "name": "Fentuft", "stage": "Lumin Stage", "image": "10291", "slug": "fentuft", "nameClean": "Fentuft"}, {"id": "10002701", "number": "061", "name": "Fenmane", "stage": "Nova Stage", "image": "10293", "slug": "fenmane", "nameClean": "Fenmane"}], "homelandType": "Combat Instinct", "slug": "fentuft", "nameClean": "Fentuft", "desc_pt": "Pelagem felpuda que acumula eletricidade estática até explodir em faíscas velozes.", "habitats_pt": ["Pico do Trovão", "Pouso do Eco", "Penhasco dos Raios", "Escarpa Tempestuosa"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "061", "id": "10002701", "name": "Fenmane", "element": "electric", "role": "dps", "image": "10293", "stage": "Nova Stage", "desc": "Using the excellent conductivity of their fur, they condense the power of lightning to extend their wings, dashing to dispel the haze and brighten their mood.", "attributes": {"HP": 100, "ATK": 125, "M.ATK": 50, "P.DEF": 70, "M.DEF": 70, "HASTE": 90}, "totalAttributes": 505, "habitats": ["Thunder Peak", "Echoback Landing", "Lightning Crag", "Stormy Bluffs"], "homeland": "12 Mobility", "skills": [{"name": "Volt Jab", "type": "Physical", "cost": 0, "power": 78, "desc": "Discharges an electric punch that shocks the opponent."}, {"name": "Fenmane Thunderstorm Wrath", "type": "Magic", "cost": 18, "power": 130, "desc": "Calls down a devastating lightning strike from above."}], "trait": {"name": "Static Charge", "desc": "Has a 25% chance to paralyze the attacker on contact."}, "evolution": [], "relatedIds": ["10002704", "10002701"], "evolutionPath": [{"id": "10002704", "number": "060", "name": "Fentuft", "stage": "Lumin Stage", "image": "10291", "slug": "fentuft", "nameClean": "Fentuft"}, {"id": "10002701", "number": "061", "name": "Fenmane", "stage": "Nova Stage", "image": "10293", "slug": "fenmane", "nameClean": "Fenmane"}], "homelandType": "Combat Instinct", "slug": "fenmane", "nameClean": "Fenmane", "desc_pt": "Leão elétrico de juba dourada. Cada salto gera estrondos de trovão no horizonte.", "habitats_pt": ["Pico do Trovão", "Pouso do Eco", "Penhasco dos Raios", "Escarpa Tempestuosa"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "062", "id": "10002868", "name": "Helmut", "element": "dark", "role": "break", "image": "10021", "stage": "Lumin Stage", "desc": "That tough helmet keeps its squishy body safe, while those extendable mouth-claws help it hunt.", "attributes": {"HP": 60, "ATK": 52, "M.ATK": 60, "P.DEF": 68, "M.DEF": 48, "HASTE": 51}, "totalAttributes": 339, "habitats": ["Twilight Ruins", "Umbral Hollow", "Shadowed Vale", "Beast Fang Ridge"], "homeland": "14 Crushing", "skills": [{"name": "Shadow Bite", "type": "Physical", "cost": 0, "power": 76, "desc": "Engulfs the target in shadows, inflicting Break damage."}, {"name": "Helmut Abyssal Rift", "type": "Magic", "cost": 16, "power": 125, "desc": "Opens a dark vortex that consumes enemy buffs."}], "trait": {"name": "Nightfall Stalker", "desc": "Increases Critical Strike rate by 25% during combat."}, "evolution": [], "relatedIds": ["10002868", "10002882", "10002847", "10002904", "10002714", "10002861", "10002854"], "evolutionPath": [{"id": "10002868", "number": "062", "name": "Helmut", "stage": "Lumin Stage", "image": "10021", "slug": "helmut", "nameClean": "Helmut"}, {"id": "10002882", "number": "063", "name": "Pawney", "stage": "Nova Stage", "image": "10026", "slug": "pawney", "nameClean": "Pawney"}, {"id": "10002847", "number": "064", "name": "Rookey", "stage": "Nova Stage", "image": "10027", "slug": "rookey", "nameClean": "Rookey"}, {"id": "10002904", "number": "065", "name": "Jawling", "stage": "Lumin Stage", "image": "10024", "slug": "jawling", "nameClean": "Jawling"}, {"id": "10002714", "number": "066", "name": "Helmwhelp", "stage": "Gamma Stage", "image": "10022", "slug": "helmwhelp", "nameClean": "Helmwhelp"}, {"id": "10002861", "number": "067", "name": "Helgon", "stage": "Nova Stage", "image": "10023", "slug": "helgon", "nameClean": "Helgon"}, {"id": "10002854", "number": "068", "name": "Infergon", "stage": "Nova Stage", "image": "10025", "slug": "infergon", "nameClean": "Infergon"}], "homelandType": "Rock Shatter", "slug": "helmut", "nameClean": "Helmut", "desc_pt": "Usa um elmo antigo encontrado em ruínas. Bate a cabeça com determinação inabalável.", "habitats_pt": ["Ruínas do Crepúsculo", "Cova Umbrática", "Vale Sombrio", "Cordilheira Presa da Fera"], "homeland_pt": "14 Esmagamento", "homelandType_pt": "Quebra-Rochas"}, {"number": "063", "id": "10002882", "name": "Pawney", "element": "dark", "role": "dps", "image": "10026", "stage": "Nova Stage", "desc": "Armed with a broken sword and armor, blessed with courage and might, it defends its friends and challenges its foes.", "attributes": {"HP": 90, "ATK": 128, "M.ATK": 55, "P.DEF": 89, "M.DEF": 70, "HASTE": 80}, "totalAttributes": 512, "habitats": ["Twilight Ruins", "Umbral Hollow", "Shadowed Vale", "Beast Fang Ridge"], "homeland": "12 Mobility", "skills": [{"name": "Shadow Bite", "type": "Physical", "cost": 0, "power": 76, "desc": "Engulfs the target in shadows, inflicting Break damage."}, {"name": "Pawney Abyssal Rift", "type": "Magic", "cost": 16, "power": 125, "desc": "Opens a dark vortex that consumes enemy buffs."}], "trait": {"name": "Nightfall Stalker", "desc": "Increases Critical Strike rate by 25% during combat."}, "evolution": [], "relatedIds": ["10002868", "10002882", "10002847", "10002904", "10002714", "10002861", "10002854"], "evolutionPath": [{"id": "10002868", "number": "062", "name": "Helmut", "stage": "Lumin Stage", "image": "10021", "slug": "helmut", "nameClean": "Helmut"}, {"id": "10002882", "number": "063", "name": "Pawney", "stage": "Nova Stage", "image": "10026", "slug": "pawney", "nameClean": "Pawney"}, {"id": "10002847", "number": "064", "name": "Rookey", "stage": "Nova Stage", "image": "10027", "slug": "rookey", "nameClean": "Rookey"}, {"id": "10002904", "number": "065", "name": "Jawling", "stage": "Lumin Stage", "image": "10024", "slug": "jawling", "nameClean": "Jawling"}, {"id": "10002714", "number": "066", "name": "Helmwhelp", "stage": "Gamma Stage", "image": "10022", "slug": "helmwhelp", "nameClean": "Helmwhelp"}, {"id": "10002861", "number": "067", "name": "Helgon", "stage": "Nova Stage", "image": "10023", "slug": "helgon", "nameClean": "Helgon"}, {"id": "10002854", "number": "068", "name": "Infergon", "stage": "Nova Stage", "image": "10025", "slug": "infergon", "nameClean": "Infergon"}], "homelandType": "Combat Instinct", "slug": "pawney", "nameClean": "Pawney", "desc_pt": "Pequeno estrategista de sombras que calcula cada movimento antes de dar o bote fatal.", "habitats_pt": ["Ruínas do Crepúsculo", "Cova Umbrática", "Vale Sombrio", "Cordilheira Presa da Fera"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "064", "id": "10002847", "name": "Rookey", "element": "dark", "role": "break", "image": "10027", "stage": "Nova Stage", "desc": "Despite its imposing size, it is timid and avoids conflict. It finds its courage when friends need protection.", "attributes": {"HP": 103, "ATK": 92, "M.ATK": 105, "P.DEF": 103, "M.DEF": 70, "HASTE": 75}, "totalAttributes": 548, "habitats": ["Twilight Ruins", "Umbral Hollow", "Shadowed Vale", "Beast Fang Ridge"], "homeland": "14 Crushing", "skills": [{"name": "Shadow Bite", "type": "Physical", "cost": 0, "power": 76, "desc": "Engulfs the target in shadows, inflicting Break damage."}, {"name": "Rookey Abyssal Rift", "type": "Magic", "cost": 16, "power": 125, "desc": "Opens a dark vortex that consumes enemy buffs."}], "trait": {"name": "Nightfall Stalker", "desc": "Increases Critical Strike rate by 25% during combat."}, "evolution": [], "relatedIds": ["10002868", "10002882", "10002847", "10002904", "10002714", "10002861", "10002854"], "evolutionPath": [{"id": "10002868", "number": "062", "name": "Helmut", "stage": "Lumin Stage", "image": "10021", "slug": "helmut", "nameClean": "Helmut"}, {"id": "10002882", "number": "063", "name": "Pawney", "stage": "Nova Stage", "image": "10026", "slug": "pawney", "nameClean": "Pawney"}, {"id": "10002847", "number": "064", "name": "Rookey", "stage": "Nova Stage", "image": "10027", "slug": "rookey", "nameClean": "Rookey"}, {"id": "10002904", "number": "065", "name": "Jawling", "stage": "Lumin Stage", "image": "10024", "slug": "jawling", "nameClean": "Jawling"}, {"id": "10002714", "number": "066", "name": "Helmwhelp", "stage": "Gamma Stage", "image": "10022", "slug": "helmwhelp", "nameClean": "Helmwhelp"}, {"id": "10002861", "number": "067", "name": "Helgon", "stage": "Nova Stage", "image": "10023", "slug": "helgon", "nameClean": "Helgon"}, {"id": "10002854", "number": "068", "name": "Infergon", "stage": "Nova Stage", "image": "10025", "slug": "infergon", "nameClean": "Infergon"}], "homelandType": "Rock Shatter", "slug": "rookey", "nameClean": "Rookey", "desc_pt": "Torre sólida de escuridão que avança em linha reta desmantelando posições inimigas.", "habitats_pt": ["Ruínas do Crepúsculo", "Cova Umbrática", "Vale Sombrio", "Cordilheira Presa da Fera"], "homeland_pt": "14 Esmagamento", "homelandType_pt": "Quebra-Rochas"}, {"number": "065", "id": "10002904", "name": "Jawling", "element": "wind", "role": "break", "image": "10024", "stage": "Lumin Stage", "desc": "Loves to bite everything it sees. Its flexible jaw can open extremely wide. It shows affection through gentle nibbles.", "attributes": {"HP": 79, "ATK": 64, "M.ATK": 76, "P.DEF": 83, "M.DEF": 51, "HASTE": 63}, "totalAttributes": 416, "habitats": ["Highland Peaks", "Breezy Steppe", "The Argent Strait", "Skyward Isle"], "homeland": "14 Crushing", "skills": [{"name": "Gale Slash", "type": "Physical", "cost": 0, "power": 73, "desc": "Slices forward with razor-sharp gusts of compressed wind."}, {"name": "Jawling Cyclone Spiral", "type": "Magic", "cost": 12, "power": 108, "desc": "Spins into a whirlwind that lifts and scatters enemy formations."}], "trait": {"name": "Tailwind Grace", "desc": "Increases haste and evasion for the entire squad."}, "evolution": [], "relatedIds": ["10002868", "10002882", "10002847", "10002904", "10002714", "10002861", "10002854"], "evolutionPath": [{"id": "10002868", "number": "062", "name": "Helmut", "stage": "Lumin Stage", "image": "10021", "slug": "helmut", "nameClean": "Helmut"}, {"id": "10002882", "number": "063", "name": "Pawney", "stage": "Nova Stage", "image": "10026", "slug": "pawney", "nameClean": "Pawney"}, {"id": "10002847", "number": "064", "name": "Rookey", "stage": "Nova Stage", "image": "10027", "slug": "rookey", "nameClean": "Rookey"}, {"id": "10002904", "number": "065", "name": "Jawling", "stage": "Lumin Stage", "image": "10024", "slug": "jawling", "nameClean": "Jawling"}, {"id": "10002714", "number": "066", "name": "Helmwhelp", "stage": "Gamma Stage", "image": "10022", "slug": "helmwhelp", "nameClean": "Helmwhelp"}, {"id": "10002861", "number": "067", "name": "Helgon", "stage": "Nova Stage", "image": "10023", "slug": "helgon", "nameClean": "Helgon"}, {"id": "10002854", "number": "068", "name": "Infergon", "stage": "Nova Stage", "image": "10025", "slug": "infergon", "nameClean": "Infergon"}], "homelandType": "Rock Shatter", "slug": "jawling", "nameClean": "Jawling", "desc_pt": "Mandíbulas de vento que mordem o ar criando vórtices cortantes ao redor dos alvos.", "habitats_pt": ["Picos das Terras Altas", "Estepe Arejada", "Estreito de Prata", "Ilha Celeste"], "homeland_pt": "14 Esmagamento", "homelandType_pt": "Quebra-Rochas"}, {"number": "066", "id": "10002714", "name": "Helmwhelp", "element": "wind", "role": "break", "image": "10022", "stage": "Gamma Stage", "desc": "A fledgling concealing weakness under its helmet, dreaming of becoming strong enough to soar freely.", "attributes": {"HP": 95, "ATK": 76, "M.ATK": 92, "P.DEF": 100, "M.DEF": 61, "HASTE": 76}, "totalAttributes": 500, "habitats": ["Highland Peaks", "Breezy Steppe", "The Argent Strait", "Skyward Isle"], "homeland": "14 Crushing", "skills": [{"name": "Gale Slash", "type": "Physical", "cost": 0, "power": 73, "desc": "Slices forward with razor-sharp gusts of compressed wind."}, {"name": "Helmwhelp Cyclone Spiral", "type": "Magic", "cost": 12, "power": 108, "desc": "Spins into a whirlwind that lifts and scatters enemy formations."}], "trait": {"name": "Tailwind Grace", "desc": "Increases haste and evasion for the entire squad."}, "evolution": [], "relatedIds": ["10002868", "10002882", "10002847", "10002904", "10002714", "10002861", "10002854"], "evolutionPath": [{"id": "10002868", "number": "062", "name": "Helmut", "stage": "Lumin Stage", "image": "10021", "slug": "helmut", "nameClean": "Helmut"}, {"id": "10002882", "number": "063", "name": "Pawney", "stage": "Nova Stage", "image": "10026", "slug": "pawney", "nameClean": "Pawney"}, {"id": "10002847", "number": "064", "name": "Rookey", "stage": "Nova Stage", "image": "10027", "slug": "rookey", "nameClean": "Rookey"}, {"id": "10002904", "number": "065", "name": "Jawling", "stage": "Lumin Stage", "image": "10024", "slug": "jawling", "nameClean": "Jawling"}, {"id": "10002714", "number": "066", "name": "Helmwhelp", "stage": "Gamma Stage", "image": "10022", "slug": "helmwhelp", "nameClean": "Helmwhelp"}, {"id": "10002861", "number": "067", "name": "Helgon", "stage": "Nova Stage", "image": "10023", "slug": "helgon", "nameClean": "Helgon"}, {"id": "10002854", "number": "068", "name": "Infergon", "stage": "Nova Stage", "image": "10025", "slug": "infergon", "nameClean": "Infergon"}], "homelandType": "Rock Shatter", "slug": "helmwhelp", "nameClean": "Helmwhelp", "desc_pt": "Jovem dragão encouraçado que testa a resistência de seus chifres contra rochas gigantes.", "habitats_pt": ["Picos das Terras Altas", "Estepe Arejada", "Estreito de Prata", "Ilha Celeste"], "homeland_pt": "14 Esmagamento", "homelandType_pt": "Quebra-Rochas"}, {"number": "067", "id": "10002861", "name": "Helgon", "element": "wind", "role": "break", "image": "10023", "stage": "Nova Stage", "desc": "Covered in hard armor, they look like tall statues when they stand still, as if standing guard over ancient treasures.", "attributes": {"HP": 105, "ATK": 85, "M.ATK": 102, "P.DEF": 111, "M.DEF": 68, "HASTE": 84}, "totalAttributes": 555, "habitats": ["Highland Peaks", "Breezy Steppe", "The Argent Strait", "Skyward Isle"], "homeland": "14 Crushing", "skills": [{"name": "Gale Slash", "type": "Physical", "cost": 0, "power": 73, "desc": "Slices forward with razor-sharp gusts of compressed wind."}, {"name": "Helgon Cyclone Spiral", "type": "Magic", "cost": 12, "power": 108, "desc": "Spins into a whirlwind that lifts and scatters enemy formations."}], "trait": {"name": "Tailwind Grace", "desc": "Increases haste and evasion for the entire squad."}, "evolution": [], "relatedIds": ["10002868", "10002882", "10002847", "10002904", "10002714", "10002861", "10002854"], "evolutionPath": [{"id": "10002868", "number": "062", "name": "Helmut", "stage": "Lumin Stage", "image": "10021", "slug": "helmut", "nameClean": "Helmut"}, {"id": "10002882", "number": "063", "name": "Pawney", "stage": "Nova Stage", "image": "10026", "slug": "pawney", "nameClean": "Pawney"}, {"id": "10002847", "number": "064", "name": "Rookey", "stage": "Nova Stage", "image": "10027", "slug": "rookey", "nameClean": "Rookey"}, {"id": "10002904", "number": "065", "name": "Jawling", "stage": "Lumin Stage", "image": "10024", "slug": "jawling", "nameClean": "Jawling"}, {"id": "10002714", "number": "066", "name": "Helmwhelp", "stage": "Gamma Stage", "image": "10022", "slug": "helmwhelp", "nameClean": "Helmwhelp"}, {"id": "10002861", "number": "067", "name": "Helgon", "stage": "Nova Stage", "image": "10023", "slug": "helgon", "nameClean": "Helgon"}, {"id": "10002854", "number": "068", "name": "Infergon", "stage": "Nova Stage", "image": "10025", "slug": "infergon", "nameClean": "Infergon"}], "homelandType": "Rock Shatter", "slug": "helgon", "nameClean": "Helgon", "desc_pt": "Dragão alado dos vendavais que destrói fortificações com investidas aéreas maciças.", "habitats_pt": ["Picos das Terras Altas", "Estepe Arejada", "Estreito de Prata", "Ilha Celeste"], "homeland_pt": "14 Esmagamento", "homelandType_pt": "Quebra-Rochas"}, {"number": "068", "id": "10002854", "name": "Infergon", "element": "fire", "role": "dps", "image": "10025", "stage": "Nova Stage", "desc": "Covered in armor forged by flames, the fire they breathe in fury can melt almost everything.", "attributes": {"HP": 100, "ATK": 114, "M.ATK": 53, "P.DEF": 81, "M.DEF": 98, "HASTE": 90}, "totalAttributes": 536, "habitats": ["Volcanic Caldera", "Scorched Plateau", "Echoback Landing", "Cinder Valley"], "homeland": "12 Mobility", "skills": [{"name": "Flame Strike", "type": "Physical", "cost": 0, "power": 75, "desc": "Lashes out with burning claws, dealing Fire damage to the target."}, {"name": "Infergon Blazing Nova", "type": "Magic", "cost": 15, "power": 120, "desc": "Unleashes a surge of intense heat that scorches all nearby foes."}], "trait": {"name": "Kindled Fury", "desc": "Increases Fire damage by 20% when facing foes weak to Fire."}, "evolution": [], "relatedIds": ["10002868", "10002882", "10002847", "10002904", "10002714", "10002861", "10002854"], "evolutionPath": [{"id": "10002868", "number": "062", "name": "Helmut", "stage": "Lumin Stage", "image": "10021", "slug": "helmut", "nameClean": "Helmut"}, {"id": "10002882", "number": "063", "name": "Pawney", "stage": "Nova Stage", "image": "10026", "slug": "pawney", "nameClean": "Pawney"}, {"id": "10002847", "number": "064", "name": "Rookey", "stage": "Nova Stage", "image": "10027", "slug": "rookey", "nameClean": "Rookey"}, {"id": "10002904", "number": "065", "name": "Jawling", "stage": "Lumin Stage", "image": "10024", "slug": "jawling", "nameClean": "Jawling"}, {"id": "10002714", "number": "066", "name": "Helmwhelp", "stage": "Gamma Stage", "image": "10022", "slug": "helmwhelp", "nameClean": "Helmwhelp"}, {"id": "10002861", "number": "067", "name": "Helgon", "stage": "Nova Stage", "image": "10023", "slug": "helgon", "nameClean": "Helgon"}, {"id": "10002854", "number": "068", "name": "Infergon", "stage": "Nova Stage", "image": "10025", "slug": "infergon", "nameClean": "Infergon"}], "homelandType": "Combat Instinct", "slug": "infergon", "nameClean": "Infergon", "desc_pt": "A lendária forma dragônica de fogo, cujas asas flamejantes incendeiam montanhas inteiras.", "habitats_pt": ["Caldeira Vulcânica", "Planalto Chamuscado", "Pouso do Eco", "Vale das Cinzas"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "069", "id": "10002758", "name": "Cubbo", "element": "rock", "role": "dps", "image": "10501", "stage": "Lumin Stage", "desc": "They spend the day sleepwalking. If woken up, they instantly become violent and lose control. Once they exhaust their energy, they fall back asleep like a baby.", "attributes": {"HP": 92, "ATK": 107, "M.ATK": 42, "P.DEF": 71, "M.DEF": 62, "HASTE": 71}, "totalAttributes": 445, "habitats": ["Beast Fang Ridge", "Obsidian Quarry", "Granite Canyon", "Stony Bastion"], "homeland": "12 Mobility", "skills": [{"name": "Boulder Crash", "type": "Physical", "cost": 0, "power": 82, "desc": "Slams with stony mass, dealing massive Break damage."}, {"name": "Cubbo Terra Tremor", "type": "Physical", "cost": 15, "power": 120, "desc": "Shatters the ground below, staggering all surrounding foes."}], "trait": {"name": "Solid Bastion", "desc": "Grants high resistance against staggering and knockdown."}, "evolution": [], "relatedIds": ["10002758", "10002752"], "evolutionPath": [{"id": "10002758", "number": "069", "name": "Cubbo", "stage": "Lumin Stage", "image": "10501", "slug": "cubbo", "nameClean": "Cubbo"}, {"id": "10002752", "number": "070", "name": "Grizbo", "stage": "Nova Stage", "image": "10503", "slug": "grizbo", "nameClean": "Grizbo"}], "homelandType": "Combat Instinct", "slug": "cubbo", "nameClean": "Cubbo", "desc_pt": "Ursinho rechonchudo de pedra que rola pelas colinas quebrando galhos e rochas.", "habitats_pt": ["Cordilheira Presa da Fera", "Pedreira de Obsidiana", "Cânion de Granito", "Bastião Pedregoso"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "070", "id": "10002752", "name": "Grizbo", "element": "rock", "role": "dps", "image": "10503", "stage": "Nova Stage", "desc": "They hide constant endurance and restraint beneath a gentle exterior. However, if provoked or hungry, they lose control and fall into a frenzy.", "attributes": {"HP": 108, "ATK": 126, "M.ATK": 50, "P.DEF": 83, "M.DEF": 73, "HASTE": 84}, "totalAttributes": 524, "habitats": ["Beast Fang Ridge", "Obsidian Quarry", "Granite Canyon", "Stony Bastion"], "homeland": "12 Mobility", "skills": [{"name": "Boulder Crash", "type": "Physical", "cost": 0, "power": 82, "desc": "Slams with stony mass, dealing massive Break damage."}, {"name": "Grizbo Terra Tremor", "type": "Physical", "cost": 15, "power": 120, "desc": "Shatters the ground below, staggering all surrounding foes."}], "trait": {"name": "Solid Bastion", "desc": "Grants high resistance against staggering and knockdown."}, "evolution": [], "relatedIds": ["10002758", "10002752"], "evolutionPath": [{"id": "10002758", "number": "069", "name": "Cubbo", "stage": "Lumin Stage", "image": "10501", "slug": "cubbo", "nameClean": "Cubbo"}, {"id": "10002752", "number": "070", "name": "Grizbo", "stage": "Nova Stage", "image": "10503", "slug": "grizbo", "nameClean": "Grizbo"}], "homelandType": "Combat Instinct", "slug": "grizbo", "nameClean": "Grizbo", "desc_pt": "Urso das cavernas gigantesco que despedaça blocos de granito com patadas sísmicas.", "habitats_pt": ["Cordilheira Presa da Fera", "Pedreira de Obsidiana", "Cânion de Granito", "Bastião Pedregoso"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "071", "id": "10002730", "name": "Pebbling", "element": "rock", "role": "break", "image": "10281", "stage": "Lumin Stage", "desc": "They are natural geologists who like eating all kinds of minerals. And what they eat determines how they grow.", "attributes": {"HP": 83, "ATK": 68, "M.ATK": 79, "P.DEF": 52, "M.DEF": 74, "HASTE": 56}, "totalAttributes": 412, "habitats": ["Beast Fang Ridge", "Obsidian Quarry", "Granite Canyon", "Stony Bastion"], "homeland": "14 Crushing", "skills": [{"name": "Boulder Crash", "type": "Physical", "cost": 0, "power": 82, "desc": "Slams with stony mass, dealing massive Break damage."}, {"name": "Pebbling Terra Tremor", "type": "Physical", "cost": 15, "power": 120, "desc": "Shatters the ground below, staggering all surrounding foes."}], "trait": {"name": "Solid Bastion", "desc": "Grants high resistance against staggering and knockdown."}, "evolution": [], "relatedIds": ["10002730", "10002850", "10002724", "10002843", "10002718"], "evolutionPath": [{"id": "10002730", "number": "071", "name": "Pebbling", "stage": "Lumin Stage", "image": "10281", "slug": "pebbling", "nameClean": "Pebbling"}, {"id": "10002850", "number": "072", "name": "Lavazar", "stage": "Gamma Stage", "image": "10282", "slug": "lavazar", "nameClean": "Lavazar"}, {"id": "10002724", "number": "073", "name": "Magmarex", "stage": "Nova Stage", "image": "10283", "slug": "magmarex", "nameClean": "Magmarex"}, {"id": "10002843", "number": "074", "name": "Geodeback", "stage": "Gamma Stage", "image": "10284", "slug": "geodeback", "nameClean": "Geodeback"}, {"id": "10002718", "number": "075", "name": "Minespine", "stage": "Nova Stage", "image": "10285", "slug": "minespine", "nameClean": "Minespine"}], "homelandType": "Rock Shatter", "slug": "pebbling", "nameClean": "Pebbling", "desc_pt": "Seixo vivo que se agrupa em desmoronamentos para afastar intrusos de sua mina natal.", "habitats_pt": ["Cordilheira Presa da Fera", "Pedreira de Obsidiana", "Cânion de Granito", "Bastião Pedregoso"], "homeland_pt": "14 Esmagamento", "homelandType_pt": "Quebra-Rochas"}, {"number": "072", "id": "10002850", "name": "Lavazar", "element": "fire", "role": "break", "image": "10282", "stage": "Gamma Stage", "desc": "They use hard claws to crush crystals and eat them to store heat, causing fiery red patterns to appear on their body. Though small, they can continuously spew high-heat flame streams from their mouth.", "attributes": {"HP": 99, "ATK": 82, "M.ATK": 93, "P.DEF": 63, "M.DEF": 89, "HASTE": 68}, "totalAttributes": 494, "habitats": ["Volcanic Caldera", "Scorched Plateau", "Echoback Landing", "Cinder Valley"], "homeland": "14 Crushing", "skills": [{"name": "Flame Strike", "type": "Physical", "cost": 0, "power": 75, "desc": "Lashes out with burning claws, dealing Fire damage to the target."}, {"name": "Lavazar Blazing Nova", "type": "Magic", "cost": 15, "power": 120, "desc": "Unleashes a surge of intense heat that scorches all nearby foes."}], "trait": {"name": "Kindled Fury", "desc": "Increases Fire damage by 20% when facing foes weak to Fire."}, "evolution": [], "relatedIds": ["10002730", "10002850", "10002724", "10002843", "10002718"], "evolutionPath": [{"id": "10002730", "number": "071", "name": "Pebbling", "stage": "Lumin Stage", "image": "10281", "slug": "pebbling", "nameClean": "Pebbling"}, {"id": "10002850", "number": "072", "name": "Lavazar", "stage": "Gamma Stage", "image": "10282", "slug": "lavazar", "nameClean": "Lavazar"}, {"id": "10002724", "number": "073", "name": "Magmarex", "stage": "Nova Stage", "image": "10283", "slug": "magmarex", "nameClean": "Magmarex"}, {"id": "10002843", "number": "074", "name": "Geodeback", "stage": "Gamma Stage", "image": "10284", "slug": "geodeback", "nameClean": "Geodeback"}, {"id": "10002718", "number": "075", "name": "Minespine", "stage": "Nova Stage", "image": "10285", "slug": "minespine", "nameClean": "Minespine"}], "homelandType": "Rock Shatter", "slug": "lavazar", "nameClean": "Lavazar", "desc_pt": "Magma incandescente escorre por suas fissuras, quebrando resistências com calor extremo.", "habitats_pt": ["Caldeira Vulcânica", "Planalto Chamuscado", "Pouso do Eco", "Vale das Cinzas"], "homeland_pt": "14 Esmagamento", "homelandType_pt": "Quebra-Rochas"}, {"number": "073", "id": "10002724", "name": "Magmarex", "element": "fire", "role": "break", "image": "10283", "stage": "Nova Stage", "desc": "Scorching crystals grow on their body like solidified lava. If the stored heat erupts, it can melt everything in their path.", "attributes": {"HP": 110, "ATK": 91, "M.ATK": 104, "P.DEF": 70, "M.DEF": 99, "HASTE": 75}, "totalAttributes": 549, "habitats": ["Volcanic Caldera", "Scorched Plateau", "Echoback Landing", "Cinder Valley"], "homeland": "14 Crushing", "skills": [{"name": "Flame Strike", "type": "Physical", "cost": 0, "power": 75, "desc": "Lashes out with burning claws, dealing Fire damage to the target."}, {"name": "Magmarex Blazing Nova", "type": "Magic", "cost": 15, "power": 120, "desc": "Unleashes a surge of intense heat that scorches all nearby foes."}], "trait": {"name": "Kindled Fury", "desc": "Increases Fire damage by 20% when facing foes weak to Fire."}, "evolution": [], "relatedIds": ["10002730", "10002850", "10002724", "10002843", "10002718"], "evolutionPath": [{"id": "10002730", "number": "071", "name": "Pebbling", "stage": "Lumin Stage", "image": "10281", "slug": "pebbling", "nameClean": "Pebbling"}, {"id": "10002850", "number": "072", "name": "Lavazar", "stage": "Gamma Stage", "image": "10282", "slug": "lavazar", "nameClean": "Lavazar"}, {"id": "10002724", "number": "073", "name": "Magmarex", "stage": "Nova Stage", "image": "10283", "slug": "magmarex", "nameClean": "Magmarex"}, {"id": "10002843", "number": "074", "name": "Geodeback", "stage": "Gamma Stage", "image": "10284", "slug": "geodeback", "nameClean": "Geodeback"}, {"id": "10002718", "number": "075", "name": "Minespine", "stage": "Nova Stage", "image": "10285", "slug": "minespine", "nameClean": "Minespine"}], "homelandType": "Rock Shatter", "slug": "magmarex", "nameClean": "Magmarex", "desc_pt": "Rei dos fluxos piroclásticos, pisa no chão transformando pedra em lava derretida.", "habitats_pt": ["Caldeira Vulcânica", "Planalto Chamuscado", "Pouso do Eco", "Vale das Cinzas"], "homeland_pt": "14 Esmagamento", "homelandType_pt": "Quebra-Rochas"}, {"number": "074", "id": "10002843", "name": "Geodeback", "element": "rock", "role": "break", "image": "10284", "stage": "Gamma Stage", "desc": "The minerals they eat will grow back on them with refined energy stored inside.", "attributes": {"HP": 99, "ATK": 81, "M.ATK": 102, "P.DEF": 89, "M.DEF": 54, "HASTE": 70}, "totalAttributes": 495, "habitats": ["Beast Fang Ridge", "Obsidian Quarry", "Granite Canyon", "Stony Bastion"], "homeland": "14 Crushing", "skills": [{"name": "Boulder Crash", "type": "Physical", "cost": 0, "power": 82, "desc": "Slams with stony mass, dealing massive Break damage."}, {"name": "Geodeback Terra Tremor", "type": "Physical", "cost": 15, "power": 120, "desc": "Shatters the ground below, staggering all surrounding foes."}], "trait": {"name": "Solid Bastion", "desc": "Grants high resistance against staggering and knockdown."}, "evolution": [], "relatedIds": ["10002730", "10002850", "10002724", "10002843", "10002718"], "evolutionPath": [{"id": "10002730", "number": "071", "name": "Pebbling", "stage": "Lumin Stage", "image": "10281", "slug": "pebbling", "nameClean": "Pebbling"}, {"id": "10002850", "number": "072", "name": "Lavazar", "stage": "Gamma Stage", "image": "10282", "slug": "lavazar", "nameClean": "Lavazar"}, {"id": "10002724", "number": "073", "name": "Magmarex", "stage": "Nova Stage", "image": "10283", "slug": "magmarex", "nameClean": "Magmarex"}, {"id": "10002843", "number": "074", "name": "Geodeback", "stage": "Gamma Stage", "image": "10284", "slug": "geodeback", "nameClean": "Geodeback"}, {"id": "10002718", "number": "075", "name": "Minespine", "stage": "Nova Stage", "image": "10285", "slug": "minespine", "nameClean": "Minespine"}], "homelandType": "Rock Shatter", "slug": "geodeback", "nameClean": "Geodeback", "desc_pt": "Suas costas abrigam cristais reluzentes de quartzo que desviam golpes de impacto.", "habitats_pt": ["Cordilheira Presa da Fera", "Pedreira de Obsidiana", "Cânion de Granito", "Bastião Pedregoso"], "homeland_pt": "14 Esmagamento", "homelandType_pt": "Quebra-Rochas"}, {"number": "075", "id": "10002718", "name": "Minespine", "element": "rock", "role": "break", "image": "10285", "stage": "Nova Stage", "desc": "Wherever crystal minerals are found, so are they. Their hard spines serve both as protection and as storage for energy.", "attributes": {"HP": 110, "ATK": 90, "M.ATK": 113, "P.DEF": 99, "M.DEF": 60, "HASTE": 78}, "totalAttributes": 550, "habitats": ["Beast Fang Ridge", "Obsidian Quarry", "Granite Canyon", "Stony Bastion"], "homeland": "14 Crushing", "skills": [{"name": "Boulder Crash", "type": "Physical", "cost": 0, "power": 82, "desc": "Slams with stony mass, dealing massive Break damage."}, {"name": "Minespine Terra Tremor", "type": "Physical", "cost": 15, "power": 120, "desc": "Shatters the ground below, staggering all surrounding foes."}], "trait": {"name": "Solid Bastion", "desc": "Grants high resistance against staggering and knockdown."}, "evolution": [], "relatedIds": ["10002730", "10002850", "10002724", "10002843", "10002718"], "evolutionPath": [{"id": "10002730", "number": "071", "name": "Pebbling", "stage": "Lumin Stage", "image": "10281", "slug": "pebbling", "nameClean": "Pebbling"}, {"id": "10002850", "number": "072", "name": "Lavazar", "stage": "Gamma Stage", "image": "10282", "slug": "lavazar", "nameClean": "Lavazar"}, {"id": "10002724", "number": "073", "name": "Magmarex", "stage": "Nova Stage", "image": "10283", "slug": "magmarex", "nameClean": "Magmarex"}, {"id": "10002843", "number": "074", "name": "Geodeback", "stage": "Gamma Stage", "image": "10284", "slug": "geodeback", "nameClean": "Geodeback"}, {"id": "10002718", "number": "075", "name": "Minespine", "stage": "Nova Stage", "image": "10285", "slug": "minespine", "nameClean": "Minespine"}], "homelandType": "Rock Shatter", "slug": "minespine", "nameClean": "Minespine", "desc_pt": "Espinhos de minério puro brotam de sua espinha para perfurar qualquer agressor.", "habitats_pt": ["Cordilheira Presa da Fera", "Pedreira de Obsidiana", "Cânion de Granito", "Bastião Pedregoso"], "homeland_pt": "14 Esmagamento", "homelandType_pt": "Quebra-Rochas"}, {"number": "076", "id": "10002711", "name": "Cozite", "element": "rock", "role": "sup", "image": "10431", "stage": "Lumin Stage", "desc": "Cozites build their shells bit by bit with mud. When in danger, they spray smoke from the top hole to cover the surroundings and hide themselves.", "attributes": {"HP": 77, "ATK": 77, "M.ATK": 50, "P.DEF": 67, "M.DEF": 67, "HASTE": 100}, "totalAttributes": 438, "habitats": ["Beast Fang Ridge", "Obsidian Quarry", "Granite Canyon", "Stony Bastion"], "homeland": "11 Mobility", "skills": [{"name": "Boulder Crash", "type": "Physical", "cost": 0, "power": 82, "desc": "Slams with stony mass, dealing massive Break damage."}, {"name": "Cozite Terra Tremor", "type": "Physical", "cost": 15, "power": 120, "desc": "Shatters the ground below, staggering all surrounding foes."}], "trait": {"name": "Solid Bastion", "desc": "Grants high resistance against staggering and knockdown."}, "evolution": [], "relatedIds": ["10002711", "10002772"], "evolutionPath": [{"id": "10002711", "number": "076", "name": "Cozite", "stage": "Lumin Stage", "image": "10431", "slug": "cozite", "nameClean": "Cozite"}, {"id": "10002772", "number": "077", "name": "Bailite", "stage": "Nova Stage", "image": "10433", "slug": "bailite", "nameClean": "Bailite"}], "homelandType": "Target Tracking", "slug": "cozite", "nameClean": "Cozite", "desc_pt": "Pequeno cristal flutuante que emite frequências harmônicas reconfortantes para aliados.", "habitats_pt": ["Cordilheira Presa da Fera", "Pedreira de Obsidiana", "Cânion de Granito", "Bastião Pedregoso"], "homeland_pt": "11 Mobilidade", "homelandType_pt": "Rastreamento de Alvos"}, {"number": "077", "id": "10002772", "name": "Bailite", "element": "rock", "role": "sup", "image": "10433", "stage": "Nova Stage", "desc": "Bailites' anatomy allows independent rotation of their upper and lower bodies. This means they can observe surroundings flexibly, ready to transform into turrets to repel opponents.", "attributes": {"HP": 75, "ATK": 114, "M.ATK": 103, "P.DEF": 85, "M.DEF": 84, "HASTE": 75}, "totalAttributes": 536, "habitats": ["Beast Fang Ridge", "Obsidian Quarry", "Granite Canyon", "Stony Bastion"], "homeland": "11 Mobility", "skills": [{"name": "Boulder Crash", "type": "Physical", "cost": 0, "power": 82, "desc": "Slams with stony mass, dealing massive Break damage."}, {"name": "Bailite Terra Tremor", "type": "Physical", "cost": 15, "power": 120, "desc": "Shatters the ground below, staggering all surrounding foes."}], "trait": {"name": "Solid Bastion", "desc": "Grants high resistance against staggering and knockdown."}, "evolution": [], "relatedIds": ["10002711", "10002772"], "evolutionPath": [{"id": "10002711", "number": "076", "name": "Cozite", "stage": "Lumin Stage", "image": "10431", "slug": "cozite", "nameClean": "Cozite"}, {"id": "10002772", "number": "077", "name": "Bailite", "stage": "Nova Stage", "image": "10433", "slug": "bailite", "nameClean": "Bailite"}], "homelandType": "Target Tracking", "slug": "bailite", "nameClean": "Bailite", "desc_pt": "Bateria mineral orgânica que estabiliza o fluxo de mana e fortalece ataques amigos.", "habitats_pt": ["Cordilheira Presa da Fera", "Pedreira de Obsidiana", "Cânion de Granito", "Bastião Pedregoso"], "homeland_pt": "11 Mobilidade", "homelandType_pt": "Rastreamento de Alvos"}, {"number": "078", "id": "10002822", "name": "Bulbly", "element": "electric", "role": "sup", "image": "10141", "stage": "Lumin Stage", "desc": "Their first reaction to everything is to escape, and their bulb-like organs indicate whether they are healthy.", "attributes": {"HP": 83, "ATK": 68, "M.ATK": 37, "P.DEF": 63, "M.DEF": 63, "HASTE": 90}, "totalAttributes": 404, "habitats": ["Thunder Peak", "Echoback Landing", "Lightning Crag", "Stormy Bluffs"], "homeland": "11 Mobility", "skills": [{"name": "Volt Jab", "type": "Physical", "cost": 0, "power": 78, "desc": "Discharges an electric punch that shocks the opponent."}, {"name": "Bulbly Thunderstorm Wrath", "type": "Magic", "cost": 18, "power": 130, "desc": "Calls down a devastating lightning strike from above."}], "trait": {"name": "Static Charge", "desc": "Has a 25% chance to paralyze the attacker on contact."}, "evolution": [], "relatedIds": ["10002822", "10002804", "10002713"], "evolutionPath": [{"id": "10002822", "number": "078", "name": "Bulbly", "stage": "Lumin Stage", "image": "10141", "slug": "bulbly", "nameClean": "Bulbly"}, {"id": "10002804", "number": "079", "name": "Veilfloat", "stage": "Gamma Stage", "image": "10142", "slug": "veilfloat", "nameClean": "Veilfloat"}, {"id": "10002713", "number": "080", "name": "Luminelle", "stage": "Nova Stage", "image": "10143", "slug": "luminelle", "nameClean": "Luminelle"}], "homelandType": "Target Tracking", "slug": "bulbly", "nameClean": "Bulbly", "desc_pt": "Globo luminoso que levita emitindo sinais elétricos suaves pela penumbra.", "habitats_pt": ["Pico do Trovão", "Pouso do Eco", "Penhasco dos Raios", "Escarpa Tempestuosa"], "homeland_pt": "11 Mobilidade", "homelandType_pt": "Rastreamento de Alvos"}, {"number": "079", "id": "10002804", "name": "Veilfloat", "element": "electric", "role": "sup", "image": "10142", "stage": "Gamma Stage", "desc": "A light-dependent creature that glows when night falls, keeping its light on even while sleeping.", "attributes": {"HP": 99, "ATK": 81, "M.ATK": 45, "P.DEF": 77, "M.DEF": 77, "HASTE": 107}, "totalAttributes": 486, "habitats": ["Thunder Peak", "Echoback Landing", "Lightning Crag", "Stormy Bluffs"], "homeland": "11 Mobility", "skills": [{"name": "Volt Jab", "type": "Physical", "cost": 0, "power": 78, "desc": "Discharges an electric punch that shocks the opponent."}, {"name": "Veilfloat Thunderstorm Wrath", "type": "Magic", "cost": 18, "power": 130, "desc": "Calls down a devastating lightning strike from above."}], "trait": {"name": "Static Charge", "desc": "Has a 25% chance to paralyze the attacker on contact."}, "evolution": [], "relatedIds": ["10002822", "10002804", "10002713"], "evolutionPath": [{"id": "10002822", "number": "078", "name": "Bulbly", "stage": "Lumin Stage", "image": "10141", "slug": "bulbly", "nameClean": "Bulbly"}, {"id": "10002804", "number": "079", "name": "Veilfloat", "stage": "Gamma Stage", "image": "10142", "slug": "veilfloat", "nameClean": "Veilfloat"}, {"id": "10002713", "number": "080", "name": "Luminelle", "stage": "Nova Stage", "image": "10143", "slug": "luminelle", "nameClean": "Luminelle"}], "homelandType": "Target Tracking", "slug": "veilfloat", "nameClean": "Veilfloat", "desc_pt": "Medusa aérea que canaliza energia estática para erguer campos de força protetores.", "habitats_pt": ["Pico do Trovão", "Pouso do Eco", "Penhasco dos Raios", "Escarpa Tempestuosa"], "homeland_pt": "11 Mobilidade", "homelandType_pt": "Rastreamento de Alvos"}, {"number": "080", "id": "10002713", "name": "Luminelle", "element": "electric", "role": "sup", "image": "10143", "stage": "Nova Stage", "desc": "Changes its glow to match its mood while its tentacles create mesmerizing patterns and deliver shocking attacks.", "attributes": {"HP": 110, "ATK": 90, "M.ATK": 50, "P.DEF": 85, "M.DEF": 85, "HASTE": 120}, "totalAttributes": 540, "habitats": ["Thunder Peak", "Echoback Landing", "Lightning Crag", "Stormy Bluffs"], "homeland": "11 Mobility", "skills": [{"name": "Volt Jab", "type": "Physical", "cost": 0, "power": 78, "desc": "Discharges an electric punch that shocks the opponent."}, {"name": "Luminelle Thunderstorm Wrath", "type": "Magic", "cost": 18, "power": 130, "desc": "Calls down a devastating lightning strike from above."}], "trait": {"name": "Static Charge", "desc": "Has a 25% chance to paralyze the attacker on contact."}, "evolution": [], "relatedIds": ["10002822", "10002804", "10002713"], "evolutionPath": [{"id": "10002822", "number": "078", "name": "Bulbly", "stage": "Lumin Stage", "image": "10141", "slug": "bulbly", "nameClean": "Bulbly"}, {"id": "10002804", "number": "079", "name": "Veilfloat", "stage": "Gamma Stage", "image": "10142", "slug": "veilfloat", "nameClean": "Veilfloat"}, {"id": "10002713", "number": "080", "name": "Luminelle", "stage": "Nova Stage", "image": "10143", "slug": "luminelle", "nameClean": "Luminelle"}], "homelandType": "Target Tracking", "slug": "luminelle", "nameClean": "Luminelle", "desc_pt": "Lanterna celestial dos céus que ilumina áreas inteiras com bênçãos elétricas.", "habitats_pt": ["Pico do Trovão", "Pouso do Eco", "Penhasco dos Raios", "Escarpa Tempestuosa"], "homeland_pt": "11 Mobilidade", "homelandType_pt": "Rastreamento de Alvos"}, {"number": "081", "id": "10002754", "name": "Fahloo", "element": "water", "role": "energy", "image": "10481", "stage": "Lumin Stage", "desc": "They rub the oil on their bodies to create a thick foam. This foam cleans and protects them, though they sometimes slip on it by accident.", "attributes": {"HP": 102, "ATK": 76, "M.ATK": 44, "P.DEF": 68, "M.DEF": 76, "HASTE": 93}, "totalAttributes": 459, "habitats": ["Azure Shoals", "Mistwoods Lagoon", "The Argent Strait", "Coral Abyss"], "homeland": "13 Lumbering", "skills": [{"name": "Aqua Jet", "type": "Magic", "cost": 0, "power": 70, "desc": "Fires a concentrated pressurized stream of water at high velocity."}, {"name": "Fahloo Surging Torrent", "type": "Magic", "cost": 12, "power": 110, "desc": "Conjures a tidal rush that restores allies and pushes back enemies."}], "trait": {"name": "Aquatic Harmony", "desc": "Heals the party for 5% max HP when triggering an elemental reaction."}, "evolution": [], "relatedIds": ["10002754", "10002755"], "evolutionPath": [{"id": "10002754", "number": "081", "name": "Fahloo", "stage": "Lumin Stage", "image": "10481", "slug": "fahloo", "nameClean": "Fahloo"}, {"id": "10002755", "number": "082", "name": "Erlath", "stage": "Nova Stage", "image": "10483", "slug": "erlath", "nameClean": "Erlath"}], "homelandType": "Resonance Beacon", "slug": "fahloo", "nameClean": "Fahloo", "desc_pt": "Espírito das águas profundas que acumula mana límpida para recarregar aliados.", "habitats_pt": ["Baixios Azuis", "Lagoa da Floresta das Névoas", "Estreito de Prata", "Abismo de Coral"], "homeland_pt": "13 Corte de Lenha", "homelandType_pt": "Farol de Ressonância"}, {"number": "082", "id": "10002755", "name": "Erlath", "element": "water", "role": "energy", "image": "10483", "stage": "Nova Stage", "desc": "Their feathers constantly secrete oil, creating various bubbles with just a little friction. They naturally use the softest, densest foam to protect the Fahloos on their backs.", "attributes": {"HP": 120, "ATK": 90, "M.ATK": 50, "P.DEF": 80, "M.DEF": 90, "HASTE": 110}, "totalAttributes": 540, "habitats": ["Azure Shoals", "Mistwoods Lagoon", "The Argent Strait", "Coral Abyss"], "homeland": "13 Lumbering", "skills": [{"name": "Aqua Jet", "type": "Magic", "cost": 0, "power": 70, "desc": "Fires a concentrated pressurized stream of water at high velocity."}, {"name": "Erlath Surging Torrent", "type": "Magic", "cost": 12, "power": 110, "desc": "Conjures a tidal rush that restores allies and pushes back enemies."}], "trait": {"name": "Aquatic Harmony", "desc": "Heals the party for 5% max HP when triggering an elemental reaction."}, "evolution": [], "relatedIds": ["10002754", "10002755"], "evolutionPath": [{"id": "10002754", "number": "081", "name": "Fahloo", "stage": "Lumin Stage", "image": "10481", "slug": "fahloo", "nameClean": "Fahloo"}, {"id": "10002755", "number": "082", "name": "Erlath", "stage": "Nova Stage", "image": "10483", "slug": "erlath", "nameClean": "Erlath"}], "homelandType": "Resonance Beacon", "slug": "erlath", "nameClean": "Erlath", "desc_pt": "Fontanela viva que purifica e revitaliza a energia vital de todo o esquadrão.", "habitats_pt": ["Baixios Azuis", "Lagoa da Floresta das Névoas", "Estreito de Prata", "Abismo de Coral"], "homeland_pt": "13 Corte de Lenha", "homelandType_pt": "Farol de Ressonância"}, {"number": "083", "id": "10002874", "name": "Besauce", "element": "electric", "role": "energy", "image": "10122", "stage": "Lumin Stage", "desc": "Always trying to find beats to drown out its persistent heartbeat, Besauce loves to groove to the music.", "attributes": {"HP": 82, "ATK": 89, "M.ATK": 90, "P.DEF": 75, "M.DEF": 75, "HASTE": 110}, "totalAttributes": 521, "habitats": ["Thunder Peak", "Echoback Landing", "Lightning Crag", "Stormy Bluffs"], "homeland": "13 Lumbering", "skills": [{"name": "Volt Jab", "type": "Physical", "cost": 0, "power": 78, "desc": "Discharges an electric punch that shocks the opponent."}, {"name": "Besauce Thunderstorm Wrath", "type": "Magic", "cost": 18, "power": 130, "desc": "Calls down a devastating lightning strike from above."}], "trait": {"name": "Static Charge", "desc": "Has a 25% chance to paralyze the attacker on contact."}, "evolution": [], "relatedIds": ["10002874"], "evolutionPath": [{"id": "10002874", "number": "083", "name": "Besauce", "stage": "Lumin Stage", "image": "10122", "slug": "besauce", "nameClean": "Besauce"}], "homelandType": "Resonance Beacon", "slug": "besauce", "nameClean": "Besauce", "desc_pt": "Gerador vivo de eletricidade constante que acelera a prontidão de habilidades da equipe.", "habitats_pt": ["Pico do Trovão", "Pouso do Eco", "Penhasco dos Raios", "Escarpa Tempestuosa"], "homeland_pt": "13 Corte de Lenha", "homelandType_pt": "Farol de Ressonância"}, {"number": "084", "id": "10002819", "name": "Reefish", "element": "rock", "role": "energy", "image": "10381", "stage": "Lumin Stage", "desc": "They burrow underground to camouflage as coral and bite any prey that comes near. However, they sometimes get impatient and peek around.", "attributes": {"HP": 83, "ATK": 66, "M.ATK": 91, "P.DEF": 75, "M.DEF": 79, "HASTE": 92}, "totalAttributes": 486, "habitats": ["Beast Fang Ridge", "Obsidian Quarry", "Granite Canyon", "Stony Bastion"], "homeland": "13 Lumbering", "skills": [{"name": "Boulder Crash", "type": "Physical", "cost": 0, "power": 82, "desc": "Slams with stony mass, dealing massive Break damage."}, {"name": "Reefish Terra Tremor", "type": "Physical", "cost": 15, "power": 120, "desc": "Shatters the ground below, staggering all surrounding foes."}], "trait": {"name": "Solid Bastion", "desc": "Grants high resistance against staggering and knockdown."}, "evolution": [], "relatedIds": ["10002819", "10002811"], "evolutionPath": [{"id": "10002819", "number": "084", "name": "Reefish", "stage": "Lumin Stage", "image": "10381", "slug": "reefish", "nameClean": "Reefish"}, {"id": "10002811", "number": "085", "name": "Coraliz", "stage": "Nova Stage", "image": "10383", "slug": "coraliz", "nameClean": "Coraliz"}], "homelandType": "Resonance Beacon", "slug": "reefish", "nameClean": "Reefish", "desc_pt": "Peixe fóssil ancestral que nada em correntes profundas filtrando minerais vitais.", "habitats_pt": ["Cordilheira Presa da Fera", "Pedreira de Obsidiana", "Cânion de Granito", "Bastião Pedregoso"], "homeland_pt": "13 Corte de Lenha", "homelandType_pt": "Farol de Ressonância"}, {"number": "085", "id": "10002811", "name": "Coraliz", "element": "rock", "role": "energy", "image": "10383", "stage": "Nova Stage", "desc": "They love to bury themselves in sand, mimicking coral clumps. They use the glow of the coral on their head and back to lure creatures for a surprise attack.", "attributes": {"HP": 98, "ATK": 78, "M.ATK": 107, "P.DEF": 88, "M.DEF": 93, "HASTE": 108}, "totalAttributes": 572, "habitats": ["Beast Fang Ridge", "Obsidian Quarry", "Granite Canyon", "Stony Bastion"], "homeland": "13 Lumbering", "skills": [{"name": "Boulder Crash", "type": "Physical", "cost": 0, "power": 82, "desc": "Slams with stony mass, dealing massive Break damage."}, {"name": "Coraliz Terra Tremor", "type": "Physical", "cost": 15, "power": 120, "desc": "Shatters the ground below, staggering all surrounding foes."}], "trait": {"name": "Solid Bastion", "desc": "Grants high resistance against staggering and knockdown."}, "evolution": [], "relatedIds": ["10002819", "10002811"], "evolutionPath": [{"id": "10002819", "number": "084", "name": "Reefish", "stage": "Lumin Stage", "image": "10381", "slug": "reefish", "nameClean": "Reefish"}, {"id": "10002811", "number": "085", "name": "Coraliz", "stage": "Nova Stage", "image": "10383", "slug": "coraliz", "nameClean": "Coraliz"}], "homelandType": "Resonance Beacon", "slug": "coraliz", "nameClean": "Coraliz", "desc_pt": "Recife vivo pulsante que absorve impactos e recarrega os poderes do time.", "habitats_pt": ["Cordilheira Presa da Fera", "Pedreira de Obsidiana", "Cânion de Granito", "Bastião Pedregoso"], "homeland_pt": "13 Corte de Lenha", "homelandType_pt": "Farol de Ressonância"}, {"number": "086", "id": "10002855", "name": "Cheekie", "element": "ice", "role": "break", "image": "10461", "stage": "Lumin Stage", "desc": "People often mistake the circles on their cheeks for eyes. They love to gather in groups on the shore, feeling safe only when they huddle closely with their companions.", "attributes": {"HP": 89, "ATK": 64, "M.ATK": 92, "P.DEF": 76, "M.DEF": 79, "HASTE": 88}, "totalAttributes": 488, "habitats": ["Frostbite Ridge", "Glacier Crest", "Frozen Taiga", "Permafrost Valley"], "homeland": "14 Crushing", "skills": [{"name": "Frost Fang", "type": "Physical", "cost": 0, "power": 74, "desc": "Bites with freezing fangs, lowering the enemy's move speed."}, {"name": "Cheekie Glacial Blizzard", "type": "Magic", "cost": 14, "power": 115, "desc": "Freezes the battlefield in a harsh howling blizzard."}], "trait": {"name": "Permafrost Shield", "desc": "Reduces incoming Physical and Magic damage by 15%."}, "evolution": [], "relatedIds": ["10002855", "10002782"], "evolutionPath": [{"id": "10002855", "number": "086", "name": "Cheekie", "stage": "Lumin Stage", "image": "10461", "slug": "cheekie", "nameClean": "Cheekie"}, {"id": "10002782", "number": "087", "name": "Wavwal", "stage": "Nova Stage", "image": "10463", "slug": "wavwal", "nameClean": "Wavwal"}], "homelandType": "Rock Shatter", "slug": "cheekie", "nameClean": "Cheekie", "desc_pt": "Foca ártica divertida que desliza no gelo quebrando barreiras com o corpo rígido.", "habitats_pt": ["Crista da Congelação", "Cume Glacial", "Taiga Congelada", "Vale do Permafrost"], "homeland_pt": "14 Esmagamento", "homelandType_pt": "Quebra-Rochas"}, {"number": "087", "id": "10002782", "name": "Wavwal", "element": "ice", "role": "break", "image": "10463", "stage": "Nova Stage", "desc": "They move clumsily on land using their four limbs, but they are experts at sliding on their bellies. The males are highly territorial against other males, once angered, they unleash their wrath like a tsunami.", "attributes": {"HP": 105, "ATK": 75, "M.ATK": 110, "P.DEF": 89, "M.DEF": 93, "HASTE": 103}, "totalAttributes": 575, "habitats": ["Frostbite Ridge", "Glacier Crest", "Frozen Taiga", "Permafrost Valley"], "homeland": "14 Crushing", "skills": [{"name": "Frost Fang", "type": "Physical", "cost": 0, "power": 74, "desc": "Bites with freezing fangs, lowering the enemy's move speed."}, {"name": "Wavwal Glacial Blizzard", "type": "Magic", "cost": 14, "power": 115, "desc": "Freezes the battlefield in a harsh howling blizzard."}], "trait": {"name": "Permafrost Shield", "desc": "Reduces incoming Physical and Magic damage by 15%."}, "evolution": [], "relatedIds": ["10002855", "10002782"], "evolutionPath": [{"id": "10002855", "number": "086", "name": "Cheekie", "stage": "Lumin Stage", "image": "10461", "slug": "cheekie", "nameClean": "Cheekie"}, {"id": "10002782", "number": "087", "name": "Wavwal", "stage": "Nova Stage", "image": "10463", "slug": "wavwal", "nameClean": "Wavwal"}], "homelandType": "Rock Shatter", "slug": "wavwal", "nameClean": "Wavwal", "desc_pt": "Morsa imponente cujas presas de gelo quebram geleiras com um único golpe.", "habitats_pt": ["Crista da Congelação", "Cume Glacial", "Taiga Congelada", "Vale do Permafrost"], "homeland_pt": "14 Esmagamento", "homelandType_pt": "Quebra-Rochas"}, {"number": "088", "id": "10002748", "name": "Bubbeep", "element": "grass", "role": "heal", "image": "10581", "stage": "Lumin Stage", "desc": "It stretches its leafy feathers with lazy ease, always chewing away as it turns algae and slime into floating bubbles. One light hop, and off it drifts, riding the bubbles like a little boat in the breeze.", "attributes": {"HP": 104, "ATK": 85, "M.ATK": 43, "P.DEF": 78, "M.DEF": 75, "HASTE": 82}, "totalAttributes": 467, "habitats": ["Nimbus Fields", "Verdant Canopy", "Whispering Grove", "Flora Reach"], "homeland": "10 Gathering", "skills": [{"name": "Vine Whip", "type": "Physical", "cost": 0, "power": 72, "desc": "Strikes fiercely with hardened floral vines."}, {"name": "Bubbeep Verdant Bloom", "type": "Magic", "cost": 10, "power": 105, "desc": "Sprouts radiant flora that saps enemy defenses and grants Regen."}], "trait": {"name": "Photosynthesis", "desc": "Regenerates energy over time while in sunlit or grassy terrain."}, "evolution": [], "relatedIds": ["10002748", "10002744"], "evolutionPath": [{"id": "10002748", "number": "088", "name": "Bubbeep", "stage": "Lumin Stage", "image": "10581", "slug": "bubbeep", "nameClean": "Bubbeep"}, {"id": "10002744", "number": "089", "name": "Glameep", "stage": "Nova Stage", "image": "10583", "slug": "glameep", "nameClean": "Glameep"}], "homelandType": "Herbal Foraging", "slug": "bubbeep", "nameClean": "Bubbeep", "desc_pt": "Ovelha floral cuja lã de algodão e folhas tem propriedades cicatrizantes milagrosas.", "habitats_pt": ["Campos de Nimbos", "Dossel Verdejante", "Bosque dos Sussurros", "Recanto da Flora"], "homeland_pt": "10 Coleta", "homelandType_pt": "Colheita de Ervas"}, {"number": "089", "id": "10002744", "name": "Glameep", "element": "grass", "role": "heal", "image": "10583", "stage": "Nova Stage", "desc": "Draped in fresh green leaf-feathers, Glameep moves lightly along the lake shore. It adores clear water most of all, especially when that water reflects its own graceful, unhurried beauty.", "attributes": {"HP": 122, "ATK": 100, "M.ATK": 50, "P.DEF": 92, "M.DEF": 89, "HASTE": 97}, "totalAttributes": 550, "habitats": ["Nimbus Fields", "Verdant Canopy", "Whispering Grove", "Flora Reach"], "homeland": "10 Gathering", "skills": [{"name": "Vine Whip", "type": "Physical", "cost": 0, "power": 72, "desc": "Strikes fiercely with hardened floral vines."}, {"name": "Glameep Verdant Bloom", "type": "Magic", "cost": 10, "power": 105, "desc": "Sprouts radiant flora that saps enemy defenses and grants Regen."}], "trait": {"name": "Photosynthesis", "desc": "Regenerates energy over time while in sunlit or grassy terrain."}, "evolution": [], "relatedIds": ["10002748", "10002744"], "evolutionPath": [{"id": "10002748", "number": "088", "name": "Bubbeep", "stage": "Lumin Stage", "image": "10581", "slug": "bubbeep", "nameClean": "Bubbeep"}, {"id": "10002744", "number": "089", "name": "Glameep", "stage": "Nova Stage", "image": "10583", "slug": "glameep", "nameClean": "Glameep"}], "homelandType": "Herbal Foraging", "slug": "glameep", "nameClean": "Glameep", "desc_pt": "Lã aveludada de aroma doce que restaura grandes quantidades de vida aos companheiros.", "habitats_pt": ["Campos de Nimbos", "Dossel Verdejante", "Bosque dos Sussurros", "Recanto da Flora"], "homeland_pt": "10 Coleta", "homelandType_pt": "Colheita de Ervas"}, {"number": "090", "id": "10002735", "name": "Popapus", "element": "water", "role": "dps", "image": "10621", "stage": "Lumin Stage", "desc": "It loves collecting colorful bubbles. They bob and sway inside its air sac as it moves, and when inspiration strikes, it uses them to doodle strange little wonders in the air.", "attributes": {"HP": 90, "ATK": 102, "M.ATK": 45, "P.DEF": 58, "M.DEF": 65, "HASTE": 90}, "totalAttributes": 450, "habitats": ["Azure Shoals", "Mistwoods Lagoon", "The Argent Strait", "Coral Abyss"], "homeland": "12 Mobility", "skills": [{"name": "Aqua Jet", "type": "Magic", "cost": 0, "power": 70, "desc": "Fires a concentrated pressurized stream of water at high velocity."}, {"name": "Popapus Surging Torrent", "type": "Magic", "cost": 12, "power": 110, "desc": "Conjures a tidal rush that restores allies and pushes back enemies."}], "trait": {"name": "Aquatic Harmony", "desc": "Heals the party for 5% max HP when triggering an elemental reaction."}, "evolution": [], "relatedIds": ["10002735", "10002834"], "evolutionPath": [{"id": "10002735", "number": "090", "name": "Popapus", "stage": "Lumin Stage", "image": "10621", "slug": "popapus", "nameClean": "Popapus"}, {"id": "10002834", "number": "091", "name": "Gachapus", "stage": "Nova Stage", "image": "10623", "slug": "gachapus", "nameClean": "Gachapus"}], "homelandType": "Combat Instinct", "slug": "popapus", "nameClean": "Popapus", "desc_pt": "Polvo brincalhão que cospe tinta colorida de alta velocidade em seus oponentes.", "habitats_pt": ["Baixios Azuis", "Lagoa da Floresta das Névoas", "Estreito de Prata", "Abismo de Coral"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "091", "id": "10002834", "name": "Gachapus", "element": "water", "role": "dps", "image": "10623", "stage": "Nova Stage", "desc": "With a quick tap from its nimble tentacles, it can launch all kinds of capsule bubbles from its head. No one knows what will pop out next—a delightful surprise, or a complete accident.", "attributes": {"HP": 106, "ATK": 121, "M.ATK": 51, "P.DEF": 68, "M.DEF": 77, "HASTE": 106}, "totalAttributes": 529, "habitats": ["Azure Shoals", "Mistwoods Lagoon", "The Argent Strait", "Coral Abyss"], "homeland": "12 Mobility", "skills": [{"name": "Aqua Jet", "type": "Magic", "cost": 0, "power": 70, "desc": "Fires a concentrated pressurized stream of water at high velocity."}, {"name": "Gachapus Surging Torrent", "type": "Magic", "cost": 12, "power": 110, "desc": "Conjures a tidal rush that restores allies and pushes back enemies."}], "trait": {"name": "Aquatic Harmony", "desc": "Heals the party for 5% max HP when triggering an elemental reaction."}, "evolution": [], "relatedIds": ["10002735", "10002834"], "evolutionPath": [{"id": "10002735", "number": "090", "name": "Popapus", "stage": "Lumin Stage", "image": "10621", "slug": "popapus", "nameClean": "Popapus"}, {"id": "10002834", "number": "091", "name": "Gachapus", "stage": "Nova Stage", "image": "10623", "slug": "gachapus", "nameClean": "Gachapus"}], "homelandType": "Combat Instinct", "slug": "gachapus", "nameClean": "Gachapus", "desc_pt": "Gira seus tentáculos em redemoinhos aquáticos que causam dano massivo e contínuo.", "habitats_pt": ["Baixios Azuis", "Lagoa da Floresta das Névoas", "Estreito de Prata", "Abismo de Coral"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "092", "id": "10002738", "name": "Malangel", "element": "ice", "role": "dps", "image": "10421", "stage": "Lumin Stage", "desc": "They disguise themselves with a cheerful smile to sneak up on targets. Once in combat, they reveal their true colors and bare their fangs poised to strike.", "attributes": {"HP": 100, "ATK": 105, "M.ATK": 50, "P.DEF": 80, "M.DEF": 80, "HASTE": 100}, "totalAttributes": 515, "habitats": ["Frostbite Ridge", "Glacier Crest", "Frozen Taiga", "Permafrost Valley"], "homeland": "12 Mobility", "skills": [{"name": "Frost Fang", "type": "Physical", "cost": 0, "power": 74, "desc": "Bites with freezing fangs, lowering the enemy's move speed."}, {"name": "Malangel Glacial Blizzard", "type": "Magic", "cost": 14, "power": 115, "desc": "Freezes the battlefield in a harsh howling blizzard."}], "trait": {"name": "Permafrost Shield", "desc": "Reduces incoming Physical and Magic damage by 15%."}, "evolution": [], "relatedIds": ["10002738", "10002732"], "evolutionPath": [{"id": "10002738", "number": "092", "name": "Malangel", "stage": "Lumin Stage", "image": "10421", "slug": "malangel", "nameClean": "Malangel"}, {"id": "10002732", "number": "093", "name": "Malevsera", "stage": "Nova Stage", "image": "10423", "slug": "malevsera", "nameClean": "Malevsera"}], "homelandType": "Combat Instinct", "slug": "malangel", "nameClean": "Malangel", "desc_pt": "Anjo de gelo de aura austera que dispara lanças congeladas contra o mal.", "habitats_pt": ["Crista da Congelação", "Cume Glacial", "Taiga Congelada", "Vale do Permafrost"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "093", "id": "10002732", "name": "Malevsera", "element": "ice", "role": "dps", "image": "10423", "stage": "Nova Stage", "desc": "They hide their fangs and claws in their soft body. Expert at using their gentle, harmless look to lower other creatures' guard before casually freezing them into ice sculptures.", "attributes": {"HP": 88, "ATK": 125, "M.ATK": 52, "P.DEF": 70, "M.DEF": 80, "HASTE": 110}, "totalAttributes": 525, "habitats": ["Frostbite Ridge", "Glacier Crest", "Frozen Taiga", "Permafrost Valley"], "homeland": "12 Mobility", "skills": [{"name": "Frost Fang", "type": "Physical", "cost": 0, "power": 74, "desc": "Bites with freezing fangs, lowering the enemy's move speed."}, {"name": "Malevsera Glacial Blizzard", "type": "Magic", "cost": 14, "power": 115, "desc": "Freezes the battlefield in a harsh howling blizzard."}], "trait": {"name": "Permafrost Shield", "desc": "Reduces incoming Physical and Magic damage by 15%."}, "evolution": [], "relatedIds": ["10002738", "10002732"], "evolutionPath": [{"id": "10002738", "number": "092", "name": "Malangel", "stage": "Lumin Stage", "image": "10421", "slug": "malangel", "nameClean": "Malangel"}, {"id": "10002732", "number": "093", "name": "Malevsera", "stage": "Nova Stage", "image": "10423", "slug": "malevsera", "nameClean": "Malevsera"}], "homelandType": "Combat Instinct", "slug": "malevsera", "nameClean": "Malevsera", "desc_pt": "Soberana gélida que rege as tempestades de neve com poder destrutivo incomparável.", "habitats_pt": ["Crista da Congelação", "Cume Glacial", "Taiga Congelada", "Vale do Permafrost"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "9997", "id": "10002823", "name": "Fennelun", "element": "holy", "role": "dps", "image": "10373", "stage": "Lumin Stage", "desc": "The soft moonlight running through their fur gives them an aloof and rational look. But they can also be sentimental.", "attributes": {"HP": 90, "ATK": 116, "M.ATK": 85, "P.DEF": 65, "M.DEF": 65, "HASTE": 83}, "totalAttributes": 504, "habitats": ["Sunlit Sanctuary", "Astral Ridge", "Luminous Pinnacle", "Sacred Crest"], "homeland": "12 Mobility", "skills": [{"name": "Luminous Beam", "type": "Magic", "cost": 0, "power": 80, "desc": "Channels sacred light to pierce through enemy barriers."}, {"name": "Fennelun Astral Judgement", "type": "Magic", "cost": 20, "power": 140, "desc": "Summons celestial stars to smite darkness across the area."}], "trait": {"name": "Divine Resonance", "desc": "Grants complete immunity to debuffs for 5 seconds upon entry."}, "evolution": [], "relatedIds": ["10002823"], "evolutionPath": [{"id": "10002823", "number": "9997", "name": "Fennelun", "stage": "Lumin Stage", "image": "10373", "slug": "fennelun", "nameClean": "Fennelun"}], "homelandType": "Combat Instinct", "slug": "fennelun", "nameClean": "Fennelun", "desc_pt": "Guardiã sagrada da lua radiante que purifica corrupções com luz celestial.", "habitats_pt": ["Santuário Ensolarado", "Cume Astral", "Pináculo Luminoso", "Crista Sagrada"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}, {"number": "9998", "id": "10002700", "name": "Helion", "element": "holy", "role": "dps", "image": "10361", "stage": "Lumin Stage", "desc": "Enthusiastic and confident, they always stand up for their friends at critical moments, displaying amazing power.", "attributes": {"HP": 90, "ATK": 116, "M.ATK": 85, "P.DEF": 65, "M.DEF": 65, "HASTE": 83}, "totalAttributes": 504, "habitats": ["Sunlit Sanctuary", "Astral Ridge", "Luminous Pinnacle", "Sacred Crest"], "homeland": "12 Mobility", "skills": [{"name": "Luminous Beam", "type": "Magic", "cost": 0, "power": 80, "desc": "Channels sacred light to pierce through enemy barriers."}, {"name": "Helion Astral Judgement", "type": "Magic", "cost": 20, "power": 140, "desc": "Summons celestial stars to smite darkness across the area."}], "trait": {"name": "Divine Resonance", "desc": "Grants complete immunity to debuffs for 5 seconds upon entry."}, "evolution": [], "relatedIds": ["10002700"], "evolutionPath": [{"id": "10002700", "number": "9998", "name": "Helion", "stage": "Lumin Stage", "image": "10361", "slug": "helion", "nameClean": "Helion"}], "homelandType": "Combat Instinct", "slug": "helion", "nameClean": "Helion", "desc_pt": "Avatar solar imortal que banha o mundo em brilho sagrado e poder absoluto.", "habitats_pt": ["Santuário Ensolarado", "Cume Astral", "Pináculo Luminoso", "Crista Sagrada"], "homeland_pt": "12 Mobilidade", "homelandType_pt": "Instinto de Combate"}];
+/**
+ * ANIIMO TOOLS BRASIL — CORE APPLICATION ENGINE (ENHANCED EDITION)
+ * Standard Google Stitch UX/UI, i18n (PT default / EN secondary), 
+ * Spotlight Search (Ctrl+K), Versus Comparator, Map Progress, Clean Deep Linking
+ */
 
-// Language dictionaries (Default: pt)
+// I18N DICTIONARY
 const I18N = {
   pt: {
-    code: "PT",
-    title_suffix: "Aniimo Wiki Brasil & Global | DLuz Games",
-    search_placeholder: "Buscar criatura ou número...",
-    elements_label: "Elementos:",
-    roles_label: "Funções:",
-    stage_label: "Estágios:",
+    brand_subtitle: "Ferramentas e Banco de Dados",
+    nav_home: "Início",
+    nav_codes: "Códigos",
+    nav_creatures: "Criaturas",
+    nav_versus: "Comparador",
+    nav_map: "Mapa Interativo",
+    nav_type_chart: "Tabela de Tipos",
+    nav_tier_list: "Tier List",
+    nav_items: "Itens",
+    nav_guides: "Guias",
+    quick_search: "Buscar",
+    hero_badge: "Lançamento Global em Setembro de 2026",
+    hero_title: "O Guia e Banco de Dados Definitivo de Aniimo",
+    hero_desc: "Tudo o que você precisa para explorar Idília: mapa interativo, códigos de resgate ativos, calculadora de tipos, tier list do meta e enciclopédia completa de criaturas.",
+    countdown_kicker: "Tempo Restante para o Lançamento",
+    days: "Dias",
+    hours: "Horas",
+    mins: "Min",
+    secs: "Seg",
+    card_codes_title: "Códigos de Resgate",
+    card_codes_desc: "Resgate recompensas gratuitas como cristais de invocação, ovos raros e moedas de ouro.",
+    card_creatures_title: "Registro Anii (94 Criaturas)",
+    card_creatures_desc: "Consulte fraquezas, atributos base, habilidades de combate e habitats de todas as criaturas.",
+    card_versus_title: "Comparador de Criaturas",
+    card_versus_desc: "Compare duas criaturas lado a lado: atributos base, fraquezas elementais e sinergia de equipe.",
+    card_map_title: "Mapa Interativo de Idília",
+    card_map_desc: "Localize teletransportes, baús secretos, ninhos de ovos, chefes e pontos de coleta.",
+    card_types_title: "Tabela de Tipos e Fraquezas",
+    card_types_desc: "Descubra vantagens e fraquezas elementais com a matriz e calculadora rápida de dano.",
+    card_tier_title: "Tier List do Meta",
+    card_tier_desc: "Descubra as melhores criaturas para DPS, Quebra de Escudo, Cura e Suporte.",
+    card_guides_title: "Guias e Requisitos",
+    card_guides_desc: "Guia para iniciantes, como baixar, melhores starters e requisitos de sistema.",
+    access_tool: "Acessar ferramenta →",
+    active_codes: "Códigos Promocionais Ativos",
+    codes_subtitle: "Códigos oficiais verificados. Clique para copiar e resgate no menu do jogo.",
+    codes_filter_active: "Códigos Ativos (5)",
+    codes_filter_expired: "Códigos Expirados (2)",
+    copy_code: "Copiar Código",
+    copied: "Copiado!",
+    valid_until: "Válido até",
+    source: "Origem",
+    how_to_redeem: "Como Resgatar Códigos no Jogo",
+    search_creatures: "Buscar criatura por nome, número ou elemento...",
+    all_elements: "Todos os Elementos",
+    all_roles: "Todas as Funções",
+    all_stages: "Todos os Estágios",
+    type_calc_title: "Calculadora de Matchup Elemental",
+    attacker_element: "Elemento Atacante",
+    defender_element: "Elemento Defensor",
+    damage_multiplier: "Multiplicador de Dano",
+    super_effective: "Super Efetivo! Causa 2x de dano.",
+    normal_damage: "Dano Normal (1x).",
+    not_effective: "Pouco Efetivo. Causa apenas metade do dano (0.5x).",
+    immune_damage: "Sem Efeito! O defensor é imune a este elemento (0x).",
+    filter_role: "Filtrar por Papel:",
     all: "Todos",
-    all_f: "Todas",
-    sort_no_asc: "Ordenar por Nº (Crescente)",
-    sort_no_desc: "Ordenar por Nº (Decrescente)",
-    sort_name_asc: "Ordenar por Nome (A-Z)",
-    sort_name_desc: "Ordenar por Nome (Z-A)",
-    showing: "Exibindo",
-    of: "de",
-    aniimos: "Aniimos",
-    empty_title: "Nenhum Aniimo encontrado com esses filtros.",
-    reset_filters: "Limpar Filtros",
-    back_to_wiki: "‹ Voltar para a Wiki",
-    prev: "‹ Anterior",
-    next: "Próximo ›",
-    overview: "Visão Geral",
-    attributes_total: "Total de Atributos:",
-    related_forms: "Formas Relacionadas:",
-    evolution_path: "Caminho de Evolução",
-    habitats: "Habitats",
-    homeland_ability: "Habilidade de Território",
-    skill_details: "Detalhes das Habilidades",
-    passive_trait: "Característica Passiva:",
-    physical: "Físico",
-    magic: "Mágico",
-    cost: "Custo",
-    power: "Poder",
-    elements: {
-      all: "Todos",
-      holy: "Sagrado",
-      fire: "Fogo",
-      ice: "Gelo",
-      dark: "Sombra",
-      electric: "Elétrico",
-      grass: "Planta",
-      water: "Água",
-      rock: "Rocha",
-      wind: "Vento"
-    },
-    roles: {
-      all: "Todas",
-      dps: "Dano (DPS)",
-      heal: "Cura",
-      sup: "Suporte",
-      break: "Quebra",
-      energy: "Regeneração"
-    },
-    stages: {
-      all: "Todos",
-      "Lumin Stage": "Estágio Lumin",
-      "Gamma Stage": "Estágio Gamma",
-      "Nova Stage": "Estágio Nova"
-    }
+    footer_motto: "Mantenha as patas para cima, Desbravante. Nos vemos em Idília.",
+    footer_disclaimer: "aniimo.dluz.com.br é um recurso não oficial feito por fãs para a comunidade de Aniimo. Todos os direitos de imagens e marcas pertencem à Pawprint Studio e FunPlus.",
+    stat_hp: "Vida (HP)",
+    stat_atk: "Ataque",
+    stat_def: "Defesa",
+    stat_spd: "Velocidade (Haste)",
+    homeland_ability: "Habilidade Territorial",
+    combat_skills: "Habilidades de Combate",
+    habitat: "Habitats Naturais"
   },
   en: {
-    code: "EN",
-    title_suffix: "Official Aniimo Wiki - Complete Aniimo Index",
-    search_placeholder: "Search creatures by name or no...",
-    elements_label: "Elements:",
-    roles_label: "Roles:",
-    stage_label: "Stage:",
+    brand_subtitle: "Tools & Database",
+    nav_home: "Home",
+    nav_codes: "Codes",
+    nav_creatures: "Creatures",
+    nav_versus: "Comparator",
+    nav_map: "Interactive Map",
+    nav_type_chart: "Type Chart",
+    nav_tier_list: "Tier List",
+    nav_items: "Items",
+    nav_guides: "Guides",
+    quick_search: "Search",
+    hero_badge: "Global Launch in September 2026",
+    hero_title: "The Ultimate Fan Database & Tools for Aniimo",
+    hero_desc: "Everything you need to master Idylia: interactive map, active redeem codes, type chart calculator, meta tier list, and full creature database.",
+    countdown_kicker: "Time Until Global Launch",
+    days: "Days",
+    hours: "Hours",
+    mins: "Mins",
+    secs: "Secs",
+    card_codes_title: "Redeem Codes",
+    card_codes_desc: "Claim free rewards such as summon crystals, rare eggs, and gold coins.",
+    card_creatures_title: "Anii Register (94 Creatures)",
+    card_creatures_desc: "Check weaknesses, base attributes, combat skills, and habitats for all Aniimos.",
+    card_versus_title: "Creature Comparator",
+    card_versus_desc: "Compare two Aniimos side-by-side: stats, type advantages, and team synergy.",
+    card_map_title: "Interactive Map of Idylia",
+    card_map_desc: "Locate teleporters, secret chests, egg nests, field bosses, and gathering nodes.",
+    card_types_title: "Type Chart & Matchups",
+    card_types_desc: "Discover elemental strengths and weaknesses with our 9x9 matrix and calculator.",
+    card_tier_title: "Meta Tier List",
+    card_tier_desc: "Find the top-tier Aniimos ranked for DPS, Shield Break, Healing, and Support.",
+    card_guides_title: "Guides & Requirements",
+    card_guides_desc: "Beginner starter guide, system specs, download links, and launch tips.",
+    access_tool: "Open tool →",
+    active_codes: "Active Redeem Codes",
+    codes_subtitle: "Verified official codes. Click to copy and redeem in the in-game settings.",
+    codes_filter_active: "Active Codes (5)",
+    codes_filter_expired: "Expired Codes (2)",
+    copy_code: "Copy Code",
+    copied: "Copied!",
+    valid_until: "Valid until",
+    source: "Source",
+    how_to_redeem: "How to Redeem Codes In-Game",
+    search_creatures: "Search creatures by name, number, or element...",
+    all_elements: "All Elements",
+    all_roles: "All Roles",
+    all_stages: "All Stages",
+    type_calc_title: "Elemental Matchup Calculator",
+    attacker_element: "Attacker Element",
+    defender_element: "Defender Element",
+    damage_multiplier: "Damage Multiplier",
+    super_effective: "Super Effective! Deals 2x damage.",
+    normal_damage: "Normal Damage (1x).",
+    not_effective: "Not Very Effective. Deals half damage (0.5x).",
+    immune_damage: "No Effect! The defender is completely immune (0x).",
+    filter_role: "Filter by Role:",
     all: "All",
-    all_f: "All",
-    sort_no_asc: "Sort by No. in ascending order",
-    sort_no_desc: "Sort by No. in descending order",
-    sort_name_asc: "Sort by name (A-Z)",
-    sort_name_desc: "Sort by name (Z-A)",
-    showing: "Showing",
-    of: "of",
-    aniimos: "Aniimos",
-    empty_title: "No Aniimos match the selected filters.",
-    reset_filters: "Reset All Filters",
-    back_to_wiki: "‹ Back to Wiki",
-    prev: "‹ Prev",
-    next: "Next ›",
-    overview: "Overview",
-    attributes_total: "Attributes Total:",
-    related_forms: "Related Forms:",
-    evolution_path: "Evolution Path",
-    habitats: "Habitats",
+    footer_motto: "Keep your paws up, Pathfinder. See you in Idylia.",
+    footer_disclaimer: "aniimo.dluz.com.br is an unofficial fan resource made for the Aniimo community. All trademarks and assets belong to Pawprint Studio and FunPlus.",
+    stat_hp: "Health (HP)",
+    stat_atk: "Attack",
+    stat_def: "Defense",
+    stat_spd: "Speed (Haste)",
     homeland_ability: "Homeland Ability",
-    skill_details: "Skill Details",
-    passive_trait: "Passive Trait:",
-    physical: "Physical",
-    magic: "Magic",
-    cost: "Cost",
-    power: "Power",
-    elements: {
-      all: "All",
-      holy: "Holy",
-      fire: "Fire",
-      ice: "Ice",
-      dark: "Dark",
-      electric: "Electric",
-      grass: "Grass",
-      water: "Water",
-      rock: "Rock",
-      wind: "Wind"
-    },
-    roles: {
-      all: "All",
-      dps: "DPS",
-      heal: "Heal",
-      sup: "Support",
-      break: "BREAK",
-      energy: "REGEN"
-    },
-    stages: {
-      all: "All",
-      "Lumin Stage": "Lumin Stage",
-      "Gamma Stage": "Gamma Stage",
-      "Nova Stage": "Nova Stage"
-    }
+    combat_skills: "Combat Skills",
+    habitat: "Natural Habitats"
   }
 };
 
-// Language State (Default: pt)
-let currentLang = localStorage.getItem("aniimo_lang") || "pt";
-function t(key, subkey) {
-  const dict = I18N[currentLang] || I18N.pt;
-  if (subkey && dict[key]) {
-    return dict[key][subkey] || subkey;
-  }
-  return dict[key] || key;
-}
-
+// Global App State
 const state = {
-  search: "",
-  element: "all",
-  role: "all",
-  stage: "all",
-  sort: "number_asc"
+  lang: localStorage.getItem('aniimo_lang') || 'pt',
+  theme: localStorage.getItem('aniimo_theme') || 'dark',
+  creatures: [],
+  codes: null,
+  typeChart: null,
+  tierList: null,
+  mapData: null,
+  items: [],
+  guides: [],
+  mapZoom: 1,
+  mapPan: { x: 0, y: 0 },
+  activeLayers: new Set(['aniimo', 'teleport', 'chest', 'boss', 'egg', 'resource']),
+  foundMarkers: new Set(JSON.parse(localStorage.getItem('aniimo_found_markers') || '[]')),
+  hideFoundMarkers: false,
+  codeFilter: 'active',
+  selectedFilterElement: 'all',
+  selectedFilterRole: 'all',
+  selectedFilterStage: 'all',
+  searchQuery: '',
+  versusCreature1: 'inferlupa',
+  versusCreature2: 'celestis'
 };
 
-const app = document.querySelector("#app");
-const searchInput = document.querySelector("#search");
-const toTop = document.querySelector("#to-top");
-const langButton = document.querySelector(".language-button");
-
-const colors = {
-  holy: "#f6a93c",
-  fire: "#e26161",
-  ice: "#45c1d6",
-  dark: "#a373d2",
-  electric: "#e0c21a",
-  grass: "#51b17a",
-  water: "#529de7",
-  rock: "#bea77b",
-  wind: "#2a52be"
-};
-
-const symbols = {
-  holy: "✚",
-  fire: "♨",
-  ice: "❄",
-  dark: "☾",
-  electric: "ϟ",
-  grass: "✦",
-  water: "≋",
-  rock: "◆",
-  wind: "◉"
-};
-
-const creatureImage = (item) => `assets/creatures/Wiki_Aniimo_${item.image}.png`;
-
-function parseRoute() {
-  // 1. Check path first: e.g. /inferlupa or /item/10002753
-  const path = location.pathname.replace(/^\/+|\/+$/g, "").toLowerCase();
-  if (path && path !== "index.html") {
-    const clean = path.replace(/^item\//, "");
-    const foundByPath = CREATURES.find((c) => c.slug === clean || c.id === clean || c.number === clean);
-    if (foundByPath) return foundByPath;
-  }
-
-  // 2. Check hash: e.g. #inferlupa or #item=10002753
-  const hash = location.hash.replace(/^#\/?/, "").toLowerCase();
-  if (hash) {
-    const params = new URLSearchParams(hash.includes("=") ? hash : "");
-    const target = params.get("item") || hash.replace(/^item\//, "");
-    const foundByHash = CREATURES.find((c) => c.slug === target || c.id === target || c.number === target);
-    if (foundByHash) {
-      // Update cleanly to /slug via history.replaceState
-      history.replaceState(null, "", "/" + foundByHash.slug);
-      return foundByHash;
-    }
-  }
-
-  return null;
-}
-
-function navigateTo(slug) {
-  if (!slug) {
-    history.pushState(null, "", "/");
-  } else {
-    history.pushState(null, "", "/" + slug);
-  }
-  render();
-}
-
-function filteredItems() {
-  const query = state.search.trim().toLowerCase();
-  const filtered = CREATURES.filter((item) => {
-    const matchesQuery = !query || 
-      item.name.toLowerCase().includes(query) || 
-      item.number.toLowerCase().includes(query) ||
-      item.number.replace(/^0+/, "").includes(query) ||
-      (item.slug && item.slug.includes(query));
-
-    const matchesElement = state.element === "all" || item.element.toLowerCase() === state.element.toLowerCase();
-    const matchesRole = state.role === "all" || item.role.toLowerCase() === state.role.toLowerCase();
-    const matchesStage = state.stage === "all" || item.stage.toLowerCase() === state.stage.toLowerCase();
-
-    return matchesQuery && matchesElement && matchesRole && matchesStage;
-  });
-
-  return filtered.sort((a, b) => {
-    if (state.sort === "name_asc") return a.name.localeCompare(b.name);
-    if (state.sort === "name_desc") return b.name.localeCompare(a.name);
-    if (state.sort === "number_desc") return Number(b.number) - Number(a.number);
-    return Number(a.number) - Number(b.number);
-  });
-}
-
-function chip(group, value, label, visual) {
-  const active = state[group] === value;
-  return `<button class="filter-chip" role="button" tabindex="0" data-filter-group="${group}" data-filter-value="${value}" aria-pressed="${active}">${visual || ""}${label}</button>`;
-}
-
-function iconBadge(kind, text) {
-  const bg = colors[kind] || "#565673";
-  return `<span class="dot" style="background:${bg}">${text || symbols[kind] || "•"}</span>`;
-}
-
-function card(item) {
-  const elemBg = colors[item.element] || "#565673";
-  const roleDisplay = item.role === "energy" ? "R" : item.role === "sup" ? "S" : item.role.slice(0, 1).toUpperCase();
-  const elemName = t("elements", item.element);
-  const roleName = t("roles", item.role);
-
-  return `<a class="creature-card" href="/${item.slug}" data-slug="${item.slug}" aria-label="NO.${item.number} ${item.name}" tabindex="0">
-    <div class="creature-image">
-      <span class="creature-number">NO.${item.number}</span>
-      <img src="${creatureImage(item)}" alt="${item.name}" loading="lazy" width="134" height="134">
-      <div class="badges">
-        <span class="badge" style="background:${elemBg}" title="${t('elements_label')} ${elemName}">${symbols[item.element] || "•"}</span>
-        <span class="badge" style="background:#3d3d51" title="${t('roles_label')} ${roleName}">${roleDisplay}</span>
-      </div>
-    </div>
-    <span class="creature-name">${item.name}</span>
-  </a>`;
-}
-
-function renderIndex() {
-  const items = filteredItems();
+// INITIALIZATION
+document.addEventListener('DOMContentLoaded', async () => {
+  // Apply initial theme
+  document.documentElement.setAttribute('data-theme', state.theme);
   
-  if (searchInput) {
-    searchInput.placeholder = t("search_placeholder");
-  }
-  if (langButton) {
-    langButton.innerHTML = currentLang === "pt" ? "🇧🇷 PT" : "🇺🇸 EN";
-  }
+  // Load JSON Data
+  await loadData();
 
-  app.innerHTML = `<section class="wiki-panel">
-    <div class="panel-content">
-      <div class="panel-header">
-        <h1>Aniimo Wiki</h1>
-        <button class="collapse-button" type="button" aria-label="Toggle filters" title="Expand / Collapse filters">⌃</button>
-      </div>
-      
-      <div class="filters">
-        <div class="filter-row">
-          <span class="filter-label">${t("elements_label")}</span>
-          ${chip("element", "all", t("all"), iconBadge("all", "•"))}
-          ${["holy", "fire", "ice", "dark", "electric", "grass", "water", "rock", "wind"].map((e) => chip("element", e, t("elements", e), iconBadge(e))).join("")}
-        </div>
-        
-        <div class="filter-row">
-          <span class="filter-label">${t("roles_label")}</span>
-          ${chip("role", "all", t("all_f"), iconBadge("all", "•"))}
-          ${Object.keys(I18N.pt.roles).filter(k => k !== "all").map((k) => chip("role", k, t("roles", k), iconBadge("all", k === "dps" ? "◆" : k === "heal" ? "✚" : k === "sup" ? "◉" : k === "break" ? "▲" : "⚡"))).join("")}
-        </div>
-        
-        <div class="filter-row">
-          <span class="filter-label">${t("stage_label")}</span>
-          ${chip("stage", "all", t("all"), iconBadge("all", "•"))}
-          ${["Lumin Stage", "Gamma Stage", "Nova Stage"].map((st) => chip("stage", st, t("stages", st), iconBadge("all", "◈"))).join("")}
-        </div>
-        
-        <div class="sort-row">
-          <select class="sort-select" id="sort" aria-label="${t('sort_no_asc')}">
-            <option value="number_asc">${t("sort_no_asc")}</option>
-            <option value="number_desc">${t("sort_no_desc")}</option>
-            <option value="name_asc">${t("sort_name_asc")}</option>
-            <option value="name_desc">${t("sort_name_desc")}</option>
-          </select>
-          <span class="creatures-count">${t("showing")} ${items.length} ${t("of")} ${CREATURES.length} ${t("aniimos")}</span>
-        </div>
-      </div>
-      
-      <div class="grid">
-        ${items.length ? items.map(card).join("") : `<div class="empty"><p>${t("empty_title")}</p><button type="button" class="reset-filters-btn">${t("reset_filters")}</button></div>`}
-      </div>
-    </div>
-  </section>`;
+  // Setup Event Listeners
+  setupNavigation();
+  setupLanguageSwitcher();
+  setupThemeSwitcher();
+  setupCountdown();
+  setupCommandPalette();
+  setupCodes();
+  setupCreatures();
+  setupVersusMode();
+  setupMap();
+  setupTypeChart();
+  setupTierList();
+  setupItemsAndGuides();
 
-  const sortEl = app.querySelector("#sort");
-  if (sortEl) sortEl.value = state.sort;
-}
-
-function statBar(name, value, maxVal = 100) {
-  const pct = Math.min(100, Math.max(10, Math.round((value / maxVal) * 100)));
-  return `<div class="stat">
-    <span class="stat-name">${name}:</span>
-    <div class="stat-bar"><span style="width: ${pct}%"></span></div>
-    <span class="stat-val">${value}</span>
-  </div>`;
-}
-
-function renderDetail(item) {
-  const currentIndex = CREATURES.findIndex((c) => c.id === item.id);
-  const prevItem = CREATURES[(currentIndex - 1 + CREATURES.length) % CREATURES.length];
-  const nextItem = CREATURES[(currentIndex + 1) % CREATURES.length];
-
-  const related = (item.relatedIds || [item.id])
-    .map((rid) => CREATURES.find((c) => c.id === rid))
-    .filter(Boolean);
-
-  const evoNodes = item.evolutionPath && item.evolutionPath.length > 0 
-    ? item.evolutionPath.map((node) => CREATURES.find((c) => c.id === node.id) || node)
-    : [item];
-
-  const elemColor = colors[item.element] || "#565673";
-  const elemName = t("elements", item.element);
-  const roleName = t("roles", item.role);
-  const stageName = t("stages", item.stage);
-  const descriptionText = currentLang === "pt" && item.desc_pt ? item.desc_pt : item.desc;
-  const habitatsList = currentLang === "pt" && item.habitats_pt ? item.habitats_pt : item.habitats;
-  const homelandText = currentLang === "pt" && item.homeland_pt ? item.homeland_pt : item.homeland;
-  const homelandDesc = currentLang === "pt" && item.homelandType_pt ? item.homelandType_pt : item.homelandType;
-
-  if (langButton) {
-    langButton.innerHTML = currentLang === "pt" ? "🇧🇷 PT" : "🇺🇸 EN";
-  }
-
-  app.innerHTML = `<div class="detail-wrap">
-    <div class="back-row">
-      <a class="nav-back" href="/" data-nav="home" aria-label="${t('back_to_wiki')}">${t("back_to_wiki")}</a>
-      <span class="current-creature-title">NO.${item.number} ${item.name}</span>
-      <div class="nav-pair">
-        <a class="nav-step prev-btn" href="/${prevItem.slug}" data-slug="${prevItem.slug}" title="${t('prev')}: NO.${prevItem.number} ${prevItem.name}">${t("prev")} (NO.${prevItem.number})</a>
-        <a class="nav-step next-btn" href="/${nextItem.slug}" data-slug="${nextItem.slug}" title="${t('next')}: NO.${nextItem.number} ${nextItem.name}">${t("next")} (NO.${nextItem.number})</a>
-      </div>
-    </div>
-
-    <section class="detail-panel">
-      <div class="panel-content">
-        <div class="detail-hero">
-          <div class="hero-art">
-            <img src="${creatureImage(item)}" alt="${item.name}" width="400" height="400">
-            <span class="hero-stage-badge">${stageName}</span>
-          </div>
-          
-          <div class="hero-info">
-            <h1 class="hero-title">
-              ${item.name}
-              <span class="tag" style="background:${elemColor}">${symbols[item.element] || ""} ${elemName.toUpperCase()}</span>
-              <span class="tag tag-role">◉ ${roleName.toUpperCase()}</span>
-            </h1>
-            
-            <h2 class="section-title">${t("overview")}</h2>
-            <p class="hero-desc">${descriptionText}</p>
-            
-            <div class="attributes">
-              <h3 class="attribute-total">${t("attributes_total")} ${item.totalAttributes}</h3>
-              ${statBar(currentLang === 'pt' ? 'VIDA (HP)' : 'HP', item.attributes?.HP || 70, 120)}
-              ${statBar(currentLang === 'pt' ? 'ATQ. FÍSICO' : 'ATK', item.attributes?.ATK || 60, 120)}
-              ${statBar(currentLang === 'pt' ? 'ATQ. MÁGICO' : 'M.ATK', item.attributes?.['M.ATK'] || 50, 120)}
-              ${statBar(currentLang === 'pt' ? 'DEF. FÍSICA' : 'P.DEF', item.attributes?.['P.DEF'] || 55, 120)}
-              ${statBar(currentLang === 'pt' ? 'DEF. MÁGICA' : 'M.DEF', item.attributes?.['M.DEF'] || 50, 120)}
-              ${statBar(currentLang === 'pt' ? 'AGILIDADE' : 'HASTE', item.attributes?.HASTE || 65, 120)}
-            </div>
-          </div>
-        </div>
-
-        ${related.length > 1 ? `
-        <div class="forms-container">
-          <span class="forms-label">${t("related_forms")}</span>
-          <div class="forms">
-            ${related.map((rel) => `<a class="form-link ${rel.id === item.id ? "active" : ""}" href="/${rel.slug}" data-slug="${rel.slug}">NO.${rel.number} ${rel.name}</a>`).join("")}
-          </div>
-        </div>` : ""}
-      </div>
-    </section>
-
-    <section class="evolution-panel">
-      <div class="panel-content">
-        <div class="panel-header">
-          <h2>${t("evolution_path")}</h2>
-        </div>
-        <div class="evolution-path">
-          ${evoNodes.map((node, i) => `
-            ${i > 0 ? '<span class="evo-arrow">➔</span>' : ""}
-            <a class="evo-node ${node.id === item.id ? "active" : ""}" href="/${node.slug}" data-slug="${node.slug}">
-              <img src="${creatureImage(node)}" alt="${node.name}" width="70" height="70">
-              <span class="evo-name">${node.name}</span>
-              <small class="evo-stage">${t("stages", node.stage)}</small>
-            </a>
-          `).join("")}
-        </div>
-      </div>
-    </section>
-
-    <div class="info-grid">
-      <section class="info-card">
-        <h2 class="section-title">${t("habitats")}</h2>
-        <ul class="habitats-list">
-          ${(habitatsList || ["Campos de Nimbos"]).map((h) => `<li>📍 ${h}</li>`).join("")}
-        </ul>
-        
-        <h2 class="section-title" style="margin-top:22px">${t("homeland_ability")}</h2>
-        <div class="homeland-box">
-          <span class="homeland-badge">🛠️</span>
-          <div>
-            <strong>${homelandText || "11 Mobilidade"}</strong>
-            <p>${homelandDesc || "Bônus especial de exploração e sobrevivência."}</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="info-card">
-        <h2 class="section-title">${t("skill_details")}</h2>
-        ${(item.skills || []).map((sk, i) => `
-          <div class="skill">
-            <span class="skill-icon" style="background:${i === 0 ? elemColor : '#3d3d51'}">${symbols[item.element] || "⚡"}</span>
-            <div class="skill-body">
-              <strong>${sk.name}</strong>
-              <div class="skill-meta">${sk.type === 'Physical' ? t('physical') : t('magic')} · ${t('cost')} ${sk.cost} · ${t('power')} ${sk.power}</div>
-              <p class="skill-desc">${sk.desc}</p>
-            </div>
-          </div>
-        `).join("")}
-        
-        ${item.trait ? `
-          <div class="skill trait-skill">
-            <span class="skill-icon" style="background:#565673">✦</span>
-            <div class="skill-body">
-              <strong>${t("passive_trait")} ${item.trait.name}</strong>
-              <p class="skill-desc">${item.trait.desc}</p>
-            </div>
-          </div>
-        ` : ""}
-      </section>
-    </div>
-  </div>`;
-}
-
-function render() {
-  const creature = parseRoute();
-  if (creature) {
-    document.title = `${creature.name} (NO.${creature.number}) — ${t('title_suffix')}`;
-    renderDetail(creature);
-    window.scrollTo({ top: 0, behavior: "instant" });
-    return;
-  }
-
-  document.title = `Aniimo Wiki — ${t('title_suffix')}`;
-  renderIndex();
-  window.scrollTo({ top: 0, behavior: "instant" });
-}
-
-// Click handler with SPA routing for clean /slug URLs
-document.addEventListener("click", (event) => {
-  // 1. Check card or creature detail navigation link
-  const link = event.target.closest("a[data-slug]");
-  if (link) {
-    event.preventDefault();
-    const slug = link.dataset.slug;
-    navigateTo(slug);
-    return;
-  }
-
-  // 2. Check back to home link
-  const homeLink = event.target.closest("a[data-nav='home'], .brand");
-  if (homeLink) {
-    event.preventDefault();
-    navigateTo("");
-    return;
-  }
-
-  // 3. Language toggle
-  const langBtn = event.target.closest(".language-button");
-  if (langBtn) {
-    currentLang = currentLang === "pt" ? "en" : "pt";
-    localStorage.setItem("aniimo_lang", currentLang);
-    render();
-    return;
-  }
-
-  // 4. Filters
-  const chipBtn = event.target.closest(".filter-chip");
-  if (chipBtn) {
-    const group = chipBtn.dataset.filterGroup;
-    const val = chipBtn.dataset.filterValue;
-    state[group] = val;
-    renderIndex();
-    return;
-  }
-
-  const resetBtn = event.target.closest(".reset-filters-btn");
-  if (resetBtn) {
-    state.search = "";
-    state.element = "all";
-    state.role = "all";
-    state.stage = "all";
-    if (searchInput) searchInput.value = "";
-    renderIndex();
-    return;
-  }
-
-  const collapseBtn = event.target.closest(".collapse-button");
-  if (collapseBtn) {
-    const filters = document.querySelector(".filters");
-    if (filters) {
-      filters.hidden = !filters.hidden;
-      collapseBtn.classList.toggle("is-collapsed", filters.hidden);
-    }
-    return;
-  }
+  // Initial Route Dispatch
+  handleRouting();
 });
 
-// Keyboard navigation on filter chips (Enter and Space)
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Enter" || event.key === " ") {
-    const chipBtn = event.target.closest(".filter-chip");
-    if (chipBtn) {
-      event.preventDefault();
-      chipBtn.click();
-    }
-  }
-});
+// LOAD ALL DATA FROM DATA/ DIRECTORY
+async function loadData() {
+  try {
+    const [creaturesRes, codesRes, typeRes, tierRes, mapRes, itemsRes, guidesRes] = await Promise.all([
+      fetch('data/creatures.json'),
+      fetch('data/codes.json'),
+      fetch('data/type_chart.json'),
+      fetch('data/tier_list.json'),
+      fetch('data/map_data.json'),
+      fetch('data/items.json'),
+      fetch('data/guides.json')
+    ]);
 
-document.addEventListener("change", (event) => {
-  if (event.target.id === "sort") {
-    state.sort = event.target.value;
-    renderIndex();
+    state.creatures = await creaturesRes.json();
+    state.codes = await codesRes.json();
+    state.typeChart = await typeRes.json();
+    state.tierList = await tierRes.json();
+    state.mapData = await mapRes.json();
+    state.items = await itemsRes.json();
+    state.guides = await guidesRes.json();
+  } catch (err) {
+    console.error("Error loading application data:", err);
   }
-});
+}
 
-if (searchInput) {
-  searchInput.addEventListener("input", () => {
-    state.search = searchInput.value;
-    const currentCreature = parseRoute();
-    if (currentCreature) {
-      navigateTo("");
+// NAVIGATION & ROUTING
+function setupNavigation() {
+  window.addEventListener('hashchange', () => {
+    handleRouting();
+  });
+
+  window.addEventListener('popstate', () => {
+    handleRouting();
+  });
+
+  // Mobile menu toggle
+  const mobileBtn = document.getElementById('mobile-toggle');
+  const navLinks = document.getElementById('nav-links');
+  if (mobileBtn && navLinks) {
+    mobileBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+      });
+    });
+  }
+}
+
+function handleRouting() {
+  // Check pathname first (e.g. /inferlupa or /codigos) or hash
+  let raw = window.location.hash.replace(/^#\/?/, '') || window.location.pathname.replace(/^\/+/, '');
+  raw = raw.split('/')[0] || 'home';
+
+  // Check if raw matches a creature slug directly (Deep Linking!)
+  const foundCreature = state.creatures.find(c => c.slug.toLowerCase() === raw.toLowerCase());
+  if (foundCreature) {
+    showSection('criaturas');
+    openCreatureModal(foundCreature);
+    document.title = `${foundCreature.name_pt} (${foundCreature.number}) — Aniimo Tools Brasil`;
+    return;
+  }
+
+  // Normal route map
+  const routeAliases = {
+    '': 'home',
+    'home': 'home',
+    'codigos': 'codigos',
+    'codes': 'codigos',
+    'criaturas': 'criaturas',
+    'creatures': 'criaturas',
+    'comparador': 'comparador',
+    'versus': 'comparador',
+    'mapa': 'mapa',
+    'map': 'mapa',
+    'tabela-tipos': 'tabela-tipos',
+    'type-chart': 'tabela-tipos',
+    'tier-list': 'tier-list',
+    'itens': 'itens',
+    'items': 'itens',
+    'guias': 'guias',
+    'guides': 'guias'
+  };
+
+  const target = routeAliases[raw.toLowerCase()] || 'home';
+  showSection(target);
+
+  // Update Page Title dynamically
+  const titles = {
+    'home': 'Aniimo Tools Brasil: Banco de Dados, Mapa Interativo, Códigos & Guias',
+    'codigos': 'Códigos Promocionais Ativos de Aniimo — Aniimo Tools Brasil',
+    'criaturas': 'Registro Anii: 94 Criaturas, Fraquezas e Stats — Aniimo Tools Brasil',
+    'comparador': 'Comparador de Criaturas (Versus Mode) — Aniimo Tools Brasil',
+    'mapa': 'Mapa Interativo de Idília (Planícies Ventosas) — Aniimo Tools Brasil',
+    'tabela-tipos': 'Tabela de Tipos e Matchup Elemental — Aniimo Tools Brasil',
+    'tier-list': 'Tier List Oficial do Meta — Aniimo Tools Brasil',
+    'itens': 'Banco de Itens e Dispositivos — Aniimo Tools Brasil',
+    'guias': 'Guias e Requisitos de Sistema — Aniimo Tools Brasil'
+  };
+  document.title = titles[target] || titles['home'];
+}
+
+function showSection(target) {
+  const sections = document.querySelectorAll('.app-section');
+  sections.forEach(s => s.classList.remove('active'));
+
+  const activeSection = document.getElementById(`section-${target}`) || document.getElementById('section-home');
+  if (activeSection) {
+    activeSection.classList.add('active');
+  }
+
+  // Update active nav link
+  document.querySelectorAll('.nav-item a').forEach(a => {
+    const href = a.getAttribute('href').replace(/^#\/?/, '');
+    if (href === target || (target === 'home' && href === '')) {
+      a.classList.add('active');
     } else {
-      renderIndex();
+      a.classList.remove('active');
+    }
+  });
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// COMMAND PALETTE (CTRL+K SPOTLIGHT SEARCH)
+function setupCommandPalette() {
+  const overlay = document.getElementById('command-palette');
+  const triggerBtn = document.getElementById('search-trigger');
+  const input = document.getElementById('command-input');
+  const results = document.getElementById('command-results');
+
+  if (!overlay || !input || !results) return;
+
+  function openPalette() {
+    overlay.classList.add('open');
+    input.value = '';
+    renderCommandResults('');
+    input.focus();
+  }
+
+  function closePalette() {
+    overlay.classList.remove('open');
+  }
+
+  if (triggerBtn) triggerBtn.addEventListener('click', openPalette);
+
+  // Global Keyboard Shortcut: Ctrl+K or Cmd+K or /
+  window.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      if (overlay.classList.contains('open')) closePalette();
+      else openPalette();
+    } else if (e.key === 'Escape' && overlay.classList.contains('open')) {
+      closePalette();
+    }
+  });
+
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closePalette();
+  });
+
+  input.addEventListener('input', (e) => {
+    renderCommandResults(e.target.value.toLowerCase().trim());
+  });
+
+  function renderCommandResults(query) {
+    const isPt = state.lang === 'pt';
+    let itemsHtml = '';
+
+    // Quick Tool Links
+    const tools = [
+      { title: isPt ? 'Códigos de Resgate' : 'Redeem Codes', sub: isPt ? 'Ferramenta de códigos promocionais' : 'Redeem promo codes', hash: '#/codigos', icon: '🎁' },
+      { title: isPt ? 'Registro Anii (Criaturas)' : 'Anii Register (Creatures)', sub: isPt ? 'Catálogo das 94 criaturas' : '94 Creatures database', hash: '#/criaturas', icon: '🐾' },
+      { title: isPt ? 'Comparador de Criaturas' : 'Creature Comparator', sub: isPt ? 'Comparar atributos e tipos lado a lado' : 'Side-by-side stats comparison', hash: '#/comparador', icon: '⚔️' },
+      { title: isPt ? 'Mapa Interativo' : 'Interactive Map', sub: isPt ? 'Planícies Ventosas (Breezy Plains)' : 'Explore Breezy Plains', hash: '#/mapa', icon: '🗺️' },
+      { title: isPt ? 'Tabela de Tipos' : 'Type Chart', sub: isPt ? 'Matriz e calculadora elemental' : 'Elemental matchup calculator', hash: '#/tabela-tipos', icon: '🔮' },
+      { title: isPt ? 'Tier List do Meta' : 'Meta Tier List', sub: isPt ? 'Rankings S+, S, A e B' : 'S+, S, A, B Rankings', hash: '#/tier-list', icon: '🏆' }
+    ];
+
+    const matchingTools = tools.filter(t => !query || t.title.toLowerCase().includes(query) || t.sub.toLowerCase().includes(query));
+    if (matchingTools.length > 0) {
+      itemsHtml += `<li style="padding:0.4rem 0.8rem; font-size:0.75rem; font-weight:800; color:var(--ink-muted); text-transform:uppercase;">${isPt ? 'Ferramentas' : 'Tools'}</li>`;
+      itemsHtml += matchingTools.map(t => `
+        <li class="command-item" data-action="nav" data-hash="${t.hash}">
+          <span style="font-size:1.4rem;">${t.icon}</span>
+          <div class="command-item-text">
+            <div class="command-item-title">${t.title}</div>
+            <div class="command-item-subtitle">${t.sub}</div>
+          </div>
+        </li>
+      `).join('');
+    }
+
+    // Matching Creatures
+    if (state.creatures.length > 0) {
+      const matchingCreatures = state.creatures.filter(c => {
+        const name = (isPt ? c.name_pt : c.name_en).toLowerCase();
+        return !query || name.includes(query) || c.number.includes(query) || c.element_en.toLowerCase().includes(query);
+      }).slice(0, 6);
+
+      if (matchingCreatures.length > 0) {
+        itemsHtml += `<li style="padding:0.4rem 0.8rem; font-size:0.75rem; font-weight:800; color:var(--ink-muted); text-transform:uppercase; margin-top:0.4rem;">${isPt ? 'Criaturas' : 'Creatures'}</li>`;
+        itemsHtml += matchingCreatures.map(c => `
+          <li class="command-item" data-action="creature" data-slug="${c.slug}">
+            <img class="command-item-icon" src="${c.image}" alt="${c.name_pt}" />
+            <div class="command-item-text">
+              <div class="command-item-title">${isPt ? c.name_pt : c.name_en} (${c.number})</div>
+              <div class="command-item-subtitle">${isPt ? c.element : c.element_en} • ${isPt ? c.role_pt : c.role_en} • Tier ${c.tier}</div>
+            </div>
+          </li>
+        `).join('');
+      }
+    }
+
+    results.innerHTML = itemsHtml || `<li style="padding:1.5rem; text-align:center; color:var(--ink-muted); font-weight:600;">Nenhum resultado encontrado para "${query}".</li>`;
+
+    // Click handlers on items
+    results.querySelectorAll('.command-item').forEach(li => {
+      li.addEventListener('click', () => {
+        closePalette();
+        const action = li.getAttribute('data-action');
+        if (action === 'nav') {
+          window.location.hash = li.getAttribute('data-hash');
+        } else if (action === 'creature') {
+          const slug = li.getAttribute('data-slug');
+          const c = state.creatures.find(cr => cr.slug === slug);
+          if (c) {
+            window.location.hash = '#/criaturas';
+            openCreatureModal(c);
+          }
+        }
+      });
+    });
+  }
+}
+
+// I18N & LANGUAGE TOGGLE
+function setupLanguageSwitcher() {
+  const langBtn = document.getElementById('lang-toggle');
+  updateTexts();
+
+  if (langBtn) {
+    langBtn.addEventListener('click', () => {
+      state.lang = state.lang === 'pt' ? 'en' : 'pt';
+      localStorage.setItem('aniimo_lang', state.lang);
+      updateTexts();
+      renderAll();
+      showToast(state.lang === 'pt' ? 'Idioma alterado para Português (Brasil)' : 'Language switched to English');
+    });
+  }
+}
+
+function updateTexts() {
+  const d = I18N[state.lang];
+  const langBtn = document.getElementById('lang-toggle');
+  if (langBtn) {
+    langBtn.innerHTML = state.lang === 'pt' ? '🇧🇷 PT' : '🇺🇸 EN';
+    langBtn.setAttribute('title', state.lang === 'pt' ? 'Mudar para Inglês' : 'Switch to Portuguese');
+  }
+
+  // Translate all [data-i18n] elements
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (d[key]) {
+      el.innerHTML = d[key];
+    }
+  });
+
+  // Translate placeholders
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    const key = el.getAttribute('data-i18n-ph');
+    if (d[key]) {
+      el.setAttribute('placeholder', d[key]);
     }
   });
 }
 
-window.addEventListener("popstate", render);
-window.addEventListener("hashchange", render);
+function renderAll() {
+  renderCodes();
+  renderCreatures();
+  renderVersusMode();
+  renderMap();
+  renderTypeChart();
+  renderTierList();
+  renderItems();
+  renderGuides();
+}
 
-window.addEventListener("scroll", () => {
-  if (toTop) {
-    toTop.classList.toggle("visible", window.scrollY > 300);
+// THEME TOGGLE (DARK / LIGHT)
+function setupThemeSwitcher() {
+  const themeBtn = document.getElementById('theme-toggle');
+  if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+      state.theme = state.theme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', state.theme);
+      localStorage.setItem('aniimo_theme', state.theme);
+      themeBtn.innerHTML = state.theme === 'dark' ? '🌙' : '☀️';
+    });
+    themeBtn.innerHTML = state.theme === 'dark' ? '🌙' : '☀️';
   }
-});
+}
 
-if (toTop) {
-  toTop.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+// COUNTDOWN TIMER
+function setupCountdown() {
+  const launchDate = new Date('2026-09-16T00:00:00Z').getTime();
+
+  function update() {
+    const now = new Date().getTime();
+    const diff = launchDate - now;
+
+    if (diff > 0) {
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+      const dEl = document.getElementById('cd-days');
+      const hEl = document.getElementById('cd-hours');
+      const mEl = document.getElementById('cd-mins');
+      const sEl = document.getElementById('cd-secs');
+
+      if (dEl) dEl.textContent = String(days).padStart(2, '0');
+      if (hEl) hEl.textContent = String(hours).padStart(2, '0');
+      if (mEl) mEl.textContent = String(mins).padStart(2, '0');
+      if (sEl) sEl.textContent = String(secs).padStart(2, '0');
+    }
+  }
+
+  update();
+  setInterval(update, 1000);
+}
+
+// REDEEM CODES
+function setupCodes() {
+  renderCodes();
+
+  document.querySelectorAll('.code-filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.code-filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      state.codeFilter = btn.getAttribute('data-code-filter');
+      renderCodes();
+    });
   });
 }
 
-// Initial load
-render();
+function renderCodes() {
+  if (!state.codes) return;
+  const listEl = document.getElementById('codes-container');
+  if (!listEl) return;
+
+  const isPt = state.lang === 'pt';
+  const d = I18N[state.lang];
+
+  const items = state.codeFilter === 'active' ? state.codes.active : state.codes.expired;
+
+  listEl.innerHTML = items.map((c, idx) => `
+    <div class="code-card">
+      <div class="code-info">
+        <div class="code-badge-row">
+          <span class="code-string">${c.code}</span>
+          <span class="code-status-badge ${c.status}">${c.status === 'active' ? (isPt ? 'Ativo' : 'Active') : (isPt ? 'Expirado' : 'Expired')}</span>
+          ${idx === 0 && c.status === 'active' ? `<span class="code-status-badge new">${isPt ? 'NOVO' : 'NEW'}</span>` : ''}
+        </div>
+        <p class="code-rewards">${isPt ? c.rewards_pt : c.rewards_en}</p>
+        <p class="code-expiry">${d.valid_until}: ${c.valid_until || c.expired_at} ${c.source ? `• ${d.source}: ${c.source}` : ''}</p>
+      </div>
+      ${c.status === 'active' ? `
+        <button class="btn-copy-code" data-code="${c.code}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+          <span>${d.copy_code}</span>
+        </button>
+      ` : ''}
+    </div>
+  `).join('');
+
+  listEl.querySelectorAll('.btn-copy-code').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const code = btn.getAttribute('data-code');
+      navigator.clipboard.writeText(code).then(() => {
+        btn.classList.add('copied');
+        btn.querySelector('span').textContent = d.copied;
+        showToast(isPt ? `Código ${code} copiado para a área de transferência!` : `Code ${code} copied to clipboard!`);
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          btn.querySelector('span').textContent = d.copy_code;
+        }, 2000);
+      });
+    });
+  });
+
+  const stepsEl = document.getElementById('guide-steps');
+  if (stepsEl) {
+    const steps = isPt ? state.codes.instructions_pt : state.codes.instructions_en;
+    stepsEl.innerHTML = steps.map(s => `<li>${s}</li>`).join('');
+  }
+}
+
+// CREATURES DATABASE (ANIIMODEX)
+function setupCreatures() {
+  renderCreatures();
+
+  const searchInput = document.getElementById('creature-search');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      state.searchQuery = e.target.value.toLowerCase().trim();
+      filterCreatures();
+    });
+  }
+
+  document.querySelectorAll('.filter-chip[data-filter-group]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const group = btn.getAttribute('data-filter-group');
+      const val = btn.getAttribute('data-filter-value');
+      
+      btn.parentElement.querySelectorAll('.filter-chip').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      if (group === 'element') state.selectedFilterElement = val;
+      if (group === 'role') state.selectedFilterRole = val;
+      if (group === 'stage') state.selectedFilterStage = val;
+
+      filterCreatures();
+    });
+  });
+}
+
+function filterCreatures() {
+  const filtered = state.creatures.filter(c => {
+    const isPt = state.lang === 'pt';
+    const name = (isPt ? c.name_pt : c.name_en).toLowerCase();
+    const matchesSearch = !state.searchQuery || name.includes(state.searchQuery) || c.number.includes(state.searchQuery);
+    const matchesElement = state.selectedFilterElement === 'all' || c.element_en.toLowerCase() === state.selectedFilterElement;
+    const matchesRole = state.selectedFilterRole === 'all' || c.role_en.toLowerCase() === state.selectedFilterRole;
+    const matchesStage = state.selectedFilterStage === 'all' || c.stage.toLowerCase() === state.selectedFilterStage;
+
+    return matchesSearch && matchesElement && matchesRole && matchesStage;
+  });
+
+  const countBadge = document.getElementById('creatures-count-badge');
+  if (countBadge) {
+    const isPt = state.lang === 'pt';
+    countBadge.textContent = isPt 
+      ? `Exibindo ${filtered.length} de ${state.creatures.length} criaturas` 
+      : `Showing ${filtered.length} of ${state.creatures.length} creatures`;
+  }
+
+  renderCreaturesGrid(filtered);
+}
+
+function renderCreatures() {
+  filterCreatures();
+}
+
+function renderCreaturesGrid(list) {
+  const grid = document.getElementById('creatures-grid');
+  if (!grid) return;
+
+  const isPt = state.lang === 'pt';
+
+  grid.innerHTML = list.map(c => `
+    <div class="creature-card" data-slug="${c.slug}">
+      <span class="creature-number">${c.number}</span>
+      <span class="creature-tier-badge">${c.tier}</span>
+      <img class="creature-card-img" src="${c.image}" alt="${c.name_pt}" loading="lazy" />
+      <h3 class="creature-card-name">${isPt ? c.name_pt : c.name_en}</h3>
+      <div class="creature-card-badges">
+        <span class="element-pill" style="background: var(--el-${c.element_en.toLowerCase()}, #94a3b8)">${isPt ? c.element : c.element_en}</span>
+        <span class="role-pill">${isPt ? c.role_pt : c.role_en}</span>
+      </div>
+    </div>
+  `).join('');
+
+  grid.querySelectorAll('.creature-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const slug = card.getAttribute('data-slug');
+      const creature = state.creatures.find(c => c.slug === slug);
+      if (creature) {
+        openCreatureModal(creature);
+        window.history.pushState(null, '', `/${creature.slug}`);
+      }
+    });
+  });
+}
+
+function openCreatureModal(c) {
+  const modal = document.getElementById('creature-modal');
+  if (!modal) return;
+
+  const isPt = state.lang === 'pt';
+
+  document.getElementById('modal-title').textContent = `${isPt ? c.name_pt : c.name_en} (${c.number})`;
+  document.getElementById('modal-img').src = c.image;
+  document.getElementById('modal-element').textContent = isPt ? c.element : c.element_en;
+  document.getElementById('modal-element').style.background = `var(--el-${c.element_en.toLowerCase()}, #94a3b8)`;
+  document.getElementById('modal-role').textContent = isPt ? c.role_pt : c.role_en;
+  document.getElementById('modal-desc').textContent = isPt ? c.description_pt : c.description_en;
+  document.getElementById('modal-habitat').textContent = isPt ? c.habitat_pt : c.habitat_en;
+  document.getElementById('modal-homeland').textContent = isPt ? c.homeland_pt : c.homeland_en;
+
+  document.getElementById('stat-hp').textContent = c.stats.HP || 80;
+  document.getElementById('stat-atk').textContent = c.stats.ATK || 85;
+  document.getElementById('stat-def').textContent = c.stats.P_DEF || 70;
+  document.getElementById('stat-spd').textContent = c.stats.HASTE || 65;
+
+  const skillsList = isPt ? c.skills_pt : c.skills_en;
+  const skillsContainer = document.getElementById('modal-skills');
+  if (skillsContainer) {
+    skillsContainer.innerHTML = skillsList.map(s => `
+      <div style="margin-bottom:0.6rem; padding:0.5rem 0.75rem; background:var(--surface-2); border-radius:var(--radius-md); border:1px solid var(--border);">
+        <strong>${s.name}</strong> • <small style="color:var(--accent-strong)">${s.type} (Poder: ${s.power})</small>
+        <p style="font-size:0.85rem; color:var(--ink-soft); margin-top:0.2rem;">${s.desc}</p>
+      </div>
+    `).join('');
+  }
+
+  modal.classList.add('open');
+}
+
+// VERSUS COMPARATOR MODE
+function setupVersusMode() {
+  const sel1 = document.getElementById('versus-select-1');
+  const sel2 = document.getElementById('versus-select-2');
+  if (!sel1 || !sel2) return;
+
+  renderVersusMode();
+
+  sel1.addEventListener('change', (e) => {
+    state.versusCreature1 = e.target.value;
+    updateVersusDisplay();
+  });
+
+  sel2.addEventListener('change', (e) => {
+    state.versusCreature2 = e.target.value;
+    updateVersusDisplay();
+  });
+}
+
+function renderVersusMode() {
+  const sel1 = document.getElementById('versus-select-1');
+  const sel2 = document.getElementById('versus-select-2');
+  if (!sel1 || !sel2 || state.creatures.length === 0) return;
+
+  const isPt = state.lang === 'pt';
+  const opts = state.creatures.map(c => `<option value="${c.slug}">${c.number} - ${isPt ? c.name_pt : c.name_en}</option>`).join('');
+
+  sel1.innerHTML = opts;
+  sel2.innerHTML = opts;
+
+  sel1.value = state.versusCreature1;
+  sel2.value = state.versusCreature2;
+
+  updateVersusDisplay();
+}
+
+function updateVersusDisplay() {
+  const c1 = state.creatures.find(c => c.slug === state.versusCreature1) || state.creatures[0];
+  const c2 = state.creatures.find(c => c.slug === state.versusCreature2) || state.creatures[1];
+  if (!c1 || !c2) return;
+
+  const isPt = state.lang === 'pt';
+
+  // Update C1
+  document.getElementById('versus-name-1').textContent = isPt ? c1.name_pt : c1.name_en;
+  document.getElementById('versus-img-1').src = c1.image;
+  document.getElementById('versus-elem-1').textContent = isPt ? c1.element : c1.element_en;
+  document.getElementById('versus-elem-1').style.background = `var(--el-${c1.element_en.toLowerCase()}, #94a3b8)`;
+  document.getElementById('versus-role-1').textContent = isPt ? c1.role_pt : c1.role_en;
+  
+  const hp1 = c1.stats.HP || 80, atk1 = c1.stats.ATK || 85, def1 = c1.stats.P_DEF || 70, spd1 = c1.stats.HASTE || 65;
+  document.getElementById('vs1-hp').textContent = hp1;
+  document.getElementById('vs1-atk').textContent = atk1;
+  document.getElementById('vs1-def').textContent = def1;
+  document.getElementById('vs1-spd').textContent = spd1;
+  document.getElementById('bar1-hp').style.width = `${Math.min(hp1, 140) / 1.4}%`;
+  document.getElementById('bar1-atk').style.width = `${Math.min(atk1, 140) / 1.4}%`;
+  document.getElementById('bar1-def').style.width = `${Math.min(def1, 140) / 1.4}%`;
+  document.getElementById('bar1-spd').style.width = `${Math.min(spd1, 140) / 1.4}%`;
+
+  // Update C2
+  document.getElementById('versus-name-2').textContent = isPt ? c2.name_pt : c2.name_en;
+  document.getElementById('versus-img-2').src = c2.image;
+  document.getElementById('versus-elem-2').textContent = isPt ? c2.element : c2.element_en;
+  document.getElementById('versus-elem-2').style.background = `var(--el-${c2.element_en.toLowerCase()}, #94a3b8)`;
+  document.getElementById('versus-role-2').textContent = isPt ? c2.role_pt : c2.role_en;
+
+  const hp2 = c2.stats.HP || 80, atk2 = c2.stats.ATK || 85, def2 = c2.stats.P_DEF || 70, spd2 = c2.stats.HASTE || 65;
+  document.getElementById('vs2-hp').textContent = hp2;
+  document.getElementById('vs2-atk').textContent = atk2;
+  document.getElementById('vs2-def').textContent = def2;
+  document.getElementById('vs2-spd').textContent = spd2;
+  document.getElementById('bar2-hp').style.width = `${Math.min(hp2, 140) / 1.4}%`;
+  document.getElementById('bar2-atk').style.width = `${Math.min(atk2, 140) / 1.4}%`;
+  document.getElementById('bar2-def').style.width = `${Math.min(def2, 140) / 1.4}%`;
+  document.getElementById('bar2-spd').style.width = `${Math.min(spd2, 140) / 1.4}%`;
+
+  // Calculate Elemental Advantage
+  const matrix = state.typeChart ? state.typeChart.matrix : {};
+  const mult1to2 = (matrix[c1.element] && matrix[c1.element][c2.element] !== undefined) ? matrix[c1.element][c2.element] : 1.0;
+  const mult2to1 = (matrix[c2.element] && matrix[c2.element][c1.element] !== undefined) ? matrix[c2.element][c1.element] : 1.0;
+
+  const verdictEl = document.getElementById('versus-verdict');
+  if (verdictEl) {
+    if (mult1to2 > mult2to1) {
+      verdictEl.innerHTML = isPt 
+        ? `🔥 <strong style="color:var(--accent-strong);">${c1.name_pt}</strong> tem grande vantagem elemental (${mult1to2}x de dano em ${c2.name_pt})!` 
+        : `🔥 <strong style="color:var(--accent-strong);">${c1.name_en}</strong> has major elemental advantage (${mult1to2}x damage against ${c2.name_en})!`;
+    } else if (mult2to1 > mult1to2) {
+      verdictEl.innerHTML = isPt 
+        ? `🔥 <strong style="color:var(--accent-strong);">${c2.name_pt}</strong> tem grande vantagem elemental (${mult2to1}x de dano em ${c1.name_pt})!` 
+        : `🔥 <strong style="color:var(--accent-strong);">${c2.name_en}</strong> has major elemental advantage (${mult2to1}x damage against ${c1.name_en})!`;
+    } else {
+      verdictEl.innerHTML = isPt 
+        ? `⚖️ Duelo neutro: ambos possuem multiplicadores equivalentes (${mult1to2}x vs ${mult2to1}x). A vitória dependerá dos atributos brutos e sinergia!` 
+        : `⚖️ Neutral matchup: both deal balanced damage (${mult1to2}x vs ${mult2to1}x). Raw stats and team synergy will decide the battle!`;
+    }
+  }
+}
+
+// INTERACTIVE MAP WITH PROGRESS
+function setupMap() {
+  renderMap();
+
+  const viewport = document.getElementById('map-viewport');
+  const container = document.getElementById('map-container');
+  const zoomIn = document.getElementById('map-zoom-in');
+  const zoomOut = document.getElementById('map-zoom-out');
+  const zoomReset = document.getElementById('map-zoom-reset');
+  const filterUnfoundBtn = document.getElementById('map-filter-unfound');
+  const resetProgressBtn = document.getElementById('map-reset-progress');
+
+  if (!viewport || !container) return;
+
+  function updateTransform() {
+    container.style.transform = `translate(${state.mapPan.x}px, ${state.mapPan.y}px) scale(${state.mapZoom})`;
+  }
+
+  if (zoomIn) zoomIn.addEventListener('click', () => { state.mapZoom = Math.min(state.mapZoom + 0.25, 3); updateTransform(); });
+  if (zoomOut) zoomOut.addEventListener('click', () => { state.mapZoom = Math.max(state.mapZoom - 0.25, 0.5); updateTransform(); });
+  if (zoomReset) zoomReset.addEventListener('click', () => { state.mapZoom = 1; state.mapPan = { x: 0, y: 0 }; updateTransform(); });
+
+  if (filterUnfoundBtn) {
+    filterUnfoundBtn.addEventListener('click', () => {
+      state.hideFoundMarkers = !state.hideFoundMarkers;
+      filterUnfoundBtn.classList.toggle('active', state.hideFoundMarkers);
+      filterUnfoundBtn.textContent = state.hideFoundMarkers 
+        ? (state.lang === 'pt' ? 'Mostrar Todos' : 'Show All') 
+        : (state.lang === 'pt' ? 'Ocultar Encontrados' : 'Hide Found');
+      renderMarkers();
+    });
+  }
+
+  if (resetProgressBtn) {
+    resetProgressBtn.addEventListener('click', () => {
+      if (confirm(state.lang === 'pt' ? 'Deseja resetar o progresso dos marcadores encontrados?' : 'Reset found markers progress?')) {
+        state.foundMarkers.clear();
+        localStorage.removeItem('aniimo_found_markers');
+        updateMapProgress();
+        renderMarkers();
+        showToast(state.lang === 'pt' ? 'Progresso do mapa resetado.' : 'Map progress reset.');
+      }
+    });
+  }
+
+  // Pan dragging
+  let isDragging = false;
+  let startX, startY;
+
+  viewport.addEventListener('mousedown', (e) => {
+    if (e.target.closest('.map-marker') || e.target.closest('.map-controls')) return;
+    isDragging = true;
+    startX = e.clientX - state.mapPan.x;
+    startY = e.clientY - state.mapPan.y;
+  });
+
+  window.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    state.mapPan.x = e.clientX - startX;
+    state.mapPan.y = e.clientY - startY;
+    updateTransform();
+  });
+
+  window.addEventListener('mouseup', () => { isDragging = false; });
+}
+
+function updateMapProgress() {
+  if (!state.mapData) return;
+  const total = state.mapData.markers.length;
+  const found = state.foundMarkers.size;
+  const pct = Math.round((found / total) * 100);
+
+  const fillEl = document.getElementById('map-progress-bar-fill');
+  const textEl = document.getElementById('map-progress-text');
+  if (fillEl) fillEl.style.width = `${pct}%`;
+  if (textEl) textEl.textContent = `${found} / ${total} (${pct}%)`;
+}
+
+function renderMap() {
+  if (!state.mapData) return;
+  const layersEl = document.getElementById('map-layers-list');
+  const isPt = state.lang === 'pt';
+
+  if (layersEl) {
+    layersEl.innerHTML = state.mapData.categories.map(cat => `
+      <li class="map-layer-item ${state.activeLayers.has(cat.id) ? 'active' : ''}" data-layer="${cat.id}">
+        <span>${cat.icon} ${isPt ? cat.name_pt : cat.name_en}</span>
+        <input type="checkbox" ${state.activeLayers.has(cat.id) ? 'checked' : ''} />
+      </li>
+    `).join('');
+
+    layersEl.querySelectorAll('.map-layer-item').forEach(li => {
+      li.addEventListener('click', () => {
+        const id = li.getAttribute('data-layer');
+        if (state.activeLayers.has(id)) {
+          state.activeLayers.delete(id);
+          li.classList.remove('active');
+          li.querySelector('input').checked = false;
+        } else {
+          state.activeLayers.add(id);
+          li.classList.add('active');
+          li.querySelector('input').checked = true;
+        }
+        renderMarkers();
+      });
+    });
+  }
+
+  updateMapProgress();
+  renderMarkers();
+}
+
+function renderMarkers() {
+  const container = document.getElementById('map-markers-container');
+  if (!container || !state.mapData) return;
+
+  const isPt = state.lang === 'pt';
+  const visibleMarkers = state.mapData.markers.filter(m => {
+    const layerActive = state.activeLayers.has(m.cat);
+    const notHiddenByFound = !state.hideFoundMarkers || !state.foundMarkers.has(m.id);
+    return layerActive && notHiddenByFound;
+  });
+
+  container.innerHTML = visibleMarkers.map(m => {
+    const cat = state.mapData.categories.find(c => c.id === m.cat) || {};
+    const isFound = state.foundMarkers.has(m.id);
+    return `
+      <div class="map-marker ${isFound ? 'found' : ''}" style="left:${m.x}%; top:${m.y}%; --marker-color:${cat.color || '#38bdf8'}" data-marker-id="${m.id}" title="${isPt ? m.name_pt : m.name_en}">
+        ${cat.icon || '📍'}
+      </div>
+    `;
+  }).join('');
+
+  container.querySelectorAll('.map-marker').forEach(mEl => {
+    mEl.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const id = mEl.getAttribute('data-marker-id');
+      const marker = state.mapData.markers.find(m => m.id === id);
+      if (marker) openMarkerDetail(marker);
+    });
+  });
+}
+
+function openMarkerDetail(m) {
+  const card = document.getElementById('map-detail-card');
+  if (!card) return;
+
+  const isPt = state.lang === 'pt';
+  const cat = state.mapData.categories.find(c => c.id === m.cat) || {};
+
+  card.querySelector('.map-detail-title').textContent = isPt ? m.name_pt : m.name_en;
+  card.querySelector('.map-detail-category').textContent = `${cat.icon} ${isPt ? cat.name_pt : cat.name_en}`;
+  card.querySelector('.map-detail-desc').textContent = isPt ? m.desc_pt : m.desc_en;
+
+  const foundBtn = card.querySelector('#btn-mark-found');
+  const isFound = state.foundMarkers.has(m.id);
+  foundBtn.textContent = isFound ? (isPt ? '✓ Encontrado' : '✓ Found') : (isPt ? 'Marcar como Encontrado' : 'Mark as Found');
+
+  foundBtn.onclick = () => {
+    if (state.foundMarkers.has(m.id)) {
+      state.foundMarkers.delete(m.id);
+      foundBtn.textContent = isPt ? 'Marcar como Encontrado' : 'Mark as Found';
+    } else {
+      state.foundMarkers.add(m.id);
+      foundBtn.textContent = isPt ? '✓ Encontrado' : '✓ Found';
+    }
+    localStorage.setItem('aniimo_found_markers', JSON.stringify(Array.from(state.foundMarkers)));
+    updateMapProgress();
+    renderMarkers();
+  };
+
+  card.classList.add('visible');
+}
+
+// TYPE CHART & CALCULATOR
+function setupTypeChart() {
+  renderTypeChart();
+
+  const atkSel = document.getElementById('calc-attacker');
+  const defSel = document.getElementById('calc-defender');
+  if (atkSel && defSel) {
+    atkSel.addEventListener('change', calculateTypeMatchup);
+    defSel.addEventListener('change', calculateTypeMatchup);
+  }
+}
+
+function renderTypeChart() {
+  if (!state.typeChart) return;
+
+  const isPt = state.lang === 'pt';
+  const elements = isPt ? state.typeChart.elements_pt : state.typeChart.elements_en;
+  const matrix = state.typeChart.matrix;
+
+  const atkSel = document.getElementById('calc-attacker');
+  const defSel = document.getElementById('calc-defender');
+  if (atkSel && defSel) {
+    const opts = elements.map(e => `<option value="${e}">${e}</option>`).join('');
+    atkSel.innerHTML = opts;
+    defSel.innerHTML = opts;
+    defSel.selectedIndex = 1;
+    calculateTypeMatchup();
+  }
+
+  const table = document.getElementById('type-matrix-table');
+  if (table) {
+    let html = `<thead><tr><th>Atacante \\ Defensor</th>${elements.map(e => `<th>${e}</th>`).join('')}</tr></thead><tbody>`;
+    
+    elements.forEach(atk => {
+      html += `<tr><th>${atk}</th>`;
+      elements.forEach(def => {
+        const mult = (matrix[atk] && matrix[atk][def] !== undefined) ? matrix[atk][def] : 1.0;
+        let cellClass = 'cell-normal';
+        if (mult === 2.0) cellClass = 'cell-super';
+        else if (mult === 0.5) cellClass = 'cell-weak';
+        else if (mult === 0.0) cellClass = 'cell-immune';
+
+        html += `<td class="${cellClass}">${mult}x</td>`;
+      });
+      html += `</tr>`;
+    });
+
+    html += `</tbody>`;
+    table.innerHTML = html;
+  }
+}
+
+function calculateTypeMatchup() {
+  const atk = document.getElementById('calc-attacker').value;
+  const def = document.getElementById('calc-defender').value;
+  const multEl = document.getElementById('type-multiplier');
+  const descEl = document.getElementById('type-calc-desc');
+  const d = I18N[state.lang];
+
+  if (!state.typeChart || !multEl) return;
+
+  const matrix = state.typeChart.matrix;
+  const mult = (matrix[atk] && matrix[atk][def] !== undefined) ? matrix[atk][def] : 1.0;
+
+  multEl.textContent = `${mult}x`;
+  multEl.className = 'type-result-mult';
+
+  if (mult === 2.0) {
+    multEl.classList.add('super');
+    descEl.textContent = d.super_effective;
+  } else if (mult === 0.5) {
+    multEl.classList.add('weak');
+    descEl.textContent = d.not_effective;
+  } else if (mult === 0.0) {
+    multEl.classList.add('immune');
+    descEl.textContent = d.immune_damage;
+  } else {
+    multEl.classList.add('normal');
+    descEl.textContent = d.normal_damage;
+  }
+}
+
+// TIER LIST
+function setupTierList() {
+  renderTierList();
+
+  document.querySelectorAll('.tier-role-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tier-role-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const role = btn.getAttribute('data-role');
+      filterTierList(role);
+    });
+  });
+}
+
+function filterTierList(role) {
+  if (!state.tierList) return;
+  const filtered = role === 'all' 
+    ? state.tierList.items 
+    : state.tierList.items.filter(i => i.role.toLowerCase() === role.toLowerCase());
+  renderTierRows(filtered);
+}
+
+function renderTierList() {
+  if (!state.tierList) return;
+  renderTierRows(state.tierList.items);
+}
+
+function renderTierRows(items) {
+  const tiers = ["S+", "S", "A", "B"];
+  tiers.forEach(t => {
+    const container = document.getElementById(`tier-content-${t.replace('+', '-plus').toLowerCase()}`);
+    if (!container) return;
+
+    const tierItems = items.filter(i => i.tier === t);
+    container.innerHTML = tierItems.map(item => `
+      <div class="tier-creature-item" data-slug="${item.slug}">
+        <img class="tier-creature-img" src="/assets/creatures/${item.slug}.webp" alt="${item.name}" />
+        <span class="tier-creature-name">${item.name}</span>
+        <small style="font-size:0.68rem; color:var(--ink-muted)">${item.role}</small>
+      </div>
+    `).join('');
+
+    container.querySelectorAll('.tier-creature-item').forEach(card => {
+      card.addEventListener('click', () => {
+        const slug = card.getAttribute('data-slug');
+        const c = state.creatures.find(cr => cr.slug === slug);
+        if (c) openCreatureModal(c);
+      });
+    });
+  });
+}
+
+// ITEMS & GUIDES
+function setupItemsAndGuides() {
+  renderItems();
+  renderGuides();
+}
+
+function renderItems() {
+  const container = document.getElementById('items-container');
+  if (!container || !state.items) return;
+
+  const isPt = state.lang === 'pt';
+  container.innerHTML = state.items.map(item => `
+    <div class="tool-card" style="cursor:default;">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <span class="role-pill">${isPt ? item.category_pt : item.category_en}</span>
+        <span style="color:#eab308; font-weight:800;">${'★'.repeat(item.rarity)}</span>
+      </div>
+      <h3 class="tool-card-title" style="font-size:1.15rem;">${isPt ? item.name_pt : item.name_en}</h3>
+      <p class="tool-card-desc">${isPt ? item.desc_pt : item.desc_en}</p>
+    </div>
+  `).join('');
+}
+
+function renderGuides() {
+  const container = document.getElementById('guides-container');
+  if (!container || !state.guides) return;
+
+  const isPt = state.lang === 'pt';
+  container.innerHTML = state.guides.map(g => `
+    <article class="guide-box" style="margin:0 0 2rem 0; max-width:100%;">
+      <span class="brand-badge">${isPt ? g.category_pt : g.category_en} • ${g.read_time}</span>
+      <h2 class="section-title" style="font-size:1.6rem; text-align:left; margin-top:0.5rem;">${isPt ? g.title_pt : g.title_en}</h2>
+      <p style="color:var(--ink-soft); margin-bottom:1.25rem;">${isPt ? g.summary_pt : g.summary_en}</p>
+      <div style="white-space:pre-line; color:var(--ink); font-size:0.95rem; line-height:1.7;">${g.content_pt}</div>
+    </article>
+  `).join('');
+}
+
+// TOAST HELPER
+function showToast(msg) {
+  const container = document.getElementById('toast-container');
+  if (!container) return;
+  const toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.textContent = msg;
+  container.appendChild(toast);
+  setTimeout(() => { toast.remove(); }, 3000);
+}
+
+// MODAL CLOSE LISTENERS
+window.addEventListener('click', (e) => {
+  const modal = document.getElementById('creature-modal');
+  if (e.target === modal || e.target.closest('.modal-close-btn')) {
+    modal.classList.remove('open');
+    if (window.location.hash.includes('/') && !['#/', '#/codigos', '#/criaturas', '#/comparador', '#/mapa', '#/tabela-tipos', '#/tier-list', '#/itens', '#/guias'].includes(window.location.hash)) {
+      window.history.pushState(null, '', '/');
+    }
+  }
+});
